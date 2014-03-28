@@ -1,0 +1,1698 @@
+* {
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+html,
+body {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+img {
+  padding: 0px;
+  margin: 0px;
+  border-width: 0px;
+}
+div {
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+}
+.Selected {
+  cursor: auto;
+}
+.Dark {
+  background: #000000;
+}
+.Gray {
+  background: #F4EEDF;
+}
+.Light {
+  background: #FFFFFF;
+}
+.DarkFront {
+  background: #FFFFFF;
+}
+.GrayFront {
+  background: #000000;
+}
+.LightFront {
+  background: #000000;
+}
+.MainContainer {
+  width: 100%;
+  z-index: 500;
+  border: solid 0px #000000;
+}
+.MainContainer .LeftPanel {
+  top: 39px;
+  left: 45px;
+  z-index: 2000;
+}
+.MainContainer .RightPanel {
+  top: 48px;
+  left: 78%;
+  z-index: 2000;
+}
+.MainContainer .MainContentContainer {
+  top: 115px;
+  bottom: 70px;
+  left: 0px;
+  width: 100%;
+  z-index: 10;
+  overflow: hidden;
+}
+.MainContainer .MainContentContainer .ScrollBarContainer {
+  top: 0px;
+  right: 0px;
+  width: 23px;
+  height: 100%;
+}
+.MainContainer .MainContentContainer .ScrollBarContainer .ScrollBar {
+  top: 0px;
+  right: 0px;
+  width: 23px;
+  height: 68px;
+  z-index: 1000;
+  background: url(/images/Navigation/Bar.jpg) no-repeat;
+  cursor: pointer;
+}
+.MainContainer .MainContentContainer .MainContent {
+  left: 0px;
+  width: 100%;
+}
+.MainContainer .MainContentContainer .MainContent > div {
+  padding-bottom: 40px;
+}
+.MainContainer .MainContentContainer .MainContent div {
+  position: relative;
+}
+.MainContainer .MainContentContainer > .BottomMask {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 40px;
+  background: #FFFFFF;
+}
+.MainContainer .MainContentContainer > .BottomMask .Underline {
+  position: absolute;
+  width: 804px;
+  left: 46%;
+  margin-left: -400px;
+  bottom: 0px;
+  height: 0px;
+}
+.HoverLink {
+  cursor: pointer;
+}
+.MainContainer .TopMenu {
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  width: 100%;
+  height: 115px;
+}
+.MainContainer .TopMenu .Logo {
+  top: 0px;
+  left: 45px;
+}
+.MainContainer .TopMenu .MenuItemContainer {
+  top: 0px;
+  left: 25.3%;
+  width: 750px;
+}
+.MainContainer .TopMenu .MenuItemContainer .SelectionBar {
+  top: 81px;
+  height: 1px;
+}
+.MainContainer .TopMenu .MenuItem {
+  position: absolute;
+  cursor: pointer;
+}
+.MainContainer .TopMenu .News {
+  top: 0px;
+  left: 10px;
+}
+.MainContainer .TopMenu .Blog {
+  top: 0px;
+  left: 110px;
+}
+.MainContainer .TopMenu .Brands {
+  top: 0px;
+  left: 201px;
+}
+.MainContainer .TopMenu .Visit {
+  top: 0px;
+  left: 314px;
+}
+.MainContainer .TopMenu .Services {
+  top: 0px;
+  left: 407px;
+}
+.MainContainer .TopMenu .SearchArea {
+  position: absolute;
+  top: 0px;
+  left: 533px;
+}
+.MainContainer .TopMenu .SearchBox {
+  left: 533px;
+  top: 51px;
+  height: 30px;
+  width: 200px;
+}
+.MainContainer .TopMenu .SearchBox input {
+  height: 28px;
+  width: 200px;
+  border: none;
+  outline: none;
+  color: white;
+  font: normal 22px times;
+}
+.MainContainer .Dark {
+  background: url(/images/Navigation/MS_Dark_BK.jpg) repeat-x;
+}
+.MainContainer .Dark input {
+  background: #000000;
+}
+.MainContainer .Gray {
+  background: url(/images/Navigation/MS_Gray_BK.jpg) repeat-x;
+}
+.MainContainer .Gray input {
+  background: #F4EEDF;
+}
+.MainContainer .Light {
+  background: url(/images/Navigation/MS_Light_BK.jpg) repeat-x;
+}
+.MainContainer .Light input {
+  background: #FFFFFF;
+}
+.Footer {
+  z-index: 600;
+}
+.Footer img {
+  position: absolute;
+  top: 0px;
+}
+.Footer .FooterItem {
+  cursor: pointer;
+}
+.Footer .LanguageSelectionContainer {
+  top: 0px;
+  left: 0px;
+}
+.Footer .LanguageSelectionContainer img.En {
+  left: 40px;
+}
+.Footer .LanguageSelectionContainer img.Ch {
+  left: 64px;
+}
+.Footer .CopyrightContainer {
+  width: 343px;
+  margin-left: -171px;
+  left: 50%;
+}
+.Footer .OtherLinkContainer {
+  top: 0px;
+  right: 0px;
+  width: 355px;
+}
+.Footer .OtherLinkContainer img.Privacy[language=En] {
+  right: 266px;
+}
+.Footer .OtherLinkContainer img.Privacy[language=Ch] {
+  right: 304px;
+}
+.Footer .OtherLinkContainer img.Concern[language=En] {
+  display: hidden;
+}
+.Footer .OtherLinkContainer img.Concern[language=Ch] {
+  right: 251px;
+}
+.Footer .OtherLinkContainer img.Contact[language=En] {
+  right: 197px;
+}
+.Footer .OtherLinkContainer img.Contact[language=Ch] {
+  right: 198px;
+}
+.Footer .OtherLinkContainer img.Recruiting[language=En] {
+  right: 130px;
+}
+.Footer .OtherLinkContainer img.Recruiting[language=Ch] {
+  right: 146px;
+}
+.Footer .OtherLinkContainer img.FAQ[language=En] {
+  right: 94px;
+}
+.Footer .OtherLinkContainer img.FAQ[language=Ch] {
+  right: 93px;
+}
+.Footer .OtherLinkContainer img.SiteMap {
+  right: 40px;
+  cursor: default;
+}
+.Footer .Mark {
+  top: -74px;
+  left: 40px;
+  width: 77px;
+  height: 74px;
+}
+.Lead {
+  height: 100%;
+  width: 100%;
+}
+.Lead .Flash {
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  width: 640px;
+  height: 480px;
+  margin-left: -320px;
+  margin-top: -240px;
+  z-index: 300;
+}
+.Lead .Title {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: 130px;
+  font-size: 40px;
+  font-family: times;
+  z-index: 500;
+  text-align: center;
+}
+.Lead .SubTitle {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: 72px;
+  font-size: 17px;
+  font-family: times;
+  font-weight: 10;
+  z-index: 500;
+  text-align: center;
+}
+.Index {
+  top: 45px;
+  left: 50%;
+  margin-left: -507px;
+  width: 1014px;
+  margin-bottom: 45px;
+  color: #808080;
+}
+.Index .MainTitle {
+  display: table;
+  height: 480px;
+  width: 295px;
+  overflow: hidden;
+}
+.Index .MainTitleContent {
+  position: relative !important;
+  display: table-cell;
+  vertical-align: middle;
+}
+.Index .MainTitleContent img {
+  margin-bottom: 10px;
+}
+.Index .MainTitleContent div {
+  position: relative !important;
+}
+.Index .MainDescription {
+  position: absolute;
+  left: 8px;
+  top: 215px;
+  width: 295px;
+  font-size: 11px;
+  line-height: 18px;
+  color: #808080;
+}
+.Index .MainImage {
+  position: absolute;
+  width: 665px;
+  height: 480px;
+  top: 0px;
+  left: 347px;
+  background: url(/images/Index/Sticker-MainBK.jpg) no-repeat;
+}
+.Index .MainImage img {
+  position: absolute;
+  top: 59px;
+  left: 57px;
+}
+.Index div.ImageItem {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 338px;
+  height: 458px;
+}
+.Index div.ImageItem img {
+  position: absolute;
+  top: 65px;
+  left: 29px;
+  width: 280px;
+  height: 190px;
+}
+.Index div.ImageItem .Title {
+  top: 336px;
+  left: 10px;
+  width: 318px;
+  height: 49px;
+  border-top: solid 1px #E4E4E4;
+}
+.Index div.ImageItem .Title .Date {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  font-weight: bold;
+  font-size: 11px;
+  color: #808080;
+}
+.Index div.ImageItem .Title .Text {
+  position: absolute;
+  bottom: 5px;
+  left: 3px;
+  padding-top: 12px;
+  font-size: 16px;
+  color: #808080;
+}
+.Index div.ImageItem .Title .Text a {
+  font-size: 16px;
+  color: #808080;
+  text-decoration: none;
+}
+.Index div.ImageItem .Description {
+  top: 385px;
+  left: 10px;
+  width: 318px;
+  height: 73px;
+  border-top: solid 1px #E4E4E4;
+  font-size: 11px;
+  color: #808080;
+  padding: 3px;
+  padding-top: 8px;
+}
+.Index div.ImageItem .Description a {
+  font-size: 11px;
+  color: #808080;
+  text-decoration: none;
+}
+.Index div.Type1 {
+  background: url(/images/Index/StickerBK_01.jpg) no-repeat !important;
+}
+.Index div.Type2 {
+  background: url(/images/Index/StickerBK_02.jpg) no-repeat !important;
+}
+.Index div.Type3 {
+  background: url(/images/Index/StickerBK_03.jpg) no-repeat !important;
+}
+.Index div.Type4 {
+  background: url(/images/Index/StickerBK_04.jpg) no-repeat !important;
+}
+.Index div.Type5 {
+  background: url(/images/Index/StickerBK_05.jpg) no-repeat !important;
+}
+.Index div.Type6 {
+  background: url(/images/Index/StickerBK_06.jpg) no-repeat !important;
+}
+.Index div.NoBackground img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 338px;
+  height: 320px;
+}
+.MainContent .BlogContainer {
+  top: 5px;
+  left: 43%;
+  margin-left: -490px;
+  width: 980px;
+  height: 630px;
+  margin-bottom: 5px;
+}
+.MainContent .BlogContainer img {
+  position: absolute;
+  top: 285px;
+  left: 50%;
+  margin-left: -155px;
+}
+.MainContent .ContactUs {
+  top: 45px;
+  left: 46.7%;
+  width: 660px;
+  margin-left: -325px;
+  padding-bottom: 45px;
+}
+.MainContent .ContactUs p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #83837E;
+  font-size: 11px;
+  line-height: 22px;
+}
+.MainContent .ContactUs a {
+  color: #83837E;
+  font-size: 11px;
+  text-decoration: none;
+}
+.MainContent .ContactUs a:hover {
+  color: #000000;
+}
+.MainContent .ContactUs .Download {
+  cursor: pointer;
+}
+.MainContent .ContactUs .Cooperation {
+  position: relative;
+  width: 400px;
+  margin-top: 30px;
+}
+.MainContent .ContactUs .Cooperation textarea.Content {
+  width: 100%;
+  height: 200px;
+  border: solid 1px #A0A0A0;
+  margin-bottom: 8px;
+}
+.MainContent .ContactUs .Cooperation input {
+  width: 250px;
+  height: 28px;
+  border: solid 1px #A0A0A0;
+  margin-bottom: 8px;
+}
+.MainContent .ContactUs .Cooperation .SubmitButton {
+  float: right;
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+}
+.MainContent .FloorGuideReelPlace {
+  left: 50%;
+  margin-left: -339px;
+  width: 679px;
+  height: 639px;
+  margin-bottom: 45px;
+}
+.MainContent .FloorGuideReelPlace .FloorGuideBackground {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 679px;
+  height: 639px;
+  z-index: 100;
+}
+.MainContent .FloorGuideReelPlace .FloorGuideOver {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 679px;
+  height: 639px;
+  z-index: 1000;
+}
+.MainContent .FloorGuide {
+  left: 50%;
+  margin-bottom: 45px;
+}
+.MainContent .FloorGuide .FloorGuideBackground {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+}
+.MainContent .FloorGuide .FloorGuideOver {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+}
+.MainContent .FloorGuide map {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.MainContent .VisitFloor {
+  margin-top: 48px;
+}
+.MainContent .FloorGuide1F {
+  top: 2px;
+  margin-left: -322px;
+  width: 614px;
+  height: 578px;
+}
+.MainContent .FloorGuide1F div,
+.MainContent .FloorGuide1F map {
+  width: 614px;
+  height: 578px;
+}
+.MainContent .FloorGuide2F,
+.MainContent .FloorGuide3F,
+.MainContent .FloorGuide4F,
+.MainContent .FloorGuide5F {
+  margin-left: -299px;
+  width: 593px;
+  height: 569px;
+}
+.MainContent .FloorGuide2F div,
+.MainContent .FloorGuide3F div,
+.MainContent .FloorGuide4F div,
+.MainContent .FloorGuide5F div,
+.MainContent .FloorGuide2F map,
+.MainContent .FloorGuide3F map,
+.MainContent .FloorGuide4F map,
+.MainContent .FloorGuide5F map {
+  width: 593px;
+  height: 569px;
+}
+.MainContent .FloorGuideB1 {
+  margin-left: -400px;
+  width: 740px;
+  height: 614px;
+}
+.MainContent .FloorGuideB1 div,
+.MainContent .FloorGuideB1 map {
+  width: 740px;
+  height: 614px;
+}
+.MainContent .FloorGuideB2 {
+  margin-left: -435px;
+  width: 775px;
+  height: 614px;
+}
+.MainContent .FloorGuideB2 div,
+.MainContent .FloorGuideB2 map {
+  width: 775px;
+  height: 614px;
+}
+.AreaList {
+  width: 240px;
+  height: 420px;
+  position: relative;
+  overflow: hidden;
+  border-top: dotted 1px #808080;
+  border-bottom: dotted 1px #808080;
+}
+.AreaList .AreaListPanel {
+  position: absolute;
+  display: block;
+}
+.AreaList div {
+  position: static;
+}
+.AreaList .Title {
+  margin-top: 15px;
+  margin-bottom: 23px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.AreaList .ReelPlaceSelector {
+  margin: -2px;
+  padding: 0px;
+}
+.AreaList .Selector {
+  font-size: 11px;
+  line-height: 20px;
+  color: #808080;
+  cursor: pointer;
+}
+.AreaList .Selector.Selected {
+  color: #000000;
+}
+.AreaList img {
+  cursor: pointer;
+}
+.AreaList .TopMask {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 15px;
+  width: 100%;
+  background: #FFFFFF;
+}
+.AreaList .BottomMask {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 15px;
+  width: 100%;
+  background: #FFFFFF;
+}
+.AreaListScrollButton {
+  margin-top: 10px;
+}
+.FloorGuideReelPlaceAreaList {
+  border-bottom: none;
+  height: 660px;
+}
+.FloorGuideReelPlaceAreaList .Seperator {
+  width: 100%;
+  height: 0px;
+  border-bottom: dotted 1px #808080;
+}
+.FloorGuideReelPlaceAreaList .Detail {
+  padding: 10px;
+  padding-top: 0px;
+}
+.FloorGuideReelPlaceAreaList .Detail .Title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font: bold 14px Times;
+}
+.FloorGuideReelPlaceAreaList .Detail .Description {
+  font-size: 9px;
+  color: #666666;
+  line-height: 20px;
+}
+.FloorGuideReelPlaceAreaList .Detail .Photo {
+  margin-top: 10px;
+}
+/*.FloorGuide4FAreaList,.FloorGuideB1AreaList,.FloorGuideB2AreaList{
+	position:		relative;
+	height:		512px;
+	overflow:		hidden;
+	.AreaListPanel{
+		position:	absolute;
+		display:	block;
+	}
+}*/
+.MainContent .About {
+  top: 45px;
+  left: 50%;
+  width: 755px;
+  margin-left: -377px;
+  margin-bottom: 45px;
+}
+.MainContent .About .MainImage {
+  height: 334px;
+}
+.MainContent .About p {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  color: #83837E;
+  font-size: 11px;
+  line-height: 22px;
+}
+.MainContent .Location {
+  top: 45px;
+  left: 50%;
+  width: 755px;
+  margin-left: -377px;
+  margin-bottom: 90px;
+}
+.MainContent .Location table {
+  width: 755px;
+  height: 320px;
+}
+.MainContent .Location table .MainMapContainer {
+  width: 320px;
+}
+.MainContent .Location table .MainMapContainer .MainMap {
+  width: 320px;
+  height: 320px;
+  margin-left: 20px;
+  cursor: move;
+  overflow: hidden;
+}
+.MainContent .Location table .MainMapContainer .MainMap .Sing_4 {
+  position: absolute;
+  top: 390px;
+  left: 38px;
+}
+.MainContent .Location table .MainMapContainer .MainMap .Sing_10 {
+  position: absolute;
+  top: 470px;
+  left: 245px;
+}
+.MainContent .Location table .MainMapContainer .MainMap .Sing_P {
+  position: relative;
+  top: 163px;
+  left: 114px;
+}
+.MainContent .Location table .MainMapContainer .MainMap .Baidu {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  cursor: pointer;
+}
+.MainContent .Location table .MainMapContainer .MainMap .Google {
+  position: absolute;
+  top: 250px;
+  left: 250px;
+  cursor: pointer;
+}
+.MainContent .Location table .SecondMapContainer {
+  width: 248px;
+}
+.MainContent .Location table .SecondMapContainer .SecondMap {
+  margin-left: 20px;
+  width: 320px;
+  height: 248px;
+  overflow: hidden;
+}
+.MainContent .Location table td {
+  color: #808080;
+}
+.MainContent .Location table tr.Description {
+  height: 39px;
+}
+.MainContent .Location table td.Description {
+  width: 415px;
+  border-bottom: dotted 1px #83837E;
+  font-size: 11px;
+  line-height: 22px;
+  border-spacing: 0px;
+}
+.MainContent .Location table td.MiniDescription {
+  width: 315px;
+  border-bottom: dotted 1px #83837E;
+  font-size: 11px;
+  line-height: 22px;
+  border-spacing: 0px;
+}
+.MainContent .Location table td.Sing {
+  width: 100px;
+  border-bottom: dotted 1px #83837E;
+  font-size: 11px;
+  line-height: 22px;
+  border-spacing: 0px;
+  cursor: pointer;
+}
+.MainContent .Location table td.Sing.Ch {
+  background: url(/images/Visit/Location/Location_B_MAP_Ch_L.png) no-repeat;
+}
+.MainContent .Location table td.Sing.En {
+  background: url(/images/Visit/Location/Location_B_MAP_En_L.png) no-repeat;
+}
+.MainContent .Location table td.Sing:hover.Ch {
+  background: url(/images/Visit/Location/Location_B_MAP_Ch_D.png) no-repeat;
+}
+.MainContent .Location table td.Sing:hover.En {
+  background: url(/images/Visit/Location/Location_B_MAP_En_D.png) no-repeat;
+}
+.MainContent .Location table td.Park {
+  width: 100px;
+  border-bottom: dotted 1px #83837E;
+  font-size: 11px;
+  line-height: 22px;
+  border-spacing: 0px;
+  background: url(/images/Visit/Location/Location_B_MAP_L.png) no-repeat;
+  cursor: pointer;
+}
+.MainContent .Location table td.Park:hover {
+  background: url(/images/Visit/Location/Location_B_MAP_D.png) no-repeat;
+}
+.MainContent .Location table tr.BigDescription {
+  height: 79px;
+}
+.MainContent .Location table td.BigDescription {
+  width: 415px;
+  height: 79px;
+  border-bottom: dotted 1px #83837E;
+  font-size: 11px;
+  line-height: 22px;
+  border-spacing: 0px;
+}
+.MainContent .Location table .WithTrain {
+  background: url(/images/Visit/Location/Location_Sing_01.png) no-repeat;
+}
+.MainContent .Location table .WithBus {
+  height: 80px;
+  background: url(/images/Visit/Location/Location_Sing_02.png) no-repeat;
+}
+.MainContent .Location table .MpaMarkLink {
+  width: 100px;
+  height: 40px;
+  border-bottom: dotted 1px #83837E;
+  font-size: 11px;
+  line-height: 1px;
+}
+.FloorGuideSubMenu {
+  border-top: dotted 1px #4D4D4D;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.FloorGuideSubMenu div {
+  width: 100px;
+  border-bottom: dotted 1px #4D4D4D;
+}
+.VisitSelector div {
+  position: relative;
+}
+.VisitSelector img {
+  cursor: pointer;
+}
+.MainContent .FAQ {
+  top: 45px;
+  padding-bottom: 45px;
+  left: 25.3%;
+  width: 45%;
+}
+.MainContent .FAQ .Question {
+  position: static;
+  width: 100%;
+  color: #808080;
+  font-size: 11px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+.MainContent .FAQ .Answer {
+  position: static;
+  width: 100%;
+  border-top: dotted 1px #000000;
+  border-bottom: dotted 1px #000000;
+  background: #F9F9F5;
+  color: #808080;
+  font-size: 11px;
+  line-height: 22px;
+  padding: 12px;
+}
+.FAQSelector {
+  width: 222px;
+  border-top: dotted 1px #000000;
+  border-bottom: dotted 1px #000000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.FAQSelector img {
+  cursor: pointer;
+}
+.MainContent .MemberShipBook {
+  top: 45px;
+  left: 50%;
+  width: 755px;
+  margin-left: -377px;
+  margin-bottom: 45px;
+}
+.MainContent .MemberShipBook p {
+  color: #808080;
+  font-size: 11px;
+  line-height: 22px;
+}
+.MainContent .MemberShipBook h3 {
+  color: #999999;
+  font-size: 14px;
+  margin-top: 40px;
+}
+.MainContent .MemberShipBook h4 {
+  color: #999999;
+  font-size: 12px;
+  margin-top: 30px;
+}
+.MainContent .Petition {
+  top: 45px;
+  left: 50%;
+  width: 755px;
+  margin-left: -377px;
+  margin-bottom: 45px;
+}
+.MainContent .Petition p {
+  color: #808080;
+  font-size: 11px;
+  line-height: 22px;
+}
+.MainContent .Petition h5 {
+  color: #808080;
+}
+.MainContent .Petition img {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.MainContent .Petition table {
+  width: 100%;
+}
+.MainContent .Petition table,
+.MainContent .Petition tr,
+.MainContent .Petition td {
+  margin: 0px;
+  padding: 0px;
+  border-spacing: 0px;
+}
+.MainContent .Petition tr {
+  height: 65px;
+}
+.MainContent .Petition td {
+  color: #808080;
+  font-size: 11px;
+  line-height: 22px;
+  border-bottom: solid 1px #666666;
+  text-align: center;
+}
+.MainContent .Petition table.SmallTable {
+  width: 500px;
+}
+.MainContent .Petition table.SmallTable tr {
+  height: 22px;
+}
+.MainContent .Petition table.SmallTable td {
+  color: #808080;
+  font-size: 11px;
+  line-height: 22px;
+  border-bottom: solid 0px #666666;
+  padding-right: 15px;
+  text-align: left;
+}
+.MainContent .Petition table.ServiceTable {
+  border-spacing: 20px;
+}
+.MainContent .Petition table.ServiceTable th {
+  color: #808080;
+  font-size: 11px;
+  text-align: left;
+  vertical-align: bottom;
+  height: 25px;
+}
+.MainContent .Petition table.ServiceTable td {
+  height: 350px;
+  color: #808080;
+  font-size: 11px;
+  line-height: 22px;
+  border: solid 1px #666666;
+  padding-left: 45px;
+  padding-top: 45px;
+  text-align: left;
+  vertical-align: top;
+}
+.MainContent .Booking {
+  top: 45px;
+  left: 50%;
+  width: 755px;
+  margin-left: -377px;
+  margin-bottom: 45px;
+}
+.MainContent .Booking p {
+  color: #808080;
+  font-size: 11px;
+  line-height: 22px;
+}
+.ServicesSelector img {
+  cursor: pointer;
+}
+.MainContent .News {
+  top: 45px;
+  width: 804px;
+  left: 46%;
+  margin-left: -400px;
+  margin-bottom: 70px;
+  overflow: auto;
+}
+.MainContent .News .NewsImageContainer {
+  width: 504px;
+}
+.MainContent .News .NewsImageContainer img {
+  margin-right: 4px;
+  margin-bottom: 4px;
+}
+.MainContent .News .NewsTextContainer {
+  width: 290px;
+  float: right;
+  padding-left: 10px;
+}
+.MainContent .News .NewsTextContainer .NewsTextTitle {
+  font-size: 17px;
+  margin-bottom: 14px;
+  color: #999999;
+}
+.MainContent .News .NewsTextContainer .NewsTextDate {
+  font-size: 12px;
+  margin-bottom: 29px;
+  color: #A0A0A0;
+}
+.MainContent .News .NewsTextContainer .NewsTextDescription {
+  font-size: 12px;
+  line-height: 22px;
+  color: #808080;
+}
+.MainContent .News .NewsItem {
+  position: relative;
+  height: 350px;
+  width: 750px;
+}
+.MainContent .News .NewsItem img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 334px;
+  width: 500px;
+}
+.MainContent .News .NewsItem video {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 334px;
+  width: 500px;
+}
+.MainContent .News .NewsItem h3 {
+  font-family: Times;
+}
+.MainContent .News .NewsItem .Description {
+  position: absolute;
+  top: 0px;
+  left: 500px;
+  height: 334px;
+  width: 250px;
+  border-bottom: dotted 1px #898989;
+  font: normal 11px Times;
+  line-height: 18px;
+  margin-left: 10px;
+}
+.MainContent .News .NewsItem .Description h3 {
+  margin-top: 0px;
+}
+.MainContent .News .NewsItem .OutLink {
+  position: absolute;
+  bottom: 24px;
+  left: 500px;
+  margin-left: 10px;
+  font: normal 11px Times;
+  cursor: pointer;
+}
+.MainContent .News:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.NewsSelectorContainer {
+  left: 46%;
+  margin-left: -400px;
+  padding-bottom: 45px;
+  width: 795px;
+  border-top: solid 1px #808080;
+  overflow: auto;
+}
+.NewsSelectorContainer .Title {
+  width: 100%;
+  height: 40px;
+  border-bottom: dotted 1px #808080;
+}
+.NewsSelectorContainer .NewsItem {
+  width: 260px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: dotted 1px #808080;
+  float: left;
+}
+.NewsSelectorContainer .NewsItem .Description {
+  position: absolute !important;
+  width: 180px;
+  top: 15px;
+  left: 70px;
+  line-height: 18px;
+  font-size: 12px;
+  color: #808080;
+}
+.MainContent .Privacy {
+  top: 45px;
+  left: 46.7%;
+  width: 660px;
+  margin-left: -325px;
+  padding-bottom: 45px;
+}
+.MainContent .Privacy p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #808080;
+  font-size: 11px;
+  line-height: 22px;
+}
+.MainContent .Privacy h2 {
+  color: #999999;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+.MainContent .Privacy a {
+  color: #808080;
+  font-size: 11px;
+  text-decoration: none;
+}
+.MainContent .Privacy a:hover {
+  color: #000000;
+}
+.MainContent .BrandMapContainer {
+  top: 5px;
+  left: 43%;
+  margin-left: -490px;
+  width: 980px;
+  height: 630px;
+  margin-bottom: 5px;
+}
+.MainContent .BrandMapContainer .BrandMap {
+  width: 100%;
+  height: 100%;
+}
+.BrandCategorySelector {
+  font: normal 14px Arial;
+  line-height: 24px;
+  color: #757671;
+  width: 130px;
+  cursor: pointer;
+}
+.BrandCategorySelector .SubMenu {
+  width: 100px;
+  border-top: dotted 1px #504C4D;
+}
+.BrandCategorySelector .SubMenu a {
+  display: block;
+  border-bottom: dotted 1px #504C4D;
+  width: 100px;
+  height: 26px;
+}
+.BrandCategorySelector .SubMenu a img {
+  height: 26px;
+}
+.BrandSelectorContainer {
+  border-top: dotted 1px #504C4D;
+  border-bottom: dotted 1px #504C4D;
+  height: 420px;
+  width: 222px;
+  overflow: hidden;
+}
+.BrandSelectorContainer .TopMask {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 15px;
+  width: 100%;
+  background: #FFFFFF;
+}
+.BrandSelectorContainer .BottomMask {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 15px;
+  width: 100%;
+  background: #FFFFFF;
+}
+.BrandSelectorContainer .BrandSelector {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.BrandSelectorContainer .BrandSelector .HeadLetter {
+  font: bold 13px Times;
+  color: #000000;
+  line-height: 20px;
+  margin-top: 10px;
+  display: inline-block;
+}
+.BrandSelectorContainer .BrandSelector .HoverLink {
+  font-size: 11px;
+  color: #504C4D;
+  line-height: 20px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.BrandSelectorScrollButton {
+  position: absolute;
+  top: 430px;
+  left: 0px;
+  height: 25px;
+  width: 222px;
+}
+.FoodSelectorContainer {
+  border-top: dotted 1px #504C4D;
+  border-bottom: dotted 1px #504C4D;
+  height: 420px;
+  width: 222px;
+  overflow: hidden;
+}
+.FoodSelectorContainer .TopMask {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 15px;
+  width: 100%;
+  background: #FFFFFF;
+}
+.FoodSelectorContainer .BottomMask {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 15px;
+  width: 100%;
+  background: #FFFFFF;
+}
+.FoodSelectorContainer .FoodSelector {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.FoodSelectorContainer .FoodSelector .HoverLink {
+  font-size: 11px;
+  color: #504C4D;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+.FoodSelectorScrollButton {
+  position: absolute;
+  top: 430px;
+  left: 0px;
+  height: 25px;
+  width: 222px;
+}
+.RestaurentSelectorContainer {
+  border-top: dotted 1px #504C4D;
+  border-bottom: dotted 1px #504C4D;
+  height: 420px;
+  width: 222px;
+  overflow: hidden;
+}
+.RestaurentSelectorContainer .TopMask {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 15px;
+  width: 100%;
+  background: #FFFFFF;
+}
+.RestaurentSelectorContainer .BottomMask {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 15px;
+  width: 100%;
+  background: #FFFFFF;
+}
+.RestaurentSelectorContainer .RestaurentSelector {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.RestaurentSelectorContainer .RestaurentSelector .HeadLetter {
+  font: bold 13px Times;
+  color: #000000;
+  line-height: 20px;
+  margin-top: 10px;
+  display: inline-block;
+}
+.RestaurentSelectorContainer .RestaurentSelector .HoverLink {
+  font-size: 11px;
+  color: #504C4D;
+  line-height: 20px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.BrandContainer {
+  /*top:					40px;*/
+  left: 45%;
+  width: 755px;
+  margin-top: 48px;
+  margin-left: -377px;
+  margin-bottom: 40px;
+  border-top: solid 1px #808080;
+  border-bottom: solid 1px #808080;
+}
+.BrandContainer .BrandItem {
+  position: relative;
+  border-bottom: dotted 1px #808080;
+}
+.BrandContainer .BrandItem .BrandHeader {
+  height: 24px;
+  cursor: pointer;
+  padding-left: 3px;
+  color: #808080;
+  font: normal 14px verdana;
+  line-height: 24px;
+}
+.BrandContainer .BrandItem .BrandHeader.Active {
+  background: #000000;
+  color: #FFFFFF;
+  border-bottom: solid 1px #000000;
+}
+.BrandContainer .BrandItem .BrandContent {
+  height: 250px;
+}
+.BrandContainer .BrandItem .BrandContent .BrandDescription {
+  position: absolute !important;
+  top: 10px;
+  left: 510px;
+  width: 245px;
+  height: 174px;
+  color: #808080;
+  font-size: 12px;
+  line-height: 19px;
+  overflow: hidden;
+}
+.BrandContainer .BrandItem .BrandContent .BrandProperty1 {
+  position: absolute !important;
+  bottom: 24px;
+  left: 500px;
+  height: 24px;
+  width: 255px;
+  border-bottom: dotted 1px #808080;
+  font-size: 12px;
+  color: #808080;
+  line-height: 24px;
+}
+.BrandContainer .BrandItem .BrandContent .BrandProperty1 .BrandBusinessHours {
+  height: 100%;
+  padding-left: 10px;
+}
+.BrandContainer .BrandItem .BrandContent .BrandProperty1 .BrandBusinessHours div {
+  position: absolute !important;
+  top: 0px;
+  left: 25px;
+  height: 100%;
+  line-height: 24px;
+}
+.BrandContainer .BrandItem .BrandContent .BrandProperty1 .BrandFloorGuide {
+  position: absolute !important;
+  top: 0px;
+  right: 6px;
+  height: 100%;
+  width: 200px;
+  text-align: right;
+}
+.BrandContainer .BrandItem .BrandContent .BrandProperty1 .BrandFloorGuide div {
+  position: absolute !important;
+  top: 0px;
+  right: 15px;
+  height: 100%;
+  line-height: 24px;
+}
+.BrandContainer .BrandItem .BrandContent .BrandProperty2 {
+  position: absolute !important;
+  bottom: 0px;
+  left: 500px;
+  height: 24px;
+  width: 255px;
+  font-size: 12px;
+  color: #808080;
+  line-height: 24px;
+}
+.BrandContainer .BrandItem .BrandContent .BrandProperty2 .BrandContact {
+  height: 100%;
+  padding-left: 10px;
+}
+.BrandContainer .BrandItem .BrandContent .BrandProperty2 .BrandContact div {
+  position: absolute !important;
+  top: 0px;
+  left: 25px;
+  height: 100%;
+  line-height: 24px;
+}
+.BrandContainer .BrandItem .BrandContent .BrandProperty2 .BrandURL {
+  position: absolute !important;
+  top: 0px;
+  right: 6px;
+  height: 100%;
+  width: 200px;
+  text-align: right;
+}
+.BrandContainer .BrandItem .BrandContent .BrandProperty2 .BrandURL a {
+  font-size: 10px;
+  color: #808080;
+  text-decoration: none;
+}
+.BrandContainer .BrandItem .BrandContent .BrandProperty2 .BrandURL a:hover {
+  text-decoration: underline;
+}
+.BrandContainer .BrandItem .BrandContent .BrandProperty2 .BrandURL div {
+  position: absolute !important;
+  top: 0px;
+  right: 15px;
+  height: 100%;
+  line-height: 24px;
+}
+.FoodContainer {
+  /*top:					40px;*/
+  left: 45%;
+  width: 755px;
+  margin-top: 48px;
+  margin-left: -377px;
+  margin-bottom: 40px;
+  border-top: solid 1px #808080;
+  border-bottom: solid 1px #808080;
+}
+.FoodContainer .FoodItem {
+  position: relative;
+  border-bottom: dotted 1px #808080;
+}
+.FoodContainer .FoodItem .FoodHeader {
+  height: 24px;
+  cursor: pointer;
+  padding-left: 3px;
+  color: #808080;
+  font: normal 14px verdana;
+  line-height: 24px;
+}
+.FoodContainer .FoodItem .FoodHeader.Active {
+  background: #000000;
+  color: #FFFFFF;
+  border-bottom: solid 1px #000000;
+}
+.FoodContainer .FoodItem .FoodContent {
+  height: 250px;
+}
+.FoodContainer .FoodItem .FoodContent .FoodDescription {
+  position: absolute !important;
+  top: 10px;
+  left: 510px;
+  width: 245px;
+  height: 174px;
+  color: #808080;
+  font-size: 12px;
+  line-height: 19px;
+  overflow: hidden;
+}
+.FoodContainer .FoodItem .FoodContent .FoodProperty1 {
+  position: absolute !important;
+  bottom: 24px;
+  left: 500px;
+  height: 24px;
+  width: 255px;
+  border-bottom: dotted 1px #808080;
+  font-size: 12px;
+  color: #808080;
+  line-height: 24px;
+}
+.FoodContainer .FoodItem .FoodContent .FoodProperty1 .FoodBusinessHours {
+  height: 100%;
+  padding-left: 10px;
+}
+.FoodContainer .FoodItem .FoodContent .FoodProperty1 .FoodBusinessHours div {
+  position: absolute !important;
+  top: 0px;
+  left: 25px;
+  height: 100%;
+  line-height: 24px;
+}
+.FoodContainer .FoodItem .FoodContent .FoodProperty1 .FoodFloorGuide {
+  position: absolute !important;
+  top: 0px;
+  right: 6px;
+  height: 100%;
+  width: 200px;
+  text-align: right;
+}
+.FoodContainer .FoodItem .FoodContent .FoodProperty1 .FoodFloorGuide div {
+  position: absolute !important;
+  top: 0px;
+  right: 15px;
+  height: 100%;
+  line-height: 24px;
+}
+.FoodContainer .FoodItem .FoodContent .FoodProperty2 {
+  position: absolute !important;
+  bottom: 0px;
+  left: 500px;
+  height: 24px;
+  width: 255px;
+  font-size: 12px;
+  color: #808080;
+  line-height: 24px;
+}
+.FoodContainer .FoodItem .FoodContent .FoodProperty2 .FoodContact {
+  height: 100%;
+  padding-left: 10px;
+}
+.FoodContainer .FoodItem .FoodContent .FoodProperty2 .FoodContact div {
+  position: absolute !important;
+  top: 0px;
+  left: 25px;
+  height: 100%;
+  line-height: 24px;
+}
+.FoodContainer .FoodItem .FoodContent .FoodProperty2 .FoodURL {
+  position: absolute !important;
+  top: 0px;
+  right: 6px;
+  height: 100%;
+  width: 200px;
+  text-align: right;
+}
+.FoodContainer .FoodItem .FoodContent .FoodProperty2 .FoodURL a {
+  font-size: 10px;
+  color: #808080;
+  text-decoration: none;
+}
+.FoodContainer .FoodItem .FoodContent .FoodProperty2 .FoodURL a:hover {
+  text-decoration: underline;
+}
+.FoodContainer .FoodItem .FoodContent .FoodProperty2 .FoodURL div {
+  position: absolute !important;
+  top: 0px;
+  right: 15px;
+  height: 100%;
+  line-height: 24px;
+}
+.RestaurentContainer {
+  margin-top: 48px;
+  left: 20%;
+  margin-bottom: 40px;
+  max-width: 820px;
+  width: 54%;
+  height: 330px;
+}
+.RestaurentContainer .BlockItem {
+  width: 500px;
+  height: 330px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+.RestaurentContainer .VerticalItem {
+  width: 245px;
+  height: 330px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+.RestaurentContainer .VerticalItem .Image {
+  width: 245px;
+  height: 165px;
+}
+.RestaurentContainer .VerticalItem .Image img {
+  width: 100%;
+  height: 100%;
+}
+.RestaurentContainer .HorizonItem {
+  position: relative;
+  width: 500px;
+  height: 165px;
+  float: left;
+}
+.RestaurentContainer .HorizonItem .Image {
+  position: absolute !important;
+  top: 0px;
+  left: 245px;
+  height: 165px;
+  width: 255px;
+}
+.RestaurentContainer .HorizonItem .Image img {
+  width: 100%;
+  height: 100%;
+}
+.RestaurentContainer .Detail {
+  background: #AAAAAA;
+  width: 245px;
+  height: 165px;
+}
+.RestaurentContainer .Detail .Title {
+  font-size: 14px;
+  padding-top: 12px;
+  padding-left: 12px;
+}
+.RestaurentContainer .Detail .Description {
+  font-size: 12px;
+  padding-top: 8px;
+  padding-left: 12px;
+}
+.RestaurentContainer .Detail .Property1 {
+  position: absolute !important;
+  left: 10px;
+  top: 115px;
+  width: 225px;
+  height: 20px;
+}
+.RestaurentContainer .Detail .Property1 div {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  font-size: 11px;
+  width: 100%;
+  height: 100%;
+  line-height: 20px;
+}
+.RestaurentContainer .Detail .Property1 .BusinessHours {
+  padding-left: 15px;
+  width: 210px;
+  background: url(/images/Brand/TimeIconRed.png) no-repeat left;
+}
+.RestaurentContainer .Detail .Property1 .FloorGuide {
+  padding-right: 15px;
+  width: 210px;
+  text-align: right;
+  background: url(/images/Brand/SwrilIconRed.png) no-repeat right;
+}
+.RestaurentContainer .Detail .Property2 {
+  position: absolute !important;
+  left: 10px;
+  top: 138px;
+  width: 225px;
+  height: 20px;
+}
+.RestaurentContainer .Detail .Property2 div {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  font-size: 11px;
+  width: 100%;
+  height: 100%;
+  line-height: 20px;
+}
+.RestaurentContainer .Detail .Property2 .Phone {
+  padding-left: 15px;
+  width: 210px;
+  background: url(/images/Brand/PhoneIconRed.png) no-repeat left;
+}
+.RestaurentContainer .Detail .Property2 .Url {
+  text-align: right;
+}
+.RestaurentContainer .Detail.Red {
+  background: #9A0000;
+  color: #FFFFFF;
+}
+.RestaurentContainer .Detail.Red .Property1 {
+  border-bottom: solid 1px #A93838;
+}
+.RestaurentContainer .Detail.Black {
+  background: #000000;
+  color: #FFFFFF;
+}
+.RestaurentContainer .Detail.Black .Property1 {
+  border-bottom: solid 1px #383838;
+}
+.RestaurentContainer .Detail.White {
+  background: #FFFFFF;
+  color: #444444;
+}
+.RestaurentContainer .Detail.White .Property1 {
+  border-bottom: solid 1px #CCCCCC;
+}
+.RestaurentContainer .Detail.White .BusinessHours {
+  background: url(/images/Brand/TimeIcon.png) no-repeat left;
+}
+.RestaurentContainer .Detail.White .FloorGuide {
+  background: url(/images/Brand/SwrilIcon.png) no-repeat right;
+}
+.RestaurentContainer .Detail.White .Phone {
+  background: url(/images/Brand/PhoneIcon.png) no-repeat left;
+}
+.MainContent .Concern {
+  top: 45px;
+  left: 46.7%;
+  width: 660px;
+  margin-left: -325px;
+  padding-bottom: 45px;
+}
+.MainContent .Concern p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #808080;
+  font-size: 11px;
+  line-height: 22px;
+}
+.MainContent .Concern a {
+  color: #808080;
+  font-size: 11px;
+  text-decoration: none;
+}
+.MainContent .Concern a:hover {
+  color: #000000;
+}

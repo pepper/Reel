@@ -1,0 +1,19 @@
+extends layout
+
+block rightPanel
+	div(class="FAQSelector")
+		- each questionCategory in QuestionCategoryArray
+			img(class="HoverLink ChangeImage", faqSet="#{questionCategory.Title}", src="/images/FAQ/FAQ_B_#{questionCategory.Title}_#{questionCategory.Language}_L.png")
+			br
+
+block mainContent
+	div(class="FAQ")
+		- each questionCategory in QuestionCategoryArray
+			div(class="FAQSet #{questionCategory.Title}")
+				img(src="/images/FAQ/FAQ_#{questionCategory.Title}_#{questionCategory.Language}.png")
+				br
+				br
+				- each questionSet in questionCategory.QuestionList
+					div(class="Question") #{questionSet.Question}
+					div(class="Answer") !{questionSet.Answer}
+	script(src="/javascripts/faq.js")

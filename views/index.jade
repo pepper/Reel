@@ -1,0 +1,27 @@
+extends layout
+
+block moreScript
+	script(src="/javascripts/index.js")
+
+block mainContent
+	div(class="Index")
+		div(class="MainTitle")
+			div(class="MainTitleContent")
+				div 
+					a(href="/News/#{MainNews.Key}")
+						img(src="#{MainNews.TitleImage}")
+					br
+					| #{MainNews.ShortDescription}
+		div(class="MainImage")
+			a(href="/News/#{MainNews.Key}")
+				img(src="#{MainNews.MainImage}")
+		- each NewsItem in News
+			div(class="ImageItem #{NewsItem.BackgroundType}")
+				a(href="/News/#{NewsItem.Key}")
+					img(src="/images/News/#{NewsItem.Key}/Sticker.png")
+				div(class="Title")
+					span(class="Date") #{NewsItem.Date}
+					span(class="Text")
+						a(href="/News/#{NewsItem.Key}", class="HoverLink ChangeColor", overColor="#000000", outColor="#808080") #{NewsItem.Title}
+				div(class="Description")
+					a(href="/News/#{NewsItem.Key}", class="HoverLink ChangeColor", overColor="#000000", outColor="#808080") #{NewsItem.ShortDescription}

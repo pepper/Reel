@@ -1,0 +1,94 @@
+extends visit
+
+block mainContent
+	div(class="Location")
+		table
+			tr(class="Description")
+				td(class="Description", colspan="2")
+					img(src="/images/Visit/Location/Location_01_#{Language}.png")
+				td(class="MainMapContainer", rowspan="7")
+					div(class="MainMap", language="#{Language}")
+						div(class="Level1", style="background: url(/images/Visit/Location/Loaction_Map_Zoom01_#{Language}.jpg) no-repeat; width: 320px; height: 320px;")
+						div(style="height: 384px; width: 384px;")
+							img(class="Level2", src="/images/Visit/Location/Loaction_Map_Zoom02_#{Language}.jpg", alt="")
+							div(class="mapcontent")
+						div(style="height: 448px; width: 448px;")
+							img(class="Level3", src="/images/Visit/Location/Loaction_Map_Zoom03_#{Language}.jpg", alt="")
+							div(class="mapcontent")
+						div(style="height: 512px; width: 512px;")
+							img(class="Level4", src="/images/Visit/Location/Loaction_Map_Zoom04_#{Language}.jpg", alt="")
+							div(class="mapcontent")
+						div(style="height: 640px; width: 640px;")
+							img(class="Level5", src="/images/Visit/Location/Loaction_Map_Zoom05_#{Language}.jpg", alt="")
+							div(class="mapcontent")
+					div(class="ExternalMap ZoomIn", style="position: absolute; top: 20px; left: 450px;")
+						img(src="/images/Visit/Location/Loaction_Map_ZoomIn_L.jpg")
+					div(class="ExternalMap ZoomOut", style="position: absolute; top: 40px; left: 450px;")
+						img(src="/images/Visit/Location/Loaction_Map_ZoomOut_L.jpg")
+					div(class="ExternalMap Baidu", style="position: absolute; top: 280px; left: 450px;")
+						img(class="HoverLink ChangeImage", src="/images/Visit/Location/Loaction_B_Baidu_L.jpg")
+					div(class="ExternalMap Google", style="position: absolute; top: 300px; left: 450px;")
+						img(class="HoverLink ChangeImage", src="/images/Visit/Location/Loaction_B_Google_L.jpg")
+			tr(class="Description")
+				td(class="Description", colspan="2")
+					- if(Language == "Ch")
+						| 商场地址&nbsp;&nbsp;&nbsp;&nbsp;上海市静安区南京西路1601号（常德路交叉口)
+					- if(Language == "En")
+						| Address 1601 Nanjing Road (W), Shanghai, P.R.C. 200040
+			tr(class="Description")
+				td(class="Description", colspan="2")
+					- if(Language == "Ch")
+						| 营业时间&nbsp;&nbsp;&nbsp;&nbsp;每日10:00AM - 22:00PM
+					- if(Language == "En")
+						| Open Hours 10:00a.m. to 10:00p.m.
+			tr(class="Description")
+				td(class="Description", colspan="2")
+					img(src="/images/Visit/Location/Location_02_#{Language}.png")
+			tr(class="Description")
+				td(class="MiniDescription WithTrain")
+					- if(Language == "Ch")
+						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地铁二号线，静安寺站，4号出口
+					- if(Language == "En")
+						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Metro Line 2, Jin’an si, Exit 4
+				td(class="Sing #{Language}", value="A")
+			tr(class="Description")
+				td(class="MiniDescription WithTrain")
+					- if(Language == "Ch")
+						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地铁七号线，静安寺站，10号出口
+					- if(Language == "En")
+						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Metro Line 7, Jin’an si, Exit 10
+				td(class="Sing #{Language}", value="B")
+			tr(class="BigDescription")
+				td(class="BigDescription WithBus", colspan="2")
+					- if(Language == "Ch")
+						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15路、20路、21路、37路、40路、45路、76路、93路、94路、
+						br
+						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;113路、315路、321路、323路、327路、330路、506路、
+						br
+						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;824路、825路、830路、838路、921路、927路、旅游8号线
+					- if(Language == "En")
+						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15、20、21、37、40、45、76、93、94、113、315、
+						br
+						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;321、323、327、330、506、824、
+						br
+						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;825、830、838、 921、927、Tour Line 8
+			tr(class="Description")
+				td(class="Description", colspan="2")
+					img(src="/images/Visit/Location/Location_03_#{Language}.png")
+				td(class="SecondMapContainer", rowspan="5")
+					div(class="SecondMap", style="margin-top:5px")
+						div(class="Level1", style="background: url(/images/Visit/Location/Location_Park_#{Language}.jpg) no-repeat; width: 320px; height: 320px;")
+			tr(class="Description")
+				td(class="Description", colspan="2") 与越洋广场共用停车场. 汽车入口位于常德路上
+			tr(class="Description")
+				td(class="Description", colspan="2")
+					- if(Language == "Ch")
+						| 停车费用方式&nbsp;&nbsp;&nbsp;&nbsp;1小时15元，每日最高上限120元
+					- if(Language == "En")
+						| RMB 15 per hour, Maximum RMB 120 per day
+			tr(class="Description")
+				td(class="Description", colspan="2", style="height:123px;vertical-align:top;")
+					| 第二个小时起以半个小时为收费单位，
+					br
+					| 收费金额为人民币7.50元/个/半小时
+	script(src="/javascripts/visitLocation.js")

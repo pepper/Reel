@@ -1,0 +1,357 @@
+.MainContent .FloorGuideReelPlace{
+	left:			50%;
+	margin-left:	-339px;
+	width:			679px;
+	height:			639px;
+	margin-bottom:	45px;
+	.FloorGuideBackground{
+		position:	absolute;
+		top:		0px;
+		left:		0px;
+		width:		679px;
+		height:		639px;
+		z-index:	100;
+	}
+	.FloorGuideOver{
+		position:	absolute;
+		top:		0px;
+		left:		0px;
+		width:		679px;
+		height:		639px;
+		z-index: 	1000;
+	}
+}
+
+.MainContent .FloorGuide{
+	left:			50%;
+	margin-bottom:	45px;
+	.FloorGuideBackground{
+		position:	absolute;
+		top:		0px;
+		left:		0px;
+		z-index:	100;
+	}
+	.FloorGuideOver{
+		position:	absolute;
+		top:		0px;
+		left:		0px;
+		z-index: 	1000;
+	}
+	map{
+		position:	absolute;
+		top:		0px;
+		left:		0px;
+	}
+}
+
+.MainContent{
+	.VisitFloor{
+		margin-top:		48px;
+	}
+	.FloorGuide1F{
+		top:			2px;
+		margin-left:	-322px;
+		width:			614px;
+		height:			578px;
+		div,map{
+			width:		614px;
+			height:		578px;
+		}
+	}
+	.FloorGuide2F,.FloorGuide3F,.FloorGuide4F,.FloorGuide5F{
+		margin-left:	-299px;
+		width:			593px;
+		height:			569px;
+		div,map{
+			width:		593px;
+			height:		569px;
+		}
+	}
+	.FloorGuideB1{
+		margin-left:	-400px;
+		width:			740px;
+		height:			614px;
+		div,map{
+			width:		740px;
+			height:		614px;
+		}
+	}
+	.FloorGuideB2{
+		margin-left:	-435px;
+		width:			775px;
+		height:			614px;
+		div,map{
+			width:		775px;
+			height:		614px;
+		}
+	}
+}
+
+.AreaList{
+	width:					240px;
+	height:					420px;
+	position:				relative;
+	overflow:				hidden;
+	border-top:				dotted 1px #808080;
+	border-bottom:			dotted 1px #808080;
+	.AreaListPanel{
+		position:			absolute;
+		display:			block;
+	}
+	div{
+		position:			static;
+	}
+	.Title{
+		margin-top:			15px;
+		margin-bottom:		23px;
+		font-weight:		bold;
+		font-size:			14px;
+	}
+	.ReelPlaceSelector{
+		margin:				-2px;
+		padding:			0px;
+	}
+	.Selector{
+		font-size:			11px;
+		line-height:		20px;
+		color:				#808080;
+		cursor:				pointer;
+	}
+	.Selector.Selected{
+		color:				#000000;
+	}
+	img{
+		cursor:				pointer;
+	}
+	.TopMask{
+		position:	absolute;
+		top:		0px;
+		left:		0px;
+		height:		15px;
+		width:		100%;
+		background:	#FFFFFF;
+	}
+	.BottomMask{
+		position:	absolute;
+		bottom:		0px;
+		left:		0px;
+		height:		15px;
+		width:		100%;
+		background:	#FFFFFF;
+	}
+}
+.AreaListScrollButton{
+	margin-top:			10px;
+}
+.FloorGuideReelPlaceAreaList{
+	border-bottom:			none;
+	height:					660px;
+	.Seperator{
+		width:				100%;
+		height:				0px;
+		border-bottom:		dotted 1px #808080;
+	}
+	.Detail{
+		padding:			10px;
+		padding-top:		0px;
+		.Title{
+			margin-top:		10px;
+			margin-bottom:	10px;
+			font:			bold 14px Times;
+		}
+		.Description{
+			font-size:		9px;
+			color:			#666666;
+			line-height:	20px;
+		}
+		.Photo{
+			margin-top: 	10px;
+		}
+	}
+}
+/*.FloorGuide4FAreaList,.FloorGuideB1AreaList,.FloorGuideB2AreaList{
+	position:		relative;
+	height:		512px;
+	overflow:		hidden;
+	.AreaListPanel{
+		position:	absolute;
+		display:	block;
+	}
+}*/
+
+.MainContent .About{
+	top:			45px;
+	left:			50%;
+	width:			755px;
+	margin-left:	-377px;
+	margin-bottom:	45px;
+	.MainImage{
+		height:	334px;
+	}
+	p{
+		padding-top:	10px;
+		padding-bottom: 5px;
+		color:			#83837E;
+		font-size:		11px;
+		line-height:	22px;
+	}
+	//Must Setting Image size
+}
+
+.MainContent .Location{
+	@FontColor:		#808080;
+	top:			45px;
+	left:			50%;
+	width:			755px;
+	margin-left:	-377px;
+	margin-bottom:	90px;
+	table{
+		width:	755px;
+		height:	320px;
+		.MainMapContainer{
+			width:	320px;
+			.MainMap{
+				width:	320px;
+				height:	320px;
+				margin-left:20px;
+				cursor: move; 
+				overflow: hidden;
+				.Sing_4{
+					position:	absolute;
+					top:		390px;
+					left:		38px;
+				}
+				.Sing_10{
+					position:	absolute;
+					top:		470px;
+					left:		245px;
+				}
+				.Sing_P{
+					position:	relative;
+					top:		163px;
+					left:		114px;
+				}
+				.Baidu{
+					position:	absolute;
+					top:		200px;
+					left:		200px;
+					cursor:		pointer;
+				}
+				.Google{
+					position:	absolute;
+					top:		250px;
+					left:		250px;
+					cursor:		pointer;
+				}
+			}
+		}
+		.SecondMapContainer{
+			width:	248px;
+			.SecondMap{
+				margin-left:20px;
+				width:	320px;
+				height:	248px;
+				overflow: hidden;
+			}
+		}
+		td{
+			color:			@FontColor;
+		}
+		tr.Description{
+			height:			39px;
+		}
+		td.Description{
+			width:			415px;
+			border-bottom:	dotted 1px #83837E;
+			font-size:		11px;
+			line-height: 	22px;
+			border-spacing: 0px;
+		}
+		td.MiniDescription{
+			width:			315px;
+			border-bottom:	dotted 1px #83837E;
+			font-size:		11px;
+			line-height: 	22px;
+			border-spacing: 0px;
+		}
+		td.Sing{
+			width:			100px;
+			border-bottom:	dotted 1px #83837E;
+			font-size:		11px;
+			line-height: 	22px;
+			border-spacing: 0px;
+			cursor:			pointer;
+			&.Ch{
+				background:		url(/images/Visit/Location/Location_B_MAP_Ch_L.png) no-repeat;
+			}
+			&.En{
+				background:		url(/images/Visit/Location/Location_B_MAP_En_L.png) no-repeat;
+			}
+		}
+		td.Sing:hover{
+			&.Ch{
+				background:		url(/images/Visit/Location/Location_B_MAP_Ch_D.png) no-repeat;
+			}
+			&.En{
+				background:		url(/images/Visit/Location/Location_B_MAP_En_D.png) no-repeat;
+			}
+		}
+		td.Park{
+			width:			100px;
+			border-bottom:	dotted 1px #83837E;
+			font-size:		11px;
+			line-height: 	22px;
+			border-spacing: 0px;
+			background:		url(/images/Visit/Location/Location_B_MAP_L.png) no-repeat;
+			cursor:			pointer;
+		}
+		td.Park:hover{
+			background:		url(/images/Visit/Location/Location_B_MAP_D.png) no-repeat;
+		}
+		tr.BigDescription{
+			height:			79px;
+		}
+		td.BigDescription{
+			width:			415px;
+			height:			79px;
+			border-bottom:	dotted 1px #83837E;
+			font-size:		11px;
+			line-height: 	22px;
+			border-spacing: 0px;
+		}
+		.WithTrain{
+			background:url(/images/Visit/Location/Location_Sing_01.png) no-repeat;
+		}
+		.WithBus{
+			height:			80px;
+			background:url(/images/Visit/Location/Location_Sing_02.png) no-repeat;
+		}
+		.MpaMarkLink{
+			width:			100px;
+			height:			40px;
+			border-bottom:	dotted 1px #83837E;
+			font-size:		11px;
+			line-height: 	1px;
+		}
+	}
+}
+
+.FloorGuideSubMenu{
+	border-top:dotted 1px #4D4D4D;
+	margin-top:15px;
+	margin-bottom:15px;
+}
+
+.FloorGuideSubMenu div{
+	width:100px;
+	border-bottom:dotted 1px #4D4D4D;
+}
+
+.VisitSelector{
+	div{
+		position: relative;
+	}
+	img{
+		cursor:	pointer;
+	}
+}

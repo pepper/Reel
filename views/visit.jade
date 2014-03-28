@@ -1,0 +1,31 @@
+extends layout
+
+block leftPanel
+	div(class="VisitSelector")
+		div(subMenu="FloorGuideSubMenu")
+			a(href="/Visit/Floor")
+				img(class="#{(VisitTopic == 'Floor')?'Selected':''} HoverLink ChangeImage FloorGuideSubMenuItem", src="/images/Visit/LeftPanel/Visit_B_FloorGuide_#{Language}_L.png")
+		div(class="SubMenu FloorGuideSubMenu #{(VisitTopic == 'Floor')?'Selected':''}")
+			div(topic="FloorGuideReelPlace")
+				img(class="Selected HoverLink ChangeImage", src="/images/Visit/LeftPanel/V_B_FG_00_L.png")
+			div(topic="FloorGuide1F")
+				img(class="HoverLink ChangeImage", src="/images/Visit/LeftPanel/V_B_FG_01_L.png")
+			div(topic="FloorGuide2F")
+				img(class="HoverLink ChangeImage", src="/images/Visit/LeftPanel/V_B_FG_02_L.png")
+			div(topic="FloorGuide3F")
+				img(class="HoverLink ChangeImage", src="/images/Visit/LeftPanel/V_B_FG_03_L.png")
+			div(topic="FloorGuide4F")
+				img(class="HoverLink ChangeImage", src="/images/Visit/LeftPanel/V_B_FG_04_L.png")
+			div(topic="FloorGuide5F")
+				img(class="HoverLink ChangeImage", src="/images/Visit/LeftPanel/V_B_FG_05_L.png")
+			div(topic="FloorGuideB1")
+				img(class="HoverLink ChangeImage", src="/images/Visit/LeftPanel/V_B_FG_B1_L.png")
+			div(topic="FloorGuideB2")
+				img(class="HoverLink ChangeImage", src="/images/Visit/LeftPanel/V_B_FG_B2_L.png")
+		div
+			a(href="/Visit/Location")
+				img(class="#{(VisitTopic == 'Location')?'Selected':''} HoverLink ChangeImage", src="/images/Visit/LeftPanel/Visit_B_Location_#{Language}_L.png")
+		div
+			a(href="/Visit/About")
+				img(class="#{(VisitTopic == 'About')?'Selected':''} HoverLink ChangeImage", src="/images/Visit/LeftPanel/Visit_B_About_#{Language}_L.png")
+	script(src="/javascripts/visit.js")

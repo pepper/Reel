@@ -1,0 +1,22 @@
+extends layout
+
+block mainContent
+	div(class="Concern")
+		- if(Language == "Ch")
+			img(src="/images/Concern/Concern.png")
+			p
+				| 亲爱的顾客您好，欢迎关注芮欧百货官方微博（
+				a(href="//weibo.com/reelshanghai", target="_blank") weibo.com/reelshanghai
+				| ）及时了解更多商场丰富信息，同时也欢迎您透过客服信箱：
+				a(href="mailto:eservice@reelshanghai.com") eservice@reelshanghai.com
+				| 传达您的宝贵意见，我们将竭诚为您答复。（贴心小提醒：敬请于信件中留下您的个人联络资料，如：姓名、联络电话、电子信箱等，以利客服人员尽速与您联系。）您亦可拨打客服专线：+86 21 22309788 或 4001559788，将有客服人员为您解说与服务，或至下列常见问题中查询您所需要的信息。
+				br
+				| 客服专线服务时间每日早上10点至晚上10点。
+		- if(Language == "En")
+			img(src="/images/Concern/Concern_En.png")
+			p
+				| Dear customer, thank you to follow the official Weibo of Réel Department Store (weibo.com/reelshanghai)
+				br
+				| to acquire a wealth of information of the our department store; you’re also welcomed to express your ideas or suggestions through our Customer Service email: eservice@reelshanghai.com, and we will be wholeheartedly at your service.
+				br
+				| (Warm tips: please leave your personal contact information such as name, telephone number, e-mail, etc. in your e-mail so that a timely contact will be facilitated.) You can also call the customer service line +86 21 22309788 or 4001559788 for explanation and services, or inquire about the following FAQ for more information. Service hours of customer service line: 10:00 to 22:00.

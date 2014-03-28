@@ -1,0 +1,25 @@
+extends layout
+
+block mainContent
+	div(class="News")
+		div(class="NewsTextContainer")
+			div(class="NewsTextTitle") #{News.Title}
+			div(class="NewsTextDate") #{News.Date}
+			div(class="NewsTextDescription")
+				- each Description in News.Description
+					p #{Description}
+		div(class="NewsImageContainer")
+			- for(var i = 1; i <= News.ImageQuantity; i++){
+				img(src="/images/News/#{News.Key}/#{((i < 10)?'0'+i:i)}.jpg")
+			- }
+	div(class="NewsSelectorContainer")
+		div(class="Title")
+			img(src="/images/News/Title.png")
+		- each News in NewsList
+			a(href="/News/#{News.Key}")
+				div(class="NewsItem")
+					img(src="/images/News/#{News.Key}/Selector.png")
+					div(class="Description")
+						| #{News.Title}
+						br
+						| #{News.Date}

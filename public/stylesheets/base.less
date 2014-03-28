@@ -1,0 +1,141 @@
+@BasicTopLine:	160px;
+@BasicLeftLine:	45px;
+@BasicRightLine:78%;
+
+@LeftPanelTop:	151px;
+@RightPanelTop:	160px;
+
+@TopMenuHeight: 115px;
+
+*{
+	font-family:	"Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+html, body{
+	width:		100%;
+	padding:	0px;
+	margin:		0px;
+}
+
+img{
+	padding:		0px;
+	margin:			0px;
+	border-width:	0px;
+}
+
+div{
+	padding:		0px;
+	margin:			0px;
+	position: absolute;
+}
+
+.Selected{
+	cursor: auto;
+}
+
+.Dark{
+	background:	#000000;
+}
+.Gray{
+	background:	#F4EEDF;
+}
+.Light{
+	background:	#FFFFFF;
+}
+
+.DarkFront{
+	background:	#FFFFFF;
+}
+.GrayFront{
+	background:	#000000;
+}
+.LightFront{
+	background:	#000000;
+}
+
+.MainContainer{
+	width:	100%;
+	z-index:500;
+	border:	solid 0px #000000;
+
+	.LeftPanel{
+		top:	@LeftPanelTop - @TopMenuHeight + 3px;
+		left:	@BasicLeftLine;
+		z-index:2000;
+	}
+
+	.RightPanel{
+		top:	@RightPanelTop - @TopMenuHeight + 3px;
+		left:	@BasicRightLine;
+		z-index:2000;
+	}
+
+	.MainContentContainer{
+		top:		@TopMenuHeight;
+		bottom:		70px;
+		left:		0px;
+		width:		100%;
+		z-index:	10;
+		overflow:	hidden;
+		.ScrollBarContainer{
+			top:		0px;
+			right:		0px;
+			width:		23px;
+			height:		100%;
+			.ScrollBar{
+				top:		0px;
+				right:		0px;
+				width:		23px;
+				height:		68px;
+				z-index:	1000;
+				background:	url(/images/Navigation/Bar.jpg) no-repeat;
+				cursor:		pointer;
+			}
+		}
+		.MainContent{
+			left:0px;
+			width:100%;
+			> div{
+				padding-bottom:	40px;
+			}
+			div{
+				position:	relative;
+			}
+		}
+		> .BottomMask{
+			position:		absolute;
+			bottom:			0px;
+			width:			100%;
+			height:			40px;
+			background:		#FFFFFF;
+			.Underline{
+				position:		absolute;
+				width:			804px;
+				left:			46%;
+				margin-left:	-400px;
+				bottom:			0px;
+				height:			0px;
+				//border-bottom:	dotted 1px #504C4D;
+			}
+		}
+	}
+}
+
+.HoverLink{
+	cursor: pointer;
+}
+
+@import "topMenu.less";
+@import "footer.less";
+@import "lead.less";
+@import "index.less";
+@import "blog.less";
+@import "contactUs.less";
+@import "visit.less";
+@import "faq.less";
+@import "services.less";
+@import "news.less";
+@import "pr.less";
+@import "brands.less";
+@import "concern.less";
+

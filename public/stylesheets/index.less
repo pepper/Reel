@@ -1,0 +1,138 @@
+@IndexImageItemWidth:	338px;
+@IndexImageItemHeight:	458px;
+
+.Index{
+	top:			45px;
+	left:			50%;
+	margin-left:	-507px;
+	width:			1014px;
+	margin-bottom:	45px;
+	color:			#808080;
+	.MainTitle{
+		display:	table;
+		height:		480px;
+		width:		295px;
+		overflow:	hidden;
+	}
+	.MainTitleContent{
+		position:		relative !important;
+		display:		table-cell;
+		vertical-align:	middle;
+		img{
+			margin-bottom:		10px;
+		}
+		div{
+			position:	relative !important;
+		}
+	}
+
+	.MainDescription{
+		position:	absolute;
+		left:		8px;
+		top:		215px;
+		width:		295px;
+		font-size:	11px;
+		line-height:18px;
+		color:		#808080;
+	}
+
+	.MainImage{
+		position:	absolute;
+		width:		665px;
+		height:		480px;
+		top:		0px;
+		left:		347px;
+		background:	url(/images/Index/Sticker-MainBK.jpg) no-repeat;
+		img{
+			position: absolute;
+			top:59px;
+			left:57px;
+		}
+	}
+
+	div.ImageItem{
+		position:	absolute;
+		top:		0px;
+		left:		0px;
+		width:		@IndexImageItemWidth;
+		height:		@IndexImageItemHeight;
+		img{
+			position:	absolute;
+			top:		65px;
+			left:		29px;
+			width:		280px;
+			height:		190px;
+		}
+		.Title{
+			top:		336px;
+			left:		10px;
+			width:		318px;
+			height:		49px;
+			border-top:solid 1px #E4E4E4;
+			.Date{
+				position:	absolute;
+				top:		3px;
+				left:		3px;
+				font-weight:bold;
+				font-size:	11px;
+				color:		#808080;
+			}
+			.Text{
+				position:	absolute;
+				bottom:		5px;
+				left:		3px;
+				padding-top:12px;
+				font-size:	16px;
+				color:		#808080;
+				a{
+					font-size:	16px;
+					color:		#808080;
+					text-decoration: none;
+				}
+			}
+		}
+		.Description{
+			top:		385px;
+			left:		10px;
+			width:		318px;
+			height:		73px;
+			border-top:	solid 1px #E4E4E4;
+			font-size:	11px;
+			color:		#808080;
+			padding:	3px;
+			padding-top:8px;
+			a{
+				font-size:			11px;
+				color:				#808080;
+				text-decoration:	none;
+			}
+		}
+	}
+	div.Type1{
+		background: url(/images/Index/StickerBK_01.jpg) no-repeat !important;
+	}
+	div.Type2{
+		background: url(/images/Index/StickerBK_02.jpg) no-repeat !important;
+	}
+	div.Type3{
+		background: url(/images/Index/StickerBK_03.jpg) no-repeat !important;
+	}
+	div.Type4{
+		background: url(/images/Index/StickerBK_04.jpg) no-repeat !important;
+	}
+	div.Type5{
+		background: url(/images/Index/StickerBK_05.jpg) no-repeat !important;
+	}
+	div.Type6{
+		background: url(/images/Index/StickerBK_06.jpg) no-repeat !important;
+	}
+	div.NoBackground{
+		img{
+			position:	absolute;
+			top:		0px;
+			left:		0px;
+			width:		338px;
+			height:		320px;
+		}
+	}
+}

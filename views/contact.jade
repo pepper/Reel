@@ -1,0 +1,54 @@
+extends layout
+
+block mainContent
+	div(class="ContactUs")
+		- if(Language == "Ch")
+			img(src="/images/ContactUs/Contact_Mail.png")
+			p
+				| 亲爱的顾客您好，如对芮欧百货(上海)有限公司有任何疑问或建议，
+				br
+				| 欢迎您透过客服信箱传达，我们将竭诚为您答复。
+				br
+				| 客服信箱 :
+				a(href="mailto:eservice@reelshanghai.com") eservice@reelshanghai.com
+				br
+				| （贴心小提醒：敬请于信件中留下您的个人联络资料，如:姓名、联络电话、电子信箱…等，以利客服人员尽速与您联系。）
+			img(src="/images/ContactUs/Contact_Line.png")
+			p
+				| 您亦可拨打客服专线：+86 21 22309788 或 4001559788
+				br
+				| 将有客服人员为您解说与服务，或至下列常见问题中查询您所需要的信息。
+				br
+				| 客服专线服务时间为每日早上10点至晚上10点。
+			img(src="/images/ContactUs/Contact_Cooperation.png")
+			p
+				| 欢迎光临芮欧网站，如欲提供合作提案内容，请于以下表格内填妥详细内容，
+				br
+				| 提案内容将会寄送相关部门，我们将会于审核信息后主动与您连络，谢谢！
+				br
+				div(class="Cooperation")
+					textarea(class="Content", placeholder="  提案内容")
+					input(type="text", placeholder="  公司名称")
+					input(type="text", placeholder="  姓名")
+					input(type="text", placeholder="  邮箱地址")
+					input(type="text", placeholder="  连络电话")
+					div(class="SubmitButton")
+						img(src="/images/ContactUs/SubmitButton.png")
+		- if(Language == "En")
+			img(src="/images/ContactUs/Contact_Mail_En.png")
+			p
+				| Dear customer, you’re also welcomed to express your ideas or suggestions through our Customer Service email: eservice@reelshanghai.com, and we will be wholeheartedly at your service.
+				br
+				| (Warm tips: please leave your personal contact information such as name, telephone number, e-mail, etc. in your e-mail so that a timely contact will be facilitated.)  Customer 
+			img(src="/images/ContactUs/Contact_Line_En.png")
+			p You can also call the customer service line +86 21 22309788 or 4001559788 for explanation and services, or inquire about the following FAQ for more information. Service hours of customer service line: 10:00 to 22:00.
+			img(src="/images/ContactUs/Contact_Cooperation_En.png")
+			p Welcome to Réel Department’s website and thank you for providing the cooperation proposal(s). Please complete the form below for more details and we will contact you after the content submitted to relevant departments being verified.
+				div(class="Cooperation")
+					textarea(class="Content", placeholder="  Proposal")
+					input(type="text", placeholder="  Company Name")
+					input(type="text", placeholder="  Contact’s Name")
+					input(type="text", placeholder="  Email")
+					input(type="text", placeholder="  Tel")
+					div(class="SubmitButton")
+						img(src="/images/ContactUs/SubmitButton.png")

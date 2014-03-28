@@ -1,0 +1,79 @@
+doctype html
+html
+	head
+		title REEL
+		block styles
+			link(rel="stylesheet", href="/stylesheets/bootstrap.min.css")
+			link(rel="stylesheet", href="/stylesheets/base.css")
+		block scripts
+			script(src="/javascripts/libraries/jquery.min.js")
+			script(src="/javascripts/libraries/jquery.ui.min.js")
+			script(src="/javascripts/libraries/underscore.min.js")
+			script(src="/javascripts/libraries/backbone.min.js")
+			script(src="/javascripts/libraries/bootstrap.min.js")
+			script(src="/javascripts/libraries/jquery.mousewheel.min.js")
+			script(src="/javascripts/libraries/mapbox.min.js")
+			script(src="/javascripts/libraries/raphael.min.js")
+		block moreScript
+	body
+		div(class="MainContainer #{BackgroundStyle}")
+			block mainContainer
+				div(class="TopMenu #{BackgroundStyle}")
+					div(class="Logo")
+						a(href="/")
+							img(src="/images/Navigation/LOGO_#{BackgroundStyle}.jpg")
+					div(class="MenuItemContainer")
+						a(href="/")
+							img(src="/images/Navigation/MS_#{BackgroundStyle}_News_L.jpg", class="#{(CurrentURL == '/')?'Selected':''} HoverLink ChangeImage MenuItem News")
+						a(href="/Blog")
+							img(src="/images/Navigation/MS_#{BackgroundStyle}_Blog_L.jpg", class="#{(CurrentURL == '/Blog')?'Selected':''} HoverLink ChangeImage MenuItem Blog")
+						a(href="/Brands")
+							img(src="/images/Navigation/MS_#{BackgroundStyle}_Brands_L.jpg", class="#{(CurrentURL == '/Brands')?'Selected':''} HoverLink ChangeImage MenuItem Brands")
+						a(href="/Visit")
+							img(src="/images/Navigation/MS_#{BackgroundStyle}_Visit_L.jpg", class="#{(CurrentURL == '/Visit')?'Selected':''} HoverLink ChangeImage MenuItem Visit")
+						a(href="/Services")
+							img(src="/images/Navigation/MS_#{BackgroundStyle}_Services_L.jpg", class="#{(CurrentURL == '/Services')?'Selected':''} HoverLink ChangeImage MenuItem Services")
+						img(src="/images/Navigation/MS_#{BackgroundStyle}_Search.jpg", class="SearchArea")
+						div(class="SearchBox")
+							input(type="text", name="Search")
+						div(class="SelectionBar #{BackgroundStyle}Front")
+				script(src="/javascripts/topMenu.js")
+				div(class="MainContentContainer")
+					div(class="LeftPanel")
+						block leftPanel
+					div(class="RightPanel")
+						block rightPanel
+					div(class="ScrollBarContainer")
+						div(class="ScrollBar")
+					div(class="MainContent")
+						block mainContent
+					- if(ShowBottomLine)
+						div(class="BottomMask")
+							div(class="Underline")
+		script(src="/javascripts/mainContainer.js")
+		block footer
+			div(class="Footer")
+				div(class="LanguageSelectionContainer")
+					a(href="#{CurrentURL}?language=En")
+						img(src="/images/Navigation/DLS_En_L.jpg", class="HoverLink ChangeImage FooterItem SwitchLanguage En")
+					a(href="#{CurrentURL}?language=Ch")
+						img(src="/images/Navigation/DLS_Ch_L.jpg", class="HoverLink ChangeImage FooterItem SwitchLanguage Ch")
+				div(class="CopyrightContainer")
+					img(src="/images/Navigation/CopyRight.jpg")
+				div(class="OtherLinkContainer")
+					a(href="/Privacy")
+						img(src="/images/Navigation/DRS_#{Language}_Privacy_L.jpg", class="#{(CurrentURL == '/Privacy‎')?'Selected':''} HoverLink ChangeImage FooterItem Privacy", language="#{Language}")
+					a(href="/Concern")
+						img(src="/images/Navigation/DRS_#{Language}_Concern_L.jpg", class="#{(CurrentURL == '/Concern')?'Selected':''} HoverLink ChangeImage FooterItem Concern", language="#{Language}")
+					a(href="/Contact")
+						img(src="/images/Navigation/DRS_#{Language}_Contact_L.jpg", class="#{(CurrentURL == '/Contact')?'Selected':''} HoverLink ChangeImage FooterItem Contact", language="#{Language}")
+					a(href="/Recruiting")
+						img(src="/images/Navigation/DRS_#{Language}_Recruiting_L.jpg", class="#{(CurrentURL == '/Recruiting')?'Selected':''} HoverLink ChangeImage FooterItem Recruiting", language="#{Language}")
+					a(href="/FAQ")
+						img(src="/images/Navigation/DRS_#{Language}_FAQ_L.jpg", class="#{(CurrentURL == '/FAQ')?'Selected':''} HoverLink ChangeImage FooterItem FAQ", language="#{Language}")
+					img(src="/images/Navigation/DRS_#{Language}_SiteMap_L.jpg", class="HoverLink ChangeImage FooterItem SiteMap", language="#{Language}")
+		script.
+			$(document).ready(function(){
+				_.templateSettings = { interpolate : /\{\{(.+?)\}\}/g };
+			});
+		script(src="/javascripts/utilities.js")
