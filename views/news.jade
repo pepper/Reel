@@ -1,25 +1,162 @@
 extends layout
 
+block moreScript
+	script(src="/javascripts/news.js")
+
 block mainContent
 	div(class="News")
 		div(class="NewsTextContainer")
-			div(class="NewsTextTitle") #{News.Title}
+			div(class="NewsTextTitle")
+				| #{News.Title}&nbsp;&nbsp;&nbsp;
+				- if(Administrator)
+					span(class="glyphicon glyphicon-pencil", data-toggle="modal", data-target="#EditNewsPanel")
+					| &nbsp;
+					span(class="glyphicon glyphicon-star", data-toggle="modal", data-target="#SetHeadNewsPanel")
+					| &nbsp;
+					span(class="glyphicon glyphicon-trash RemoveNews", data-news-key="#{News.Key}")
 			div(class="NewsTextDate") #{News.Date}
 			div(class="NewsTextDescription")
 				- each Description in News.Description
 					p #{Description}
 		div(class="NewsImageContainer")
-			- for(var i = 1; i <= News.ImageQuantity; i++){
-				img(src="/images/News/#{News.Key}/#{((i < 10)?'0'+i:i)}.jpg")
-			- }
+			- for(var i = 1; i <= News.ImageQuantity; i++)
+				img(src="/images/News/#{News.Key}_#{Language}/#{((i < 10)?'0'+i:i)}.jpg" class="RemoveImage" data-news-key="#{News.Key}" data-image-key="#{((i < 10)?'0'+i:i)}")
+			- if(Administrator)
+				span(class="glyphicon glyphicon-plus" style="font-size:48px" data-toggle="modal", data-target="#AddNewsImagePanel")
 	div(class="NewsSelectorContainer")
 		div(class="Title")
 			img(src="/images/News/Title.png")
+			- if(Administrator)
+				span
+					| &nbsp;&nbsp;&nbsp;
+					span(class="glyphicon glyphicon-plus" data-toggle="modal", data-target="#CreateNewsPanel")
 		- each News in NewsList
 			a(href="/News/#{News.Key}")
 				div(class="NewsItem")
-					img(src="/images/News/#{News.Key}/Selector.png")
+					img(src="/images/News/#{News.Key}_#{Language}/Selector.png")
 					div(class="Description")
 						| #{News.Title}
 						br
 						| #{News.Date}
+block panel
+	- if(Administrator)
+		div(class="modal fade", id="CreateNewsPanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/news", method="post", enctype="multipart/form-data")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Add News
+						div(class="modal-body")
+							span Date:
+							div(class="row")
+								div(class="col-md-4")
+									select(class="form-control input-sm", name="Year")
+										- for (var i = 2014; i < 2017; i++)
+											option(value="#{i}") #{i}
+								div(class="col-md-4")
+									select(class="form-control input-sm", name="Month")
+										- for (var i = 0; i < 12; i++)
+											option(value="#{i}") #{i + 1}
+								div(class="col-md-4")
+									select(class="form-control input-sm", name="Date")
+										- for (var i = 0; i < 31; i++)
+											option(value="#{i + 1}") #{i + 1}
+							span Title:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="Title")
+							span Short Description:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="ShortDescription")
+							span Description:
+							div(class="row")
+								div(class="col-md-10")
+									textarea(class="form-control input-sm", name="Description")
+							span Small Select Image
+							div(class="row")
+								div(class="col-md-10")
+									input(type="file", name="Selector" id="Selector")
+							span Index Cover Image
+							div(class="row")
+								div(class="col-md-10")
+									input(type="file", name="Sticker" id="Sticker")
+							span Background Type
+							div(class="row")
+								div(class="col-md-6")
+									select(class="form-control input-sm", name="BackgroundType")
+										option(value="NoBackground") NoBackground
+										- for (var i = 0; i < 6; i++)
+											option(value="Type#{i + 1}") Background Type#{i + 1}
+						div(class="modal-footer")
+							input(type="hidden", name="Language", value="#{Language}")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Create News
+		div(class="modal fade", id="AddNewsImagePanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/news/#{News.Key}/image", method="post", enctype="multipart/form-data")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Add News Image
+						div(class="modal-body")
+							div(class="row")
+								div(class="col-md-10")
+									input(type="file", name="Image" id="Image")
+						div(class="modal-footer")
+							input(type="hidden", name="Language", value="#{Language}")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Add
+		div(class="modal fade", id="EditNewsPanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/news/#{News.Key}", method="post")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Edit News
+						div(class="modal-body")
+							span Title:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="Title", value="#{News.Title}")
+							span Short Description:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="ShortDescription", value="#{News.ShortDescription}")
+							span Description:
+							div(class="row")
+								div(class="col-md-10")
+									textarea(class="form-control input-sm", name="Description") #{News.Description}
+							span Background Type
+							div(class="row")
+								div(class="col-md-6")
+									select(class="form-control input-sm", name="BackgroundType")
+										option(value="NoBackground") NoBackground
+										- for (var i = 0; i < 6; i++)
+											option(value="Type#{i + 1}") Background Type#{i + 1}
+						div(class="modal-footer")
+							input(type="hidden", name="Language", value="#{Language}")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Save News
+		div(class="modal fade", id="SetHeadNewsPanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/news/#{News.Key}/head_news", method="post", enctype="multipart/form-data")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Set Head News
+						div(class="modal-body")
+							span Main Image
+							div(class="row")
+								div(class="col-md-10")
+									input(type="file", name="MainSticker" id="MainSticker")
+							span Head Line
+							div(class="row")
+								div(class="col-md-10")
+									input(type="file", name="HeadLine" id="HeadLine")
+						div(class="modal-footer")
+							input(type="hidden", name="Language", value="#{Language}")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Set
+

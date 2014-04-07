@@ -1,0 +1,207 @@
+extends layout
+
+block leftPanel
+	div(class="BrandCategorySelector")
+		a(class="HoverLink BrandMapMode")
+			img(src="/images/Brand/Brand_A_Z_#{Language}_L.png")
+		br
+		- each brandCategory in BrandCategoryArray
+			a(class="HoverLink BrandFilter", brand="#{brandCategory.Brands.join()}")
+				img(src="/images/Brand/Brand_#{brandCategory.Key}_#{Language}_L.png")
+			br
+		a(class="HoverLink HaveSubMenu" sub_menu="Food")
+			img(src="/images/Brand/Brand_Food_#{Language}_L.png")
+		br
+		div(class="SubMenu Food")
+			a(class="HoverLink RestaurentMode")
+				img(src="/images/Brand/Brand_RestaurentA_#{Language}_L.png")
+			a(class="HoverLink FoodMode")
+				img(src="/images/Brand/Brand_RestaurentB_#{Language}_L.png")
+			br
+block rightPanel
+	div(class="BrandSelectorContainer")
+		div(class="BrandSelector")
+			- each Prefix in BrandPrefix
+				a(class="HeadLetter")
+					img(src="/images/Brand/#{Prefix.Prefix}_L.png", class="#{Prefix.Prefix}")
+				br
+				- each Brand in Prefix.Brands
+					a(class="HoverLink ChangeColor OpenBrand", overColor="#000000", outColor="#504C4D") #{Brand}
+					br
+			br
+		div(class="TopMask")
+		div(class="BottomMask")
+	div(class="BrandSelectorScrollButton")
+		img(class="HoverLink ChangeImage ScrollUp", src="/images/Brand/ScrollUp_L.png")
+		| &nbsp;&nbsp;
+		img(class="HoverLink ChangeImage ScrollDown", src="/images/Brand/ScrollDown_L.png")
+		- if(Administrator)
+			| &nbsp;&nbsp;&nbsp;&nbsp;
+			span(class="glyphicon glyphicon-plus" style="font-size:24px" data-toggle="modal", data-target="#CreateBrandPanel")
+block mainContent
+	div(class="BrandMapContainer")
+		div(id="canvas_container", class="BrandMap")
+	div(class="BrandContainer")
+		- each Brand in Brands
+			div(class="BrandItem #{Brand.Key}")
+				div(class="BrandHeader")
+					| #{Brand.Title}&nbsp;&nbsp;&nbsp;
+					span(class="glyphicon glyphicon-trash RemoveBrand", data-brand-key="#{Brand.Key}")
+				div(class="BrandContent")
+					img(class="BrandImage", src="/brands/#{Brand.Key}.jpg")
+					div(class="BrandDescription")
+						- if(Language == "En")
+							| #{Brand.Description_En}
+						- if(Language == "Ch")
+							| #{Brand.Description_Ch}
+					div(class="BrandProperty1")
+						div(class="BrandBusinessHours")
+							img(src="/images/Brand/TimeIcon.png")
+							div #{Brand.BusinessHours}
+						div(class="BrandFloorGuide")
+							div Floor Guide
+							img(src="/images/Brand/SwrilIcon.png")
+							
+					div(class="BrandProperty2")
+						div(class="BrandContact")
+							img(src="/images/Brand/PhoneIcon.png")
+							div #{Brand.Phone}
+						div(class="BrandURL")
+							a(href="http://#{Brand.Url}", target="_blank") #{Brand.Url}
+	div(class="FoodContainer")
+		- each Food in Foods
+			div(class="FoodItem #{Food.Key}")
+				div(class="FoodHeader") #{Food.Title}
+				div(class="FoodContent")
+					img(class="FoodImage", src="/foods/#{Food.Key}.jpg")
+					div(class="FoodDescription")
+						- if(Language == "En")
+							| #{Food.Description_En}
+						- if(Language == "Ch")
+							| #{Food.Description_Ch}
+					div(class="FoodProperty1")
+						div(class="FoodBusinessHours")
+							img(src="/images/Brand/TimeIcon.png")
+							div #{Food.BusinessHours}
+						div(class="FoodFloorGuide")
+							div Floor Guide
+							img(src="/images/Brand/SwrilIcon.png")
+							
+					div(class="FoodProperty2")
+						div(class="FoodContact")
+							img(src="/images/Brand/PhoneIcon.png")
+							div #{Food.Phone}
+						div(class="FoodURL")
+							a(href="http://#{Food.Url}", target="_blank") #{Food.Url}
+	div(class="RestaurentContainer")
+		- each Restaurent in Restaurents
+			if Restaurent.Type == "block"
+				div(class="BlockItem")
+					- each i in [0, 1]
+						div(class="HorizonItem")
+							div(class="Detail #{Restaurent.Brand[i].Style}")
+								div(class="Title") #{Restaurent.Brand[i].Title}
+								div(class="Description")
+									- if(Language == "En")
+										| !{Restaurent.Brand[i].Description_En.replace(/\n/g, '<br />')}
+									- if(Language == "Ch")
+										| !{Restaurent.Brand[i].Description_Ch.replace(/\n/g, '<br />')}
+								div(class="Property1")
+									div(class="BusinessHours") #{Restaurent.Brand[i].BusinessHours}
+									div(class="FloorGuide") Floor Guide
+								div(class="Property2")
+									div(class="Phone") #{Restaurent.Brand[i].Phone}
+									div(class="Url") #{Restaurent.Brand[i].Url}
+							div(class="Image")
+								img(src="/restaurents/#{Restaurent.Brand[i].Key}.jpg")
+			else if Restaurent.Type == "vertical"
+				div(class="VerticalItem")
+					div(class="Detail #{Restaurent.Style}")
+						div(class="Title") #{Restaurent.Title}
+						div(class="Description")
+							- if(Language == "En")
+								| !{Restaurent.Description_En.replace(/\n/g, '<br />')}
+							- if(Language == "Ch")
+								| !{Restaurent.Description_Ch.replace(/\n/g, '<br />')}
+						div(class="Property1")
+							div(class="BusinessHours") #{Restaurent.BusinessHours}
+							div(class="FloorGuide") Floor Guide
+						div(class="Property2")
+							div(class="Phone") #{Restaurent.Phone}
+							div(class="Url") #{Restaurent.Url}
+					div(class="Image")
+						img(src="/restaurents/#{Restaurent.Key}.jpg")
+	script(src="/javascripts/brands.js")
+
+block panel
+	- if(Administrator)
+		div(class="modal fade", id="CreateBrandPanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/brand", method="post", enctype="multipart/form-data")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Create Brand
+						div(class="modal-body")
+							span Title:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="Title")
+							span Description Chinese:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="Description_Ch")
+							span Description English:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="Description_En")
+							span Phone:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="Phone")
+							span BusinessHours:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="BusinessHours")
+							span Url:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="Url")
+							span Brand Image
+							div(class="row")
+								div(class="col-md-10")
+									input(type="file", name="Image")
+							span Filter
+							div(class="row")
+								div(class="col-md-6")
+									label
+										input(type="checkbox" name="Women")
+										| Women
+									| &nbsp;
+									label
+										input(type="checkbox" name="Man")
+										| Man
+									| &nbsp;
+									label
+										input(type="checkbox" name="Underwear")
+										| Underwear
+									| &nbsp;
+									label
+										input(type="checkbox" name="Accessory")
+										| Accessory
+									| &nbsp;
+									label
+										input(type="checkbox" name="Kids")
+										| Kids
+									| &nbsp;
+									label
+										input(type="checkbox" name="Beauty")
+										| Beauty
+									| &nbsp;
+									label
+										input(type="checkbox" name="Living")
+										| Living
+						div(class="modal-footer")
+							input(type="hidden", name="Language", value="#{Language}")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Create Brand

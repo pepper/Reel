@@ -14,6 +14,7 @@ html
 			script(src="/javascripts/libraries/jquery.mousewheel.min.js")
 			script(src="/javascripts/libraries/mapbox.min.js")
 			script(src="/javascripts/libraries/raphael.min.js")
+			script(src="/javascripts/libraries/bootbox.min.js")
 		block moreScript
 	body
 		div(class="MainContainer #{BackgroundStyle}")
@@ -72,6 +73,7 @@ html
 					a(href="/FAQ")
 						img(src="/images/Navigation/DRS_#{Language}_FAQ_L.jpg", class="#{(CurrentURL == '/FAQ')?'Selected':''} HoverLink ChangeImage FooterItem FAQ", language="#{Language}")
 					img(src="/images/Navigation/DRS_#{Language}_SiteMap_L.jpg", class="HoverLink ChangeImage FooterItem SiteMap", language="#{Language}")
+		block panel
 		script.
 			$(document).ready(function(){
 				_.templateSettings = { interpolate : /\{\{(.+?)\}\}/g };

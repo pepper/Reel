@@ -34,4 +34,22 @@ VisitLocationView = Backbone.View.extend({
 
 $(document).ready(function(){
 	window.visitLocationView = new VisitLocationView({ el: $(".MainContent .Location") });
+	$(".SubmitVisitLocation").click(function(){
+		var text = "";
+		$("#EditVisitLocationPanel").find("input").each(function(){
+			text = text + $(this).val() + "\n";
+		});
+		$.ajax({
+			url: "/fix_text",
+			type: "POST",
+			data:{
+				Topic: "VisitLocation",
+				Language: $("#EditVisitLocationPanel").data("language"),
+				Content: text
+			},
+			success: function(result) {
+				location.reload();
+			}
+		});
+	});
 });

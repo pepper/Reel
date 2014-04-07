@@ -4,11 +4,32 @@ block mainContent
 	div(class="ContactUs")
 		p
 			img(src="/images/Recruiting/Title.png")
-		p 
-			| Applicants who are interested in joining in Réel Department Store can send the resume to XXX@reelshanghai.com, and the Companywill arrange interviews according to the post requirements. Information of applicants who are not informed of the interview or recruitment will be kept in the Company's Human Resources Department and will not be returned. No call or visit allowed.
+			&nbsp;&nbsp;
+			- if(Administrator)
+				span(class="glyphicon glyphicon-pencil", style="font-size:12px", data-toggle="modal", data-target="#EditRecruitingPanel")
 			br
-			| Links to other human resources websites:
-			br
-			a(href="//www.51job.com") www.51job.com
-			br
-			a(href="//www.ChinaHR.com") www.ChinaHR.com
+			- each Content in ContentArray
+				if (Content.indexOf("#Paragraph#") >= 0) 
+					p #{Content.replace("#Paragraph# ", "")}
+				- else
+					span #{Content}
+					br
+block panel
+	- if(Administrator)
+		div(class="modal fade", id="EditRecruitingPanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/fix_text", method="post")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Edit Concern
+						div(class="modal-body")
+							div(class="row")
+								div(class="col-md-12")
+									textarea(class="form-control input-sm", name="Content", rows="10") #{OriginContent}
+						div(class="modal-footer")
+							input(type="hidden", name="Language", value="#{Language}")
+							input(type="hidden", name="Topic", value="Recruiting")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Save
+		

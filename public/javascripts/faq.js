@@ -27,6 +27,8 @@ FAQView = Backbone.View.extend({
 	},
 	events:{
 		"click .Question":"toggleAnswer",
+		"click .AddQuestion": "addQuestion",
+		"click .RemoveQuestion": "removeQuestion"
 	},
 	toggleAnswer: function(event){
 		if($(event.target).next(".Answer").is(':hidden')){
@@ -45,6 +47,43 @@ FAQView = Backbone.View.extend({
 		this.$el.find(".FAQSet").hide();
 		this.$el.find(".FAQSet." + faqSet).show();
 		$(window).trigger("resize");
+	},
+	addQuestion: function(event){
+		var title = $(event.target).data("title");
+		bootbox.prompt("Enter the question", function(question){
+			if(question && question != ""){
+				bootbox.prompt("Enter the answer", function(answer){
+					if(answer && answer != ""){
+						$.ajax({
+							url: "/faq/" + title,
+							type: "POST",
+							data:{
+								Question: question,
+								Answer: answer
+							},
+							success: function(result) {
+								window.location = "/faq";
+							}
+						});
+					}
+				});
+			}
+		});
+	},
+	removeQuestion: function(event){
+		var title = $(event.target).data("title");
+		var index = $(event.target).data("index");
+		bootbox.confirm("Are you sure want to remove question?", function(result){
+			if(result){
+				$.ajax({
+					url: "/faq/" + title + "/question/" + index,
+					type: "DELETE",
+					success: function(result) {
+						window.location = "/faq";
+					}
+				});
+			}
+		});
 	}
 });
 

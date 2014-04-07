@@ -11,9 +11,15 @@ block mainContent
 		- each questionCategory in QuestionCategoryArray
 			div(class="FAQSet #{questionCategory.Title}")
 				img(src="/images/FAQ/FAQ_#{questionCategory.Title}_#{questionCategory.Language}.png")
+				&nbsp;&nbsp;
+				- if(Administrator)
+					span(class="glyphicon glyphicon-plus AddQuestion", style="font-size:12px", data-title="#{questionCategory.Title}")
 				br
 				br
-				- each questionSet in questionCategory.QuestionList
-					div(class="Question") #{questionSet.Question}
+				- each questionSet, i in questionCategory.QuestionList
+					div(class="Question")
+						| #{questionSet.Question}
+						- if(Administrator)
+							span(class="glyphicon glyphicon-trash RemoveQuestion", style="font-size:12px", data-title="#{questionCategory.Title}", data-index="#{i}")
 					div(class="Answer") !{questionSet.Answer}
 	script(src="/javascripts/faq.js")

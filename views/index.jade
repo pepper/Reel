@@ -9,16 +9,16 @@ block mainContent
 			div(class="MainTitleContent")
 				div 
 					a(href="/News/#{MainNews.Key}")
-						img(src="#{MainNews.TitleImage}")
+						img(src="/images/News/#{MainNews.Key}_#{Language}/HeadLine.png")
 					br
 					| #{MainNews.ShortDescription}
 		div(class="MainImage")
 			a(href="/News/#{MainNews.Key}")
-				img(src="#{MainNews.MainImage}")
+				img(src="/images/News/#{MainNews.Key}_#{Language}/MainSticker.png")
 		- each NewsItem in News
 			div(class="ImageItem #{NewsItem.BackgroundType}")
 				a(href="/News/#{NewsItem.Key}")
-					img(src="/images/News/#{NewsItem.Key}/Sticker.png")
+					img(src="/images/News/#{NewsItem.Key}_#{Language}/Sticker.png")
 				div(class="Title")
 					span(class="Date") #{NewsItem.Date}
 					span(class="Text")

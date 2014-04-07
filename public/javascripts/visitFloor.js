@@ -15,6 +15,8 @@ VisitFloorDescriptionView = Backbone.View.extend({
 		"mouseout .FloorGuide4FAreaList":"stop4FPanel",
 		"click .AreaListScrollButton .ScrollUp":"scrollUp",
 		"click .AreaListScrollButton .ScrollDown":"scrollDown",
+		"click .AddSection": "addSection",
+		"click .RemoveSection": "removeSection"
 	},
 	moveB2Panel: function(event){
 		var context = this;
@@ -190,6 +192,43 @@ VisitFloorDescriptionView = Backbone.View.extend({
 		if(this.$el.find(".AreaSelector[value=" + target + "] img").length > 0){
 			this.$el.find(".AreaSelector[value=" + target + "] img").addClass("Selected").attr("src", this.$el.find(".AreaSelector[value=" + target + "] img").attr("src").replace("_L.png", "_D.png"));
 		}
+	},
+	addSection: function(event){
+		var floorLevel = $(event.target).data("floor-level");
+		bootbox.prompt("Enter section number", function(key){
+			if(key && key != ""){
+				bootbox.prompt("Enter brand name", function(title){
+					if(title && title != ""){
+						$.ajax({
+							url: "/floor/" + floorLevel,
+							type: "POST",
+							data:{
+								Key: key,
+								Title: title
+							},
+							success: function(result) {
+								window.location = "/Visit/Floor";
+							}
+						});
+					}
+				});
+			}
+		});
+	},
+	removeSection: function(event){
+		var floorLevel = $(event.target).data("floor-level");
+		var sectionKey = $(event.target).data("section-key");
+		bootbox.confirm("Are you sure want to remove brand?", function(result){
+			if(result){
+				$.ajax({
+					url: "/floor/" + floorLevel + "/section/" + sectionKey,
+					type: "DELETE",
+					success: function(result) {
+						window.location = "/Visit/Floor";
+					}
+				});
+			}
+		});
 	}
 });
 

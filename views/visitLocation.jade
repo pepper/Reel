@@ -2,6 +2,9 @@ extends visit
 
 block mainContent
 	div(class="Location")
+		- if(Administrator)
+			span(class="glyphicon glyphicon-pencil", style="font-size:24px", data-toggle="modal", data-target="#EditVisitLocationPanel")
+			br
 		table
 			tr(class="Description")
 				td(class="Description", colspan="2")
@@ -32,46 +35,41 @@ block mainContent
 			tr(class="Description")
 				td(class="Description", colspan="2")
 					- if(Language == "Ch")
-						| 商场地址&nbsp;&nbsp;&nbsp;&nbsp;上海市静安区南京西路1601号（常德路交叉口)
+						| 商场地址&nbsp;&nbsp;&nbsp;&nbsp;
 					- if(Language == "En")
-						| Address 1601 Nanjing Road (W), Shanghai, P.R.C. 200040
+						| Address&nbsp;
+					| #{ContentArray[0]}
 			tr(class="Description")
 				td(class="Description", colspan="2")
 					- if(Language == "Ch")
-						| 营业时间&nbsp;&nbsp;&nbsp;&nbsp;每日10:00AM - 22:00PM
+						| 营业时间&nbsp;&nbsp;&nbsp;&nbsp;
 					- if(Language == "En")
-						| Open Hours 10:00a.m. to 10:00p.m.
+						| Open Hours&nbsp;
+					| #{ContentArray[1]}
 			tr(class="Description")
 				td(class="Description", colspan="2")
 					img(src="/images/Visit/Location/Location_02_#{Language}.png")
 			tr(class="Description")
 				td(class="MiniDescription WithTrain")
-					- if(Language == "Ch")
-						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地铁二号线，静安寺站，4号出口
-					- if(Language == "En")
-						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Metro Line 2, Jin’an si, Exit 4
+					| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					| #{ContentArray[2]}
 				td(class="Sing #{Language}", value="A")
 			tr(class="Description")
 				td(class="MiniDescription WithTrain")
-					- if(Language == "Ch")
-						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;地铁七号线，静安寺站，10号出口
-					- if(Language == "En")
-						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Metro Line 7, Jin’an si, Exit 10
+					| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					| #{ContentArray[3]}
 				td(class="Sing #{Language}", value="B")
 			tr(class="BigDescription")
 				td(class="BigDescription WithBus", colspan="2")
-					- if(Language == "Ch")
-						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15路、20路、21路、37路、40路、45路、76路、93路、94路、
-						br
-						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;113路、315路、321路、323路、327路、330路、506路、
-						br
-						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;824路、825路、830路、838路、921路、927路、旅游8号线
-					- if(Language == "En")
-						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15、20、21、37、40、45、76、93、94、113、315、
-						br
-						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;321、323、327、330、506、824、
-						br
-						| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;825、830、838、 921、927、Tour Line 8
+					| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					| #{ContentArray[4]}
+					br
+					| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					| #{ContentArray[5]}
+					br
+					| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					| #{ContentArray[6]}
+					br
 			tr(class="Description")
 				td(class="Description", colspan="2")
 					img(src="/images/Visit/Location/Location_03_#{Language}.png")
@@ -79,16 +77,69 @@ block mainContent
 					div(class="SecondMap", style="margin-top:5px")
 						div(class="Level1", style="background: url(/images/Visit/Location/Location_Park_#{Language}.jpg) no-repeat; width: 320px; height: 320px;")
 			tr(class="Description")
-				td(class="Description", colspan="2") 与越洋广场共用停车场. 汽车入口位于常德路上
+				td(class="Description", colspan="2") #{ContentArray[7]}
 			tr(class="Description")
-				td(class="Description", colspan="2")
-					- if(Language == "Ch")
-						| 停车费用方式&nbsp;&nbsp;&nbsp;&nbsp;1小时15元，每日最高上限120元
-					- if(Language == "En")
-						| RMB 15 per hour, Maximum RMB 120 per day
+				td(class="Description", colspan="2") #{ContentArray[8]}
 			tr(class="Description")
 				td(class="Description", colspan="2", style="height:123px;vertical-align:top;")
-					| 第二个小时起以半个小时为收费单位，
+					| #{ContentArray[9]}
 					br
-					| 收费金额为人民币7.50元/个/半小时
+					| #{ContentArray[10]}
 	script(src="/javascripts/visitLocation.js")
+
+block panel
+	- if(Administrator)
+		div(class="modal fade", id="EditVisitLocationPanel" data-language="#{Language}")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					div(class="modal-header")
+						button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+						h4(class="modal-title") Edit Visit Location
+					div(class="modal-body")
+						span Address
+						div(class="row")
+							div(class="col-md-12")
+								input(class="form-control input-sm", value="#{ContentArray[0]}")
+						span Open Hours
+						div(class="row")
+							div(class="col-md-12")
+								input(class="form-control input-sm", value="#{ContentArray[1]}")
+						span Train1
+						div(class="row")
+							div(class="col-md-12")
+								input(class="form-control input-sm", value="#{ContentArray[2]}")
+						span Train2
+						div(class="row")
+							div(class="col-md-12")
+								input(class="form-control input-sm", value="#{ContentArray[3]}")
+						span Bus1
+						div(class="row")
+							div(class="col-md-12")
+								input(class="form-control input-sm", value="#{ContentArray[4]}")
+						span Bus2
+						div(class="row")
+							div(class="col-md-12")
+								input(class="form-control input-sm", value="#{ContentArray[5]}")
+						span Bus3
+						div(class="row")
+							div(class="col-md-12")
+								input(class="form-control input-sm", value="#{ContentArray[6]}")
+						span Parking1
+						div(class="row")
+							div(class="col-md-12")
+								input(class="form-control input-sm", value="#{ContentArray[7]}")
+						span Parking2
+						div(class="row")
+							div(class="col-md-12")
+								input(class="form-control input-sm", value="#{ContentArray[8]}")
+						span Parking3
+						div(class="row")
+							div(class="col-md-12")
+								input(class="form-control input-sm", value="#{ContentArray[9]}")
+						span Parking4
+						div(class="row")
+							div(class="col-md-12")
+								input(class="form-control input-sm", value="#{ContentArray[10]}")
+					div(class="modal-footer")
+						button(type="button", class="btn btn-default", data-dismiss="modal") Close
+						button(type="button", class="btn btn-primary SubmitVisitLocation") Save

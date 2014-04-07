@@ -6,8 +6,6 @@ exports.createNews = function(req, res){
 			Key: "20130601",
 			Date: "6月1日 2013",
 			HeadNews: true,
-			MainImage: "/images/News/20130601/MainSticker.png",
-			TitleImage: "/images/News/20130601/HeadLine.png",
 			Title: "芮欧百货六月开启全家欢乐之旅",
 			ShortDescription: "缤纷夏日，芮欧百货邀您全家总动员，开启欢乐之旅！6月1日起，芮欧百货开启一系列温馨活动，点亮今夏。在儿童节欢乐气氛的萦绕中，爸爸妈妈除了陪伴小孩尽情嬉戏，也可找回久违的童年回忆，享受与孩子们的幸福时光。",
 			Description: "2013年6月1日至16日，在儿童节欢乐气氛的萦绕中，芮欧百货为孩子们精心打造的巨型“芮欧涂鸦墙”在百货4楼亮相。清新可爱的画面背景，小朋友们在留白处随心涂鸦，并留下署名，共同创作巨型绘画作品，作品完成后将继续展览至6月30日。同时，芮欧百货4楼还为小朋友们准备了好吃的糖果和有趣的游乐设施。爸爸妈妈除了陪伴小孩尽情嬉戏，也可找回久违的童年回忆，与孩子们一起欢度儿童节假期。\n6月1日至30日，芮欧百货盛大启动“双重惊喜欢乐购”活动，顾客除享受购物优惠，更可凭任意消费，有机会赢得东京迪士尼乐园及香港迪士尼乐园“家庭随心游”。6月17日至30日，芮欧百货“夏日狂欢”积分换礼活动全年首轮启动回馈消费者，凭芮欧百货消费记录卡累计金额即可兑换不等值精致礼品，与家人一同分享喜悦。\n6月23日，由法国领事馆和上海市文化局联合举办的夏日音乐节，将在芮欧百货1楼RAT TAR ART BAR举办盛大音乐派对，在盛夏到来之前将城市的激情点燃。当日下午16时至晚上23时，来自全城的音乐爱好者将在芮欧百货RAT TAR ART BAR汇聚，感受世界知名乐队Monkey Philosophy、Crazy 88及众多音乐家的精彩表演。演出当日，音乐家们将在16时至17时特别举办一场儿童音乐会，邀请芮欧百货的小朋友客人和爸爸妈妈一起享受家庭欢聚的美好时光。\n6月30日，第三届“星光宝贝“初赛将在芮欧百货4楼闪亮开幕。届时，众多星光小宝贝们将身着芮欧百货内驻法国高级童装品牌Sergent Major，秀出独特才艺和气质，将六月专属的儿童假期和家庭欢聚的热闹气氛完美演绎。\n缤纷夏日，芮欧百货邀您全家总动员，来芮欧百货，开启欢乐之旅吧！",
@@ -71,8 +69,7 @@ exports.createNews = function(req, res){
 			Key: "20130601",
 			Date: "June 1, 2013",
 			HeadNews: true,
-			MainImage: "/images/News/20130601/MainSticker.png",
-			TitleImage: "/images/News/20130601/HeadLineEn.png",
+			Title: "A Happy Family Trip in June at Réel Department",
 			ShortDescription: "Starting from June 1st, a series of warm and sweet activities in Réel will highlight the whole summer.“Réel Grati Wall” on the fourth floor will oer children a space of imagination and creativity, where their fresh and lovely drawing...",
 			Description: "A Happy Family Trip in June at Réel Department\nFrom June 1 to 16, 2013, in the convivial atmosphere of Children's Day, the huge “Réel Grati Wall” for kids to draw their grati and signatures at the white space on the fresh and lovely background was presented on the fourth floor of Réel Department Store. The co-created giant paintings would be exhibited till June 30. Meanwhile, on the same floor delicious candies and fun rides were prepared for young kids that mom and dad will not only enjoy the happy hours with their children here but also retrieve the long-lost childhood memories.\nFrom June 1 to 30, \"Double Surprise Happy Shopping\" activities were grandly held at Réel Department Store that customers may have a chance to win the \"Free Family Travel\" to Tokyo or Hong Kong Disneyland in addition to enjoying shopping discounts. From June 17 to 30, Réel Department Store launched the \"Summer Carnival\" point-for-gift activity to feedback consumers that they can exchange exquisite gifts of varied values with the accumulated points of their Réel Tracking Card to share the joy with their families.\nOn June 23, the Summer Music Festival co-sponsored by the French Consulate and Shanghai Municipal Bureau of Culture at RAT TAR ART BAR on the first floor of Réel Department Store ignited the passion of the whole city before the height of summer. From 16:00 to 23:00 on that day, music lovers from all over the city gathered at RAT TAR ART BAR to enjoy the performances of world- renowned bands Monkey Philosophy, Crazy 88, and many other musicians. Meanwhile, a special concert for children was held from 16:00 to 17:00 by the musicians, where the young kids were invited to share the happy hours with their mom and dad.\nOn June 30, preliminaries of the third \"Starlight Baby\" contest shone on the fourth floor of Réel Department Store. The star kids dressed in Sergent Major, a highclass children's clothing brand from France at the Department, and showed their unique talent and temperament, perfectly interpreting the lively atmosphere of children’s holiday and family’s get-together exclusive to the month of June.\nIn the colorful summer, come with your whole family to Réel Department Store and start a trip of happiness and joy!",
 			ImageQuantity: 2,
@@ -348,12 +345,1888 @@ exports.createNews = function(req, res){
 			}]
 		}]);
 	});
-	// mongo.database.collection("floor", function(err, collection){
-	// 	collection.insert([{
-	// 		Language: "Ch",
-	// 		Floor: "1F",
-	// 		Key: "",
-	// 		Title: ""
-	// 	}]);
-	// })
+	mongo.database.collection("floor", function(err, collection){
+		collection.insert([{
+			Language: "Ch",
+			Floor: "1F",
+			Brands:[{
+				Key: "101",
+				Title: "101 Gucci"
+			},{
+				Key: "102",
+				Title: "102 Givenchy"
+			},{
+				Key: "103",
+				Title: "103 Sergio Rossi"
+			},{
+				Key: "105",
+				Title: "105 Saint Laurent"
+			},{
+				Key: "106",
+				Title: "106 Moncler"
+			},{
+				Key: "107",
+				Title: "107 Lanvin"
+			},{
+				Key: "108",
+				Title: "108 Balenciaga"
+			},{
+				Key: "109",
+				Title: "109 RAT TAR ART BAR"
+			},{
+				Key: "110",
+				Title: "110 Alexander McQueen"
+			},{
+				Key: "111",
+				Title: "111 Stella McCartney"
+			},{
+				Key: "112",
+				Title: "112 Marni"
+			},{
+				Key: "113",
+				Title: "113 Emilio Pucci"
+			},{
+				Key: "115",
+				Title: "115 Ralph Lauren"
+			}]
+		},{
+			Language: "Ch",
+			Floor: "2F",
+			Brands:[{
+				Key: "201",
+				Title: "201 Gucci"
+			},{
+				Key: "202-1",
+				Title: "202-1 Sarment"
+			},{
+				Key: "205",
+				Title: "205 Marni"
+			},{
+				Key: "206",
+				Title: "206 Moncler/Gamme Rouge"
+			},{
+				Key: "207",
+				Title: "207 Lanvin"
+			},{
+				Key: "208",
+				Title: "208 Alexander McQueen Men's"
+			},{
+				Key: "209",
+				Title: "209 Givenchy"
+			},{
+				Key: "210-5",
+				Title: "210-5 Yohji Yamamoto"
+			},{
+				Key: "210-7",
+				Title: "210-7 Alain Mikli"
+			},{
+				Key: "211",
+				Title: "211 Alexander Wang"
+			},{
+				Key: "212",
+				Title: "212 ACNE"
+			},{
+				Key: "213",
+				Title: "213 Costume National"
+			},{
+				Key: "216",
+				Title: "216 Ralph Lauren"
+			},{
+				Key: "218",
+				Title: "218 Helmut Lang"
+			}]
+		},{
+			Language: "Ch",
+			Floor: "3F",
+			Brands:[{
+				Key: "301-2",
+				Title: "301-2 JiCheng"
+			},{
+				Key: "303",
+				Title: "303 Gerard Darel"
+			},{
+				Key: "304",
+				Title: "304 Maje"
+			},{
+				Key: "306",
+				Title: "306 Theory"
+			},{
+				Key: "307",
+				Title: "307 Sandro"
+			},{
+				Key: "308",
+				Title: "308 Claudie Pierlot"
+			},{
+				Key: "309",
+				Title: "309 Jacobean"
+			},{
+				Key: "310",
+				Title: "310 SyncChic"
+			},{
+				Key: "311",
+				Title: "311 黄淑琦"
+			},{
+				Key: "319",
+				Title: "319 Unconditional"
+			},{
+				Key: "330",
+				Title: "330 Suunto"
+			},{
+				Key: "339",
+				Title: "339 Munich"
+			}]
+		},{
+			Language: "Ch",
+			Floor: "4F",
+			Brands:[{
+				Key: "401",
+				Title: "401 wise kids"
+			},{
+				Key: "404",
+				Title: "404 JACADI"
+			},{
+				Key: "405",
+				Title: "405 FIONA’S PRINCE"
+			},{
+				Key: "406-2",
+				Title: "406-2 NECK&NECK"
+			},{
+				Key: "407",
+				Title: "407 SERGENT MAJOR"
+			},{
+				Key: "410-2",
+				Title: "410-2 Marni"
+			},{
+				Key: "411-1",
+				Title: "411-1 Miss blumarine"
+			},{
+				Key: "411-2",
+				Title: "411-2 Stella McCartney"
+			},{
+				Key: "412-1",
+				Title: "412-1 Ice"
+			},{
+				Key: "413-1412-2",
+				Title: "412-2 Tuctuc/JEEP"
+			},{
+				Key: "413-1412-2",
+				Title: "413-1 Tuctuc/JEEP"
+			},{
+				Key: "413-2",
+				Title: "413-2 NEW BALANCE"
+			},{
+				Key: "415",
+				Title: "415 Ballon roage"
+			},{
+				Key: "415-1",
+				Title: "415-1 RIO"
+			},{
+				Key: "415-2",
+				Title: "415-2 Naturecolored"
+			},{
+				Key: "419-1",
+				Title: "419-1 bubble"
+			},{
+				Key: "423",
+				Title: "423 TRIUMPH"
+			},{
+				Key: "424-1",
+				Title: "424-1 Essence"
+			},{
+				Key: "424-2",
+				Title: "424-2 Aimer"
+			},{
+				Key: "425-1",
+				Title: "425-1 欣姿芳"
+			},{
+				Key: "425-2",
+				Title: "425-2 INTELLIGE"
+			},{
+				Key: "426",
+				Title: "426 CHASNEY BEAUTY"
+			},{
+				Key: "427",
+				Title: "427 LA FALINO"
+			},{
+				Key: "428",
+				Title: "428 ENWEIS"
+			},{
+				Key: "429-1",
+				Title: "429-1 Corsetc"
+			},{
+				Key: "430-1",
+				Title: "430-1 ILSEE"
+			},{
+				Key: "430-2",
+				Title: "430-2 Stella McCartney"
+			},{
+				Key: "431",
+				Title: "431 INNEE"
+			},{
+				Key: "433-1",
+				Title: "433-1 SIMONE PERELE"
+			},{
+				Key: "434-1",
+				Title: "434-1 BE CHIC"
+			},{
+				Key: "434-2",
+				Title: "434-2 OROBLU"
+			},{
+				Key: "435",
+				Title: "435-1 DURANCE"
+			},{
+				Key: "435",
+				Title: "435-2 LINARI"
+			},{
+				Key: "435-4",
+				Title: "435-3.4 Millefiori"
+			},{
+				Key: "436-1",
+				Title: "436-1 isyfen"
+			},{
+				Key: "436-2",
+				Title: "436-2 PIERE MANTOUX"
+			},{
+				Key: "437-1",
+				Title: "437-1 POWER SHAPE"
+			},{
+				Key: "437-2",
+				Title: "437-2 WACOAL"
+			}]
+		},{
+			Language: "Ch",
+			Floor: "5F",
+			Brands:[{
+				Key: "505506",
+				Title: "505, 506 宽庭"
+			},{
+				Key: "523",
+				Title: "523, 524 ipluso"
+			}]
+		},{
+			Language: "Ch",
+			Floor: "B1",
+			Brands:[{
+				Key: "B101",
+				Title: "b101 P+"
+			},{
+				Key: "B103",
+				Title: "b103 Stefanel"
+			},{
+				Key: "B104",
+				Title: "b104 Porter"
+			},{
+				Key: "B105",
+				Title: "b105 Retro Fuse"
+			},{
+				Key: "B106",
+				Title: "b106 Giordano Ladies"
+			},{
+				Key: "B107",
+				Title: "b107 M)phosis"
+			},{
+				Key: "B113",
+				Title: "b113 MeiRie'S"
+			},{
+				Key: "B114",
+				Title: "b114 J Shoes"
+			},{
+				Key: "B115",
+				Title: "b115 Blk Market"
+			},{
+				Key: "B116",
+				Title: "b116 Blk Market"
+			},{
+				Key: "B117",
+				Title: "b117 Martinelli"
+			},{
+				Key: "B118",
+				Title: "b118 GCI COLLEZIONE"
+			},{
+				Key: "B119",
+				Title: "b119 PELLE MODA"
+			},{
+				Key: "B120",
+				Title: "b120 ESSIE"
+			},{
+				Key: "B121-1",
+				Title: "b121-1 Jurlique"
+			},{
+				Key: "B122",
+				Title: "b122 Kiehl's "
+			},{
+				Key: "B124",
+				Title: "b124 Hit Gallery"
+			},{
+				Key: "B125",
+				Title: "b125 自由区"
+			},{
+				Key: "B126",
+				Title: "b126 Lacoste"
+			},{
+				Key: "B131",
+				Title: "b131 Lothantique"
+			},{
+				Key: "B132",
+				Title: "b132 myLOHAS"
+			},{
+				Key: "B134-1",
+				Title: "b134-1 MAC"
+			},{
+				Key: "B134-2",
+				Title: "b134-2 Bobbi Brown"
+			},{
+				Key: "B137",
+				Title: "b137 Lancome"
+			},{
+				Key: "B138",
+				Title: "b138 Sisley"
+			},{
+				Key: "B139",
+				Title: "b139 SKII"
+			},{
+				Key: "B146",
+				Title: "b146 Fancl "
+			},{
+				Key: "B147",
+				Title: "b147 Clarins"
+			},{
+				Key: "B148",
+				Title: "b148 Clinique"
+			},{
+				Key: "B151-2",
+				Title: "b151-2 L'Occitane"
+			},{
+				Key: "B151-1",
+				Title: "b151-1 Origins"
+			},{
+				Key: "B153",
+				Title: "b153 DHC"
+			}]
+		},{
+			Language: "Ch",
+			Floor: "B2",
+			Brands:[{
+				Key: "B201",
+				Title: "b201 Dazzling Cafe"
+			},{
+				Key: "B204",
+				Title: "b204 斗香园"
+			},{
+				Key: "B208",
+				Title: "b208 麦当劳"
+			},{
+				Key: "B213",
+				Title: "b213 葡京制造"
+			},{
+				Key: "B214",
+				Title: "b214 釜山料理"
+			},{
+				Key: "B215B216",
+				Title: "b215.216 七条"
+			},{
+				Key: "B230",
+				Title: "b230 胖达人手感烘焙"
+			},{
+				Key: "B202",
+				Title: "b202 Blink"
+			},{
+				Key: "B203",
+				Title: "b203 Subway"
+			},{
+				Key: "B205",
+				Title: "b205 饥饿吐司"
+			},{
+				Key: "B205A",
+				Title: "b205a 宝馔"
+			},{
+				Key: "B206",
+				Title: "b206 Crumbs"
+			},{
+				Key: "B207",
+				Title: "b207 Coldstone "
+			},{
+				Key: "B209",
+				Title: "b209 wagas express"
+			},{
+				Key: "B210",
+				Title: "b210 STARBUCKS"
+			},{
+				Key: "B211B212",
+				Title: "b211.212 满记甜品"
+			},{
+				Key: "B231",
+				Title: "b231 早安巴黎"
+			},{
+				Key: "B231A",
+				Title: "b231a 西龙饭团"
+			},{
+				Key: "B232",
+				Title: "b232 大一梦鲷鱼烧"
+			},{
+				Key: "B233",
+				Title: "b233 缘喜寿司"
+			},{
+				Key: "B234",
+				Title: "b234 每日新鲜水果吧"
+			},{
+				Key: "B235",
+				Title: "b235 贡茶"
+			},{
+				Key: "B236",
+				Title: "b236 布歌东京"
+			},{
+				Key: "B237",
+				Title: "b237 鲜芋仙"
+			},{
+				Key: "B238",
+				Title: "b238 植本色"
+			},{
+				Key: "B239",
+				Title: "b239 Mister Donut"
+			},{
+				Key: "B240",
+				Title: "b240 美珍香"
+			},{
+				Key: "B241",
+				Title: "b241 继光香香鸡"
+			},{
+				Key: "B242",
+				Title: "b242 贝蕾魔法"
+			},{
+				Key: "B242A",
+				Title: "b242a 瑞克爷爷"
+			},{
+				Key: "B243",
+				Title: "b243 西树泡芙"
+			},{
+				Key: "B243",
+				Title: "b243 摩提工房"
+			},{
+				Key: "B244",
+				Title: "b244 宝珠奶酪"
+			},{
+				Key: "B244A",
+				Title: "b244a 榴小莲"
+			},{
+				Key: "B245",
+				Title: "b245 筑地银章鱼 "
+			},{
+				Key: "B246A",
+				Title: "b246a 汁喜屋"
+			},{
+				Key: "B246B",
+				Title: "b246b 芋贵人"
+			},{
+				Key: "B217",
+				Title: "b217 战锅时代"
+			},{
+				Key: "B218",
+				Title: "b218 尚保罗香榭铁板"
+			},{
+				Key: "B219",
+				Title: "b219 锦官城麻辣香锅"
+			},{
+				Key: "B220",
+				Title: "b220 吴记牛肉面"
+			},{
+				Key: "B221",
+				Title: "b221 狮子山香港小厨"
+			},{
+				Key: "B222",
+				Title: "b222 古镇汤团"
+			},{
+				Key: "B223",
+				Title: "b223 融合南洋料理"
+			},{
+				Key: "B224",
+				Title: "b224 小杨生煎"
+			},{
+				Key: "B225",
+				Title: "b225 韩林拌拌饭"
+			},{
+				Key: "B226",
+				Title: "b226 伊比力牛排"
+			},{
+				Key: "B227",
+				Title: "b227 台北东一排骨"
+			},{
+				Key: "B228",
+				Title: "b228 秦韵西北菜"
+			},{
+				Key: "B229",
+				Title: "b229 次郎日式简餐"
+			}]
+		}]);
+
+		collection.insert([{
+			Language: "En",
+			Floor: "1F",
+			Brands:[{
+				Key: "101",
+				Title: "101 Gucci"
+			},{
+				Key: "102",
+				Title: "102 Givenchy"
+			},{
+				Key: "103",
+				Title: "103 Sergio Rossi"
+			},{
+				Key: "105",
+				Title: "105 Saint Laurent"
+			},{
+				Key: "106",
+				Title: "106 Moncler"
+			},{
+				Key: "107",
+				Title: "107 Lanvin"
+			},{
+				Key: "108",
+				Title: "108 Balenciaga"
+			},{
+				Key: "109",
+				Title: "109 RAT TAR ART BAR"
+			},{
+				Key: "110",
+				Title: "110 Alexander McQueen"
+			},{
+				Key: "111",
+				Title: "111 Stella McCartney"
+			},{
+				Key: "112",
+				Title: "112 Marni"
+			},{
+				Key: "113",
+				Title: "113 Emilio Pucci"
+			},{
+				Key: "115",
+				Title: "115 Ralph Lauren"
+			}]
+		},{
+			Language: "En",
+			Floor: "2F",
+			Brands:[{
+				Key: "201",
+				Title: "201 Gucci"
+			},{
+				Key: "202-1",
+				Title: "202-1 Sarment"
+			},{
+				Key: "205",
+				Title: "205 Marni"
+			},{
+				Key: "206",
+				Title: "206 Moncler/Gamme Rouge"
+			},{
+				Key: "207",
+				Title: "207 Lanvin"
+			},{
+				Key: "208",
+				Title: "208 Alexander McQueen Men's"
+			},{
+				Key: "209",
+				Title: "209 Givenchy"
+			},{
+				Key: "210-5",
+				Title: "210-5 Yohji Yamamoto"
+			},{
+				Key: "210-7",
+				Title: "210-7 Alain Mikli"
+			},{
+				Key: "211",
+				Title: "211 Alexander Wang"
+			},{
+				Key: "212",
+				Title: "212 ACNE"
+			},{
+				Key: "213",
+				Title: "213 Costume National"
+			},{
+				Key: "216",
+				Title: "216 Ralph Lauren"
+			},{
+				Key: "218",
+				Title: "218 Helmut Lang"
+			}]
+		},{
+			Language: "En",
+			Floor: "3F",
+			Brands:[{
+				Key: "301-2",
+				Title: "301-2 JiCheng"
+			},{
+				Key: "303",
+				Title: "303 Gerard Darel"
+			},{
+				Key: "304",
+				Title: "304 Maje"
+			},{
+				Key: "306",
+				Title: "306 Theory"
+			},{
+				Key: "307",
+				Title: "307 Sandro"
+			},{
+				Key: "308",
+				Title: "308 Claudie Pierlot"
+			},{
+				Key: "309",
+				Title: "309 Jacobean"
+			},{
+				Key: "310",
+				Title: "310 SyncChic"
+			},{
+				Key: "311",
+				Title: "311 黄淑琦"
+			},{
+				Key: "319",
+				Title: "319 Unconditional"
+			},{
+				Key: "330",
+				Title: "330 Suunto"
+			},{
+				Key: "339",
+				Title: "339 Munich"
+			}]
+		},{
+			Language: "En",
+			Floor: "4F",
+			Brands:[{
+				Key: "401",
+				Title: "401 wise kids"
+			},{
+				Key: "404",
+				Title: "404 JACADI"
+			},{
+				Key: "405",
+				Title: "405 FIONA’S PRINCE"
+			},{
+				Key: "406-2",
+				Title: "406-2 NECK&NECK"
+			},{
+				Key: "407",
+				Title: "407 SERGENT MAJOR"
+			},{
+				Key: "410-2",
+				Title: "410-2 Marni"
+			},{
+				Key: "411-1",
+				Title: "411-1 Miss blumarine"
+			},{
+				Key: "411-2",
+				Title: "411-2 Stella McCartney"
+			},{
+				Key: "412-1",
+				Title: "412-1 Ice"
+			},{
+				Key: "413-1412-2",
+				Title: "412-2 Tuctuc/JEEP"
+			},{
+				Key: "413-1412-2",
+				Title: "413-1 Tuctuc/JEEP"
+			},{
+				Key: "413-2",
+				Title: "413-2 NEW BALANCE"
+			},{
+				Key: "415",
+				Title: "415 Ballon roage"
+			},{
+				Key: "415-1",
+				Title: "415-1 RIO"
+			},{
+				Key: "415-2",
+				Title: "415-2 Naturecolored"
+			},{
+				Key: "419-1",
+				Title: "419-1 bubble"
+			},{
+				Key: "423",
+				Title: "423 TRIUMPH"
+			},{
+				Key: "424-1",
+				Title: "424-1 Essence"
+			},{
+				Key: "424-2",
+				Title: "424-2 Aimer"
+			},{
+				Key: "425-1",
+				Title: "425-1 欣姿芳"
+			},{
+				Key: "425-2",
+				Title: "425-2 INTELLIGE"
+			},{
+				Key: "426",
+				Title: "426 CHASNEY BEAUTY"
+			},{
+				Key: "427",
+				Title: "427 LA FALINO"
+			},{
+				Key: "428",
+				Title: "428 ENWEIS"
+			},{
+				Key: "429-1",
+				Title: "429-1 Corsetc"
+			},{
+				Key: "430-1",
+				Title: "430-1 ILSEE"
+			},{
+				Key: "430-2",
+				Title: "430-2 Stella McCartney"
+			},{
+				Key: "431",
+				Title: "431 INNEE"
+			},{
+				Key: "433-1",
+				Title: "433-1 SIMONE PERELE"
+			},{
+				Key: "434-1",
+				Title: "434-1 BE CHIC"
+			},{
+				Key: "434-2",
+				Title: "434-2 OROBLU"
+			},{
+				Key: "435",
+				Title: "435-1 DURANCE"
+			},{
+				Key: "435",
+				Title: "435-2 LINARI"
+			},{
+				Key: "435-4",
+				Title: "435-3.4 Millefiori"
+			},{
+				Key: "436-1",
+				Title: "436-1 isyfen"
+			},{
+				Key: "436-2",
+				Title: "436-2 PIERE MANTOUX"
+			},{
+				Key: "437-1",
+				Title: "437-1 POWER SHAPE"
+			},{
+				Key: "437-2",
+				Title: "437-2 WACOAL"
+			}]
+		},{
+			Language: "En",
+			Floor: "5F",
+			Brands:[{
+				Key: "505506",
+				Title: "505, 506 Kuan's Living"
+			},{
+				Key: "523",
+				Title: "523, 524 ipluso"
+			}]
+		},{
+			Language: "En",
+			Floor: "B1",
+			Brands:[{
+				Key: "B101",
+				Title: "b101 P+"
+			},{
+				Key: "B103",
+				Title: "b103 Stefanel"
+			},{
+				Key: "B104",
+				Title: "b104 Porter"
+			},{
+				Key: "B105",
+				Title: "b105 Retro Fuse"
+			},{
+				Key: "B106",
+				Title: "b106 Giordano Ladies"
+			},{
+				Key: "B107",
+				Title: "b107 M)phosis"
+			},{
+				Key: "B113",
+				Title: "b113 MeiRie'S"
+			},{
+				Key: "B114",
+				Title: "b114 J Shoes"
+			},{
+				Key: "B115",
+				Title: "b115 Blk Market"
+			},{
+				Key: "B116",
+				Title: "b116 Blk Market"
+			},{
+				Key: "B117",
+				Title: "b117 Martinelli"
+			},{
+				Key: "B118",
+				Title: "b118 GCI COLLEZIONE"
+			},{
+				Key: "B119",
+				Title: "b119 PELLE MODA"
+			},{
+				Key: "B120",
+				Title: "b120 ESSIE"
+			},{
+				Key: "B121-1",
+				Title: "b121-1 Jurlique"
+			},{
+				Key: "B122",
+				Title: "b122 Kiehl's "
+			},{
+				Key: "B124",
+				Title: "b124 Hit Gallery"
+			},{
+				Key: "B125",
+				Title: "b125 自由区"
+			},{
+				Key: "B126",
+				Title: "b126 Lacoste"
+			},{
+				Key: "B131",
+				Title: "b131 Lothantique"
+			},{
+				Key: "B132",
+				Title: "b132 myLOHAS"
+			},{
+				Key: "B134-1",
+				Title: "b134-1 MAC"
+			},{
+				Key: "B134-2",
+				Title: "b134-2 Bobbi Brown"
+			},{
+				Key: "B137",
+				Title: "b137 Lancome"
+			},{
+				Key: "B138",
+				Title: "b138 Sisley"
+			},{
+				Key: "B139",
+				Title: "b139 SKII"
+			},{
+				Key: "B146",
+				Title: "b146 Fancl "
+			},{
+				Key: "B147",
+				Title: "b147 Clarins"
+			},{
+				Key: "B148",
+				Title: "b148 Clinique"
+			},{
+				Key: "B151-2",
+				Title: "b151-2 L'Occitane"
+			},{
+				Key: "B151-1",
+				Title: "b151-1 Origins"
+			},{
+				Key: "B153",
+				Title: "b153 DHC"
+			}]
+		},{
+			Language: "En",
+			Floor: "B2",
+			Brands:[{
+				Key: "B201",
+				Title: "b201 Dazzling Cafe"
+			},{
+				Key: "B204",
+				Title: "b204 斗香园"
+			},{
+				Key: "B208",
+				Title: "b208 麦当劳"
+			},{
+				Key: "B213",
+				Title: "b213 葡京制造"
+			},{
+				Key: "B214",
+				Title: "b214 釜山料理"
+			},{
+				Key: "B215B216",
+				Title: "b215.216 七条"
+			},{
+				Key: "B230",
+				Title: "b230 胖达人手感烘焙"
+			},{
+				Key: "B202",
+				Title: "b202 Blink"
+			},{
+				Key: "B203",
+				Title: "b203 Subway"
+			},{
+				Key: "B205",
+				Title: "b205 饥饿吐司"
+			},{
+				Key: "B205A",
+				Title: "b205a 宝馔"
+			},{
+				Key: "B206",
+				Title: "b206 Crumbs"
+			},{
+				Key: "B207",
+				Title: "b207 Coldstone "
+			},{
+				Key: "B209",
+				Title: "b209 wagas express"
+			},{
+				Key: "B210",
+				Title: "b210 STARBUCKS"
+			},{
+				Key: "B211B212",
+				Title: "b211.212 满记甜品"
+			},{
+				Key: "B231",
+				Title: "b231 早安巴黎"
+			},{
+				Key: "B231A",
+				Title: "b231a 西龙饭团"
+			},{
+				Key: "B232",
+				Title: "b232 大一梦鲷鱼烧"
+			},{
+				Key: "B233",
+				Title: "b233 缘喜寿司"
+			},{
+				Key: "B234",
+				Title: "b234 每日新鲜水果吧"
+			},{
+				Key: "B235",
+				Title: "b235 贡茶"
+			},{
+				Key: "B236",
+				Title: "b236 布歌东京"
+			},{
+				Key: "B237",
+				Title: "b237 鲜芋仙"
+			},{
+				Key: "B238",
+				Title: "b238 植本色"
+			},{
+				Key: "B239",
+				Title: "b239 Mister Donut"
+			},{
+				Key: "B240",
+				Title: "b240 美珍香"
+			},{
+				Key: "B241",
+				Title: "b241 继光香香鸡"
+			},{
+				Key: "B242",
+				Title: "b242 贝蕾魔法"
+			},{
+				Key: "B242A",
+				Title: "b242a 瑞克爷爷"
+			},{
+				Key: "B243",
+				Title: "b243 西树泡芙"
+			},{
+				Key: "B243",
+				Title: "b243 摩提工房"
+			},{
+				Key: "B244",
+				Title: "b244 宝珠奶酪"
+			},{
+				Key: "B244A",
+				Title: "b244a 榴小莲"
+			},{
+				Key: "B245",
+				Title: "b245 筑地银章鱼 "
+			},{
+				Key: "B246A",
+				Title: "b246a 汁喜屋"
+			},{
+				Key: "B246B",
+				Title: "b246b 芋贵人"
+			},{
+				Key: "B217",
+				Title: "b217 战锅时代"
+			},{
+				Key: "B218",
+				Title: "b218 尚保罗香榭铁板"
+			},{
+				Key: "B219",
+				Title: "b219 锦官城麻辣香锅"
+			},{
+				Key: "B220",
+				Title: "b220 吴记牛肉面"
+			},{
+				Key: "B221",
+				Title: "b221 狮子山香港小厨"
+			},{
+				Key: "B222",
+				Title: "b222 古镇汤团"
+			},{
+				Key: "B223",
+				Title: "b223 融合南洋料理"
+			},{
+				Key: "B224",
+				Title: "b224 小杨生煎"
+			},{
+				Key: "B225",
+				Title: "b225 韩林拌拌饭"
+			},{
+				Key: "B226",
+				Title: "b226 伊比力牛排"
+			},{
+				Key: "B227",
+				Title: "b227 台北东一排骨"
+			},{
+				Key: "B228",
+				Title: "b228 秦韵西北菜"
+			},{
+				Key: "B229",
+				Title: "b229 次郎日式简餐"
+			}]
+		}]);
+	});
+	mongo.database.collection("brand", function(err, collection){
+		collection.insert([{
+			Key: "acne",
+			Title: "ACNE",
+			Description_Ch: "2013年3月2日，AcneStudios在巴黎发布了2013秋冬女装成衣系列。这个系列是Acne Studios与艺术家Katerina Jebb以及巴黎Galliera流行服饰博物馆共同合作的成果。我们力求化无形于有形，让服装实穿性更高。我们试图从不同的角度去探索时尚，重新诠释它，并让历史重现。",
+			Description_En: "stockholm, march 2, 2013 — ‘Acne Studios Autumn/Winter 2013 Women’s collection is a collaboration between artist Katerina Jebb, the Musée Galliera– Musée de la Mode de la Ville de Paris and Acne Studios. For this collection we sought to make the invisible visible and the unwearable wearable. We wanted to explore fashion from a different angle, decontextualize it and make history visible.",
+			Phone: "02132539526",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "acnestudios.com",
+			Filter: ["Women", "Man"]
+		},{
+			Key: "aimer",
+			Title: "Aimer",
+			Description_Ch: "Aimer 爱慕，诞生于1993年中国北京。20年来，她秉承“爱”与“美”的品牌理念，融科技于时尚，追求融合东西方文化的美学设计，为都市女性提供精致、时尚、优雅的产品和体验，展现万千姿彩的女性魅力，帮助女性做最好的自己、最美的自己。今天的爱慕是中国原创内衣品牌的领导者，是中国女性喜爱的首选内衣品牌。",
+			Description_En: "Founded in 1993, Aimer is one of the leading lingerie brands in China and as well a fashion kingdom which is dedicated to supplying high quality lingerie products for women, men, youth, kids. Led by a world-class creative design team, Aimer believes in creating beauty and quality lingerie products. The Group consist- ently focuses on innovation and creativity in its designs, which often features an elegant fusion of oriental and western design elements.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "aimer.com.cn",
+			Filter: ["Underwear"]
+		},{
+			Key: "alainmikli",
+			Title: "Alain Mikli",
+			Description_Ch: "Alain Mikli（艾伦 米恺力），来自法国的国际著名设计品牌，坚持着其独特风格与产品品质，贯彻了<看与被看>的艺术。融合美学与科技，设计出别具一格的镜框，让<看>的障碍转化成独特的个人风格，是Alain Mikli一貫的理念。",
+			Description_En: "Alain Mikli, the uncompromising reference brand in terms of style and quality, «frames to see as well as to be seen» One single purpose: to provide style to a constraint and transform a handicap into a sign of personality. Beautiful and technical the Alain Mikli frames have as only signature: correction & distinction.",
+			Phone: "02132568928",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "mikli.com",
+			Filter: ["Accessory"]
+		},{
+			Key: "alexandermcqueen",
+			Title: "Alexander McQueen",
+			Description_Ch: "亚历山大·麦昆(AlexanderMcQueen)品牌成立于1992年，其创始人李·麦昆(LeeMcQueen)在不超过 10年的时间里便成为了全球最受尊敬的时装设计师之一。亚历山大·麦昆时装秀以强大的感染力，蓬勃的活力以及浪漫而时尚的气息闻名于世。柔弱与坚强，传统与现代，流畅与拘谨等截然相反的元素并行不悖，成为麦昆品牌文化中一个不可或缺的标记。麦昆以极富张力及狂热的手法向艺术和手工传统致敬。",
+			Description_En: "亚历山大·麦昆(AlexanderMcQueen)品牌成立于1992年，其创始人李·麦昆(LeeMcQueen)在不超过 10年的时间里便成为了全球最受尊敬的时装设计师之一。亚历山大·麦昆时装秀以强大的感染力，蓬勃的活力以及浪漫而时尚的气息闻名于世。柔弱与坚强，传统与现代，流畅与拘谨等截然相反的元素并行不悖，成为麦昆品牌文化中一个不可或缺的标记。麦昆以极富张力及狂热的手法向艺术和手工传统致敬。",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "alexandermcqueen.com",
+			Filter: ["Women"]
+		},{
+			Key: "alexanderwang",
+			Title: "Alexander Wang",
+			Description_Ch: "亚历山大·王生长在旧金山，2007年，他推出了全套女装系列。如今，亚历山大·王已有遍布全球的15家店铺。并且有了自己的电子商务网站。旗下包括男装，女装，子品牌T by Alexander Wang，手袋，鞋类，皮革制品以及各种其他生活用品。品牌的本质情感在于自由与不羁。精工细致与不完全的完美之间让人充满好奇又意犹未尽。",
+			Description_En: "Alexander Wang was born and raised in San Francisco, In Spring 2007, it had evolved into a full Women’s ready-to-wear line. Today, Alexander Wang has over 15 stores worldwide, including its own E-Commerce site. Men’s and Women’s categories offer ready-to-wear, T by Alexander Wang, handbags, footwear, small leather goods and the OBJECTS collection, a curation of personal lifestyle items.",
+			Phone: "02122309838",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "alexanderwang.com",
+			Filter: ["Women"]
+		},{
+			Key: "balabala",
+			Title: "Balabala",
+			Description_Ch: "Balabala童装品牌创立于2002年，是中国领先具有国际视野的时尚大众童装品牌。Balabala致力于为孩子们提供时尚又实用的儿童服饰产品，主张“童年不同样”的品牌理念。产品覆盖0-16岁儿童的服装、童鞋、配饰等。Balabala注重消费者购物体验，一站式的零售空间提供多样的专业时尚产品，持续创造选择丰富、物超所值的消费价值。",
+			Description_En: "Established in 2002.Balabala is in the lead of international view of mass fashion in children clothing brand in China.Balabala which advo- cates “Same age special childhood” brand conception is committed to supply fashion and practical clothing for children from zero to sixteen .Its product covers clothing 、shoes and accessories etc.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "balabala.com.cn",
+			Filter: ["Kids"]
+		},{
+			Key: "balenciaga",
+			Title: "Balenciaga",
+			Description_Ch: "Balenciaga于1919年由克里斯托瓦尔.巴朗斯加(Cristobal Balenciaga)成立，是时尚界最有影响力的品牌之一。至今，品牌具代表性的成衣系列体现了品牌的精神，而皮具、鞋和饰品也取得了全球性的成绩。2012年底，Balenciaga 和开云集团荣幸宣布Alexander Wang 为Balenciaga的创意总监",
+			Description_En: "The Balenciaga fashion house is one of the most influential names in fashion. Founded in 1919 by Cristobal Balenciaga While the brand’s identity is firmly rooted in its highly symbolic prêt-à-porter collections, items of leather, footwear and accessories are also experiencing success worldwide. In 2012, Balenciaga and KERING group have jointly announced the employment of Alexander Wang as their new Creative Director.",
+			Phone: "02122309811",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "balenciaga.com",
+			Filter: ["Women", "Man"]
+		},{
+			Key: "ballonrouge",
+			Title: "Ballon rouge",
+			Description_Ch: "作为一种新奢主义，Ballon Rouge的热情血液为童装时尚界注入了一股新鲜力量。每一件制作精良的作品均限量出自于品牌自身的工作室。这里是一个梦工厂，是法式摇滚风情奇妙绽放的嘉年华。Rock’Mantic是我们的品牌风格，这种优雅的法式摇滚风情源于一个热爱生活、充满想象力的摩登小孩，以让我们将设计融于风格与舒适之中。",
+			Description_En: "Ballon Rouge is born out of a passion to create a new luxury. Since the beginning, we’ve crafted a kid’s fashion brand ahead of its time. All our pieces are made in our workshop in limited quantities and exclusively distributed. Ballon Rouge is dream factory where color, playful- ness, music & youth culture come together in an elegant French Rock attitude.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "balabala.com.cn",
+			Filter: ["Kids"]
+		},{
+			Key: "chasneybeauty",
+			Title: "CHASNEY BEAUTY",
+			Description_Ch: "澳大利亚知名内衣品牌 — Chasney Beauty起源于1988年。由英籍内衣设计师Marilyn Chasney创立，是第壹家以设计师命名的内衣品牌；Chasney Beauty的産品基调源于欧洲中古时代的优雅宫廷式，全部采用利巴蕾丝（Leavers Lace），勾画出欧式文艺复兴期的内衣盛宴。目前在日本东京银座丶涉谷百货等两百多家商场；台湾丶香港SOGO系统及新光系统均有专柜。",
+			Description_En: "Chasney Beauty, an Australian haute-lingerie, created since 1998 by Marilyn Chasney, an English designer. It is a designer signature brand of which products are inspired from European “Bucolic Boudoir” ambience of the 18th century, and made of specially chosen Leavers Lace, the top grade quality material, outlining the quintessence of Renaissance to the sublime.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "bubblelondon.com",
+			Filter: ["Underwear"]
+		},{
+			Key: "clinique",
+			Title: "Clinique",
+			Description_Ch: "Clinique倩碧是全球最大高档化妆品集团雅诗兰黛集团旗下，适合所有年龄、肤色、肤质、性别人群的，最值得信赖的肌肤护理专家。倩碧成立于1968年，是第一个将皮肤学专业产品推广给广大消费者的护肤品牌，从诞生至今，始终坚持所有产品由皮肤学专家研制，通过过敏性测试，100%不含香料。",
+			Description_En: "Clinique is one of the world’s most recognized and unique brands. Clinique was launched in 1968, born in a dermatologist’s office, with skin care and makeup products that were allergy tested and 100% fragrance free. Clinique products have always been designed to address individual skin types and needs. The products are based on extensive scientific research and the expertise of leading dermatologists.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "clinique.com.cn",
+			Filter: ["Beauty"]
+		},{
+			Key: "corsetc",
+			Title: "Corsetc",
+			Description_Ch: "CORSETC(蔻夏尔)，主张女人应该是知性、智慧、内心自由。拥有CORSETC(蔻夏尔)内衣的女性，知性而有品位，智慧而低调；她们从容，是有幸福能力的女人。她们经历了时间的冲洗，世事的打磨之后仍然透着光芒。只是这光芒更内敛更含蓄，这种光芒所蕴含的美丽更具力量，可以被颂读。",
+			Description_En: "CORSETC claims that women are intellectual, wise and independently free. Women who consume CORSETC lingerie are of same characteristics; they are leisurable but with the power to create happiness. They are still shining going througb the wave of time and difficulties. But the is more implicit, more stronger.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "",
+			Filter: ["Underwear"]
+		},{
+			Key: "dhc",
+			Title: "DHC",
+			Description_Ch: "日本DHC株式会社自1972年由现任吉田嘉明总裁一人创立至今，经过约40年的不懈努力，已发展成为集团性企业，成为日本大型的翻译出版教育公司、连续10多年独占日本国内化妆品、健康食品通信销售第1名，护肤型化妆品品牌的市场占有率九年排名第1名。公司还经营食品、内衣与时装、温泉酒店、药品、海洋深层水等事业，日本国内年营业额黄超过80亿元。",
+			Description_En: "DHC China Incorporated is the chinese subsidiary of DHC Corporation, Japan’s No. 1 direct skincare company. We are a leading direct-to-consumer provider of beauty prod- ucts, including skincare and body care, as well as makeup items. The vision behind DHC is rooted in the beneficial properties of virgin olive oil.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "dhc.net.cn",
+			Filter: ["Beauty"]
+		},{
+			Key: "emiliopucci",
+			Title: "Emilio Pucci",
+			Description_Ch: "创始人Emilio Pucci先生，于1914年出生在意大利的佛罗伦萨的一个贵族世家,拥有Barsento侯爵爵位。他曾是意大利奥林匹克滑雪队的成员之一，个性大胆勇于挑战，在二战时期服役于空军。Emilio Pucci在美国西雅图读大学时，对于市面上售卖的滑雪服装不满意，因此他为自己与身旁好友操刀设计独一无二的滑雪服。",
+			Description_En: "The Emilio Pucci brand was created in 1947 by the Marquis Emilio Pucci of Barsento, a dashing Florentine aristocrat. His fashion career began unexpectedly when a revolutionary ski outfit he’d designed for himself and his friends was photographed on the slopes of Zermatt by fashion photographer Toni Frissel and wound up on the pages of Harper’s Bazaar USA.",
+			Phone: "02152929808",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "emiliopucci.com",
+			Filter: ["Women"]
+		},{
+			Key: "enweis",
+			Title: "ENWEIS",
+			Description_Ch: "伊维斯是一个专为外表精雕细琢的都市女性而准备的内衣品牌，让她们拥有一种完美和永恒的雅致。伊维斯以“优雅”、“精致”、“国际化”为品牌关键价值。通过专业高端的工艺研发、顶尖的创意设计，为女性创造出精致细腻、永恒经典的内衣产品，并提供无微不至、细心呵护的服务。",
+			Description_En: "伊维斯是一个专为外表精雕细琢的都市女性而准备的内衣品牌，让她们拥有一种完美和永恒的雅致。伊维斯以“优雅”、“精致”、“国际化”为品牌关键价值。通过专业高端的工艺研发、顶尖的创意设计，为女性创造出精致细腻、永恒经典的内衣产品，并提供无微不至、细心呵护的服务。",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "",
+			Filter: ["Underwear"]
+		},{
+			Key: "essie",
+			Title: "ESSIE",
+			Description_Ch: "艾茜美甲沙龙是上海大型美甲连锁机构艾手艾脚甲文化旗下高端品牌。 艾茜美甲沙龙为你提供奢华的美甲服务及手足护理。我们选用世界顶级的产品如来自纽约的Debora Lippmann和比弗利山庄的Spa Ritual 为您带来至尊的全新体验。我们的员工都为经验丰富，技术精湛的资深美甲技师，以确保您每一次都能体验到最高质量的服务。我们期待您的光临。",
+			Description_En: "Essie Nail is the premium branch store of the biggest nail salon chain brand in Shanghai- AiShouAiJiao. We provide superior nail service and spa for hands and feet using the most exclusive high quality products like Debora Lippmann and Spa Ritual from Beverly Hills.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "essie.com",
+			Filter: ["Beauty"]
+		},{
+			Key: "fancl",
+			Title: "Fancl",
+			Description_Ch: "FANCL是极具规模的护肤品及营养补充品品牌，已设立了近400家分店，遍布世界各地，现为东京证券交易主版上市公司。成立于1980年的FANCL，拥有当今世界的尖端科研和生产技术，首创不含防腐剂等化学成分的美容品及营养补充品，杜绝一般含防腐剂的护肤品所引起的皮肤问题，稳占全球美容及营养补充品领导地位。主张结合内在调理的“内外美容”理念，力求为人们“赶走不安”，成就源自健康的美丽。",
+			Description_En: "FANCL是极具规模的护肤品及营养补充品品牌，已设立了近400家分店，遍布世界各地，现为东京证券交易主版上市公司。成立于1980年的FANCL，拥有当今世界的尖端科研和生产技术，首创不含防腐剂等化学成分的美容品及营养补充品，杜绝一般含防腐剂的护肤品所引起的皮肤问题，稳占全球美容及营养补充品领导地位。主张结合内在调理的“内外美容”理念，力求为人们“赶走不安”，成就源自健康的美丽。",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "fancl.com.cn",
+			Filter: ["Beauty"]
+		},{
+			Key: "fionasprince",
+			Title: "FIONA’S PRINCE",
+			Description_Ch: "FIONA’S PRINCE是一个充满英伦气息的童鞋品牌，集合了英国文学童话故事的优雅气质，与伦敦时装的风格，与别不同。以啡色系为主，配合蜜糖金的色调，令品牌高贵却不失童话的美丽，所有小孩子步入FIONA’S PRINCE，就像置身一个缤纷的童鞋皇国。FIONA’S PRINCE整个品牌从产品到礼品包装细节到店铺形象,都是一个呈现出的童话风格的品牌。",
+			Description_En: "Founded in Hong Kong, Fiona’s Prince is a luxury British style children’s shoes brand that presents the concept of fairy tales kingdom from the designs of products to décor of the stores. This concept, a magical wonderland, is presented in every aspect of the brand, that Fiona’s Prince is a luxury children’s wear brand that captures the sweetness of childhood.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "bubblelondon.com",
+			Filter: ["Kids"]
+		},{
+			Key: "gerarddarel",
+			Title: "Gerard Darel",
+			Description: "在法国时装界享有盛誉的GERARD DAREL，自1971年成立以来，店铺遍布于巴黎春天、老佛爷、BON MARCHE等知名百货公司。GERARD DAREL所崇尚的穿衣哲学将完美地融合了女性的优雅知性与温柔贤淑。GERARD DAREL提供从服装单品到鞋袋配饰等一系列精心设计，既易于搭配又极富个性，塑造了一群在使用价值中追求自我价值与独特个性的现代女性。",
+			Description_En: "GERARD DAREL is a prestigious brand of French fashion industry, since it incepted in 1971, the outlets throughout famous department stores. It’s spirits are feminine elegance and gentle, GERARD DAREL provides products from clothing to series of well-designed accessories , creates a group unique personality modern women in pursuit of self-worth.",
+			Phone: "02132535368",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "gerarddarel.com",
+			Filter: ["Women"]
+		},{
+			Key: "givenchy",
+			Title: "Givenchy",
+			Description_Ch: "纪梵希品牌由Hubert de Givenchy于1952年创立。Givenchy的名字随即成为了优雅风格的象征。自2008年以来，Riccardo Tisci同时负责起纪梵希男女装成衣和配饰的设计。他的高级时装设计中不仅有着货真价实的奢华和不可或缺的活力元素，还充满着都市气息。",
+			Description_En: "The House of Givenchy was founded by Hubert de Givenchy in 1952. The name came to epitomise stylish elegance. Since 2008, Riccardo Tisci has been responsible for both men’s collection (ready-to-wear and accessories) and women’s collections (Haute Couture, readyto- wear and accessories).While genuine luxury and exclusivity remain vital ingredients of Riccardo’s Haute Couture collections, they are also shot through with urban culture.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "givenchy.com",
+			Filter: ["Women", "Man"]
+		},{
+			Key: "gucci",
+			Title: "Gucci",
+			Description_Ch: "以奢华、性感而闻名于世的古驰(Gucci) 是意大利殿堂级时尚品牌, 总部位于佛罗伦萨，成立于1921年。其时髦高级男女时装、香水、手袋皮具、鞋履、手表、等以优质的面料和精细的手工艺成为“身份与地位之象征”，亦是上流社会和富有阶层的挚爱品牌",
+			Description_En: "Founded in Florence in 1921, Gucci is one of the world's leading luxury fashion brands. With a renowned reputation for quality and Italian craftsmanship, Gucci designs, manufactures and distributes highly desirable products such as leather goods (handbags, small leather goods, and luggage), shoes, ready-to-wear, silks, timepieces and fine jewellery, are popular in upper & wealthy class.",
+			Phone: "02122309808",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "gucci.com",
+			Filter: ["Women", "Man"]
+		},{
+			Key: "huangshuchi",
+			Title: "HUANG SHU CHI 黄淑琦",
+			Description_Ch: "台湾设计师黄淑琦是亚洲时装界着名的服装设计师之一。其设计作品除被广大消费者与时尚名媛所喜爱，并数次受邀于多国时尚周展出，2004年更荣获亚洲杰出设计师代表。品牌设计观点揉合东西方流行趋势，设计风格强烈独特却又不失优雅大方。擅长以华丽手法刻画都会女人性感样貌与自我风格。多年的时尚界历练，对于女性体态及线条变化有着独到的见解与执着，作品着重素材变化与版型多样，完美的设计能力与精湛的时尚工艺完美的塑造及呈现女性的高雅身形。",
+			Description_En: "Taiwan designer Huang Shu Chi is one of the leading designers in Asia. Her works are appreciated by not only general consumers but also celebrities. Additionally, she was invited to participate international fashion week several times and was rewarded Asia Outstanding Designer in 2004. 「Creates everlasting fashion 」is what the designer and her team yearning for. Look forward to your connoisseur and experience.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "huangshuchi.com",
+			Filter: ["Women"]
+		},{
+			Key: "ilsee",
+			Title: "ILSEE",
+			Description_Ch: "法式奢华珠宝内衣伊夏ILSEE珠宝内衣，把女人最宠爱的两样私密，珠宝及贴身内衣，完美的融合到了一起!使用国际名品牌Dior、GUCCI、PRADA同家等级面料采用欧洲皇家御用百年作坊传统面料，每一件内衣高于是乎60%的纯手工打造，每一颗珠宝均以法式工艺精致烫贴，内衣与施华洛世奇水晶璀璨结合，面料与蕾丝繁复衔接一针不漏，限量珍藏，每套产量少于300件，花边对称精致，制衣成功率仅50%",
+			Description_En: "法式奢华珠宝内衣伊夏ILSEE珠宝内衣，把女人最宠爱的两样私密，珠宝及贴身内衣，完美的融合到了一起!使用国际名品牌Dior、GUCCI、PRADA同家等级面料采用欧洲皇家御用百年作坊传统面料，每一件内衣高于是乎60%的纯手工打造，每一颗珠宝均以法式工艺精致烫贴，内衣与施华洛世奇水晶璀璨结合，面料与蕾丝繁复衔接一针不漏，限量珍藏，每套产量少于300件，花边对称精致，制衣成功率仅50%",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "ordifen.com.cn",
+			Filter: ["Underwear"]
+		},{
+			Key: "ipluso",
+			Title: "ipluso",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "",
+			Filter: ["Living"]
+		},{
+			Key: "jacadi",
+			Title: "JACADI",
+			Description_Ch: "JACADI1976年创建于法国巴黎。在童装时尚中独领风骚，并成为法国儿童时装在世界分布最广的品牌。法国亚卡迪于1999年5月进入中国，与全球同步销售应季的服装，服饰，鞋及儿童用品。每年两季，每季三十个系列，500种款式的服装，款款尽显欧洲高贵典雅风格。与此同时，全面考虑儿童，特别是0-12岁儿童身体发育和活动特点，采用高档棉麻面料，舒适自然。",
+			Description_En: "Jacadi’s beginnings are in the passion for childhood. It’s a joy we have been sharing with over four hundred Franchisee partners in more than forty two countries for the past twenty years. We are a childrenswear retail company whose collections include clothing, shoes, accessories, furniture and nursery items in newborn thru size 12 years for both boys and girls.",
+			Phone: "02132568922",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "jacadi.com",
+			Filter: ["Kids"]
+		},{
+			Key: "jurlique",
+			Title: "Jurlique",
+			Description_Ch: "活机美颜先驱Jurlique茱莉蔻，在澳大利亚活机农场运用活机耕种法种植天然草本花卉，并将它们糅合尖端科艺萃取植物能量制作出高效卓越的护肤品，引领自然+科艺=美丽的护肤美颜风潮，为消费者带去健康美丽的肌肤。",
+			Description_En: "Jurlique has been the leader in natural skin care for over 28 years. We apply advanced technologies to biodynamic ingredients from our Australian farm to create high perfor- mance, potent skin care. The result: healthy, beautiful skin.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "jurlique.com.cn",
+			Filter: ["Beauty"]
+		},{
+			Key: "kiehls",
+			Title: "Kiehl\'s",
+			Description_Ch: "Kiehl’s科颜氏是1851年诞生于美国纽约的天然高效护肤品牌。160多年来始终秉承药房传统，以制药理念生产专业高效的护肤和护发产品。科颜氏坚持“功效至上，天然为佳”“个性化服务，先试后买”，“回馈社会，投身公益”的理念和宗旨，将最好的服务带给每位客人。当你在任何时候踏进科颜氏的任一家门店，你都能体验到专业的咨询服务，放心地选择到完全适用于自己肤质和发质的产品。",
+			Description_En: "Kiehl’s科颜氏是1851年诞生于美国纽约的天然高效护肤品牌。160多年来始终秉承药房传统，以制药理念生产专业高效的护肤和护发产品。科颜氏坚持“功效至上，天然为佳”“个性化服务，先试后买”，“回馈社会，投身公益”的理念和宗旨，将最好的服务带给每位客人。当你在任何时候踏进科颜氏的任一家门店，你都能体验到专业的咨询服务，放心地选择到完全适用于自己肤质和发质的产品。",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "kiehls.com.cn",
+			Filter: ["Beauty"]
+		},{
+			Key: "kuansliving",
+			Title: "Kuan\'s Living 宽庭",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "",
+			Filter: ["Living"]
+		},{
+			Key: "loccitane",
+			Title: "L\'Occitane",
+			Description_Ch: "1976年，品牌创办人Olivier Baussan将提炼的迷迭香精油拿到文化市集贩卖，L’OCCITANE欧舒丹便从普罗旺斯诞生了。30多年来，欧舒丹持续研发天然的产品，选择与严谨质量标准的供应商合作，每个产品系列背后都有真实的故事。",
+			Description_En: "In 1976, when Olivier Baussan the brand founder brought his refined rosemary essential oil to sell in the market, L'OCCITANE was born. For over 30 years, L'OCCITANE continuously creates and develops products with natural ingredients, selects suppliers with strict quality standard, and each product series has a true story behind it.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "loccitane.cn",
+			Filter: ["Beauty"]
+		},{
+			Key: "lancome",
+			Title: "Lancome",
+			Description_Ch: "1935年，在布鲁塞尔世博会，一位远见不凡的法兰西梦想家展出了5瓶香水，正是这5瓶盛装在奢华瓶身里的香水，令全世界为之惊艳和欢呼。这位梦想家便是阿芒.珀蒂让（Armand Petitjean）先生，而他也让全世界认识了一个彰显法兰西奢华美丽的品牌Lancome兰蔻。就是在世博会上的惊艳绽放，全世界的女性从此拥有了一个情感永存，美丽永恒的品牌。",
+			Description_En: "Founded in 1935 by Armand Petitjean, vision-ary and lover of French elegance and women, Lancôme is THE brand of women. Today more than ever, ultra-femininity, emotion, joie-de- vivre, happiness and beauty are at the very heart of Lancôme’ s DNA. A spirit that asserts itself through the most beautiful, the most optimistic mission: that every woman who come to Lancôme to be more beautiful, always leave happier.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "lancome.com.cn",
+			Filter: ["Beauty"]
+		},{
+			Key: "lanvin",
+			Title: "Lanvin",
+			Description_Ch: "Lanvin是法国历史最悠久的高级时装品牌，1889年由Jeanne Lanvin女士创立至今，在时装、香水、配饰等各方面引领潮流。2001年，设计总监Alber Elbaz的加盟，不仅沿袭了品牌一贯的优雅，更将过去与未来完美结合，满足都市女性多样的着装需求。Lanvin男装，也广受巴黎时装圈的好评与拥护。",
+			Description_En: "Lanvin是法国历史最悠久的高级时装品牌，1889年由Jeanne Lanvin女士创立至今，在时装、香水、配饰等各方面引领潮流。2001年，设计总监Alber Elbaz的加盟，不仅沿袭了品牌一贯的优雅，更将过去与未来完美结合，满足都市女性多样的着装需求。Lanvin男装，也广受巴黎时装圈的好评与拥护。",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "lanvin.com",
+			Filter: ["Women", "Man"]
+		},{
+			Key: "lothantique",
+			Title: "Lothantique",
+			Description_Ch: "罗丹缇，来自法国的护肤和香氛大师来自法国普罗旺斯的“香氛世家”罗丹缇（Lothantique），是法国知名的精油供应商。传承百年萃取工艺，沿袭顶级品质的高技术调香工艺，铸就独特的香氛文化。罗丹缇将香氛、香水与包括沐浴露、身体乳、护手霜等天然护肤品融合，使产品丰富多元化，在法国的崇尚优雅生活的人士中有着良好声誉。",
+			Description_En: "罗丹缇，来自法国的护肤和香氛大师来自法国普罗旺斯的“香氛世家”罗丹缇（Lothantique），是法国知名的精油供应商。传承百年萃取工艺，沿袭顶级品质的高技术调香工艺，铸就独特的香氛文化。罗丹缇将香氛、香水与包括沐浴露、身体乳、护手霜等天然护肤品融合，使产品丰富多元化，在法国的崇尚优雅生活的人士中有着良好声誉。",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "lothantique.com",
+			Filter: ["Beauty"]
+		},{
+			Key: "mac",
+			Title: "M.A.C",
+			Description_Ch: "M.A.C意为艺术彩妆，作为一个专业彩妆品牌，M.A.C于1984年由一名彩妆师与发型师创立于加拿大多伦多，创立初衷是为了迎合专业人士的需求。经过近30年的品牌发展，M.A.C赢得了全世界彩妆师的青睐，为包括纽约、伦敦、巴黎和米兰时装周在内的300多个秀场后台提供专业的彩妆产品。目前，M.A.C覆盖了世界范围内的73个国家。",
+			Description_En: "M.A.C stands for Make Up Art Cosmetics – we are a make up brand, created by a make up artist and hair stylist from Toronto, Canada in 1984 to meet the special needs of industry professionals. For almost 30 years, MAC has won the heart of all professional makeup artists around the world. M.A.C products are trusted to be used at over 300 fashion shows’ backstage including those at New York, London, Paris and Milan.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "maccosmetics.com.cn",
+			Filter: ["Beauty"]
+		},{
+			Key: "marni",
+			Title: "Marni",
+			Description_Ch: "1994年，Consuelo 和Gianni Castiglioni创立了Marni品牌，以其标志性的奢华，折衷风格女装及配饰系列闻名于世。Consuelo Castiglioni以一种前卫的精神来平衡精心制作的全系列成衣。她对原料，廓形，色彩以及独特印花和纹理的不同排列组合而创造了一个独特的服装风格。",
+			Description_En: "In 1994, Consuelo and Gianni Castiglioni launched Marni, the iconic luxury, eclectic women’s clothing and accessories collection. Marni created an avant-garde spirit balancing exceptionally-crafted ready-to-wear with a complete line of accessories. Consuelo’s modern approach to materials and silhouette, juxtaposing color, exclusive prints and textures has resulted in a new, unique form of functionality.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "marni.com",
+			Filter: ["Women", "Man"]
+		},{
+			Key: "moncler",
+			Title: "Moncler",
+			Description_Ch: "1952 年，Moncler 在法国格勒诺布尔（Grenoble）创立，目前总部设于意大利米兰。多年来，品牌致力于与攀登专家的通力合作，糅合时尚与创新科研成果，创造出完美体现专业与风格的时装及精品配饰。如今的 Moncler 包括多个男装、女装和配饰系列，于全球多家专卖店、世界各大顶级百货公司与多品牌时尚精品店出售。",
+			Description_En: "MONCLER was established in Grenoble, France, in 1952 and is currently based in Milan, Italy. Over the years, the brand has worked with mountaineering experts to mix style with ongoing technological research. Moncler collections are accordingly the quintessence of outerwear, combining the most extreme demands with day-to-day city life.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "moncler.com",
+			Filter: ["Women", "Man"]
+		},{
+			Key: "munich",
+			Title: "Munich",
+			Description_Ch: "1939年BERNEDA先生于西班牙创立制鞋公司。1953年公司成功成为运动鞋制造业先锋。1964年以X为形象的MUNICH品牌诞生。其中GOAL最先由室内足球鞋演变而来，ROC受田径，越野的启发。而ACROPOL基于跆拳道鞋，融合街穿时尚元素。JOC由帆布制成受到年轻人追捧。",
+			Description_En: "In 1939 Mr. BERNEDA founded the shoe company in Spain. In 1953, the company has successfully become the sports shoes manufacturing industry pioneer. In 1964 X became MUNICH brand image. The GOAL series is inspired by indoor soccer shoes, ROC is by athletics, cross-country inspiration. ACROPOL series is based on Taekwondo shoes. JOC is made of canvas chased by young people.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "munichsports.com",
+			Filter: ["Accessory"]
+		},{
+			Key: "mylohas",
+			Title: "myLOHAS",
+			Description_Ch: "myLOHAS是中国市场首家天然有机护肤精品店。美乐活提供健康、安全、有效的健康美容产品, 旗下近20个品牌涵盖了有机护肤、身体护理、头发护理、妇婴护理、芳香疗法和室内香氛等多种品类。美乐活为100%原装进口多品牌专卖店，从世界各地，如美国，法国、意大利、瑞士、德国、澳大利亚、新西兰等地，经过质量、效果、安全，和环保效应等方面仔细甄选后引进中国。",
+			Description_En: "myLOHAS is a premier beauty & lifestyle brand in China,that offers the highest-quality natural, organic, safe and effective products and information that enables individuals to lead an empowering lifestyle that is both stylish and responsible, thus helping to create a healthier and sustainable planet.myLOHAS is the first organic beauty &lifestyle shop in China.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "mylohas.net",
+			Filter: ["Beauty"]
+		},{
+			Key: "naturecolored",
+			Title: "Naturecolored",
+			Description_Ch: "Naturecolored是全球领先的彩棉、有机棉、植物纤维等环保面料婴儿服饰品牌，全部采用无化学染色工艺进行生产，目前在美国、欧盟、澳大利亚、加拿大等国家和地区销售。2010年Naturecolored 进入中国市场，中文注册商标为“本色棉”，在中国的生产商和代理商为深圳市紫瑞服装有限公司。",
+			Description_En: "Naturecolored is a global-leading brand on professionally green and pro-environment baby clothing field. Naturecolored products only use no dyeing naturally colored cotton, organic cotton and plant fiber material. Until now, it has registered in 23 countries, and has had good markets in European countries.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "naturecolored.cn",
+			Filter: ["Kids"]
+		},{
+			Key: "newbalance",
+			Title: "NEW BALANCE",
+			Description_Ch: "新百伦New Balance公司于1906年诞生在美国马拉松之城波士顿。前身为一家脚弓支撑器专业公司，1970年代起专注于运动鞋的制作，现已成为全球领先的运动品牌。作为全球唯一一个在美国和英国拥有制鞋工厂的国际运动鞋品牌，新百伦New Balance坚守高标准道德规范、100%顾客满意度、团队合作的公司精神，在科技材质、产品外观与舒适度上不断创新进步，为每一个运动者能够最大限度发挥自己的运动潜能，享受平衡自在的生活而不懈努力。",
+			Description_En: "New Balance began as a Boston-based arch support company in 1906, developed into a specialized shoe manufacturer in the 1970's, and has grown to become a leading global athletic products company. To ensure the best fitting, best performing shoes and apparel, we focus on improving our technology and production methods.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "newbalance.com.cn",
+			Filter: ["Kids"]
+		},{
+			Key: "origins",
+			Title: "Origins",
+			Description_Ch: "Origins致力于在世界各地探索有效的植物成分，是全球首个以“天然为本，科学为证”，为渴望纯净成分和卓越效果的肌肤带来最天然高效的绿色护肤体验的品牌，Origins悦木之源所有产品均源于天然植物成分以及100%纯天然植物精油。",
+			Description_En: "Origins searches all over the world for the most potent plants, to create high-performance natural skincare that is powered by nature and proven by science. We use potent plants, organic ingredients and 100% natural essential oils.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "origins.com.cn",
+			Filter: ["Beauty"]
+		},{
+			Key: "oroblu",
+			Title: "OROBLU",
+			Description_Ch: "Oroblù自1987年以来，一直是时尚、创新、舒适的完美结合体。在世界高端国际袜品品牌中，Oroblù是其中最富盛名、最受推崇的品牌之一。在意大利乃至全世界，她意味着高雅和优异的品质。在顾客的心目中，Oroblù精致、优雅，在特殊场合用她来搭配漂亮服装是一个绝佳的选择。每被问及，女性朋友们总是这样评价Oroblù：用一流的材料制作高品质的袜子。",
+			Description_En: "Since 1987 Oroblù has been the perfect combi- nation of fashion, innovation and comfort. Oroblù is one of the most famous and appreci- ated brands in the world of high level Interna- tional hosiery; Oroblù means great quality and elegance both in Italy and all around the world. Over the last few years, the classic and fashion hosiery collections were followed by under- wear, bodywear and beachwear series, both for the man and for the woman.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "oroblu.com",
+			Filter: ["Underwear"]
+		},{
+			Key: "ralphlauren",
+			Title: "Ralph Lauren",
+			Description_Ch: "Ralph Lauren是国际首屈一指的美国名牌企业，创立45年来不断以清新洗练、精闢细緻的生活态度，以及时尚高雅而隽永恆远的衣饰风格鲜活了美国精神典范，独特形象深入人心。Ralph Lauren在大中华地区开设了位于上海芮欧百货的全新奢华精品店，以Ralph Lauren的纽约麦迪逊大道及巴黎圣日耳曼大道的旗舰店为蓝本，为中国的尊贵客户提供品牌拥抱的隽永美感与高雅奢华。",
+			Description_En: "Ralph Lauren is a leader in the International luxury lifestyle market. For over 45 years, the brand has revolutionized quintessential Americana with chic and timeless clothing and accessories inspired by a lifestyle of vibrant sophistication. Ralph Lauren opened its first women’s luxury store in Reel Shanghai, China.",
+			Phone: "02132530868",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "ralphlauren.com",
+			Filter: ["Women"]
+		},{
+			Key: "sergentmajor",
+			Title: "SERGENT MAJOR",
+			Description_Ch: "思佳美儿童装源自法国巴黎，专注童装25年。思佳美儿充满想象力的法国设计，将时尚和舒适完美融合，给孩子忠于自已的个性选择，尽享无忧无虑的快乐童乐！",
+			Description_En: "SERGENT MAJOR ,a worldwide famous French kids wear brand which has been devoted to kid’s garment for more than 25 years SERGENT MAJOR is presenting its excellent design full of imagination and providing attrac- tive and comfortable choice to the kids. SER- GENT MAJOR develops strong relationship with children thanks to the unique experience that they offer in store in terms of service and innovation.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "sergent-major.com.cn",
+			Filter: ["Kids"]
+		},{
+			Key: "sergiorossi",
+			Title: "Sergio Rossi",
+			Description_Ch: "Sergio Rossi在1950年于意大利San Mauro Pascoli创立。凭着其出类拔萃的制作工艺，为追求意大利优质鞋履的高品味顾客所欢迎。无数国际明星、名人均选择穿着Sergio Rossi踏上红地毡和出席隆重社交场合。Sergio Rossi在1950年于意大利San Mauro Pascoli创立。凭着其出类拔萃的制作工艺，为追求意大利优质鞋履的高品味顾客所欢迎。无数国际明星、名人均选择穿着Sergio Rossi踏上红地毯和出席隆重社交场合。",
+			Description_En: "Sergio Rossi was established in the 1950s in San Mauro Pascoli, Italy. With its excellent workmanship, the Sergio Rossi shoe has always been chosen by a refined clientele who desires extremely high quality Italian footwear. Numerous Italian and international stars always wear Sergio Rossi on the red carpet, and countless international celebrities choose Sergio Rossi shoes for gala events.",
+			Phone: "02132530878",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "sergiorossi.com",
+			Filter: ["Women"]
+		},{
+			Key: "simoneperele",
+			Title: "SIMONE PERELE",
+			Description_Ch: "始创于1948年的法国巴黎，拥有60余年紧身内衣制造经验，西蒙佩儿生产工艺的秘密就是将历久不衰的激情和精准完美一直地保持，保证了完美内衣品质。高贵,精致，对细节的关注,性感和无与伦比的舒适 … 让女性不必在美丽和舒适之间二者选一。西蒙佩儿品牌独有特性和声誉让她的法国风格被全球女士所钟爱。",
+			Description_En: "Everything started in 1948, backed up by more than sixty years of experience in corset- making, Simone Pérèle's manufacturing secrets are passed down with enduring passion and precision, to guarantee perfect lingerie Elegance, meticulous attention to detail, sensu- ality and unparalleled comfort...the reputation of Simone Pérèle is built on the very qualities that make French Style embraced by women all over the world.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "simone-perele.com",
+			Filter: ["Underwear"]
+		},{
+			Key: "sisley",
+			Title: "Sisley",
+			Description_Ch: "诞生于1976年，奢华植物护肤专家Sisley法国希思黎，凭借跨时代尖端科技和“追求极致卓越”的理念，赋予产品“自然、安全、有效”的承诺。率先将植物精华和植物精油运用到产品中，通过高科技的多元萃取，呈现植物精萃的最优配方。不计成本选取原料，不计时间研发新，造就出一款款高品质美容精品。提供人们全方位的美肤方案：从脸部保养，身体护理，彩妆到香氛。为追求至高生活品质的人们带来非凡肌肤感受。",
+			Description_En: "When in 1976, Hubert d°Oornan created Sisley, Europe had not yet been swept by a wave of interest in aromatherapy and phytotherapy. The use of plants and Essential Oils in beauty products was at the time a highly innovative idea. A genuine pioneer, using method and precision, Hubert d’Ornano specialize his laboratories in phytocosmetology and chose to use the best of plants to create the best skin- care.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "sisley.com.cn",
+			Filter: ["Beauty"]
+		},{
+			Key: "skii",
+			Title: "SKII",
+			Description_Ch: "SK-II专注为女士缔造动人美肌，万千女士使用过SK-II的产品后，肤质获得明显改善且变得晶莹剔透，让她们变得更加精彩灿烂，“活出晶莹人生”。美丽可以焕变，只要拥有充满活力、白晰的肌肤，每位女士都会更有自信，更加迷人。",
+			Description_En: "SK-II brings miracle transformations to women. It has helped us to get clear on our role in the lives of our loyal users. So we present, \"Live Clear\".",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "skii.com.cn",
+			Filter: ["Beauty"]
+		},{
+			Key: "stellamccartneykids",
+			Title: "Stella McCartney Kids",
+			Description_Ch: "Stella McCartney 童装系列产品囊括了刚刚出生的婴儿装直至适合14岁孩子的童装，设计风格充满童趣，设计感十足,，不仅表现了儿童的纯真活力，还力求缔造小天使们的时尚个性，这个系列延续了设计师在美学和环保方面的一贯理念, Stella标志性的柔和色系与鲜艳明快的对比色相结合,带有蝴蝶翅膀的小马、发光的小恶魔都成为了童装T恤上的标志图案。",
+			Description_En: "Stella McCartney 童装系列产品囊括了刚刚出生的婴儿装直至适合14岁孩子的童装，设计风格充满童趣，设计感十足,，不仅表现了儿童的纯真活力，还力求缔造小天使们的时尚个性，这个系列延续了设计师在美学和环保方面的一贯理念, Stella标志性的柔和色系与鲜艳明快的对比色相结合,带有蝴蝶翅膀的小马、发光的小恶魔都成为了童装T恤上的标志图案。",
+			Phone: "02132536598",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "stellamccartney.com",
+			Filter: ["Women", "Kids", "Underwear"]
+		},{
+			Key: "tuctuc",
+			Title: "Tuctuc",
+			Description_Ch: "TUC TUC的产品有童装、婴幼儿用品和配饰。品牌倡导的生活方式是为了打造充满幻想和乐趣的小世界。服装的设计灵感来源于他们的充满童趣的户内外活动、家庭生活、甚至是小恶作剧。品牌的这一精髓能够很快得到顾客的认可，是孩童快乐的源泉。产品始终保持着最高的品质和舒适度，是西班牙著名的童装品牌。",
+			Description_En: "TUC TUC的产品有童装、婴幼儿用品和配饰。品牌倡导的生活方式是为了打造充满幻想和乐趣的小世界。服装的设计灵感来源于他们的充满童趣的户内外活动、家庭生活、甚至是小恶作剧。品牌的这一精髓能够很快得到顾客的认可，是孩童快乐的源泉。产品始终保持着最高的品质和舒适度，是西班牙著名的童装品牌。",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "tuctuc.com",
+			Filter: ["Kids"]
+		},{
+			Key: "unconditional",
+			Title: "Unconditional",
+			Description_Ch: "源自英国的UNCONDITIONAL是一个高端的国际时装品牌。自创牌以来，UNCONDITIONAL已享誉各界，成为当今国际设计师品牌的代表之一。国际著名设计师PhilipAlanStephens是UNCONDITIONAL的创始人，他以独到的设计理念与精准的定位使UNCONDITIONAL在短短9年间，销售点已遍布全球25个国家，并受到众多国际一线巨星的热烈追捧。",
+			Description_En: "UNCONDITIONAL is a high-end international fashion brand designed by Philip Alan Stephens who is the founder and the chief fashion designer of the brand. The brand is recognised by it's sophisticated design of minialism and modern elegance. UNCONDITIONAL has been invited to participate London fashion week for seven quarters since 2005; two quarters in New York fashion week; and four times in Shanghai and Amsterdam.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "unconditional.uk.com",
+			Filter: ["Women", "Man"]
+		},{
+			Key: "wacoal",
+			Title: "WACOAL",
+			Description_Ch: "Wacoal始终以“通过使世界上的女性变得更美丽，从而为社会作出贡献”为目标，关注女性的价值观与审美意识，不断追求超越时代的“美”的本质。Wacoal以独有的人体科学研究所为强大的产品研发后盾，并从卓越的品质、严谨的科研、优秀的产品、贴心的服务四方面着眼，为中国女性提供兼具卓越机能性与时尚设计感于一体的内衣产品。 现华歌尔的产品线分为主打系列、金标系列、年轻系列，满足不同消费者的需求。",
+			Description_En: "Wacoal始终以“通过使世界上的女性变得更美丽，从而为社会作出贡献”为目标，关注女性的价值观与审美意识，不断追求超越时代的“美”的本质。Wacoal以独有的人体科学研究所为强大的产品研发后盾，并从卓越的品质、严谨的科研、优秀的产品、贴心的服务四方面着眼，为中国女性提供兼具卓越机能性与时尚设计感于一体的内衣产品。 现华歌尔的产品线分为主打系列、金标系列、年轻系列，满足不同消费者的需求。",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "wacoal.com.cn",
+			Filter: ["Underwear"]
+		},{
+			Key: "wisekids",
+			Title: "wise kids",
+			Description_Ch: "Wise Kids（慧思创智）于1988年在香港创立，经过25年的发展，慧思创智已成为享誉国际的高端教育玩具、幼儿教材及教具零售、批发的国际品牌(Playmobil, Steiff, TOLO, Siku, Manhattan Toys, Vilac and BRIO…)，一站式销售高端教、玩具并提供专业的服务和指导。",
+			Description_En: "Established in Hong Kong since 1988, special- ized in educational toys for more than 20 years. Provides high quality educational toys for kids in Hong Kong and China. Educational toys are carefully selected based on safety, play value, design, quality and durability to stimulate kids’ physical, emotional and mental growth.",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "wisekidstoys.com",
+			Filter: ["Kids"]
+		},{
+			Key: "yohjiyamamoto",
+			Title: "Yohji Yamamoto",
+			Description_Ch: "山本耀司的品牌理念始于“穿男式衣装的女性”，她们独立不随波逐流品牌理念富于衣着的本质，以打破如季节性和协调性的陈规，来表达了“不完美的完美”白色条纹剪裁的单品，配以不同风格的衣装，如精致的蕾丝、优雅的天鹅绒、以及忧郁的效果。山本耀司2013-14秋冬系列展现了坚强的意志和个性化，且不过度——沉默的力量。",
+			Description_En: "山本耀司的品牌理念始于“穿男式衣装的女性”，她们独立不随波逐流品牌理念富于衣着的本质，以打破如季节性和协调性的陈规，来表达了“不完美的完美”白色条纹剪裁的单品，配以不同风格的衣装，如精致的蕾丝、优雅的天鹅绒、以及忧郁的效果。山本耀司2013-14秋冬系列展现了坚强的意志和个性化，且不过度——沉默的力量。",
+			Phone: "",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: "yohjiyamamoto.co.jp",
+			Filter: ["Women"]
+		}]);
+	});
+	mongo.database.collection("food", function(err, collection){
+		collection.insert([{
+			Key: "blink",
+			Title: "blink",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "coldstone",
+			Title: "coldstone",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "misterdonut",
+			Title: "misterdonut",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "starbucks",
+			Title: "starbucks",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "wagas express",
+			Title: "wagas express",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "大一梦鲷鱼",
+			Title: "大一梦鲷鱼",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "斗香园",
+			Title: "斗香园",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "古镇汤团",
+			Title: "古镇汤团",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "布歌东京",
+			Title: "布歌东京",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "汁喜屋",
+			Title: "汁喜屋",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "饥饿吐司",
+			Title: "饥饿吐司",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "次郎日式简餐",
+			Title: "次郎日式简餐",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "西树泡芙",
+			Title: "西树泡芙",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "吴记牛肉面",
+			Title: "吴记牛肉面",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "每日新鲜水果吧",
+			Title: "每日新鲜水果吧",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "芋贵人",
+			Title: "芋贵人",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "宝珠奶酪",
+			Title: "宝珠奶酪",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "宝馔",
+			Title: "宝馔",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "狮子山香港小厨",
+			Title: "狮子山香港小厨",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "美珍香",
+			Title: "美珍香",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "继光香香鸡",
+			Title: "继光香香鸡",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "釜山料理",
+			Title: "釜山料理",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "筑地银章鱼",
+			Title: "筑地银章鱼",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "缘喜寿司",
+			Title: "缘喜寿司",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "韩林拌拌饭",
+			Title: "韩林拌拌饭",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "满记甜品",
+			Title: "满记甜品",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "葡京制造",
+			Title: "葡京制造",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "锦官城麻辣香锅",
+			Title: "锦官城麻辣香锅",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		},{
+			Key: "鲜芋仙",
+			Title: "鲜芋仙",
+			Description_Ch: "",
+			Description_En: "",
+			Phone: "021",
+			BusinessHours: "10:00AM-22:00PM",
+			Url: ""
+		}]);
+	});
+	mongo.database.collection("restaurent", function(err, collection){
+		collection.insert([{
+			Type: "block",
+			Brand:[{
+				Key: "henkes002",
+				Title: "HENKES & Sushi Raku",
+				Description_Ch: "Henkes 咖啡红酒廊\n食物种类 : 澳洲 / 地中海",
+				Description_En: "Henkes 咖啡红酒廊\n食物种类 : 澳洲 / 地中海",
+				Phone: "3253 0889",
+				BusinessHours: "10:00AM-23:00PM",
+				Url: "henkes.com.cn",
+				Style: "Red"
+			},{
+				Key: "henkes001",
+				Title: "Sushi Raku",
+				Description_Ch: "食物种类 : 摩登日料",
+				Description_En: "食物种类 : 摩登日料",
+				Phone: "3253 0711",
+				BusinessHours: "11:30AM-22:30PM",
+				Url: "sushiraku.com.cn",
+				Style: "Red"
+			}]
+		},{
+			Type: "vertical",
+			Key: "lacreperie",
+			Title: "la creperie",
+			Description_Ch: "食物种类 : 法式薄饼",
+			Description_En: "食物种类 : 法式薄饼",
+			Phone: "021 5465 9055",
+			BusinessHours: "10:00AM-23:00PM",
+			Url: "lacreperie.com.cn",
+			Style: "Black"
+		},{
+			Type: "vertical",
+			Key: "golden",
+			Title: "金牛苑",
+			Description_Ch: "食物种类 : 越南菜",
+			Description_En: "食物种类 : 越南菜",
+			Phone: "",
+			BusinessHours: "10:00AM-23:00PM",
+			Url: "",
+			Style: "Black"
+		},{
+			Type: "vertical",
+			Key: "ginzabairan",
+			Title: "银座梅林",
+			Description_Ch: "食物种类: 日料吉列豚肉",
+			Description_En: "食物种类: 日料吉列豚肉",
+			Phone: "021 3253 7998",
+			BusinessHours: "10:00AM-23:00PM",
+			Url: "ginzabairin.com.hk",
+			Style: "White"
+		},{
+			Type: "vertical",
+			Key: "dadong",
+			Title: "大董餐饮",
+			Description_Ch: "食物种类 : 创意中国菜",
+			Description_En: "食物种类 : 创意中国菜",
+			Phone: "021 3253 2299",
+			BusinessHours: "10:00AM-23:00PM",
+			Url: "dadongdadong.com",
+			Style: "Red"
+		}]);
+	});
+	mongo.database.collection("fix_text", function(err, collection){
+		collection.insert([{
+			Language: "Ch",
+			Topic: "Privacy",
+			Content: "#Head# 阁下的私隐权利\n#Paragraph# 芮欧百货(上海)有限公司（下称“芮欧百货”、“我们”、“我们的”或“我们”(受格形式)）在收集、保存、使用及传送个人数据时，尊重法例赋予阁下的私隐权利；而本“私隐政策声明”旨在说明我们处理个人私隐的方法。\n#Paragraph# 以下将详细说明我们处理个人数据的政策及方法，请仔细参阅及理解。文中所述的政策适用于已在本网站登记或未登记的所有使用者。另我们有权按需要随时更新、修订、重新公布或更改有关的内容。\n#Paragraph# 本“私隐政策声明”中没有加上明确解释的用字或词语，其涵义与“使用条款”及“芮欧百货规则”给予该等字词的涵义相同。\n#Paragraph# 倘本声明的英文本与中文本有任何差异的地方，则以英文本为准。\n#Paragraph# “个人资料”指任何可识别个人身份或敏感性的资料（例如姓名、职业、地址、联络数据、八达通卡号码及信用卡数据等(但亦可包括其它的数据及数据)，藉以在切实可行下确定个别人仕的身份）。\n#Head# 使用个人资料的用途\n#Paragraph# 当你登记成为本网站的使用者，我们将收集你的个人资料。\n#Paragraph# 倘你为13岁以下，在提供任何个人资料前，必须先征求家长或监护人同意。我们可能将你的个人资料用作两种用途：强制性及自愿性用途。若个人资料用作强制性 用途，如你希望我们提供你申请的服务，你必须向我们提供你的个人资料。如个人资源只用作自愿性用途，你可以告知我们不要将你的个人资料用作该用途，我们将 不会使用你的个人资料作该用途。\n#Paragraph# 你必须提供个人资料的强制性用途包括：\n1、申请、终止及延续本网站的使用；\n2、处理账项及缴付费用；\n3、处理及跟进服务要求、查询及投诉；\n4、供我们及第三者作日后巿场研究之用；\n5、核实阁下的身份；\n6、让我们更加了解已登记用户的统计资料；\n7、促使我们或我们的附属机構，或接收该等资料的机構得以为阁下提供我们相信适合阁下或阁下可能感兴趣的网页或其她电子服务。\n#Head# 资料的披露\n#Paragraph# 我们在收集阁下的个人资料时，将会：\n向阁下说明我们正在收集阁下的个人资料以及收集的用途（以本「收集个人资料声明」或独立通知）；\nii. 给阁下“否决”的机会（即限制我们使用有关的个人数据作某些指定用途）；\niii. 说明我们如何储存个人数据的方法，以及可供阁下查阅、更改及删除已储存个人数据的方法。\n#Paragraph# 除已在本“私隐政策声明”中明确指出的情况外，我们绝不会披露阁下的个人资料，除非有关要求乃法例所需，或我们合理地相信此等行动是需要：\ni.符合法例或适用的规例；\nii.保障及就我们的权利及财产作出抗辩；\niii.保障芮欧百货免受误用或在未经许可的情况下擅自使用；\niv.保障我们的使用者或公众的个人安全或财产。\n#Head# 与其它网页的连结\n#Paragraph# 本“收集个人资料声明”只适用于本网站。倘阁下按任何广告或连结其它网页的超级链接（hyperlink），即会离开本网站而进入另一个位置，我们并不负责保护阁下在浏览其它网页时可能泄漏的私隐、个人数据及可能受到 “曲其” (cookies) 的干扰 /影响 ，阁下应自行参阅该位置的私隐政策（如有者）。\n#Head# 网络纪录\n#Paragraph# 当阁下进入本网站后，我们的服务器软件会记录阁下的计算机域名，并追查阁下曾浏览的每一网页，目的是计算本网站的通讯量、各部分数据的受欢迎程度、搜集浏览者的一般数据、及向广告客户推销网站服务。在此情况下，该等广告客户有可能会获得一些撮要的通讯量数据，但这些数据并不会揭露阁下的个人身份。\n#Head# 保安\n#Paragraph# 除以上第3点所述外，阁下的个人数据不论如何储存，均只限于已获我们授权的雇员或承办商才可以取用。利用电子方式储存的个人数据以独立的服务器保存，并加有密码保护（或同等形式的保护措施）。\n#Head# 法律程序中个人数据的应用\n#Paragraph# 阁下已明确同意在我们可基于任何原因，包括因追讨阁下拖欠的款项而须向阁下采取任何行动时，我们可以根据阁下所提供的个人资料识别阁下的身份并向阁下采取法律行动。\n#Head# 存取及保留个人资料的权利\n#Paragraph# 阁下可随时要求存取及更正我们纪录中与阁下有关的个人资料，阁下亦可要求我们从任何运作中的邮递或分发名单中删除阁下的数据。倘阁下须行使任何应有权利时，可按以下地址致函给我们，并在信封面上注明“保密”字样。我们在响应阁下的要求时，可能要求阁下提供某些个人资料，以确定阁下确实是所处理数据的当事人。在阁下提出要求后，我们是需要在切实可行的情况下，于40天内给予回复，但阁下可能因此而需缴付费用。\n#Head# 资料的保留\n#Paragraph# 我们将按收集资料目的所需的时间保留你的个人资料。\n无需保留的个人资料将会销毁。\n芮欧百货(上海)有限公司有权修改本“私隐政策声明”，而有关修改将登载于本网页上。"
+		},{
+			Language: "En",
+			Topic: "Privacy",
+			Content: "#Head# Rights to Privacy\n#Paragraph# Réel Shanghai Department Store Co., Ltd. (hereinafter referred to as \" Réel Department \", \"We\", \"Our\" or \"Us\") respects your right to privacy conferred by law in the collection, storage, use and transmission of personal data; and the \"terms and conditions\" explains our approach to handling personal privacies. In the following part we will explain our policy and method of processing personal data in details, please read carefully for understanding. The policy described in the text is applicable to all users registered or unregistered to the website. In addition, we have the right to update, amend, re-publish or change related content where we deem necessary.\n#Paragraph# Meaning of word or expression that is not coupled with a clear explanation in this \"Terms and conditions\" is the same to that used in \"Terms of Use\" and \"Réel Department Store Regulations\". In case of conflict or discrepancy between the English and the Chinese version of this statement, the former shall prevail. \"Personal Data\" refers to any data that distinguish personal identity or sensitivity such as name, occupation, address, contact data, Octopus card number and credit card data, etc, also including other data or information with which the identity of an individual person can be confirmed.\n#Head# Purpose of Using Personal Data\n#Paragraph# When you register to use this website, we will collect your personal information. If you are under the age of 13, before providing any personal informa- tion, you must first obtain parental or guardian consent. We may use your personal data for two purposes: mandatory and voluntary purposes. If the personal data are used for mandatory purpose like you want us to provide the services you request, you must provide us with your personal data. If personal data are used for voluntary purpose only, you can tell us you do not wish your personal data used for such purposes, we will not use your person- al data for that purpose. The mandatory uses of personal data you must provide include:\n1 application, termination and continuation of use of this website\n2 handle billing and payment\n3 treatment and request of follow-up services, inquiries and complaints\n4 for ours and for the third party’s future market research\n5 to verify your identity\n6 for our better understanding of the statistics of registered users and\n7 help us or our affiliates, or organization receiving such information to provide you web page or other electronic services that we believe may suit your or you may be of interest.\n#Head# Disclosure of Data\n#Paragraph# When we collect your personal data, we will:\ni. inform you that we are collecting your personal data and the collecting purposes (through the \"Personal Data Collection Statement\" or separat notice)\nii. give you a \"veto\" choice (i.e. limit our use of personal data for certain specified purposes) and explain to you how we store personal data, and you can review, change, and delete stored personal data.\n#Paragraph# Except the situation expressly state in the \"Privacy Policy Statement\", we will not disclose your personal data, unless required so by law, or we reasona- bly believe that such action is necessary:\ni. comply with applicable laws or regulations\nii. protect and defend in respect to our rights and property\niii. safeguard against the misuse or unauthorized of Réel Shanghai Department Store\niv. and protect our users or the public's personal safety or property.\n#Head# Links to other Websites\n#Paragraph# The \"Personal Data Collection Statement\" applies only to this website. If you click on any ads or hyperlink to other web pages, you will leave the site and enter into another location that we are not responsible for protecting your possible leakage of privacy, personal data or interference/influence by cookies when browsing other web pages; you are advised to refer to the privacy policies of that position (if any).\n#Head# Web Cookies\n#Paragraph# When you visit our website, our server software will record down the domain name of your computer and track every page you visit to calculate the amount of traffic on this website, the popularity of each part of the data, collect surfers’ general data, and sell web services to advertisers. In this case, the advertiser may get some summary of the traffic data, but the data will not reveal your personal identity. .\n#Head# Security\n#Paragraph# Except for the above article 3, regardless how your personal data are stored, they are only accessible by our authorized employees or contractors. Elec- tronically stored personal data will be saved to a separate server with password protection (or equivalent forms of protection).\n#Head# Use of Personal Data in Legal Procedure\n#Paragraph# You expressly agree that we can for any reason, including taking any action which would fall to you for the recovery of your outstanding amounts, identify your identity and take legal action to you according to your personal data provided.\n#Head# Right to Store and Keep Personal Data\n#Paragraph# You may at any time request access to and correction of your personal data in our records, and you may also ask us to delete your data from any active mailing or distribution list. If you should require the exercise of any right, write to us at the address below, and mark \"Confidential\" in the envelope. In response to your request we may ask you to provide certain personal information to determine that you are the subject of your data being processed. In your request, we are required to reply within 40 days in practicable situation, but you may thereof need to pay a fee.\n#Head# Retaining Personal Data\n#Paragraph# We will keep your personal data to the time necessary for the purpose of collecting your information.Personal data that are unnecessary for retaining will be destroyed. Réel Department Store reserves the right to amend this \"terms and conditions\" and such changes will be posted on the website.",
+		},{
+			Language: "Ch",
+			Topic: "Concern",
+			Content: "#Paragraph# 亲爱的顾客您好，欢迎关注芮欧百货官方微博（weibo.com\/reelshanghai）及时了解更多商场丰富信息，同时也欢迎您透过客服信箱：eservice@reelshanghai.com传达您的宝贵意见，我们将竭诚为您答复。（贴心小提醒：敬请于信件中留下您的个人联络资料，如：姓名、联络电话、电子信箱等，以利客服人员尽速与您联系。）您亦可拨打客服专线：+86 21 22309788 或 4001559788，将有客服人员为您解说与服务，或至下列常见问题中查询您所需要的信息。\n#Paragraph# 客服专线服务时间每日早上10点至晚上10点。"
+		},{
+			Language: "En",
+			Topic: "Concern",
+			Content: "Dear customer, thank you to follow the official Weibo of Réel Department Store (weibo.com/reelshanghai)\r\nto acquire a wealth of information of the our department store; you’re also welcomed to express your ideas or suggestions through our Customer Service email: eservice@reelshanghai.com, and we will be wholeheartedly at your service.\r\n(Warm tips: please leave your personal contact information such as name, telephone number, e-mail, etc. in your e-mail so that a timely contact will be facilitated.) You can also call the customer service line +86 21 22309788 or 4001559788 for explanation and services, or inquire about the following FAQ for more information. Service hours of customer service line: 10:00 to 22:00."
+		},{
+			Language: "Ch",
+			Topic: "Contact1",
+			Content: "亲爱的顾客您好，如对芮欧百货(上海)有限公司有任何疑问或建议，\n欢迎您透过客服信箱传达，我们将竭诚为您答复。\n客服信箱 : eservice@reelshanghai.com\n（贴心小提醒：敬请于信件中留下您的个人联络资料，如:姓名、联络电话、电子信箱…等，以利客服人员尽速与您联系。）"
+		},{
+			Language: "En",
+			Topic: "Contact1",
+			Content: "Dear customer, you’re also welcomed to express your ideas or suggestions through our Customer Service email: eservice@reelshanghai.com, and we will be wholeheartedly at your service.\r\n (Warm tips: please leave your personal contact information such as name, telephone number, e-mail, etc. in your e-mail so that a timely contact will be facilitated.)  Customer"
+		},{
+			Language: "Ch",
+			Topic: "Contact2",
+			Content: "您亦可拨打客服专线：+86 21 22309788 或 4001559788\r\n将有客服人员为您解说与服务，或至下列常见问题中查询您所需要的信息。\r\n客服专线服务时间为每日早上10点至晚上10点。"
+		},{
+			Language: "En",
+			Topic: "Contact2",
+			Content: "You can also call the customer service line +86 21 22309788 or 4001559788 for explanation and services, or inquire about the following FAQ for more information. Service hours of customer service line: 10:00 to 22:00."
+		},{
+			Language: "Ch",
+			Topic: "Contact3",
+			Content: "欢迎光临芮欧网站，如欲提供合作提案内容，请于以下表格内填妥详细内容，\r\n提案内容将会寄送相关部门，我们将会于审核信息后主动与您连络，谢谢！"
+		},{
+			Language: "En",
+			Topic: "Contact3",
+			Content: "Welcome to Réel Department’s website and thank you for providing the cooperation proposal(s). Please complete the form below for more details and we will contact you after the content submitted to relevant departments being verified."
+		},{
+			Language: "Ch",
+			Topic: "Recruiting",
+			Content: "Applicants who are interested in joining in Réel Department Store can send the resume to XXX@reelshanghai.com, and the Companywill arrange interviews according to the post requirements. Information of applicants who are not informed of the interview or recruitment will be kept in the Company's Human Resources Department and will not be returned. No call or visit allowed.\r\nLinks to other human resources websites:\r\nwww.51job.com\r\nwww.ChinaHR.com"
+		},{
+			Language: "En",
+			Topic: "Recruiting",
+			Content: "Applicants who are interested in joining in Réel Department Store can send the resume to XXX@reelshanghai.com, and the Companywill arrange interviews according to the post requirements. Information of applicants who are not informed of the interview or recruitment will be kept in the Company's Human Resources Department and will not be returned. No call or visit allowed.\r\nLinks to other human resources websites:\r\nwww.51job.com\r\nwww.ChinaHR.com"
+		},{
+			Language: "Ch",
+			Topic: "VisitAbout1",
+			Content: "#Paragraph# 芮欧百货以Réel为名，源于法文，代表〝真实〞之意。芮欧百货希冀以其缤彩纷呈的高端精品，以及精致贴心的服务与梦幻多变的创意，诠释现代女性的万种风貌，创造令人惊艳向往的购物体验，成为现代女性乐为女人的摩登之苑。\r\n#Paragraph# 芮欧百货地理位置优越，位于上海市静安区精华地段，地处时尚、创意、文化交汇的南京西路，临近拥有百年历史的老上海时尚圣地百乐门，直接与地铁2号线与7号线以及机场航站楼的出口相接。项目周边还有久光百货、恒隆广场、静安嘉里中心等高端购物场所，与芮欧共同呈现最摩登的生活理念，促进时尚生活圈的共荣发展。此外，静安公园亦与芮欧毗邻而居，绿荫环绕的天然景致触手可及。\r\n#Paragraph# 芮欧百货的总面积达40,000平方米，总营业面积为约25,000平方米。项目建筑由国际著名的株式会社久米设计操刀，商场设计由株式会社品浩负责。芮欧的外观设计起源自美丽浪漫的水晶雪球 (Snow Globe)。象征着芮欧是一份特别的礼物，是一个充满美丽的旋律， 联想和记忆的地方。 在这个现代与梦幻邂逅的空间里期待着意想不到的美丽惊喜。时尚且具有人文气息的空间里，处处充满精彩变化，每个楼层都有专属的氛围与特色，巧妙的展现出都会的高雅时尚风格。"
+		},{
+			Language: "En",
+			Topic: "VisitAbout1",
+			Content: "#Paragraph# Réel Department Store, with its name deriving from the French word “réel” that means “real” in English, expects to create a stunning shopping experi- ence with a profusion of high-end boutique stores, attentive services, and fantastic creativity, making it a mecca for modern women to enjoy, to show, and to share.\r\n#Paragraph# Ideally situated in the prime location of Jing’an District, Shanghai, Réel Department Store overlooks Nanjing West Road where fashion, culture and originality meet with each other and directly connects with exits of Metro Line 2 and Line 7 as well as the airport terminal. In the neighborhood lies Parliament, the century-old shrine of fashion in old Shanghai, and other high- end shopping malls including Jiuguang Department Store, Plaza 66, and Jing’an Kerry Center, presenting the most modern idea of life and promoting the common prosperity of style living. Adjacent to Jing'an Park, Réel Department Store also enjoys the natural verdancy and luxuriance.\r\n#Paragraph# Réel Department Store covers an area of 40,000 square meters, of which approximately 25,000 square meters are of business use. Designed by the internationally renowned design firm Kume Sekkei for the project construction and Pinhole for the shopping mall, its exterior design originates the concept from the beautiful and romantic Snow Globe, which symbolizes that Réel, as a special gift, is a place full of beautiful melodies, imagination and memories where unexpected surprise awaits you in the space of modern fantasy. Excitement and changes could be found everywhere in the place of fashion and culture, ingeniously showing the metropolitan elegance with atmosphere and style exclusive to each floor."
+		},{
+			Language: "Ch",
+			Topic: "VisitAbout2",
+			Content: "#Paragraph# 颠覆传统精品百货的经营模式，打造新颖个性化的购物乐趣！芮欧百货核心理念是创造“现代女性乐为女人的摩登之苑”，集世界时尚之精粹，融入追求卓越的创新与热情、对细节近乎苛求的坚持，营造愉悦的购物享受。\r\n#Paragraph# 芮欧百货力图使消费变成一段充满乐趣、个性、创意与精品的体验。芮欧百货将为时尚女性量身打造美丽的舞台，精采展示优雅的生活方式，并演绎时尚新主张，引领时尚潮流。"
+		},{
+			Language: "En",
+			Topic: "VisitAbout2",
+			Content: "#Paragraph# A subversion of the traditional business pattern of boutique department store and a creation of original and personalized shopping experience, Réel Department Store focuses its core idea on creating a “modern mecca for modern women to be happy to be a woman”, with a collection of the world fashion and the innovation and passion of pursuing excellence, almost demanding adherence to details, to make the shopping experience joyful and pleasant.\r\n#Paragraph# Réel Shanghai Department Store aims to make consumption an experience of fun, personality, creativity and quality, tailoring for fashionable women a beautiful stage of showcasing elegant lifestyles, interpreting new ideas of fashion, and leading the fashion trend.\r\n#Paragraph# A total of five floors of shopping themes will be found in Réel Shanghai Department Store. The theme of “Fashion on the Move” for B1 floor creates customers a unique atmosphere of fashion and fantasy with international A-list cosmetics and fashion brands. On the 1F and 2F, “Luxury Classic” gath- ers the famous brands of international fashion and luxury. Avant-garde personality, fashion elements, and personalized brands shape the unique fashion trend of the 3F, where customers will enjoy the distinctive fashion elements and pioneering styles. Then the 4F will highlight the delight and attitude of fashion and life with the most complete range of brands of kid’s apparel and lingerie, building up the sweet space favoring modern women. In this floor, consumers can also enjoy the exquisite moments of slow living and spa services. On the top floor locate sky garden and specialty restaurants. The inter- national food court Réel Kitchen is located on B2 floor, where many world well-known food brands and the Chinese, Japanese, Korean, Vietnamese, Italian, American and other international cuisines are gathered around, making it the first choice for dating or family reunion."
+		},{
+			Language: "Ch",
+			Topic: "VisitAbout3",
+			Content: "#Paragraph# 芮欧百货共设五层消费购物主题馆。B1为“时尚零距离”，将国际一线化妆品品牌结合设计感十足的国际时尚潮流品牌，打造出具有时尚感与梦幻美感的独特氛围。1F、2F重现“经典奢华”，汇集国际时尚前端的名品。前卫个性、流行元素、个性化品牌组成了3F独具特色的个性潮流时尚，顾客在这里将独享时尚流行元素，领略时尚先锋的风采。4F则彰显时尚购物的生活情趣与态度，有市场上最齐全的精品童装品牌、独家引进“私密内衣区”的概念，构筑宠爱现代女性的甜蜜空间。在此楼面，消费者还可以享受慢活精致时光与美容服务。顶楼则设有空中花园与特色餐厅。地下二层是Réel Kitchen国际美食广场，聚集了全球多个知名美食品牌，将中式、日式、韩式、越式、意式，美式等各国美食收入囊中。无论是私人约会还是全家团聚，Réel Kitchen都是饕餮食客的首选。"
+		},{
+			Language: "En",
+			Topic: "VisitAbout3",
+			Content: "#Paragraph# With inspiration and creativity from all over the world, Réel Shanghai Department Store offers consumers a shopping feast, customized concierge services, unique stylish atmosphere to exclusively enjoy the highly fashionable elements and styles.\r\n#Paragraph# Réel Shanghai Department Store will break the traditional pattern and bring a new concept to China’s retail malls, making it the shopping landmark of fashion, fun, and enjoyable luxury life in Shanghai. Réel Department Store is bound to be the modern mecca for modern women to be happy to be a woman."
+		},{
+			Language: "Ch",
+			Topic: "VisitAbout4",
+			Content: "#Paragraph# 芮欧百货集聚了来自世界各地的灵感和创意，让消费者尊享芮欧亲力打造的购物盛宴，提供定制化的礼宾服务，勾勒出独一无二的时尚氛围，让顾客们独享极具时尚的流行元素、领略时尚先锋的风采。\r\n#Paragraph# 芮欧将打破传统的格局，赋予中国零售百货一个全新的概念，成为上海最时尚、最具乐趣与最享受的奢侈生活时尚购物地标，超越传统的精品商场，芮欧百货势将成为现代女性乐为女人的摩登之苑。"
+		},{
+			Language: "Ch",
+			Topic: "VisitLocation",
+			Content: "上海市静安区南京西路1601号（常德路交叉口)\n每日10:00AM - 22:00PM\n地铁二号线，静安寺站，4号出口\n地铁七号线，静安寺站，10号出口\n15路、20路、21路、37路、40路、45路、76路、93路、94路、\n113路、315路、321路、323路、327路、330路、506路、\n824路、825路、830路、838路、921路、927路、旅游8号线\n与越洋广场共用停车场. 汽车入口位于常德路上\n停车费用方式 1小时15元，每日最高上限120元\n第二个小时起以半个小时为收费单位，\n收费金额为人民币7.50元/个/半小时\n"
+		},{
+			Language: "En",
+			Topic: "VisitLocation",
+			Content: "1601 Nanjing Road (W), Shanghai, P.R.C. 200040\n10:00a.m. to 10:00p.m.\nMetro Line 2, Jin’an si, Exit 4\nMetro Line 7, Jin’an si, Exit 10\n15、20、21、37、40、45、76、93、94、113、315、\n321、323、327、330、506、824、\n825、830、838、 921、927、Tour Line 8\n与越洋广场共用停车场. 汽车入口位于常德路上\nRMB 15 per hour, Maximum RMB 120 per day\n第二个小时起以半个小时为收费单位，\n收费金额为人民币7.50元/个/半小时\n"
+		},]);
+	});
 }

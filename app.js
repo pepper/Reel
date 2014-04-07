@@ -5,7 +5,7 @@
 
 var express = require("express");
 var index = require("./routes/index");
-var user = require("./routes/user");
+var backend = require("./routes/backend");
 var defaults = require("./routes/defaults");
 var http = require("http");
 var path = require("path");
@@ -24,6 +24,7 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(express.cookieParser("reelsecret"));
 app.use(express.session());
+app.use(express.bodyParser());
 
 //Custom middleware
 app.use(function(req, res, next){
@@ -44,10 +45,27 @@ app.use(function(req, res, next){
 	}
 	next();
 });
+app.use(function(req, res, next){
+	if(req.session && req.session.administrator && req.session.administrator.login){
+		res.result.Administrator = true;
+	}
+	// res.result.Administrator = true;
+	next();
+});
 
 app.use(app.router);
 app.use(require("less-middleware")({ src: path.join(__dirname, "public") }));
 app.use(express.static(path.join(__dirname, "public")));
+
+var needAdministrator = function(req, res, next){
+	if(req.session && req.session.administrator && req.session.administrator.login){
+		next();
+	}
+	else{
+		res.send(401);
+	}
+	// next();
+}
 
 // development only
 if ("development" == app.get("env")) {
@@ -61,6 +79,7 @@ app.get("/Contact", index.contact);
 app.get("/Concern", index.concern);
 app.get("/Privacy", index.privacy);
 app.get("/FAQ", index.faq);
+app.get("/Brands", index.brand);
 app.get("/Visit", index.visitFloor);
 app.get("/Visit/Floor", index.visitFloor);
 app.get("/Visit/Location", index.visitLocation);
@@ -68,14 +87,34 @@ app.get("/Visit/About", index.visitAbout);
 app.get("/Recruiting", index.recruiting);
 
 // Default Create
-app.get("/creat/news", defaults.createNews);
+app.get("/creat/default", needAdministrator, defaults.createNews);
+
+// API
+app.post("/news", needAdministrator, backend.createNews);
+app.post("/news/:news_key", needAdministrator, backend.editNews);
+app.post("/news/:news_key/head_news", needAdministrator, backend.setHeadNews);
+app.delete("/news/:news_key", needAdministrator, backend.removeNews);
+app.post("/news/:news_key/image", needAdministrator, backend.addNewsImage);
+app.delete("/news/:news_key/image/:image_id", needAdministrator, backend.removeNewsImage);
+
+app.post("/faq/:title", needAdministrator, backend.createFaq);
+app.delete("/faq/:title/question/:question_index", needAdministrator, backend.removeFaq);
+
+app.post("/floor/:floor_level", needAdministrator, backend.createSection);
+app.delete("/floor/:floor_level/section/:section_key", needAdministrator, backend.removeSection);
+
+app.post("/brand", needAdministrator, backend.createBrand);
+app.delete("/brand/:brand_key", needAdministrator, backend.removeBrand);
+
+app.post("/privacy", needAdministrator, backend.editPrivacy);
+app.post("/fix_text", needAdministrator, backend.editFixText);
 
 // app.get("/users", user.list);
 // Administrator User Login
 app.get("/administrator/status", function(req, res){
 	res.json(req.session.administrator);
 });
-app.get("/administrator", express.basicAuth("pepper", "6060"), function(req, res){
+app.get("/administrator", express.basicAuth("reel", "reel"), function(req, res){
 	req.session.administrator = {
 		login: true,
 		datetime: new Date()
