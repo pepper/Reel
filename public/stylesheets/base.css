@@ -1019,6 +1019,7 @@ div {
   margin-top: 30px;
 }
 .MainContent .InStoreService table {
+  margin-top: 10px;
   width: 755px;
 }
 .MainContent .InStoreService table td {
@@ -1062,6 +1063,7 @@ div {
   margin-top: 30px;
 }
 .MainContent .Membership table {
+  margin-top: 10px;
   width: 755px;
 }
 .MainContent .Membership table td {
@@ -1810,6 +1812,10 @@ div {
   color: #808080;
   font-size: 11px;
   line-height: 22px;
+}
+.MainContent .Concern img {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .MainContent .Concern span {
   color: #808080;

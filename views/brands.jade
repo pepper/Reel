@@ -46,7 +46,8 @@ block mainContent
 			div(class="BrandItem #{Brand.Key}")
 				div(class="BrandHeader")
 					| #{Brand.Title}&nbsp;&nbsp;&nbsp;
-					span(class="glyphicon glyphicon-trash RemoveBrand", data-brand-key="#{Brand.Key}")
+					- if(Administrator)
+						span(class="glyphicon glyphicon-trash RemoveBrand", data-brand-key="#{Brand.Key}")
 				div(class="BrandContent")
 					img(class="BrandImage", src="/brands/#{Brand.Key}.jpg")
 					div(class="BrandDescription")
