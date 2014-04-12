@@ -328,3 +328,54 @@ exports.recruiting = function(req, res){
 		});
 	});
 }
+
+exports.services = function(req, res){
+	if(res.result.Language == "Ch"){
+		res.redirect("/Services/Petition");
+	}
+	if(res.result.Language == "En"){
+		res.redirect("/Services/Membership");
+	}
+}
+
+exports.servicesMemberShipBook = function(req, res){
+	res.result.CurrentURL = "/Services";
+	res.result.ServicesTopic = "MemberShipBook";
+	res.render("servicesMemberShipBook", res.result);
+}
+
+exports.servicesPetition = function(req, res){
+	res.result.CurrentURL = "/Services";
+	res.result.ServicesTopic = "Petition";
+	res.render("servicesPetition", res.result);
+}
+
+exports.servicesBooking = function(req, res){
+	res.result.CurrentURL = "/Services";
+	res.result.ServicesTopic = "Booking";
+	res.render("servicesBooking", res.result);
+}
+
+exports.servicesMembership = function(req, res){
+	res.result.CurrentURL = "/Services";
+	res.result.ServicesTopic = "Membership";
+	res.render("servicesMembership", res.result);
+}
+
+exports.servicesMembershipBenefits = function(req, res){
+	res.result.CurrentURL = "/Services";
+	res.result.ServicesTopic = "MembershipBenefits";
+	res.render("servicesMembershipBenefits", res.result);
+}
+
+exports.servicesRegulations = function(req, res){
+	res.result.CurrentURL = "/Services";
+	res.result.ServicesTopic = "Regulations";
+	res.render("servicesRegulations", res.result);
+}
+
+exports.servicesInStoreService = function(req, res){
+	res.result.CurrentURL = "/Services";
+	res.result.ServicesTopic = "InStoreService";
+	res.render("servicesInStoreService", res.result);
+}

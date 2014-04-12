@@ -1,5 +1,5 @@
 * {
-  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", times;
 }
 html,
 body {
@@ -219,13 +219,13 @@ div {
   width: 355px;
 }
 .Footer .OtherLinkContainer img.Privacy[language=En] {
-  right: 266px;
+  right: 333px;
 }
 .Footer .OtherLinkContainer img.Privacy[language=Ch] {
   right: 304px;
 }
 .Footer .OtherLinkContainer img.Concern[language=En] {
-  display: hidden;
+  right: 266px;
 }
 .Footer .OtherLinkContainer img.Concern[language=Ch] {
   right: 251px;
@@ -996,8 +996,110 @@ div {
   font-size: 11px;
   line-height: 22px;
 }
+.MainContent .InStoreService {
+  top: 45px;
+  left: 50%;
+  width: 755px;
+  margin-left: -377px;
+  margin-bottom: 45px;
+}
+.MainContent .InStoreService p {
+  color: #808080;
+  font-size: 11px;
+  line-height: 22px;
+}
+.MainContent .InStoreService h3 {
+  color: #999999;
+  font-size: 14px;
+  margin-top: 40px;
+}
+.MainContent .InStoreService h4 {
+  color: #999999;
+  font-size: 12px;
+  margin-top: 30px;
+}
+.MainContent .InStoreService table {
+  width: 755px;
+}
+.MainContent .InStoreService table td {
+  vertical-align: top;
+  font-size: 11px;
+  line-height: 18px;
+  color: #808080;
+  padding-top: 8px;
+  border-bottom: solid 1px #808080;
+}
+.MainContent .InStoreService table .TopHead {
+  text-align: center;
+  font-size: 12px;
+  color: #333333;
+  padding-bottom: 15px;
+}
+.MainContent .InStoreService table .Title {
+  font-size: 12px;
+  color: #333333;
+}
+.MainContent .Membership {
+  top: 45px;
+  left: 50%;
+  width: 755px;
+  margin-left: -377px;
+  margin-bottom: 45px;
+}
+.MainContent .Membership p {
+  color: #808080;
+  font-size: 11px;
+  line-height: 22px;
+}
+.MainContent .Membership h3 {
+  color: #999999;
+  font-size: 14px;
+  margin-top: 40px;
+}
+.MainContent .Membership h4 {
+  color: #999999;
+  font-size: 12px;
+  margin-top: 30px;
+}
+.MainContent .Membership table {
+  width: 755px;
+}
+.MainContent .Membership table td {
+  vertical-align: top;
+  font-size: 11px;
+  line-height: 18px;
+  color: #808080;
+  padding-top: 8px;
+  padding-right: 30px;
+  padding-bottom: 8px;
+  border-bottom: solid 1px #808080;
+}
+.MainContent .Membership table .TopHead {
+  text-align: center;
+  font-size: 12px;
+  color: #333333;
+  padding-bottom: 15px;
+}
+.MainContent .Membership table .Title {
+  font-size: 12px;
+  color: #333333;
+}
+.MainContent .Membership table tr.NoBorder td {
+  border-bottom: none;
+}
 .ServicesSelector img {
   cursor: pointer;
+}
+.ServicesSelector a {
+  font-size: 11px;
+  color: #666666;
+}
+.ServicesSelector a div {
+  font-size: 11px;
+  color: #666666;
+  width: 100px;
+  position: relative;
+  padding-bottom: 5px;
 }
 .MainContent .News {
   top: 45px;

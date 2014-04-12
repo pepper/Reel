@@ -85,6 +85,14 @@ app.get("/Visit/Floor", index.visitFloor);
 app.get("/Visit/Location", index.visitLocation);
 app.get("/Visit/About", index.visitAbout);
 app.get("/Recruiting", index.recruiting);
+app.get("/Services", index.services);
+app.get("/Services/MemberShipBook", index.servicesMemberShipBook);
+app.get("/Services/Petition", index.servicesPetition);
+app.get("/Services/Booking", index.servicesBooking);
+app.get("/Services/Membership", index.servicesMembership);
+app.get("/Services/MembershipBenefits", index.servicesMembershipBenefits);
+app.get("/Services/Regulations", index.servicesRegulations);
+app.get("/Services/InStoreService", index.servicesInStoreService);
 
 // Default Create
 app.get("/creat/default", needAdministrator, defaults.createNews);

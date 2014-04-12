@@ -1,0 +1,24 @@
+extends layout
+
+block leftPanel
+	div(class="ServicesSelector")
+		- if(Language == "Ch")
+			a(href="/Services/Petition")
+				img(class="#{(ServicesTopic == 'Petition')?'Selected':''} HoverLink ChangeImage", src="/images/Services/Petition_L.png")
+			a(href="/Services/MemberShipBook")
+				img(class="#{(ServicesTopic == 'MemberShipBook')?'Selected':''} HoverLink ChangeImage", src="/images/Services/MemberShipBook_L.png")
+			br
+			img(class="#{(ServicesTopic == 'Transport')?'Selected':''} HoverLink ChangeImage", src="/images/Services/Transport_L.png")
+			br
+			a(href="/Services/Booking")
+				img(class="#{(ServicesTopic == 'Booking')?'Selected':''} HoverLink ChangeImage", src="/images/Services/Booking_L.png")
+		- if(Language == "En")
+			a(href="/Services/Membership")
+				div(class="HoverLink ChangeColor", overColor="#000000", outColor="#666666") Membership
+			a(href="/Services/MembershipBenefits")
+				div(class="HoverLink ChangeColor", overColor="#000000", outColor="#666666") Membership Benefits
+			a(href="/Services/Regulations")
+				div(class="HoverLink ChangeColor", overColor="#000000", outColor="#666666") Regulations of Member Card
+			a(href="/Services/InStoreService")
+				div(class="HoverLink ChangeColor", overColor="#000000", outColor="#666666") In-Store Service
+		
