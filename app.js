@@ -93,6 +93,8 @@ app.get("/Services/Membership", index.servicesMembership);
 app.get("/Services/MembershipBenefits", index.servicesMembershipBenefits);
 app.get("/Services/Regulations", index.servicesRegulations);
 app.get("/Services/InStoreService", index.servicesInStoreService);
+app.get("/SiteMap", index.siteMap);
+app.post("/Search", index.search);
 
 // Default Create
 app.get("/creat/default", needAdministrator, defaults.createNews);

@@ -20,16 +20,16 @@ block mainContent
 					p #{Description}
 		div(class="NewsImageContainer")
 			- for(var i = 1; i <= News.ImageQuantity; i++)
-				img(src="/images/News/#{News.Key}_#{Language}/#{((i < 10)?'0'+i:i)}.jpg" class="RemoveImage" data-news-key="#{News.Key}" data-image-key="#{((i < 10)?'0'+i:i)}")
+				img(src="/images/News/#{News.Key}_#{Language}/#{((i < 10)?'0'+i:i)}.jpg", class=Administrator?"RemoveImage":"", data-news-key="#{News.Key}", data-image-key="#{((i < 10)?'0'+i:i)}")
 			- if(Administrator)
-				span(class="glyphicon glyphicon-plus" style="font-size:48px" data-toggle="modal", data-target="#AddNewsImagePanel")
+				span(class="glyphicon glyphicon-plus", style="font-size:48px", data-toggle="modal", data-target="#AddNewsImagePanel")
 	div(class="NewsSelectorContainer")
 		div(class="Title")
 			img(src="/images/News/Title.png")
 			- if(Administrator)
 				span
 					| &nbsp;&nbsp;&nbsp;
-					span(class="glyphicon glyphicon-plus" data-toggle="modal", data-target="#CreateNewsPanel")
+					span(class="glyphicon glyphicon-plus", data-toggle="modal", data-target="#CreateNewsPanel")
 		- each News in NewsList
 			a(href="/News/#{News.Key}")
 				div(class="NewsItem")

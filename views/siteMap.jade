@@ -1,0 +1,153 @@
+extends layout
+
+block mainContent
+	div(class="SiteMap")
+		div(class="TopLevel")
+			a(href="/") News
+		div(class="TopLevel")
+			a(href="/Blog") Blog
+		div(class="TopLevel")
+			a(href="/Brands") Brands
+		div(class="SecondLevel First")
+			a(href="/Brands") &gt; A-Z
+		div(class="SecondLevel")
+			a(href="/Brands")
+				| &gt;&nbsp;
+				- if(Language=="En")
+					| Women
+				- if(Language=="Ch")
+					| 女装
+		div(class="SecondLevel")
+			a(href="/Brands")
+				| &gt;&nbsp;
+				- if(Language=="En")
+					| Men
+				- if(Language=="Ch")
+					| 男装
+		div(class="SecondLevel")
+			a(href="/Brands")
+				| &gt;&nbsp;
+				- if(Language=="En")
+					| Kids
+				- if(Language=="Ch")
+					| 童装
+		div(class="SecondLevel")
+			a(href="/Brands")
+				| &gt;&nbsp;
+				- if(Language=="En")
+					| Accessories
+				- if(Language=="Ch")
+					| 配饰
+		div(class="SecondLevel")
+			a(href="/Brands")
+				| &gt;&nbsp;
+				- if(Language=="En")
+					| Lingerie
+				- if(Language=="Ch")
+					| 内睡衣
+		div(class="SecondLevel")
+			a(href="/Brands")
+				| &gt;&nbsp;
+				- if(Language=="En")
+					| Living
+				- if(Language=="Ch")
+					| 生活用品
+		div(class="SecondLevel")
+			a(href="/Brands")
+				| &gt;&nbsp;
+				- if(Language=="En")
+					| Cosmetics
+				- if(Language=="Ch")
+					| 化妆美容
+		div(class="SecondLevel")
+			a(href="/Brands")
+				| &gt;&nbsp;
+				- if(Language=="En")
+					| Food & Beverage
+				- if(Language=="Ch")
+					| 餐厅
+		div(class="TopLevel")
+			a(href="/Visit") Visit
+		div(class="SecondLevel First")
+			a(href="/Visit/Floor")
+				| &gt;&nbsp;
+				- if(Language=="En")
+					| Floor Guide
+				- if(Language=="Ch")
+					| 楼层简介
+		div(class="SecondLevel")
+			a(href="/Visit/Location")
+				| &gt;&nbsp;
+				- if(Language=="En")
+					| Location
+				- if(Language=="Ch")
+					| 地理位置
+		div(class="SecondLevel")
+			a(href="/Visit/Floor")
+				| &gt;&nbsp;
+				- if(Language=="En")
+					| Open Hours
+				- if(Language=="Ch")
+					| 营业时间
+		div(class="SecondLevel")
+			a(href="/Visit/About")
+				| &gt;&nbsp;
+				- if(Language=="En")
+					| About Us
+				- if(Language=="Ch")
+					| 关于我们
+		div(class="TopLevel")
+			a(href="/Services") Service
+		- if(Language=="En")
+			div(class="SecondLevel First")
+				a(href="/Services/Membership") &gt;&nbsp;Membership
+			div(class="SecondLevel")
+				a(href="/Services/MembershipBenefits") &gt;&nbsp;Membership Benefits
+			div(class="SecondLevel")
+				a(href="/Services/Regulations") &gt;&nbsp;Regulations of Membership Card
+			div(class="SecondLevel")
+				a(href="/Services/InStoreService") &gt;&nbsp;In-Store Services
+		- if(Language=="Ch")
+			div(class="SecondLevel First")
+				a(href="/Services/Petition") &gt;&nbsp;会员申请
+			div(class="SecondLevel")
+				a(href="/Services/MemberShipBook") &gt;&nbsp;会员手册
+			div(class="SecondLevel")
+				a(href="/Services/Petition") &gt;&nbsp;运送物品
+			div(class="SecondLevel")
+				a(href="/Services/Booking") &gt;&nbsp;预订服务
+		div(class="TopLevel")
+			a(href="/Privacy")
+				| &gt;&nbsp;
+				- if(Language=="En")
+					| Privacy Policy
+				- if(Language=="Ch")
+					| 隐私及版权
+		div(class="TopLevel")
+			a(href="/Concern")
+				| &gt;&nbsp;
+				- if(Language=="En")
+					| Follow Us
+				- if(Language=="Ch")
+					| 关注我们
+		div(class="TopLevel")
+			a(href="/Contact")
+				| &gt;&nbsp;
+				- if(Language=="En")
+					| Contact Us
+				- if(Language=="Ch")
+					| 联系我们
+		div(class="TopLevel")
+			a(href="/Recruiting")
+				| &gt;&nbsp;
+				- if(Language=="En")
+					| Recruiting
+				- if(Language=="Ch")
+					| 人才招聘
+		div(class="TopLevel")
+			a(href="/FAQ")
+				| &gt;&nbsp;
+				- if(Language=="En")
+					| FAQ
+				- if(Language=="Ch")
+					| 常见问题

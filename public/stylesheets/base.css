@@ -167,7 +167,7 @@ div {
   width: 200px;
   border: none;
   outline: none;
-  color: white;
+  color: #808080;
   font: normal 22px times;
 }
 .MainContainer .Dark {
@@ -209,9 +209,15 @@ div {
   left: 64px;
 }
 .Footer .CopyrightContainer {
-  width: 343px;
-  margin-left: -171px;
   left: 50%;
+}
+.Footer .CopyrightContainer.En {
+  width: 514px;
+  margin-left: -257px;
+}
+.Footer .CopyrightContainer.Ch {
+  width: 466px;
+  margin-left: -233px;
 }
 .Footer .OtherLinkContainer {
   top: 0px;
@@ -250,7 +256,6 @@ div {
 }
 .Footer .OtherLinkContainer img.SiteMap {
   right: 40px;
-  cursor: default;
 }
 .Footer .Mark {
   top: -74px;
@@ -1829,4 +1834,100 @@ div {
 }
 .MainContent .Concern a:hover {
   color: #000000;
+}
+.MainContent .SiteMap {
+  top: 45px;
+  left: 46.7%;
+  width: 660px;
+  margin-left: -325px;
+  padding-bottom: 45px;
+}
+.MainContent .SiteMap p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #83837E;
+  font-size: 11px;
+  line-height: 22px;
+}
+.MainContent .SiteMap span {
+  color: #83837E;
+  font-size: 11px;
+  line-height: 22px;
+}
+.MainContent .SiteMap a {
+  color: #83837E;
+  text-decoration: none;
+}
+.MainContent .SiteMap a:hover {
+  color: #000000;
+}
+.MainContent .SiteMap .TopLevel {
+  height: 30px;
+  line-height: 30px;
+}
+.MainContent .SiteMap .TopLevel a {
+  font-size: 14px;
+  line-height: 30px;
+}
+.MainContent .SiteMap .SecondLevel {
+  height: 24px;
+  width: 608px;
+  border-bottom: dotted 1px #808080;
+  padding-left: 65px;
+  line-height: 24px;
+}
+.MainContent .SiteMap .SecondLevel.First {
+  border-top: dotted 1px #808080;
+}
+.MainContent .SiteMap .SecondLevel a {
+  line-height: 24px;
+  font-size: 12px;
+}
+.MainContent .Search {
+  top: 45px;
+  left: 46.7%;
+  width: 660px;
+  margin-left: -325px;
+  padding-bottom: 45px;
+}
+.MainContent .Search p {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #83837E;
+  font-size: 11px;
+  line-height: 22px;
+}
+.MainContent .Search span {
+  color: #83837E;
+  font-size: 11px;
+  line-height: 22px;
+}
+.MainContent .Search a {
+  color: #83837E;
+  text-decoration: none;
+}
+.MainContent .Search a:hover {
+  color: #000000;
+}
+.MainContent .Search .TopLevel {
+  height: 30px;
+  line-height: 30px;
+}
+.MainContent .Search .TopLevel a {
+  font-size: 14px;
+  line-height: 30px;
+}
+.MainContent .Search .SecondLevel {
+  height: 24px;
+  width: 608px;
+  border-bottom: dotted 1px #808080;
+  padding-left: 65px;
+  line-height: 24px;
+}
+.MainContent .Search .SecondLevel.First {
+  border-top: dotted 1px #808080;
+}
+.MainContent .Search .SecondLevel a {
+  line-height: 24px;
+  font-size: 12px;
 }

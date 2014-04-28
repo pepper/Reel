@@ -379,3 +379,152 @@ exports.servicesInStoreService = function(req, res){
 	res.result.ServicesTopic = "InStoreService";
 	res.render("servicesInStoreService", res.result);
 }
+
+exports.siteMap = function(req, res){
+	res.result.CurrentURL = "/SiteMap";
+	res.render("siteMap", res.result);
+}
+
+exports.search = function(req, res){
+	res.result.SearchResult = new Array();
+	if(req.body.Search && req.body.Search.length > 3){
+		console.log(req.body.Search);
+		step(function(){
+			var next = this;
+			mongo.database.collection("news", function(err, collection){
+				collection.find({"Language": res.result.Language}).toArray(function(err, news){
+					if(err){
+						logger.error(err);
+						return res.sned(500);
+					}
+					news.forEach(function(newsItem){
+						if(newsItem.Title.indexOf(req.body.Search) >= 0 || newsItem.Description.indexOf(req.body.Search) >= 0){
+							res.result.SearchResult.push({
+								Title: newsItem.Title,
+								URL: "/News/" + newsItem.Key,
+								ShortDescription: newsItem.Description.substr(0, 40) + "...",
+							});
+						}
+					});
+					next();
+				});
+			});
+		}, function(){
+			var next = this;
+			mongo.database.collection("faq", function(err, collection){
+				collection.find({"Language": res.result.Language}).toArray(function(err, faqs){
+					if(err){
+						logger.error(err);
+						return res.sned(500);
+					}
+					faqs.forEach(function(faq){
+						faq.QuestionList.forEach(function(question, index){
+							if(question.Question.indexOf(req.body.Search) >= 0 || question.Answer.indexOf(req.body.Search) >= 0){
+								res.result.SearchResult.push({
+									Title: question.Question,
+									URL: "/FAQ#" + faq.Title + "@" + index,
+									ShortDescription: question.Answer.substr(0, 40) + "...",
+								});
+							}
+						});
+					});
+					next();
+				});
+			});
+		}, function(){
+			var next = this;
+			mongo.database.collection("fix_text", function(err, collection){
+				collection.find({"Language": res.result.Language}).toArray(function(err, fixTexts){
+					if(err){
+						logger.error(err);
+						return res.sned(500);
+					}
+					fixTexts.forEach(function(fixText){
+						if(fixText.Content.indexOf(req.body.Search) >= 0){
+							var result = {
+								ShortDescription: fixText.Content.substr(0, 40) + "..."
+							};
+							switch(fixText.Topic){
+								case "Privacy":
+									result.Title = "私隐权利（Privacy）";
+									result.URL = "/Privacy";
+									break;
+								case "Concern":
+									result.Title = "关注我们（Follow Us）";
+									result.URL = "/Concern";
+									break;
+								case "Contact1":
+								case "Contact2":
+								case "Contact3":
+									result.Title = "联系我们（Contact Us）";
+									result.URL = "/Contact";
+									break;
+								case "Recruiting":
+									result.Title = "人才招聘（Recruiting）";
+									result.URL = "/Recruiting";
+									break;
+								case "VisitAbout1":
+								case "VisitAbout2":
+								case "VisitAbout3":
+								case "VisitAbout4":
+									result.Title = "关于我们（About）";
+									result.URL = "/Visit/About";
+									break;
+								case "VisitLocation":
+									result.Title = "地理位置（Location）";
+									result.URL = "/Visit/Location";
+									break;
+							}
+							res.result.SearchResult.push(result);
+						}
+					});
+					next();
+				});
+			});
+		}, function(){
+			var next = this;
+			mongo.database.collection("brand", function(err, collection){
+				collection.find({}).toArray(function(err, brands){
+					if(err){
+						logger.error(err);
+						return res.sned(500);
+					}
+					brands.forEach(function(brand){
+						if((brand.Description_Ch && brand.Description_Ch.indexOf(req.body.Search) >= 0) || (brand.Description_En && brand.Description_En.indexOf(req.body.Search) >= 0) || (brand.Description && brand.Description.indexOf(req.body.Search) >= 0)){
+							res.result.SearchResult.push({
+								Title: brand.Title,
+								URL: "/Brands#" + brand.Key,
+								ShortDescription: brand.Description_Ch.substr(0, 40) + "...",
+							});
+						}
+					});
+					next();
+				});
+			});
+		}, function(){
+			res.result.CurrentURL = "/";
+			res.render("search", res.result);
+		});
+		
+
+		// mongo.database.collection("floor", function(err, collection){
+		// 	collection.find({"Language": res.result.Language}).toArray(function(err, floors){
+		// 		if(err){
+		// 			logger.error(err);
+		// 			return res.sned(500);
+		// 		}
+		// 		floors.forEach(function(floor){
+		// 			floor.Brands.sort(function(a, b){
+		// 				return a.Key > b.Key;
+		// 			});
+		// 		});
+		// 		res.result.AreaListArray = floors;
+		// 		res.render("visitFloor", res.result);
+		// 	});
+		// });
+	}
+	else{
+		res.result.CurrentURL = "/";
+		res.render("search", res.result);
+	}
+}

@@ -36,7 +36,8 @@ html
 							img(src="/images/Navigation/MS_#{BackgroundStyle}_Services_L.jpg", class="#{(CurrentURL == '/Services')?'Selected':''} HoverLink ChangeImage MenuItem Services")
 						img(src="/images/Navigation/MS_#{BackgroundStyle}_Search.jpg", class="SearchArea")
 						div(class="SearchBox")
-							input(type="text", name="Search")
+							form(action="/Search", method="POST")
+								input(type="text", name="Search")
 						div(class="SelectionBar #{BackgroundStyle}Front")
 				script(src="/javascripts/topMenu.js")
 				div(class="MainContentContainer")
@@ -59,8 +60,8 @@ html
 						img(src="/images/Navigation/DLS_En_L.jpg", class="HoverLink ChangeImage FooterItem SwitchLanguage En")
 					a(href="#{CurrentURL}?language=Ch")
 						img(src="/images/Navigation/DLS_Ch_L.jpg", class="HoverLink ChangeImage FooterItem SwitchLanguage Ch")
-				div(class="CopyrightContainer")
-					img(src="/images/Navigation/CopyRight.jpg")
+				div(class="CopyrightContainer #{Language}")
+					img(src="/images/Navigation/CopyRight_#{Language}.jpg")
 				div(class="OtherLinkContainer")
 					a(href="/Privacy")
 						img(src="/images/Navigation/DRS_#{Language}_Privacy_L.jpg", class="#{(CurrentURL == '/Privacy‎')?'Selected':''} HoverLink ChangeImage FooterItem Privacy", language="#{Language}")
@@ -72,10 +73,18 @@ html
 						img(src="/images/Navigation/DRS_#{Language}_Recruiting_L.jpg", class="#{(CurrentURL == '/Recruiting')?'Selected':''} HoverLink ChangeImage FooterItem Recruiting", language="#{Language}")
 					a(href="/FAQ")
 						img(src="/images/Navigation/DRS_#{Language}_FAQ_L.jpg", class="#{(CurrentURL == '/FAQ')?'Selected':''} HoverLink ChangeImage FooterItem FAQ", language="#{Language}")
-					img(src="/images/Navigation/DRS_#{Language}_SiteMap_L.jpg", class="HoverLink ChangeImage FooterItem SiteMap", language="#{Language}")
+					a(href="/SiteMap")
+						img(src="/images/Navigation/DRS_#{Language}_SiteMap_L.jpg", class="#{(CurrentURL == '/SiteMap')?'Selected':''} HoverLink ChangeImage FooterItem SiteMap", language="#{Language}")
 		block panel
 		script.
 			$(document).ready(function(){
 				_.templateSettings = { interpolate : /\{\{(.+?)\}\}/g };
 			});
 		script(src="/javascripts/utilities.js")
+		script.
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-41118464-6', 'reelshanghai.com');
+			ga('send', 'pageview');

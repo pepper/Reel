@@ -2229,4 +2229,15 @@ exports.createNews = function(req, res){
 			Content: "1601 Nanjing Road (W), Shanghai, P.R.C. 200040\n10:00a.m. to 10:00p.m.\nMetro Line 2, Jin’an si, Exit 4\nMetro Line 7, Jin’an si, Exit 10\n15、20、21、37、40、45、76、93、94、113、315、\n321、323、327、330、506、824、\n825、830、838、 921、927、Tour Line 8\n与越洋广场共用停车场. 汽车入口位于常德路上\nRMB 15 per hour, Maximum RMB 120 per day\n第二个小时起以半个小时为收费单位，\n收费金额为人民币7.50元/个/半小时\n"
 		},]);
 	});
+	
+	//Index
+	mongo.database.collection("news", function(err, collection){
+		collection.ensureIndex({
+			"Title": "text",
+			"ShortDescription": "text",
+			"Description": "text"
+		}, function(){
+			console.log("Create Index");
+		});
+	});
 }

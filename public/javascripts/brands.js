@@ -157,34 +157,15 @@ $(document).ready(function(){
 		changeModeAndBrand("FoodMode");
 	});
 
-	var brandSelectorPrefixPosition = [
-		{ prefix: "A", position: "0px"},
-		{ prefix: "B", position: "-205px"},
-		{ prefix: "C", position: "-378px"},
-		{ prefix: "D", position: "-547px"},
-		{ prefix: "E", position: "-655px"},
-		{ prefix: "F", position: "-803px"},
-		{ prefix: "G", position: "-913px"},
-		{ prefix: "H", position: "-1080px"},
-		{ prefix: "I", position: "-1210px"},
-		{ prefix: "J", position: "-1399px"},
-		{ prefix: "K", position: "-1523px"},
-		{ prefix: "L", position: "-1633px"},
-		{ prefix: "M", position: "-1863px"},
-		{ prefix: "N", position: "-2153px"},
-		{ prefix: "O", position: "-2283px"},
-		{ prefix: "P", position: "-2393px"},
-		{ prefix: "Q", position: "-2543px"},
-		{ prefix: "R", position: "-2613px"},
-		{ prefix: "S", position: "-2741px"},
-		{ prefix: "T", position: "-3011px"},
-		{ prefix: "U", position: "-3140px"},
-		{ prefix: "V", position: "-3230px"},
-		{ prefix: "W", position: "-3300px"},
-		{ prefix: "X", position: "-3300px"},
-		{ prefix: "Y", position: "-3300px"},
-		{ prefix: "Z", position: "-3300px"}
-	];
+	var brandSelectorPrefixPosition = new Array();
+
+	$(".BrandSelector .HeadLetter").each(function(){
+		brandSelectorPrefixPosition.push({
+			prefix: $(this).find("img").attr("class"),
+			position: (($(this).position().top - 5) * -1) + "px"
+		});
+	});
+
 	var currentbrandSelectorPrefixPositionIndex = 0;
 	var SetPositionFromPrefix = function(prefix){
 		for(var i = 0; i < brandSelectorPrefixPosition.length; i++){
