@@ -6,49 +6,46 @@ block rightPanel
 			div(class="AreaList FloorGuideReelPlaceAreaList")
 				div
 					img(src="/images/Visit/FloorGuideReelPlace/FloorGuide_Page_ItemSHead.png")
+					&nbsp;&nbsp;
+					- if(Administrator)
+						span(class="glyphicon glyphicon-pencil", style="font-size:12px", data-toggle="modal", data-target="#EditReelPlacePanel")
 				div(class="AreaSelector ReelPlaceSelector", value="FloorGuide_Page_MapS01")
-					img(class="HoverLink ChangeImage", src="/images/Visit/FloorGuideReelPlace/FloorGuide_Page_ItemS01_L.png")
+					img(class="HoverLink ChangeImage", src="/images/Visit/FloorGuideReelPlace/FloorGuide_Page_ItemS01_#{Language}_L.png")
 				div(class="AreaSelector ReelPlaceSelector", value="FloorGuide_Page_MapS02")
-					img(class="HoverLink ChangeImage", src="/images/Visit/FloorGuideReelPlace/FloorGuide_Page_ItemS02_L.png")
+					img(class="HoverLink ChangeImage", src="/images/Visit/FloorGuideReelPlace/FloorGuide_Page_ItemS02_#{Language}_L.png")
 				div(class="AreaSelector ReelPlaceSelector", value="FloorGuide_Page_MapS03")
-					img(class="HoverLink ChangeImage", src="/images/Visit/FloorGuideReelPlace/FloorGuide_Page_ItemS03_L.png")
+					img(class="HoverLink ChangeImage", src="/images/Visit/FloorGuideReelPlace/FloorGuide_Page_ItemS03_#{Language}_L.png")
 				div(class="AreaSelector ReelPlaceSelector", value="FloorGuide_Page_MapS04")
-					img(class="HoverLink ChangeImage", src="/images/Visit/FloorGuideReelPlace/FloorGuide_Page_ItemS04_L.png")
+					img(class="HoverLink ChangeImage", src="/images/Visit/FloorGuideReelPlace/FloorGuide_Page_ItemS04_#{Language}_L.png")
 				div(class="AreaSelector ReelPlaceSelector", value="FloorGuide_Page_MapS05")
-					img(class="HoverLink ChangeImage", src="/images/Visit/FloorGuideReelPlace/FloorGuide_Page_ItemS05_L.png")
+					img(class="HoverLink ChangeImage", src="/images/Visit/FloorGuideReelPlace/FloorGuide_Page_ItemS05_#{Language}_L.png")
 				div(class="AreaSelector ReelPlaceSelector", value="FloorGuide_Page_MapS06")
-					img(class="HoverLink ChangeImage", src="/images/Visit/FloorGuideReelPlace/FloorGuide_Page_ItemS06_L.png")
+					img(class="HoverLink ChangeImage", src="/images/Visit/FloorGuideReelPlace/FloorGuide_Page_ItemS06_#{Language}_L.png")
 				div(class="Seperator")
 				div(class="Detail", value="FloorGuide_Page_MapS01")
-					div(class="Title") Dali melted clock Sculpture
-					div(class="Description") The Persistence of Memory is a 1931 painting by artist Salvador Dalí, and is one of his most recognizable works.First shown at the Julien Levy Gallery in 1932, the painting has been in the collection of the Museum of Modern Art in New York City since 1934.
 					div(class="Photo")
 						img(src="/images/Visit/FloorGuideReelPlace/IMGS01.jpg")
+					div(class="Description") #{ReelPlaceArray[0].Content}
 				div(class="Detail", value="FloorGuide_Page_MapS02")
-					div(class="Title") A Tree House
-					div(class="Description") The Persistence of Memory is a 1931 painting by artist Salvador Dalí, and is one of his most recognizable works.First shown at the Julien Levy Gallery in 1932, the painting has been in the collection of the Museum of Modern Art in New York City since 1934.
 					div(class="Photo")
 						img(src="/images/Visit/FloorGuideReelPlace/IMGS02.jpg")
+					div(class="Description") #{ReelPlaceArray[1].Content}
 				div(class="Detail", value="FloorGuide_Page_MapS03")
-					div(class="Title") Landscape Garden
-					div(class="Description") The Persistence of Memory is a 1931 painting by artist Salvador Dalí, and is one of his most recognizable works.First shown at the Julien Levy Gallery in 1932, the painting has been in the collection of the Museum of Modern Art in New York City since 1934.
 					div(class="Photo")
 						img(src="/images/Visit/FloorGuideReelPlace/IMGS03.jpg")
+					div(class="Description") #{ReelPlaceArray[2].Content}
 				div(class="Detail", value="FloorGuide_Page_MapS04")
-					div(class="Title") Golden House
-					div(class="Description") The Persistence of Memory is a 1931 painting by artist Salvador Dalí, and is one of his most recognizable works.First shown at the Julien Levy Gallery in 1932, the painting has been in the collection of the Museum of Modern Art in New York City since 1934.
 					div(class="Photo")
 						img(src="/images/Visit/FloorGuideReelPlace/IMGS04.jpg")
+					div(class="Description") #{ReelPlaceArray[3].Content}
 				div(class="Detail", value="FloorGuide_Page_MapS05")
-					div(class="Title") Wonderland
-					div(class="Description") The Persistence of Memory is a 1931 painting by artist Salvador Dalí, and is one of his most recognizable works.First shown at the Julien Levy Gallery in 1932, the painting has been in the collection of the Museum of Modern Art in New York City since 1934.
 					div(class="Photo")
 						img(src="/images/Visit/FloorGuideReelPlace/IMGS05.jpg")
+					div(class="Description") #{ReelPlaceArray[4].Content}
 				div(class="Detail", value="FloorGuide_Page_MapS06")
-					div(class="Title") Garden Terrace
-					div(class="Description") The Persistence of Memory is a 1931 painting by artist Salvador Dalí, and is one of his most recognizable works.First shown at the Julien Levy Gallery in 1932, the painting has been in the collection of the Museum of Modern Art in New York City since 1934.
 					div(class="Photo")
 						img(src="/images/Visit/FloorGuideReelPlace/IMGS06.jpg")
+					div(class="Description") #{ReelPlaceArray[5].Content}
 		div(class="VisitFloorDescription")
 			- each areaList in AreaListArray
 				div(class="AreaList FloorGuide#{areaList.Floor}AreaList")
@@ -73,14 +70,14 @@ block mainContent
 	div(class="VisitFloor")
 		div(class="FloorGuide FloorGuideReelPlace")
 			img(class="FloorGuideBackground", src="/images/Visit/FloorGuideReelPlace/FloorGuide_Page_Map.png")
-			img(class="FloorGuideOver", src="/images/Visit/alpha.png", usemap="#FloorGuideReelPlaceMap", border="0", width="679", height="639")
+			img(class="FloorGuideOver", src="/images/Visit/alpha.png", usemap="#FloorGuideReelPlaceMap", border="0", width="593", height="555")
 			map(class="FloorGuideMap", name="FloorGuideReelPlaceMap")
-				area(shape="rect", coords="73,58,112,114", href="#FloorGuide_Page_MapS03")
-				area(shape="rect", coords="495,0,592,65", href="#FloorGuide_Page_MapS04")
-				area(shape="rect", coords="423,184,456,217", href="#FloorGuide_Page_MapS06")
-				area(shape="rect", coords="214,316,247,349", href="#FloorGuide_Page_MapS05")
-				area(shape="rect", coords="63,321,96,354", href="#FloorGuide_Page_MapS02")
-				area(shape="rect", coords="18,544,51,577", href="#FloorGuide_Page_MapS01")
+				area(shape="rect", coords="11,472,43,504", href="#FloorGuide_Page_MapS01")
+				area(shape="rect", coords="50,273,93,317", href="#FloorGuide_Page_MapS02")
+				area(shape="rect", coords="64,66,99,102", href="#FloorGuide_Page_MapS03")
+				area(shape="rect", coords="450,4,492,42", href="#FloorGuide_Page_MapS04")
+				area(shape="rect", coords="181,272,219,307", href="#FloorGuide_Page_MapS05")
+				area(shape="rect", coords="357,153,398,194", href="#FloorGuide_Page_MapS06")
 		div(class="FloorGuide FloorGuide1F")
 			img(class="FloorGuideBackground", src="/images/Visit/FloorGuide1F/FloorGuide1F_MAP_BK.png")
 			img(class="FloorGuideOver", src="/images/Visit/alpha.png", usemap="#FloorGuide1FMap", border="0", width="614", height="578")
@@ -369,3 +366,28 @@ block mainContent
 				area(shape="rect", href="#FloorGuideB2_MAP_overB202", coords="143, 483, 172, 502")
 				area(shape="poly", href="#FloorGuideB2_MAP_overB201", coords="100, 484, 145, 484, 145, 504, 213, 504, 213, 586, 164, 591, 174, 527, 100, 513")
 	script(src="/javascripts/visitFloor.js")
+
+block panel
+	- if(Administrator)
+		div(class="modal fade", id="EditReelPlacePanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					div(class="modal-header")
+						button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+						h4(class="modal-title") Edit Reel Place
+					div(class="modal-body")
+						- each ReelPlace in ReelPlaceArray
+							div(class="row")
+								div(class="span12") #{ReelPlace.Key}
+							div(class="row")
+								form(action="/fix_text", method="post", class="form EditReelPlaceForm")
+									//- input(type="text", name="Title", class="Title", value="#{ReelPlace.Title}")
+									//- input(type="text", name="Description", class="Description", value="#{ReelPlace.Description}")
+									//- input(class="input", type="text", name="Content" value="#{ReelPlace.Content}")
+									textarea(class="form-control input-sm", name="Content", rows="3") #{ReelPlace.Content}
+									input(type="hidden", name="Language", value="#{Language}")
+									input(type="hidden", name="Topic", value="#{ReelPlace.Key}")
+									button(type="submit", class="btn btn-primary") Save
+								br
+					div(class="modal-footer")
+						button(type="button", class="btn btn-default", data-dismiss="modal") Close

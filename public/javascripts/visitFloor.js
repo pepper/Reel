@@ -270,4 +270,7 @@ $(document).ready(function(){
 	window.visitFloorDescriptionView = new VisitFloorDescriptionView({ el: $(".VisitFloorDescriptionContainer")});
 	window.visitFloorView = new VisitFloorView({ el: $(".VisitFloor")});
 	$(window).trigger("resize");
+	// $(".EditReelPlaceForm").submit(function(event){
+	// 	$(this).find(".Content").val("###Title###" + $(this).find(".Title").val() + "###TitleEnd######Description###" + $(this).find(".Description").val() + "###DescriptionEnd###");
+	// });
 });

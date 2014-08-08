@@ -2227,6 +2227,54 @@ exports.createNews = function(req, res){
 			Language: "En",
 			Topic: "VisitLocation",
 			Content: "1601 Nanjing Road (W), Shanghai, P.R.C. 200040\n10:00a.m. to 10:00p.m.\nMetro Line 2, Jin’an si, Exit 4\nMetro Line 7, Jin’an si, Exit 10\n15、20、21、37、40、45、76、93、94、113、315、\n321、323、327、330、506、824、\n825、830、838、 921、927、Tour Line 8\n与越洋广场共用停车场. 汽车入口位于常德路上\nRMB 15 per hour, Maximum RMB 120 per day\n第二个小时起以半个小时为收费单位，\n收费金额为人民币7.50元/个/半小时\n"
-		},]);
+		},{
+			Language: "Ch",
+			Topic: "VisitReelPlace1",
+			Content: "还没有中文说明1"
+		},{
+			Language: "Ch",
+			Topic: "VisitReelPlace2",
+			Content: "还没有中文说明2"
+		},{
+			Language: "Ch",
+			Topic: "VisitReelPlace3",
+			Content: "还没有中文说明3"
+		},{
+			Language: "Ch",
+			Topic: "VisitReelPlace4",
+			Content: "还没有中文说明4"
+		},{
+			Language: "Ch",
+			Topic: "VisitReelPlace5",
+			Content: "还没有中文说明5"
+		},{
+			Language: "Ch",
+			Topic: "VisitReelPlace6",
+			Content: "还没有中文说明6"
+		}, {
+			Language: "En",
+			Topic: "VisitReelPlace1",
+			Content: "A1 The Persistence of Memory is a 1931 painting by artist Salvador Dalí, and is one of his most recognizable works.First shown at the Julien Levy Gallery in 1932, the painting has been in the collection of the Museum of Modern Art in New York City since 1934."
+		}, {
+			Language: "En",
+			Topic: "VisitReelPlace2",
+			Content: "A2 The Persistence of Memory is a 1931 painting by artist Salvador Dalí, and is one of his most recognizable works.First shown at the Julien Levy Gallery in 1932, the painting has been in the collection of the Museum of Modern Art in New York City since 1934."
+		}, {
+			Language: "En",
+			Topic: "VisitReelPlace3",
+			Content: "A3 The Persistence of Memory is a 1931 painting by artist Salvador Dalí, and is one of his most recognizable works.First shown at the Julien Levy Gallery in 1932, the painting has been in the collection of the Museum of Modern Art in New York City since 1934."
+		}, {
+			Language: "En",
+			Topic: "VisitReelPlace4",
+			Content: "A4 The Persistence of Memory is a 1931 painting by artist Salvador Dalí, and is one of his most recognizable works.First shown at the Julien Levy Gallery in 1932, the painting has been in the collection of the Museum of Modern Art in New York City since 1934."
+		}, {
+			Language: "En",
+			Topic: "VisitReelPlace5",
+			Content: "A5 The Persistence of Memory is a 1931 painting by artist Salvador Dalí, and is one of his most recognizable works.First shown at the Julien Levy Gallery in 1932, the painting has been in the collection of the Museum of Modern Art in New York City since 1934."
+		}, {
+			Language: "En",
+			Topic: "VisitReelPlace6",
+			Content: "A6 The Persistence of Memory is a 1931 painting by artist Salvador Dalí, and is one of his most recognizable works.First shown at the Julien Levy Gallery in 1932, the painting has been in the collection of the Museum of Modern Art in New York City since 1934."
+		}]);
 	});
 }

@@ -327,6 +327,9 @@ exports.editFixText = function(req, res){
 				case "VisitLocation":
 					res.send(200);
 					break;
+				case "VisitReelPlace":
+					res.redirect("/Visit");
+					break;
 				default:
 					res.redirect("/" + req.body.Topic.replace(/[0-9]/g, ""));
 					break;

@@ -217,20 +217,63 @@ exports.brand = function(req, res){
 exports.visitFloor = function(req, res){
 	res.result.CurrentURL = "/Visit";
 	res.result.VisitTopic = "Floor";
-	mongo.database.collection("floor", function(err, collection){
-		collection.find({"Language": res.result.Language}).toArray(function(err, floors){
-			if(err){
-				logger.error(err);
-				return res.sned(500);
-			}
-			floors.forEach(function(floor){
-				floor.Brands.sort(function(a, b){
-					return a.Key > b.Key;
+	res.result.ReelPlaceArray = new Array();
+	step(function(){
+		var next = this;
+		mongo.database.collection("floor", function(err, collection){
+			collection.find({"Language": res.result.Language}).toArray(function(err, floors){
+				if(err){
+					logger.error(err);
+					return res.sned(500);
+				}
+				floors.forEach(function(floor){
+					floor.Brands.sort(function(a, b){
+						return a.Key > b.Key;
+					});
+				});
+				res.result.AreaListArray = floors;
+				logger.debug("A");
+				next();
+			});
+		});
+	}, function(){
+		var next = this;
+		var topicArray = ["VisitReelPlace1", "VisitReelPlace2", "VisitReelPlace3", "VisitReelPlace4", "VisitReelPlace5", "VisitReelPlace6"];
+		logger.debug("B");
+		var getVisitReelPlaceContext = function(index){
+			logger.debug("index: " + index);
+			mongo.database.collection("fix_text", function(err, collection){
+				collection.find({"Language": res.result.Language, "Topic": topicArray[index]}).toArray(function(err, place){
+					if(err){
+						logger.error(err);
+						return res.sned(500);
+					}
+					if(place && place.length > 0){
+						// var title = place[0].Content.substring(place[0].Content.indexOf("###Title###") + 11, place[0].Content.indexOf("###TitleEnd###"));
+						// var description = place[0].Content.substring(place[0].Content.indexOf("###Description###") + 17, place[0].Content.indexOf("###DescriptionEnd###"));
+						res.result.ReelPlaceArray.push({
+							Key: topicArray[index],
+							Content: place[0].Content
+							// Title: title,
+							// Description: description
+						});
+					}
+					// logger.debug(res.result.ReelPlaceArray);
+					index = index + 1;
+					if(index < topicArray.length){
+						getVisitReelPlaceContext(index);
+					}
+					else{
+						// logger.debug(res.result.ReelPlaceArray);
+						next();
+					}
 				});
 			});
-			res.result.AreaListArray = floors;
-			res.render("visitFloor", res.result);
-		});
+		};
+		getVisitReelPlaceContext(0);
+		
+	}, function(){
+		res.render("visitFloor", res.result);
 	});
 }
 

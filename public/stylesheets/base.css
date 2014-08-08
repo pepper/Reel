@@ -135,29 +135,25 @@ div {
   top: 0px;
   left: 10px;
 }
-.MainContainer .TopMenu .Blog {
-  top: 0px;
-  left: 110px;
-}
 .MainContainer .TopMenu .Brands {
   top: 0px;
-  left: 201px;
+  left: 101px;
 }
 .MainContainer .TopMenu .Visit {
   top: 0px;
-  left: 314px;
+  left: 214px;
 }
 .MainContainer .TopMenu .Services {
   top: 0px;
-  left: 407px;
+  left: 307px;
 }
 .MainContainer .TopMenu .SearchArea {
   position: absolute;
   top: 0px;
-  left: 533px;
+  left: 433px;
 }
 .MainContainer .TopMenu .SearchBox {
-  left: 533px;
+  left: 433px;
   top: 51px;
   height: 30px;
   width: 200px;
@@ -506,24 +502,24 @@ div {
 .MainContent .FloorGuideReelPlace {
   left: 50%;
   margin-left: -339px;
-  width: 679px;
-  height: 639px;
+  width: 593px;
+  height: 555px;
   margin-bottom: 45px;
 }
 .MainContent .FloorGuideReelPlace .FloorGuideBackground {
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 679px;
-  height: 639px;
+  width: 593px;
+  height: 555px;
   z-index: 100;
 }
 .MainContent .FloorGuideReelPlace .FloorGuideOver {
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 679px;
-  height: 639px;
+  width: 593px;
+  height: 555px;
   z-index: 1000;
 }
 .MainContent .FloorGuide {
@@ -622,7 +618,7 @@ div {
   font-size: 14px;
 }
 .AreaList .ReelPlaceSelector {
-  margin: -2px;
+  margin-bottom: 3px;
   padding: 0px;
 }
 .AreaList .Selector {
@@ -678,6 +674,7 @@ div {
   font-size: 9px;
   color: #666666;
   line-height: 20px;
+  margin-top: 12px;
 }
 .FloorGuideReelPlaceAreaList .Detail .Photo {
   margin-top: 10px;
@@ -947,11 +944,23 @@ div {
 .MainContent .Petition tr {
   height: 65px;
 }
+.MainContent .Petition tr.SmallRow {
+  height: 15px;
+}
+.MainContent .Petition tr.SmallRow td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 .MainContent .Petition td {
   color: #808080;
   font-size: 11px;
   line-height: 22px;
   border-bottom: solid 1px #666666;
+  text-align: left;
+  vertical-align: top;
+  padding: 15px;
+}
+.MainContent .Petition td.Center {
   text-align: center;
 }
 .MainContent .Petition table.SmallTable {
