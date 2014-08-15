@@ -226,13 +226,16 @@ exports.visitFloor = function(req, res){
 					logger.error(err);
 					return res.sned(500);
 				}
-				floors.forEach(function(floor){
-					floor.Brands.sort(function(a, b){
-						return a.Key > b.Key;
-					});
-				});
+				// floors.forEach(function(floor){
+				// 	//logger.debug(JSON.stringify(floor.Brands));
+				// 	floor.Brands.sort(function(a, b){
+				// 		logger.debug(a.Key + " # " + b.Key + ":" + (a.Key > b.Key));
+				// 		return a.Key > b.Key;
+				// 	});
+				// 	//logger.debug(JSON.stringify(floor.Brands));
+				// 	//logger.debug("\n");
+				// });
 				res.result.AreaListArray = floors;
-				logger.debug("A");
 				next();
 			});
 		});
@@ -373,12 +376,7 @@ exports.recruiting = function(req, res){
 }
 
 exports.services = function(req, res){
-	if(res.result.Language == "Ch"){
-		res.redirect("/Services/Petition");
-	}
-	if(res.result.Language == "En"){
-		res.redirect("/Services/Membership");
-	}
+	res.redirect("/Services/Petition");
 }
 
 exports.servicesMemberShipBook = function(req, res){

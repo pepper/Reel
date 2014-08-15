@@ -351,388 +351,346 @@ exports.createNews = function(req, res){
 			Floor: "1F",
 			Brands:[{
 				Key: "101",
-				Title: "101 Gucci"
+				Title: "101 GUCCI"
 			},{
 				Key: "102",
-				Title: "102 Givenchy"
+				Title: "102 GIVENCHY"
 			},{
 				Key: "103",
-				Title: "103 Sergio Rossi"
+				Title: "103 SERGIO ROSSI"
 			},{
 				Key: "105",
-				Title: "105 Saint Laurent"
+				Title: "105 SAINT LAURENT"
 			},{
 				Key: "106",
-				Title: "106 Moncler"
+				Title: "106 MONCLER"
 			},{
 				Key: "107",
-				Title: "107 Lanvin"
+				Title: "107 LANVIN"
 			},{
 				Key: "108",
-				Title: "108 Balenciaga"
+				Title: "108 BALENCIAGA"
 			},{
 				Key: "109",
 				Title: "109 RAT TAR ART BAR"
 			},{
 				Key: "110",
-				Title: "110 Alexander McQueen"
+				Title: "110 ALEXANDER MCQUEEN"
 			},{
 				Key: "111",
-				Title: "111 Stella McCartney"
+				Title: "111 STELLA McCARTNEY"
 			},{
 				Key: "112",
-				Title: "112 Marni"
+				Title: "112 MARNI"
 			},{
 				Key: "113",
-				Title: "113 Emilio Pucci"
+				Title: "113 PRINGLE（即将开业）"
 			},{
 				Key: "115",
-				Title: "115 Ralph Lauren"
+				Title: "115 RALPH LAUREN"
+			},{
+				Key: "1B",
+				Title: "1B FLOWER TREE"
+			},{
+				Key: "1C",
+				Title: "1C CANDY LAB"
+			},{
+				Key: "1D",
+				Title: "1D LA CREPERIE"
+			},{
+				Key: "1D-1",
+				Title: "1D-1 URBAN SOUP KITCHEN"
+			},{
+				Key: "1E",
+				Title: "1E URBAN SOUP KITCHEN"
+			},{
+				Key: "1H",
+				Title: "1H LIND"
+			},{
+				Key: "1L",
+				Title: "1L 星巴克（即将开业）"
 			}]
 		},{
 			Language: "Ch",
 			Floor: "2F",
 			Brands:[{
 				Key: "201",
-				Title: "201 Gucci"
+				Title: "201 GUCCI"
 			},{
-				Key: "202-1",
-				Title: "202-1 Sarment"
+				Key: "201-1",
+				Title: "201-1 SARMENT"
+			},{
+				Key: "202",
+				Title: "202 ANN DEMEULEMEESTER"
 			},{
 				Key: "205",
-				Title: "205 Marni"
+				Title: "205 MARNI MAN"
 			},{
 				Key: "206",
-				Title: "206 Moncler/Gamme Rouge"
+				Title: "206 MONCLER"
 			},{
 				Key: "207",
-				Title: "207 Lanvin"
+				Title: "207 LANVIN"
 			},{
 				Key: "208",
-				Title: "208 Alexander McQueen Men's"
+				Title: "208 ALEXANDER MCQUEEN MEN'S"
 			},{
-				Key: "209",
-				Title: "209 Givenchy"
+				Key: "209-1",
+				Title: "209-1 Y-3"
+			},{
+				Key: "210-3",
+				Title: "210-3 SHINE"
 			},{
 				Key: "210-5",
-				Title: "210-5 Yohji Yamamoto"
-			},{
-				Key: "210-7",
-				Title: "210-7 Alain Mikli"
+				Title: "210-5 YOHJI YAMAMOTO"
 			},{
 				Key: "211",
-				Title: "211 Alexander Wang"
+				Title: "211 ALEXANDER WANG"
 			},{
 				Key: "212",
 				Title: "212 ACNE"
 			},{
 				Key: "213",
-				Title: "213 Costume National"
+				Title: "213 TSE"
+			},{
+				Key: "215",
+				Title: "215 ISABEL MARANT"
 			},{
 				Key: "216",
-				Title: "216 Ralph Lauren"
+				Title: "216 RALPH LAUREN"
 			},{
 				Key: "218",
-				Title: "218 Helmut Lang"
+				Title: "218 HELMUT LANG"
+			},{
+				Key: "2A",
+				Title: "2A 金牛苑"
+			},{
+				Key: "2B",
+				Title: "2B 銀座梅林"
+			},{
+				Key: "2C",
+				Title: "2C 十食湘"
 			}]
 		},{
 			Language: "Ch",
 			Floor: "3F",
 			Brands:[{
+				Key: "301.301-1",
+				Title: "301.301-1 星巴克"
+			},{
 				Key: "301-2",
-				Title: "301-2 JiCheng"
+				Title: "301-2 JI CHENG"
+			},{
+				Key: "301-3",
+				Title: "301-3 NIIN"
+			},{
+				Key: "302",
+				Title: "302 UUJULY"
 			},{
 				Key: "303",
-				Title: "303 Gerard Darel"
+				Title: "303 GERARD DAREL"
 			},{
 				Key: "304",
-				Title: "304 Maje"
+				Title: "304 MAJE"
 			},{
 				Key: "306",
-				Title: "306 Theory"
+				Title: "306 THEORY"
 			},{
 				Key: "307",
-				Title: "307 Sandro"
+				Title: "307 SANDRO"
 			},{
 				Key: "308",
-				Title: "308 Claudie Pierlot"
+				Title: "308 SANDRO"
 			},{
 				Key: "309",
-				Title: "309 Jacobean"
+				Title: "309 SYNC CHIC"
 			},{
 				Key: "310",
-				Title: "310 SyncChic"
+				Title: "310 JACOBEAN"
 			},{
 				Key: "311",
 				Title: "311 黄淑琦"
 			},{
+				Key: "316",
+				Title: "316 DEA KUDIBAL"
+			},{
+				Key: "318",
+				Title: "318  ISTA STYLE"
+			},{
 				Key: "319",
-				Title: "319 Unconditional"
+				Title: "319 ZAPA"
 			},{
-				Key: "330",
-				Title: "330 Suunto"
+				Key: "320",
+				Title: "320 湾里书香"
 			},{
-				Key: "339",
-				Title: "339 Munich"
+				Key: "331",
+				Title: "331 PASOTTI"
+			},{
+				Key: "332",
+				Title: "332 STEFANEL（即将开业）"
+			},{
+				Key: "3A",
+				Title: "3A 晶采轩"
+			},{
+				Key: "3B",
+				Title: "3B 瓦城泰式料理"
 			}]
 		},{
 			Language: "Ch",
 			Floor: "4F",
 			Brands:[{
 				Key: "401",
-				Title: "401 wise kids"
+				Title: "401 WISE KIDS"
+			},{
+				Key: "403",
+				Title: "403 JUZI"
 			},{
 				Key: "404",
 				Title: "404 JACADI"
 			},{
 				Key: "405",
-				Title: "405 FIONA’S PRINCE"
+				Title: "405 QKUTS"
 			},{
-				Key: "406-2",
-				Title: "406-2 NECK&NECK"
+				Key: "406",
+				Title: "406 ABSORBA/PETER RABBIT"
 			},{
 				Key: "407",
 				Title: "407 SERGENT MAJOR"
 			},{
-				Key: "410-2",
-				Title: "410-2 Marni"
-			},{
-				Key: "411-1",
-				Title: "411-1 Miss blumarine"
-			},{
 				Key: "411-2",
-				Title: "411-2 Stella McCartney"
+				Title: "411-2 STELLA MCCARTNEY"
 			},{
-				Key: "412-1",
-				Title: "412-1 Ice"
+				Key: "413-1",
+				Title: "413-1 KEL KEL"
 			},{
-				Key: "413-1412-2",
-				Title: "412-2 Tuctuc/JEEP"
+				Key: "420",
+				Title: "420 MOONSTAR"
 			},{
-				Key: "413-1412-2",
-				Title: "413-1 Tuctuc/JEEP"
-			},{
-				Key: "413-2",
-				Title: "413-2 NEW BALANCE"
-			},{
-				Key: "415",
-				Title: "415 Ballon roage"
-			},{
-				Key: "415-1",
-				Title: "415-1 RIO"
-			},{
-				Key: "415-2",
-				Title: "415-2 Naturecolored"
-			},{
-				Key: "419-1",
-				Title: "419-1 bubble"
-			},{
-				Key: "423",
-				Title: "423 TRIUMPH"
-			},{
-				Key: "424-1",
-				Title: "424-1 Essence"
-			},{
-				Key: "424-2",
-				Title: "424-2 Aimer"
-			},{
-				Key: "425-1",
-				Title: "425-1 欣姿芳"
-			},{
-				Key: "425-2",
-				Title: "425-2 INTELLIGE"
-			},{
-				Key: "426",
-				Title: "426 CHASNEY BEAUTY"
-			},{
-				Key: "427",
-				Title: "427 LA FALINO"
-			},{
-				Key: "428",
-				Title: "428 ENWEIS"
-			},{
-				Key: "429-1",
-				Title: "429-1 Corsetc"
-			},{
-				Key: "430-1",
-				Title: "430-1 ILSEE"
-			},{
-				Key: "430-2",
-				Title: "430-2 Stella McCartney"
-			},{
-				Key: "431",
-				Title: "431 INNEE"
+				Key: "421",
+				Title: "421 YVONNE COLLECTION"
 			},{
 				Key: "433-1",
 				Title: "433-1 SIMONE PERELE"
 			},{
-				Key: "434-1",
-				Title: "434-1 BE CHIC"
-			},{
-				Key: "434-2",
-				Title: "434-2 OROBLU"
-			},{
-				Key: "435",
-				Title: "435-1 DURANCE"
-			},{
-				Key: "435",
-				Title: "435-2 LINARI"
-			},{
-				Key: "435-4",
-				Title: "435-3.4 Millefiori"
-			},{
-				Key: "436-1",
-				Title: "436-1 isyfen"
-			},{
-				Key: "436-2",
-				Title: "436-2 PIERE MANTOUX"
-			},{
-				Key: "437-1",
-				Title: "437-1 POWER SHAPE"
-			},{
-				Key: "437-2",
-				Title: "437-2 WACOAL"
+				Key: "4B",
+				Title: "4B 晶采轩"
 			}]
 		},{
 			Language: "Ch",
 			Floor: "5F",
 			Brands:[{
-				Key: "505506",
-				Title: "505, 506 宽庭"
+				Key: "501",
+				Title: "501 極食"
 			},{
-				Key: "523",
-				Title: "523, 524 ipluso"
+				Key: "504.525",
+				Title: "504.525 美品工房"
+			},{
+				Key: "505",
+				Title: "505 MAINSTAGE"
+			},{
+				Key: "506",
+				Title: "506 NESCAFE"
+			},{
+				Key: "508",
+				Title: "508 RÉEL ART GALLERY"
+			},{
+				Key: "509",
+				Title: "509 申活馆"
+			},{
+				Key: "510",
+				Title: "510 SEESAW"
+			},{
+				Key: "511",
+				Title: "511 艺安生活"
+			},{
+				Key: "512",
+				Title: "512 汇美舍"
+			},{
+				Key: "513.514",
+				Title: "513.514 阿吾罗"
+			},{
+				Key: "518.518-1",
+				Title: "518.518-1 美品工房"
+			},{
+				Key: "523.524",
+				Title: "523.524 IPLUSO"
+			},{
+				Key: "5f",
+				Title: "5f （越洋） 大董"
 			}]
 		},{
 			Language: "Ch",
 			Floor: "B1",
 			Brands:[{
 				Key: "B101",
-				Title: "b101 P+"
+				Title: "b101 MUJI"
+			},{
+				Key: "B102",
+				Title: "b102 BONNIE ROUGE"
 			},{
 				Key: "B103",
-				Title: "b103 Stefanel"
+				Title: "b103 STEFANEL"
 			},{
 				Key: "B104",
-				Title: "b104 Porter"
-			},{
-				Key: "B105",
-				Title: "b105 Retro Fuse"
+				Title: "b104 PORTER"
 			},{
 				Key: "B106",
-				Title: "b106 Giordano Ladies"
+				Title: "b106 GIORDANO LADIES"
 			},{
 				Key: "B107",
-				Title: "b107 M)phosis"
+				Title: "b107 M)PHOSIS"
 			},{
-				Key: "B113",
-				Title: "b113 MeiRie'S"
-			},{
-				Key: "B114",
-				Title: "b114 J Shoes"
-			},{
-				Key: "B115",
-				Title: "b115 Blk Market"
-			},{
-				Key: "B116",
-				Title: "b116 Blk Market"
-			},{
-				Key: "B117",
-				Title: "b117 Martinelli"
-			},{
-				Key: "B118",
-				Title: "b118 GCI COLLEZIONE"
-			},{
-				Key: "B119",
-				Title: "b119 PELLE MODA"
+				Key: "B108B109",
+				Title: "b108.109 ROOTS"
 			},{
 				Key: "B120",
 				Title: "b120 ESSIE"
 			},{
-				Key: "B121-1",
-				Title: "b121-1 Jurlique"
+				Key: "B121B122",
+				Title: "b121.122 BLK"
 			},{
-				Key: "B122",
-				Title: "b122 Kiehl's "
+				Key: "B123",
+				Title: "b123 HARDY'S"
 			},{
 				Key: "B124",
-				Title: "b124 Hit Gallery"
+				Title: "b124 LUJAH"
 			},{
 				Key: "B125",
-				Title: "b125 自由区"
-			},{
-				Key: "B126",
-				Title: "b126 Lacoste"
-			},{
-				Key: "B131",
-				Title: "b131 Lothantique"
-			},{
-				Key: "B132",
-				Title: "b132 myLOHAS"
+				Title: "b125 BNJ"
 			},{
 				Key: "B134-1",
-				Title: "b134-1 MAC"
+				Title: "b134-1 LOLLIPOPS"
 			},{
 				Key: "B134-2",
-				Title: "b134-2 Bobbi Brown"
-			},{
-				Key: "B137",
-				Title: "b137 Lancome"
+				Title: "b134-2 SUUNTO"
 			},{
 				Key: "B138",
-				Title: "b138 Sisley"
+				Title: "b138 MARTIN GRANT"
 			},{
-				Key: "B139",
-				Title: "b139 SKII"
-			},{
-				Key: "B146",
-				Title: "b146 Fancl "
-			},{
-				Key: "B147",
-				Title: "b147 Clarins"
-			},{
-				Key: "B148",
-				Title: "b148 Clinique"
-			},{
-				Key: "B151-2",
-				Title: "b151-2 L'Occitane"
+				Key: "B140",
+				Title: "b140 TKF SPASSO"
 			},{
 				Key: "B151-1",
-				Title: "b151-1 Origins"
+				Title: "b151-1 SHO-BI"
 			},{
-				Key: "B153",
-				Title: "b153 DHC"
+				Key: "B151-2",
+				Title: "b151-2 CALIBIO"
 			}]
 		},{
 			Language: "Ch",
 			Floor: "B2",
 			Brands:[{
 				Key: "B201",
-				Title: "b201 Dazzling Cafe"
+				Title: "b201 DAZZLING CAFÉ"
+			},{
+				Key: "B202",
+				Title: "b202 犁记"
+			},{
+				Key: "B203",
+				Title: "b203 赛百味"
 			},{
 				Key: "B204",
 				Title: "b204 斗香园"
-			},{
-				Key: "B208",
-				Title: "b208 麦当劳"
-			},{
-				Key: "B213",
-				Title: "b213 葡京制造"
-			},{
-				Key: "B214",
-				Title: "b214 釜山料理"
-			},{
-				Key: "B215B216",
-				Title: "b215.216 七条"
-			},{
-				Key: "B230",
-				Title: "b230 胖达人手感烘焙"
-			},{
-				Key: "B202",
-				Title: "b202 Blink"
-			},{
-				Key: "B203",
-				Title: "b203 Subway"
 			},{
 				Key: "B205",
 				Title: "b205 饥饿吐司"
@@ -741,28 +699,82 @@ exports.createNews = function(req, res){
 				Title: "b205a 宝馔"
 			},{
 				Key: "B206",
-				Title: "b206 Crumbs"
+				Title: "b206 酷姆思"
 			},{
 				Key: "B207",
-				Title: "b207 Coldstone "
+				Title: "b207 酷圣石"
+			},{
+				Key: "B208",
+				Title: "b208 麦当劳"
 			},{
 				Key: "B209",
-				Title: "b209 wagas express"
+				Title: "b209 WAGAS EXPRESS"
 			},{
 				Key: "B210",
-				Title: "b210 STARBUCKS"
+				Title: "b210 星巴克"
 			},{
 				Key: "B211B212",
 				Title: "b211.212 满记甜品"
+			},{
+				Key: "B213",
+				Title: "b213 葡京制造"
+			},{
+				Key: "B214",
+				Title: "b214 釜山料理"
+			},{
+				Key: "B215B216",
+				Title: "b215.216 七条日式猪排料理"
+			},{
+				Key: "B217",
+				Title: "b217 战锅时代"
+			},{
+				Key: "B218",
+				Title: "b218 阿扎家芝心年糕料理"
+			},{
+				Key: "B219",
+				Title: "b219 锦官城麻辣香锅"
+			},{
+				Key: "B220",
+				Title: "b220 吴记牛肉面"
+			},{
+				Key: "B221",
+				Title: "b221 富春小笼"
+			},{
+				Key: "B222",
+				Title: "b222 古镇汤团"
+			},{
+				Key: "B223",
+				Title: "b223 台北猪脚饭"
+			},{
+				Key: "B224",
+				Title: "b224 小杨生煎"
+			},{
+				Key: "B225",
+				Title: "b225 多彩拌韩式料理"
+			},{
+				Key: "B226",
+				Title: "b226 咏兰坊黄鱼煨面"
+			},{
+				Key: "B227",
+				Title: "b227 台北东一排骨"
+			},{
+				Key: "B228",
+				Title: "b228 秦韵西北菜"
+			},{
+				Key: "B229",
+				Title: "b229 麻辣串串香"
+			},{
+				Key: "B230",
+				Title: "b230 胖达人手感烘焙"
 			},{
 				Key: "B231",
 				Title: "b231 早安巴黎"
 			},{
 				Key: "B231A",
-				Title: "b231a 西龙饭团"
+				Title: "b231a GROSFAIRY"
 			},{
 				Key: "B232",
-				Title: "b232 大一梦鲷鱼烧"
+				Title: "b232 摩提工房"
 			},{
 				Key: "B233",
 				Title: "b233 缘喜寿司"
@@ -773,17 +785,14 @@ exports.createNews = function(req, res){
 				Key: "B235",
 				Title: "b235 贡茶"
 			},{
-				Key: "B236",
-				Title: "b236 布歌东京"
-			},{
 				Key: "B237",
-				Title: "b237 鲜芋仙"
+				Title: "b237 豆花开了"
 			},{
 				Key: "B238",
-				Title: "b238 植本色"
+				Title: "b238 YOBA"
 			},{
 				Key: "B239",
-				Title: "b239 Mister Donut"
+				Title: "b239 美仕多甜甜圈"
 			},{
 				Key: "B240",
 				Title: "b240 美珍香"
@@ -792,13 +801,10 @@ exports.createNews = function(req, res){
 				Title: "b241 继光香香鸡"
 			},{
 				Key: "B242",
-				Title: "b242 贝蕾魔法"
+				Title: "b242 瑞克爷爷"
 			},{
 				Key: "B242A",
-				Title: "b242a 瑞克爷爷"
-			},{
-				Key: "B243",
-				Title: "b243 西树泡芙"
+				Title: "b242a 贝蕾魔法"
 			},{
 				Key: "B243",
 				Title: "b243 摩提工房"
@@ -810,52 +816,16 @@ exports.createNews = function(req, res){
 				Title: "b244a 榴小莲"
 			},{
 				Key: "B245",
-				Title: "b245 筑地银章鱼 "
+				Title: "b245 筑地银章鱼"
 			},{
 				Key: "B246A",
-				Title: "b246a 汁喜屋"
+				Title: "b246a 丸龟制面"
 			},{
 				Key: "B246B",
-				Title: "b246b 芋贵人"
+				Title: "b246b 正豪大大鸡排"
 			},{
-				Key: "B217",
-				Title: "b217 战锅时代"
-			},{
-				Key: "B218",
-				Title: "b218 尚保罗香榭铁板"
-			},{
-				Key: "B219",
-				Title: "b219 锦官城麻辣香锅"
-			},{
-				Key: "B220",
-				Title: "b220 吴记牛肉面"
-			},{
-				Key: "B221",
-				Title: "b221 狮子山香港小厨"
-			},{
-				Key: "B222",
-				Title: "b222 古镇汤团"
-			},{
-				Key: "B223",
-				Title: "b223 融合南洋料理"
-			},{
-				Key: "B224",
-				Title: "b224 小杨生煎"
-			},{
-				Key: "B225",
-				Title: "b225 韩林拌拌饭"
-			},{
-				Key: "B226",
-				Title: "b226 伊比力牛排"
-			},{
-				Key: "B227",
-				Title: "b227 台北东一排骨"
-			},{
-				Key: "B228",
-				Title: "b228 秦韵西北菜"
-			},{
-				Key: "B229",
-				Title: "b229 次郎日式简餐"
+				Key: "B246C",
+				Title: "b246c 优之良品"
 			}]
 		}]);
 
@@ -864,511 +834,481 @@ exports.createNews = function(req, res){
 			Floor: "1F",
 			Brands:[{
 				Key: "101",
-				Title: "101 Gucci"
+				Title: "101 GUCCI"
 			},{
 				Key: "102",
-				Title: "102 Givenchy"
+				Title: "102 GIVENCHY"
 			},{
 				Key: "103",
-				Title: "103 Sergio Rossi"
+				Title: "103 SERGIO ROSSI"
 			},{
 				Key: "105",
-				Title: "105 Saint Laurent"
+				Title: "105 SAINT LAURENT"
 			},{
 				Key: "106",
-				Title: "106 Moncler"
+				Title: "106 MONCLER"
 			},{
 				Key: "107",
-				Title: "107 Lanvin"
+				Title: "107 LANVIN"
 			},{
 				Key: "108",
-				Title: "108 Balenciaga"
+				Title: "108 BALENCIAGA"
 			},{
 				Key: "109",
 				Title: "109 RAT TAR ART BAR"
 			},{
 				Key: "110",
-				Title: "110 Alexander McQueen"
+				Title: "110 ALEXANDER MCQUEEN"
 			},{
 				Key: "111",
-				Title: "111 Stella McCartney"
+				Title: "111 STELLA McCARTNEY"
 			},{
 				Key: "112",
-				Title: "112 Marni"
+				Title: "112 MARNI"
 			},{
 				Key: "113",
-				Title: "113 Emilio Pucci"
+				Title: "113 PRINGLE (OPENING SOON)"
 			},{
 				Key: "115",
-				Title: "115 Ralph Lauren"
+				Title: "115 RALPH LAUREN"
+			},{
+				Key: "1B",
+				Title: "1B FLOWER TREE"
+			},{
+				Key: "1C",
+				Title: "1C CANDY LAB"
+			},{
+				Key: "1D",
+				Title: "1D LA CREPERIE"
+			},{
+				Key: "1D-1",
+				Title: "1D-1 URBAN SOUP KITCHEN"
+			},{
+				Key: "1E",
+				Title: "1E URBAN SOUP KITCHEN"
+			},{
+				Key: "1H",
+				Title: "1H LIND"
+			},{
+				Key: "1L",
+				Title: "1L STARBUCKS (OPENING SOON)"
 			}]
 		},{
 			Language: "En",
 			Floor: "2F",
 			Brands:[{
 				Key: "201",
-				Title: "201 Gucci"
+				Title: "201 GUCCI"
 			},{
-				Key: "202-1",
-				Title: "202-1 Sarment"
+				Key: "201-1",
+				Title: "201-1 SARMENT"
+			},{
+				Key: "202",
+				Title: "202 ANN DEMEULEMEESTER"
 			},{
 				Key: "205",
-				Title: "205 Marni"
+				Title: "205 MARNI MAN"
 			},{
 				Key: "206",
-				Title: "206 Moncler/Gamme Rouge"
+				Title: "206 MONCLER"
 			},{
 				Key: "207",
-				Title: "207 Lanvin"
+				Title: "207 LANVIN"
 			},{
 				Key: "208",
-				Title: "208 Alexander McQueen Men's"
+				Title: "208 ALEXANDER MCQUEEN MEN'S"
 			},{
-				Key: "209",
-				Title: "209 Givenchy"
+				Key: "209-1",
+				Title: "209-1 Y-3"
+			},{
+				Key: "210-3",
+				Title: "210-3 SHINE"
 			},{
 				Key: "210-5",
-				Title: "210-5 Yohji Yamamoto"
-			},{
-				Key: "210-7",
-				Title: "210-7 Alain Mikli"
+				Title: "210-5 YOHJI YAMAMOTO"
 			},{
 				Key: "211",
-				Title: "211 Alexander Wang"
+				Title: "211 ALEXANDER WANG"
 			},{
 				Key: "212",
 				Title: "212 ACNE"
 			},{
 				Key: "213",
-				Title: "213 Costume National"
+				Title: "213 TSE"
+			},{
+				Key: "215",
+				Title: "215 ISABEL MARANT"
 			},{
 				Key: "216",
-				Title: "216 Ralph Lauren"
+				Title: "216 RALPH LAUREN"
 			},{
 				Key: "218",
-				Title: "218 Helmut Lang"
+				Title: "218 HELMUT LANG"
+			},{
+				Key: "2A",
+				Title: "2A GOLDEN BULL"
+			},{
+				Key: "2B",
+				Title: "2B GINZA BAIRIN"
+			},{
+				Key: "2C",
+				Title: "2C #"
 			}]
 		},{
 			Language: "En",
 			Floor: "3F",
 			Brands:[{
+				Key: "301.301-1",
+				Title: "301.301-1 STARBUCKS"
+			},{
 				Key: "301-2",
-				Title: "301-2 JiCheng"
+				Title: "301-2 JI CHENG"
+			},{
+				Key: "301-3",
+				Title: "301-3 NIIN"
+			},{
+				Key: "302",
+				Title: "302 UUJULY"
 			},{
 				Key: "303",
-				Title: "303 Gerard Darel"
+				Title: "303 GERARD DAREL"
 			},{
 				Key: "304",
-				Title: "304 Maje"
+				Title: "304 MAJE"
 			},{
 				Key: "306",
-				Title: "306 Theory"
+				Title: "306 THEORY"
 			},{
 				Key: "307",
-				Title: "307 Sandro"
+				Title: "307 SANDRO"
 			},{
 				Key: "308",
-				Title: "308 Claudie Pierlot"
+				Title: "308 SANDRO"
 			},{
 				Key: "309",
-				Title: "309 Jacobean"
+				Title: "309 SYNC CHIC"
 			},{
 				Key: "310",
-				Title: "310 SyncChic"
+				Title: "310 JACOBEAN"
 			},{
 				Key: "311",
 				Title: "311 黄淑琦"
 			},{
+				Key: "316",
+				Title: "316 DEA KUDIBAL"
+			},{
+				Key: "318",
+				Title: "318  ISTA STYLE"
+			},{
 				Key: "319",
-				Title: "319 Unconditional"
+				Title: "319 ZAPA"
 			},{
-				Key: "330",
-				Title: "330 Suunto"
+				Key: "320",
+				Title: "320 #"
 			},{
-				Key: "339",
-				Title: "339 Munich"
+				Key: "331",
+				Title: "331 PASOTTI"
+			},{
+				Key: "332",
+				Title: "332 STEFANEL (OPENING SOON)"
+			},{
+				Key: "3A",
+				Title: "3A EXQUISITE BOCUSE CHINESE CUISINE"
+			},{
+				Key: "3B",
+				Title: "3B THAI TOWN CUISINE"
 			}]
 		},{
 			Language: "En",
 			Floor: "4F",
 			Brands:[{
 				Key: "401",
-				Title: "401 wise kids"
+				Title: "401 WISE KIDS"
+			},{
+				Key: "403",
+				Title: "403 JUZI"
 			},{
 				Key: "404",
 				Title: "404 JACADI"
 			},{
 				Key: "405",
-				Title: "405 FIONA’S PRINCE"
+				Title: "405 QKUTS"
 			},{
-				Key: "406-2",
-				Title: "406-2 NECK&NECK"
+				Key: "406",
+				Title: "406 ABSORBA/PETER RABBIT"
 			},{
 				Key: "407",
 				Title: "407 SERGENT MAJOR"
 			},{
-				Key: "410-2",
-				Title: "410-2 Marni"
-			},{
-				Key: "411-1",
-				Title: "411-1 Miss blumarine"
-			},{
 				Key: "411-2",
-				Title: "411-2 Stella McCartney"
+				Title: "411-2 STELLA MCCARTNEY"
 			},{
-				Key: "412-1",
-				Title: "412-1 Ice"
+				Key: "413-1",
+				Title: "413-1 KEL KEL"
 			},{
-				Key: "413-1412-2",
-				Title: "412-2 Tuctuc/JEEP"
+				Key: "420",
+				Title: "420 MOONSTAR"
 			},{
-				Key: "413-1412-2",
-				Title: "413-1 Tuctuc/JEEP"
-			},{
-				Key: "413-2",
-				Title: "413-2 NEW BALANCE"
-			},{
-				Key: "415",
-				Title: "415 Ballon roage"
-			},{
-				Key: "415-1",
-				Title: "415-1 RIO"
-			},{
-				Key: "415-2",
-				Title: "415-2 Naturecolored"
-			},{
-				Key: "419-1",
-				Title: "419-1 bubble"
-			},{
-				Key: "423",
-				Title: "423 TRIUMPH"
-			},{
-				Key: "424-1",
-				Title: "424-1 Essence"
-			},{
-				Key: "424-2",
-				Title: "424-2 Aimer"
-			},{
-				Key: "425-1",
-				Title: "425-1 欣姿芳"
-			},{
-				Key: "425-2",
-				Title: "425-2 INTELLIGE"
-			},{
-				Key: "426",
-				Title: "426 CHASNEY BEAUTY"
-			},{
-				Key: "427",
-				Title: "427 LA FALINO"
-			},{
-				Key: "428",
-				Title: "428 ENWEIS"
-			},{
-				Key: "429-1",
-				Title: "429-1 Corsetc"
-			},{
-				Key: "430-1",
-				Title: "430-1 ILSEE"
-			},{
-				Key: "430-2",
-				Title: "430-2 Stella McCartney"
-			},{
-				Key: "431",
-				Title: "431 INNEE"
+				Key: "421",
+				Title: "421 YVONNE COLLECTION"
 			},{
 				Key: "433-1",
 				Title: "433-1 SIMONE PERELE"
 			},{
-				Key: "434-1",
-				Title: "434-1 BE CHIC"
-			},{
-				Key: "434-2",
-				Title: "434-2 OROBLU"
-			},{
-				Key: "435",
-				Title: "435-1 DURANCE"
-			},{
-				Key: "435",
-				Title: "435-2 LINARI"
-			},{
-				Key: "435-4",
-				Title: "435-3.4 Millefiori"
-			},{
-				Key: "436-1",
-				Title: "436-1 isyfen"
-			},{
-				Key: "436-2",
-				Title: "436-2 PIERE MANTOUX"
-			},{
-				Key: "437-1",
-				Title: "437-1 POWER SHAPE"
-			},{
-				Key: "437-2",
-				Title: "437-2 WACOAL"
+				Key: "4B",
+				Title: "4B EXQUISITE BOCUSE CHINESE CUISINE"
 			}]
 		},{
 			Language: "En",
 			Floor: "5F",
 			Brands:[{
-				Key: "505506",
-				Title: "505, 506 Kuan's Living"
+				Key: "501",
+				Title: "501 THE URBAN HARVEST"
 			},{
-				Key: "523",
-				Title: "523, 524 ipluso"
+				Key: "504.525",
+				Title: "504.525 美品工房"
+			},{
+				Key: "505",
+				Title: "505 MAINSTAGE"
+			},{
+				Key: "506",
+				Title: "506 NESCAFE"
+			},{
+				Key: "508",
+				Title: "508 RÉEL ART GALLERY"
+			},{
+				Key: "509",
+				Title: "509 申活馆"
+			},{
+				Key: "510",
+				Title: "510 SEESAW"
+			},{
+				Key: "511",
+				Title: "511 艺安生活"
+			},{
+				Key: "512",
+				Title: "512 汇美舍"
+			},{
+				Key: "513.514",
+				Title: "513.514 阿吾罗"
+			},{
+				Key: "518.518-1",
+				Title: "518.518-1 美品工房"
+			},{
+				Key: "523.524",
+				Title: "523.524 IPLUSO"
+			},{
+				Key: "5f",
+				Title: "5f DA DONG"
 			}]
 		},{
 			Language: "En",
 			Floor: "B1",
 			Brands:[{
 				Key: "B101",
-				Title: "b101 P+"
+				Title: "b101 MUJI"
+			},{
+				Key: "B102",
+				Title: "b102 BONNIE ROUGE"
 			},{
 				Key: "B103",
-				Title: "b103 Stefanel"
+				Title: "b103 STEFANEL"
 			},{
 				Key: "B104",
-				Title: "b104 Porter"
-			},{
-				Key: "B105",
-				Title: "b105 Retro Fuse"
+				Title: "b104 PORTER"
 			},{
 				Key: "B106",
-				Title: "b106 Giordano Ladies"
+				Title: "b106 GIORDANO LADIES"
 			},{
 				Key: "B107",
-				Title: "b107 M)phosis"
+				Title: "b107 M)PHOSIS"
 			},{
-				Key: "B113",
-				Title: "b113 MeiRie'S"
-			},{
-				Key: "B114",
-				Title: "b114 J Shoes"
-			},{
-				Key: "B115",
-				Title: "b115 Blk Market"
-			},{
-				Key: "B116",
-				Title: "b116 Blk Market"
-			},{
-				Key: "B117",
-				Title: "b117 Martinelli"
-			},{
-				Key: "B118",
-				Title: "b118 GCI COLLEZIONE"
-			},{
-				Key: "B119",
-				Title: "b119 PELLE MODA"
+				Key: "B108B109",
+				Title: "b108.109 ROOTS"
 			},{
 				Key: "B120",
 				Title: "b120 ESSIE"
 			},{
-				Key: "B121-1",
-				Title: "b121-1 Jurlique"
+				Key: "B121B122",
+				Title: "b121.122 BLK"
 			},{
-				Key: "B122",
-				Title: "b122 Kiehl's "
+				Key: "B123",
+				Title: "b123 HARDY'S"
 			},{
 				Key: "B124",
-				Title: "b124 Hit Gallery"
+				Title: "b124 LUJAH"
 			},{
 				Key: "B125",
-				Title: "b125 自由区"
-			},{
-				Key: "B126",
-				Title: "b126 Lacoste"
-			},{
-				Key: "B131",
-				Title: "b131 Lothantique"
-			},{
-				Key: "B132",
-				Title: "b132 myLOHAS"
+				Title: "b125 BNJ"
 			},{
 				Key: "B134-1",
-				Title: "b134-1 MAC"
+				Title: "b134-1 LOLLIPOPS"
 			},{
 				Key: "B134-2",
-				Title: "b134-2 Bobbi Brown"
-			},{
-				Key: "B137",
-				Title: "b137 Lancome"
+				Title: "b134-2 SUUNTO"
 			},{
 				Key: "B138",
-				Title: "b138 Sisley"
+				Title: "b138 MARTIN GRANT"
 			},{
-				Key: "B139",
-				Title: "b139 SKII"
-			},{
-				Key: "B146",
-				Title: "b146 Fancl "
-			},{
-				Key: "B147",
-				Title: "b147 Clarins"
-			},{
-				Key: "B148",
-				Title: "b148 Clinique"
-			},{
-				Key: "B151-2",
-				Title: "b151-2 L'Occitane"
+				Key: "B140",
+				Title: "b140 TKF SPASSO"
 			},{
 				Key: "B151-1",
-				Title: "b151-1 Origins"
+				Title: "b151-1 SHO-BI"
 			},{
-				Key: "B153",
-				Title: "b153 DHC"
+				Key: "B151-2",
+				Title: "b151-2 CALIBIO"
 			}]
 		},{
 			Language: "En",
 			Floor: "B2",
 			Brands:[{
 				Key: "B201",
-				Title: "b201 Dazzling Cafe"
-			},{
-				Key: "B204",
-				Title: "b204 斗香园"
-			},{
-				Key: "B208",
-				Title: "b208 麦当劳"
-			},{
-				Key: "B213",
-				Title: "b213 葡京制造"
-			},{
-				Key: "B214",
-				Title: "b214 釜山料理"
-			},{
-				Key: "B215B216",
-				Title: "b215.216 七条"
-			},{
-				Key: "B230",
-				Title: "b230 胖达人手感烘焙"
+				Title: "b201 DAZZLING CAFÉ"
 			},{
 				Key: "B202",
-				Title: "b202 Blink"
+				Title: "b202 LEECHI"
 			},{
 				Key: "B203",
-				Title: "b203 Subway"
+				Title: "b203 SUBWAY"
+			},{
+				Key: "B204",
+				Title: "b204 JADE CUISINE"
 			},{
 				Key: "B205",
-				Title: "b205 饥饿吐司"
+				Title: "b205 HUNGRY TOAST"
 			},{
 				Key: "B205A",
-				Title: "b205a 宝馔"
+				Title: "b205a BAO ZHUAN"
 			},{
 				Key: "B206",
-				Title: "b206 Crumbs"
+				Title: "b206 CRUMBS"
 			},{
 				Key: "B207",
-				Title: "b207 Coldstone "
+				Title: "b207 COLDSTONE"
+			},{
+				Key: "B208",
+				Title: "b208 MCDONALD'S"
 			},{
 				Key: "B209",
-				Title: "b209 wagas express"
+				Title: "b209 WAGAS EXPRESS"
 			},{
 				Key: "B210",
 				Title: "b210 STARBUCKS"
 			},{
 				Key: "B211B212",
-				Title: "b211.212 满记甜品"
+				Title: "b211.212 HONEYMOON DESSERT"
 			},{
-				Key: "B231",
-				Title: "b231 早安巴黎"
+				Key: "B213",
+				Title: "b213 LISBOA"
 			},{
-				Key: "B231A",
-				Title: "b231a 西龙饭团"
+				Key: "B214",
+				Title: "b214 PANKOO"
 			},{
-				Key: "B232",
-				Title: "b232 大一梦鲷鱼烧"
-			},{
-				Key: "B233",
-				Title: "b233 缘喜寿司"
-			},{
-				Key: "B234",
-				Title: "b234 每日新鲜水果吧"
-			},{
-				Key: "B235",
-				Title: "b235 贡茶"
-			},{
-				Key: "B236",
-				Title: "b236 布歌东京"
-			},{
-				Key: "B237",
-				Title: "b237 鲜芋仙"
-			},{
-				Key: "B238",
-				Title: "b238 植本色"
-			},{
-				Key: "B239",
-				Title: "b239 Mister Donut"
-			},{
-				Key: "B240",
-				Title: "b240 美珍香"
-			},{
-				Key: "B241",
-				Title: "b241 继光香香鸡"
-			},{
-				Key: "B242",
-				Title: "b242 贝蕾魔法"
-			},{
-				Key: "B242A",
-				Title: "b242a 瑞克爷爷"
-			},{
-				Key: "B243",
-				Title: "b243 西树泡芙"
-			},{
-				Key: "B243",
-				Title: "b243 摩提工房"
-			},{
-				Key: "B244",
-				Title: "b244 宝珠奶酪"
-			},{
-				Key: "B244A",
-				Title: "b244a 榴小莲"
-			},{
-				Key: "B245",
-				Title: "b245 筑地银章鱼 "
-			},{
-				Key: "B246A",
-				Title: "b246a 汁喜屋"
-			},{
-				Key: "B246B",
-				Title: "b246b 芋贵人"
+				Key: "B215B216",
+				Title: "b215.216 TONKATSU QITIAO"
 			},{
 				Key: "B217",
-				Title: "b217 战锅时代"
+				Title: "b217 WARRING POT AGE"
 			},{
 				Key: "B218",
-				Title: "b218 尚保罗香榭铁板"
+				Title: "b218 #"
 			},{
 				Key: "B219",
-				Title: "b219 锦官城麻辣香锅"
+				Title: "b219 JINGUAN CITY SPICY CARNIVAL"
 			},{
 				Key: "B220",
-				Title: "b220 吴记牛肉面"
+				Title: "b220 BEEF NOODLE BY WU"
 			},{
 				Key: "B221",
-				Title: "b221 狮子山香港小厨"
+				Title: "b221 FUCHUN XIAOLONGBAO"
 			},{
 				Key: "B222",
-				Title: "b222 古镇汤团"
+				Title: "b222 ANCIENT TOWN DUMPLING"
 			},{
 				Key: "B223",
-				Title: "b223 融合南洋料理"
+				Title: "b223 #"
 			},{
 				Key: "B224",
-				Title: "b224 小杨生煎"
+				Title: "b224 YANG'S FRIED DUMPLING"
 			},{
 				Key: "B225",
-				Title: "b225 韩林拌拌饭"
+				Title: "b225 HANLIM KOREAN BIBIMBAP"
 			},{
 				Key: "B226",
-				Title: "b226 伊比力牛排"
+				Title: "b226 #"
 			},{
 				Key: "B227",
-				Title: "b227 台北东一排骨"
+				Title: "b227 TAIPEI DONGYI RIBS"
 			},{
 				Key: "B228",
-				Title: "b228 秦韵西北菜"
+				Title: "b228 QINGYUN NORTHWEST CUISINE"
 			},{
 				Key: "B229",
-				Title: "b229 次郎日式简餐"
+				Title: "b229 #"
+			},{
+				Key: "B230",
+				Title: "b230 TOP POT BAKER"
+			},{
+				Key: "B231",
+				Title: "b231 BON MATÍN PARÍS"
+			},{
+				Key: "B231A",
+				Title: "b231a GROSFAIRY"
+			},{
+				Key: "B232",
+				Title: "b232 #"
+			},{
+				Key: "B233",
+				Title: "b233 SUSHI TAKE-OUT"
+			},{
+				Key: "B234",
+				Title: "b234 FRESH EVERYDAY"
+			},{
+				Key: "B235",
+				Title: "b235 GONG CHA"
+			},{
+				Key: "B237",
+				Title: "b237 MEET FRESH"
+			},{
+				Key: "B238",
+				Title: "b238 YOBA"
+			},{
+				Key: "B239",
+				Title: "b239 MISTER DONUT"
+			},{
+				Key: "B240",
+				Title: "b240 BEE CHENG HIANG"
+			},{
+				Key: "B241",
+				Title: "b241 JGSSG"
+			},{
+				Key: "B242",
+				Title: "b242 #"
+			},{
+				Key: "B242A",
+				Title: "b242a #"
+			},{
+				Key: "B243",
+				Title: "b243 CHEZ CHOUX"
+			},{
+				Key: "B244",
+				Title: "b244 BOJOO DESSERT"
+			},{
+				Key: "B244A",
+				Title: "b244a MISS DURAIN"
+			},{
+				Key: "B245",
+				Title: "b245 GINDACO"
+			},{
+				Key: "B246A",
+				Title: "b246a TAO-XIAN HOUSE"
+			},{
+				Key: "B246B",
+				Title: "b246b YU GUI REN"
+			},{
+				Key: "B246C",
+				Title: "b246c #"
 			}]
 		}]);
 	});
@@ -1850,7 +1790,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "coldstone",
@@ -1858,7 +1798,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "misterdonut",
@@ -1866,7 +1806,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "starbucks",
@@ -1874,7 +1814,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "wagas express",
@@ -1882,7 +1822,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "大一梦鲷鱼",
@@ -1890,7 +1830,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "斗香园",
@@ -1898,7 +1838,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "古镇汤团",
@@ -1906,7 +1846,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "布歌东京",
@@ -1914,7 +1854,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "汁喜屋",
@@ -1922,7 +1862,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "饥饿吐司",
@@ -1930,7 +1870,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "次郎日式简餐",
@@ -1938,7 +1878,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "西树泡芙",
@@ -1946,7 +1886,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "吴记牛肉面",
@@ -1954,7 +1894,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "每日新鲜水果吧",
@@ -1962,7 +1902,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "芋贵人",
@@ -1970,7 +1910,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "宝珠奶酪",
@@ -1978,7 +1918,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "宝馔",
@@ -1986,7 +1926,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "狮子山香港小厨",
@@ -1994,7 +1934,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "美珍香",
@@ -2002,7 +1942,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "继光香香鸡",
@@ -2010,7 +1950,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "釜山料理",
@@ -2018,7 +1958,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "筑地银章鱼",
@@ -2026,7 +1966,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "缘喜寿司",
@@ -2034,7 +1974,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "韩林拌拌饭",
@@ -2042,7 +1982,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "满记甜品",
@@ -2050,7 +1990,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "葡京制造",
@@ -2058,7 +1998,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "锦官城麻辣香锅",
@@ -2066,7 +2006,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		},{
 			Key: "鲜芋仙",
@@ -2074,7 +2014,7 @@ exports.createNews = function(req, res){
 			Description_Ch: "",
 			Description_En: "",
 			Phone: "021",
-			BusinessHours: "10:00AM-22:00PM",
+			BusinessHours: "08:00AM-22:00PM",
 			Url: ""
 		}]);
 	});
@@ -2158,7 +2098,7 @@ exports.createNews = function(req, res){
 		},{
 			Language: "En",
 			Topic: "Concern",
-			Content: "Dear customer, thank you to follow the official Weibo of Réel Department Store (weibo.com/reelshanghai)\r\nto acquire a wealth of information of the our department store; you’re also welcomed to express your ideas or suggestions through our Customer Service email: eservice@reelshanghai.com, and we will be wholeheartedly at your service.\r\n(Warm tips: please leave your personal contact information such as name, telephone number, e-mail, etc. in your e-mail so that a timely contact will be facilitated.) You can also call the customer service line +86 21 22309788 or 4001559788 for explanation and services, or inquire about the following FAQ for more information. Service hours of customer service line: 10:00 to 22:00."
+			Content: "Dear customer, thank you to follow the official Weibo of Reel Department Store (weibo.com/reelshanghai) to acquire a wealth of information of the our department store; you’re also welcomed to express your ideas or suggestions through our Customer Service email: eservice@reelshanghai.com, and we will be wholeheartedly at your service.\r\n(Warm tips: please leave your personal contact information such as name, telephone number, e-mail, etc. in your e-mail so that a timely contact will be facilitated.)\r\n\r\nYou can also call the customer service line +86 21 22309788 or 4001559788 for explanation and services,\r\nor inquire about the following FAQ for more information.\r\n\r\nService hours of customer service line: 10:00 to 22:00."
 		},{
 			Language: "Ch",
 			Topic: "Contact1",
@@ -2186,7 +2126,7 @@ exports.createNews = function(req, res){
 		},{
 			Language: "Ch",
 			Topic: "Recruiting",
-			Content: "Applicants who are interested in joining in Réel Department Store can send the resume to XXX@reelshanghai.com, and the Companywill arrange interviews according to the post requirements. Information of applicants who are not informed of the interview or recruitment will be kept in the Company's Human Resources Department and will not be returned. No call or visit allowed.\r\nLinks to other human resources websites:\r\nwww.51job.com\r\nwww.ChinaHR.com"
+			Content: "有意加入芮欧百货的有志人士可将简历发至Email:XXX@reelshanghai.com，本公司将根据招聘岗位的要求安排面试，未经面试/录用者资料将保存在本公司人力资源部，恕不退还，谢绝来电来访。\r\n其他人力资源网站链接：\r\nwww.51job.com\r\nwww.ChinaHR.com"
 		},{
 			Language: "En",
 			Topic: "Recruiting",
@@ -2226,31 +2166,31 @@ exports.createNews = function(req, res){
 		},{
 			Language: "En",
 			Topic: "VisitLocation",
-			Content: "1601 Nanjing Road (W), Shanghai, P.R.C. 200040\n10:00a.m. to 10:00p.m.\nMetro Line 2, Jin’an si, Exit 4\nMetro Line 7, Jin’an si, Exit 10\n15、20、21、37、40、45、76、93、94、113、315、\n321、323、327、330、506、824、\n825、830、838、 921、927、Tour Line 8\n与越洋广场共用停车场. 汽车入口位于常德路上\nRMB 15 per hour, Maximum RMB 120 per day\n第二个小时起以半个小时为收费单位，\n收费金额为人民币7.50元/个/半小时\n"
+			Content: "1601 Nanjing Road (W), Shanghai, P.R.C. 200040\n10:00a.m. to 10:00p.m.\nMetro Line 2, Jin’an si, Exit 4\nMetro Line 7, Jin’an si, Exit 10\n15、20、21、37、40、45、76、93、94、113、315、\n321、323、327、330、506、824、\n825、830、838、 921、927、Tour Line 8\nShare car park with Park Place. Parking entrance on Chang De Road.\n1st hour: RMB 15 \nEvery half hour (after the 1st hour): RMB 7.50 \nDaily maximum: RMB 120\n"
 		},{
 			Language: "Ch",
 			Topic: "VisitReelPlace1",
-			Content: "还没有中文说明1"
+			Content: "屹立于芮欧百货门口的传世名作，以伟大艺术气息与繁华南京西路相映衬，吸引全世界艺术追随者的关注和赏析，助力芮欧百货成为上海新艺术地标。"
 		},{
 			Language: "Ch",
 			Topic: "VisitReelPlace2",
-			Content: "还没有中文说明2"
+			Content: "选择富有艺术感的画面装饰整个装置，使之在功能性作用之外增添了一丝文化的韵味。"
 		},{
 			Language: "Ch",
 			Topic: "VisitReelPlace3",
-			Content: "还没有中文说明3"
+			Content: "郁郁葱葱的绿树环绕造就了繁华静安寺商圈中一片静寂的绿荫，为往来人群提供了舒适的景观一角。"
 		},{
 			Language: "Ch",
 			Topic: "VisitReelPlace4",
-			Content: "还没有中文说明4"
+			Content: "被各式绿色植栽包围，更有喷泉配以景观灯，使得这毗邻静安公园和Art Bar的宁静之地富有生机。"
 		},{
 			Language: "Ch",
 			Topic: "VisitReelPlace5",
-			Content: "还没有中文说明5"
+			Content: "连接越洋广场和芮欧百货的设计感极强的回廊，两边伴有各色休闲餐厅和小店，成为附近白领就餐和午后小憩的好去处。"
 		},{
 			Language: "Ch",
 			Topic: "VisitReelPlace6",
-			Content: "还没有中文说明6"
+			Content: "云集世界各地美食的现代化餐饮集中地，从一层纸五层汇集各国经典菜式，无论是商务宴请亦或是朋友小聚均为佳选。"
 		}, {
 			Language: "En",
 			Topic: "VisitReelPlace1",

@@ -548,7 +548,7 @@ div {
 }
 .MainContent .FloorGuide1F {
   top: 2px;
-  margin-left: -322px;
+  margin-left: -440px;
   width: 614px;
   height: 578px;
 }
@@ -561,7 +561,7 @@ div {
 .MainContent .FloorGuide3F,
 .MainContent .FloorGuide4F,
 .MainContent .FloorGuide5F {
-  margin-left: -299px;
+  margin-left: -440px;
   width: 593px;
   height: 569px;
 }
@@ -577,7 +577,7 @@ div {
   height: 569px;
 }
 .MainContent .FloorGuideB1 {
-  margin-left: -400px;
+  margin-left: -410px;
   width: 740px;
   height: 614px;
 }
@@ -587,7 +587,7 @@ div {
   height: 614px;
 }
 .MainContent .FloorGuideB2 {
-  margin-left: -435px;
+  margin-left: -410px;
   width: 775px;
   height: 614px;
 }

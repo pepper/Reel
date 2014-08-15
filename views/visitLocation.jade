@@ -10,7 +10,7 @@ block mainContent
 				td(class="Description", colspan="2")
 					img(src="/images/Visit/Location/Location_01_#{Language}.png")
 				td(class="MainMapContainer", rowspan="7")
-					div(class="MainMap", language="#{Language}")
+					div(class="MainMap", language="#{Language}", style="position: absolute; top: 0px;")
 						div(class="Level1", style="background: url(/images/Visit/Location/Loaction_Map_Zoom01_#{Language}.jpg) no-repeat; width: 320px; height: 320px;")
 						div(style="height: 384px; width: 384px;")
 							img(class="Level2", src="/images/Visit/Location/Loaction_Map_Zoom02_#{Language}.jpg", alt="")
@@ -78,10 +78,14 @@ block mainContent
 						div(class="Level1", style="background: url(/images/Visit/Location/Location_Park_#{Language}.jpg) no-repeat; width: 320px; height: 320px;")
 			tr(class="Description")
 				td(class="Description", colspan="2") #{ContentArray[7]}
+			- if(Language == "Ch")
+				tr(class="Description")
+					td(class="Description", colspan="2") #{ContentArray[8]}
 			tr(class="Description")
-				td(class="Description", colspan="2") #{ContentArray[8]}
-			tr(class="Description")
-				td(class="Description", colspan="2", style="height:123px;vertical-align:top;")
+				td(class="Description", colspan="2", style="height:123px;vertical-align:top;padding-top:10px;")
+					- if(Language == "En")
+						| #{ContentArray[8]}
+						br
 					| #{ContentArray[9]}
 					br
 					| #{ContentArray[10]}

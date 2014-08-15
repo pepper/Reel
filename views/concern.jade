@@ -8,11 +8,15 @@ block mainContent
 		img(src="/images/Concern/Concern_#{Language}.png")
 		br
 		- each Content in ContentArray
-			if (Content.indexOf("#Paragraph#") >= 0) 
+			- if (Content.indexOf("#Paragraph#") >= 0) 
 				p #{Content.replace("#Paragraph# ", "")}
 			- else
 				span #{Content}
 				br
+		img(src="/images/Concern/OfficalWebQRCode.png")
+		br
+		img(src="/images/Concern/ReelWeiboQRcode.jpg", style="padding-top:0px;")
+
 block panel
 	- if(Administrator)
 		div(class="modal fade", id="EditConcernPanel")
