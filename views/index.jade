@@ -21,6 +21,7 @@ block mainContent
 					img(src="/images/News/#{NewsItem.Key}_#{Language}/Sticker.png")
 				div(class="Title")
 					span(class="Date") #{NewsItem.Date}
+					br
 					span(class="Text")
 						a(href="/News/#{NewsItem.Key}", class="HoverLink ChangeColor", overColor="#000000", outColor="#808080") #{NewsItem.Title}
 				div(class="Description")

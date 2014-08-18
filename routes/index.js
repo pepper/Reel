@@ -218,6 +218,7 @@ exports.visitFloor = function(req, res){
 	res.result.CurrentURL = "/Visit";
 	res.result.VisitTopic = "Floor";
 	res.result.ReelPlaceArray = new Array();
+	res.result.Floor = (req.params.Floor)?req.params.Floor:"";
 	step(function(){
 		var next = this;
 		mongo.database.collection("floor", function(err, collection){
@@ -242,9 +243,7 @@ exports.visitFloor = function(req, res){
 	}, function(){
 		var next = this;
 		var topicArray = ["VisitReelPlace1", "VisitReelPlace2", "VisitReelPlace3", "VisitReelPlace4", "VisitReelPlace5", "VisitReelPlace6"];
-		logger.debug("B");
 		var getVisitReelPlaceContext = function(index){
-			logger.debug("index: " + index);
 			mongo.database.collection("fix_text", function(err, collection){
 				collection.find({"Language": res.result.Language, "Topic": topicArray[index]}).toArray(function(err, place){
 					if(err){

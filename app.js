@@ -82,6 +82,7 @@ app.get("/FAQ", index.faq);
 app.get("/Brands", index.brand);
 app.get("/Visit", index.visitFloor);
 app.get("/Visit/Floor", index.visitFloor);
+app.get("/Visit/Floor/:Floor", index.visitFloor);
 app.get("/Visit/Location", index.visitLocation);
 app.get("/Visit/About", index.visitAbout);
 app.get("/Recruiting", index.recruiting);

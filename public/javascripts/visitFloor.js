@@ -235,7 +235,12 @@ VisitFloorDescriptionView = Backbone.View.extend({
 VisitFloorView = Backbone.View.extend({
 	currentFloor: "",
 	initialize: function(){
-		this.changeFloor("FloorGuideReelPlace");
+		if(this.$el.attr("default-floor") && this.$el.attr("default-floor") != ""){
+			this.changeFloor("FloorGuide" + this.$el.attr("default-floor"));
+		}
+		else{
+			this.changeFloor("FloorGuideReelPlace");
+		}
 	},
 	events:{
 		"click .FloorGuide area":"selectAreaOnMap"

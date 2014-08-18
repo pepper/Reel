@@ -1321,7 +1321,8 @@ exports.createNews = function(req, res){
 			Phone: "02132539526",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "acnestudios.com",
-			Filter: ["Women", "Man"]
+			Filter: ["Women", "Man"],
+			Floor: "2F"
 		},{
 			Key: "aimer",
 			Title: "Aimer",
@@ -1330,7 +1331,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "aimer.com.cn",
-			Filter: ["Underwear"]
+			Filter: ["Underwear"],
+			Floor: ""
 		},{
 			Key: "alainmikli",
 			Title: "Alain Mikli",
@@ -1339,7 +1341,8 @@ exports.createNews = function(req, res){
 			Phone: "02132568928",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "mikli.com",
-			Filter: ["Accessory"]
+			Filter: ["Accessory"],
+			Floor: ""
 		},{
 			Key: "alexandermcqueen",
 			Title: "Alexander McQueen",
@@ -1348,7 +1351,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "alexandermcqueen.com",
-			Filter: ["Women"]
+			Filter: ["Women"],
+			Floor: "1F"
 		},{
 			Key: "alexanderwang",
 			Title: "Alexander Wang",
@@ -1357,7 +1361,8 @@ exports.createNews = function(req, res){
 			Phone: "02122309838",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "alexanderwang.com",
-			Filter: ["Women"]
+			Filter: ["Women"],
+			Floor: "2F"
 		},{
 			Key: "balabala",
 			Title: "Balabala",
@@ -1366,7 +1371,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "balabala.com.cn",
-			Filter: ["Kids"]
+			Filter: ["Kids"],
+			Floor: ""
 		},{
 			Key: "balenciaga",
 			Title: "Balenciaga",
@@ -1375,7 +1381,8 @@ exports.createNews = function(req, res){
 			Phone: "02122309811",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "balenciaga.com",
-			Filter: ["Women", "Man"]
+			Filter: ["Women", "Man"],
+			Floor: "1F"
 		},{
 			Key: "ballonrouge",
 			Title: "Ballon rouge",
@@ -1384,7 +1391,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "balabala.com.cn",
-			Filter: ["Kids"]
+			Filter: ["Kids"],
+			Floor: ""
 		},{
 			Key: "chasneybeauty",
 			Title: "CHASNEY BEAUTY",
@@ -1393,7 +1401,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "bubblelondon.com",
-			Filter: ["Underwear"]
+			Filter: ["Underwear"],
+			Floor: ""
 		},{
 			Key: "clinique",
 			Title: "Clinique",
@@ -1402,7 +1411,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "clinique.com.cn",
-			Filter: ["Beauty"]
+			Filter: ["Beauty"],
+			Floor: ""
 		},{
 			Key: "corsetc",
 			Title: "Corsetc",
@@ -1411,7 +1421,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "",
-			Filter: ["Underwear"]
+			Filter: ["Underwear"],
+			Floor: ""
 		},{
 			Key: "dhc",
 			Title: "DHC",
@@ -1420,7 +1431,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "dhc.net.cn",
-			Filter: ["Beauty"]
+			Filter: ["Beauty"],
+			Floor: ""
 		},{
 			Key: "emiliopucci",
 			Title: "Emilio Pucci",
@@ -1429,7 +1441,8 @@ exports.createNews = function(req, res){
 			Phone: "02152929808",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "emiliopucci.com",
-			Filter: ["Women"]
+			Filter: ["Women"],
+			Floor: ""
 		},{
 			Key: "enweis",
 			Title: "ENWEIS",
@@ -1438,7 +1451,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "",
-			Filter: ["Underwear"]
+			Filter: ["Underwear"],
+			Floor: ""
 		},{
 			Key: "essie",
 			Title: "ESSIE",
@@ -1447,7 +1461,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "essie.com",
-			Filter: ["Beauty"]
+			Filter: ["Beauty"],
+			Floor: "B1"
 		},{
 			Key: "fancl",
 			Title: "Fancl",
@@ -1456,7 +1471,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "fancl.com.cn",
-			Filter: ["Beauty"]
+			Filter: ["Beauty"],
+			Floor: ""
 		},{
 			Key: "fionasprince",
 			Title: "FIONA’S PRINCE",
@@ -1465,7 +1481,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "bubblelondon.com",
-			Filter: ["Kids"]
+			Filter: ["Kids"],
+			Floor: ""
 		},{
 			Key: "gerarddarel",
 			Title: "Gerard Darel",
@@ -1474,7 +1491,8 @@ exports.createNews = function(req, res){
 			Phone: "02132535368",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "gerarddarel.com",
-			Filter: ["Women"]
+			Filter: ["Women"],
+			Floor: "3F"
 		},{
 			Key: "givenchy",
 			Title: "Givenchy",
@@ -1483,7 +1501,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "givenchy.com",
-			Filter: ["Women", "Man"]
+			Filter: ["Women", "Man"],
+			Floor: "1F"
 		},{
 			Key: "gucci",
 			Title: "Gucci",
@@ -1492,7 +1511,8 @@ exports.createNews = function(req, res){
 			Phone: "02122309808",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "gucci.com",
-			Filter: ["Women", "Man"]
+			Filter: ["Women", "Man"],
+			Floor: "1F"
 		},{
 			Key: "huangshuchi",
 			Title: "HUANG SHU CHI 黄淑琦",
@@ -1501,7 +1521,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "huangshuchi.com",
-			Filter: ["Women"]
+			Filter: ["Women"],
+			Floor: "3F"
 		},{
 			Key: "ilsee",
 			Title: "ILSEE",
@@ -1510,7 +1531,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "ordifen.com.cn",
-			Filter: ["Underwear"]
+			Filter: ["Underwear"],
+			Floor: ""
 		},{
 			Key: "ipluso",
 			Title: "ipluso",
@@ -1519,7 +1541,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "",
-			Filter: ["Living"]
+			Filter: ["Living"],
+			Floor: "5F"
 		},{
 			Key: "jacadi",
 			Title: "JACADI",
@@ -1528,7 +1551,8 @@ exports.createNews = function(req, res){
 			Phone: "02132568922",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "jacadi.com",
-			Filter: ["Kids"]
+			Filter: ["Kids"],
+			Floor: ""
 		},{
 			Key: "jurlique",
 			Title: "Jurlique",
@@ -1537,7 +1561,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "jurlique.com.cn",
-			Filter: ["Beauty"]
+			Filter: ["Beauty"],
+			Floor: "4F"
 		},{
 			Key: "kiehls",
 			Title: "Kiehl\'s",
@@ -1546,7 +1571,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "kiehls.com.cn",
-			Filter: ["Beauty"]
+			Filter: ["Beauty"],
+			Floor: ""
 		},{
 			Key: "kuansliving",
 			Title: "Kuan\'s Living 宽庭",
@@ -1555,7 +1581,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "",
-			Filter: ["Living"]
+			Filter: ["Living"],
+			Floor: ""
 		},{
 			Key: "loccitane",
 			Title: "L\'Occitane",
@@ -1564,7 +1591,9 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "loccitane.cn",
-			Filter: ["Beauty"]
+			Floor: "",
+			Filter: ["Beauty"],
+			Floor: ""
 		},{
 			Key: "lancome",
 			Title: "Lancome",
@@ -1573,7 +1602,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "lancome.com.cn",
-			Filter: ["Beauty"]
+			Filter: ["Beauty"],
+			Floor: ""
 		},{
 			Key: "lanvin",
 			Title: "Lanvin",
@@ -1582,7 +1612,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "lanvin.com",
-			Filter: ["Women", "Man"]
+			Filter: ["Women", "Man"],
+			Floor: "1F"
 		},{
 			Key: "lothantique",
 			Title: "Lothantique",
@@ -1591,7 +1622,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "lothantique.com",
-			Filter: ["Beauty"]
+			Filter: ["Beauty"],
+			Floor: ""
 		},{
 			Key: "mac",
 			Title: "M.A.C",
@@ -1600,7 +1632,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "maccosmetics.com.cn",
-			Filter: ["Beauty"]
+			Filter: ["Beauty"],
+			Floor: ""
 		},{
 			Key: "marni",
 			Title: "Marni",
@@ -1609,7 +1642,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "marni.com",
-			Filter: ["Women", "Man"]
+			Filter: ["Women", "Man"],
+			Floor: "1F"
 		},{
 			Key: "moncler",
 			Title: "Moncler",
@@ -1618,7 +1652,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "moncler.com",
-			Filter: ["Women", "Man"]
+			Filter: ["Women", "Man"],
+			Floor: "1F"
 		},{
 			Key: "munich",
 			Title: "Munich",
@@ -1627,7 +1662,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "munichsports.com",
-			Filter: ["Accessory"]
+			Filter: ["Accessory"],
+			Floor: ""
 		},{
 			Key: "mylohas",
 			Title: "myLOHAS",
@@ -1636,7 +1672,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "mylohas.net",
-			Filter: ["Beauty"]
+			Filter: ["Beauty"],
+			Floor: ""
 		},{
 			Key: "naturecolored",
 			Title: "Naturecolored",
@@ -1645,7 +1682,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "naturecolored.cn",
-			Filter: ["Kids"]
+			Filter: ["Kids"],
+			Floor: ""
 		},{
 			Key: "newbalance",
 			Title: "NEW BALANCE",
@@ -1654,7 +1692,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "newbalance.com.cn",
-			Filter: ["Kids"]
+			Filter: ["Kids"],
+			Floor: ""
 		},{
 			Key: "origins",
 			Title: "Origins",
@@ -1663,7 +1702,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "origins.com.cn",
-			Filter: ["Beauty"]
+			Filter: ["Beauty"],
+			Floor: ""
 		},{
 			Key: "oroblu",
 			Title: "OROBLU",
@@ -1672,7 +1712,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "oroblu.com",
-			Filter: ["Underwear"]
+			Filter: ["Underwear"],
+			Floor: ""
 		},{
 			Key: "ralphlauren",
 			Title: "Ralph Lauren",
@@ -1681,7 +1722,8 @@ exports.createNews = function(req, res){
 			Phone: "02132530868",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "ralphlauren.com",
-			Filter: ["Women"]
+			Filter: ["Women"],
+			Floor: "1F"
 		},{
 			Key: "sergentmajor",
 			Title: "SERGENT MAJOR",
@@ -1690,7 +1732,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "sergent-major.com.cn",
-			Filter: ["Kids"]
+			Filter: ["Kids"],
+			Floor: "4F"
 		},{
 			Key: "sergiorossi",
 			Title: "Sergio Rossi",
@@ -1699,7 +1742,8 @@ exports.createNews = function(req, res){
 			Phone: "02132530878",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "sergiorossi.com",
-			Filter: ["Women"]
+			Filter: ["Women"],
+			Floor: "1F"
 		},{
 			Key: "simoneperele",
 			Title: "SIMONE PERELE",
@@ -1708,7 +1752,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "simone-perele.com",
-			Filter: ["Underwear"]
+			Filter: ["Underwear"],
+			Floor: "4F"
 		},{
 			Key: "sisley",
 			Title: "Sisley",
@@ -1717,7 +1762,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "sisley.com.cn",
-			Filter: ["Beauty"]
+			Filter: ["Beauty"],
+			Floor: ""
 		},{
 			Key: "skii",
 			Title: "SKII",
@@ -1726,7 +1772,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "skii.com.cn",
-			Filter: ["Beauty"]
+			Filter: ["Beauty"],
+			Floor: ""
 		},{
 			Key: "stellamccartneykids",
 			Title: "Stella McCartney Kids",
@@ -1735,7 +1782,8 @@ exports.createNews = function(req, res){
 			Phone: "02132536598",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "stellamccartney.com",
-			Filter: ["Women", "Kids", "Underwear"]
+			Filter: ["Women", "Kids", "Underwear"],
+			Floor: "4F"
 		},{
 			Key: "tuctuc",
 			Title: "Tuctuc",
@@ -1744,7 +1792,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "tuctuc.com",
-			Filter: ["Kids"]
+			Filter: ["Kids"],
+			Floor: ""
 		},{
 			Key: "unconditional",
 			Title: "Unconditional",
@@ -1753,7 +1802,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "unconditional.uk.com",
-			Filter: ["Women", "Man"]
+			Filter: ["Women", "Man"],
+			Floor: ""
 		},{
 			Key: "wacoal",
 			Title: "WACOAL",
@@ -1762,7 +1812,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "wacoal.com.cn",
-			Filter: ["Underwear"]
+			Filter: ["Underwear"],
+			Floor: ""
 		},{
 			Key: "wisekids",
 			Title: "wise kids",
@@ -1771,7 +1822,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "wisekidstoys.com",
-			Filter: ["Kids"]
+			Filter: ["Kids"],
+			Floor: "4F"
 		},{
 			Key: "yohjiyamamoto",
 			Title: "Yohji Yamamoto",
@@ -1780,7 +1832,8 @@ exports.createNews = function(req, res){
 			Phone: "",
 			BusinessHours: "10:00AM-22:00PM",
 			Url: "yohjiyamamoto.co.jp",
-			Filter: ["Women"]
+			Filter: ["Women"],
+			Floor: "2F"
 		}]);
 	});
 	mongo.database.collection("food", function(err, collection){

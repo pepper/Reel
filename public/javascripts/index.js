@@ -19,7 +19,8 @@ IndexView = Backbone.View.extend({
 		});
 	},
 	resetIndexHeight: function(newsLineQuantity){
-		this.$el.find("div").css("position", "absolute");
+		this.$el.find(".MainImage").css("position", "absolute");
+		this.$el.find(".ImageItem").css("position", "absolute");
 		this.$el.css({
 			"position":"relative",
 			"height":(570 + (newsLineQuantity * 458)) + "px"
