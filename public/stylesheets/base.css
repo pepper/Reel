@@ -901,6 +901,11 @@ div {
   font-size: 11px;
   line-height: 22px;
 }
+.MainContent .MemberShipBook span {
+  color: #808080;
+  font-size: 11px;
+  line-height: 22px;
+}
 .MainContent .MemberShipBook h3 {
   color: #999999;
   font-size: 14px;
@@ -911,6 +916,14 @@ div {
   font-size: 12px;
   margin-top: 30px;
 }
+.MainContent .MemberShipBook a {
+  color: #808080;
+  font-size: 11px;
+  text-decoration: none;
+}
+.MainContent .MemberShipBook a:hover {
+  color: #000000;
+}
 .MainContent .Petition {
   top: 45px;
   left: 50%;
@@ -919,6 +932,11 @@ div {
   margin-bottom: 45px;
 }
 .MainContent .Petition p {
+  color: #808080;
+  font-size: 11px;
+  line-height: 22px;
+}
+.MainContent .Petition span {
   color: #808080;
   font-size: 11px;
   line-height: 22px;
@@ -997,6 +1015,14 @@ div {
   text-align: left;
   vertical-align: top;
 }
+.MainContent .Petition a {
+  color: #808080;
+  font-size: 11px;
+  text-decoration: none;
+}
+.MainContent .Petition a:hover {
+  color: #000000;
+}
 .MainContent .Booking {
   top: 45px;
   left: 50%;
@@ -1008,6 +1034,14 @@ div {
   color: #808080;
   font-size: 11px;
   line-height: 22px;
+}
+.MainContent .Booking a {
+  color: #808080;
+  font-size: 11px;
+  text-decoration: none;
+}
+.MainContent .Booking a:hover {
+  color: #000000;
 }
 .MainContent .InStoreService {
   top: 45px;
@@ -1052,6 +1086,14 @@ div {
 .MainContent .InStoreService table .Title {
   font-size: 12px;
   color: #333333;
+}
+.MainContent .InStoreService a {
+  color: #808080;
+  font-size: 11px;
+  text-decoration: none;
+}
+.MainContent .InStoreService a:hover {
+  color: #000000;
 }
 .MainContent .Membership {
   top: 45px;
@@ -1101,6 +1143,14 @@ div {
 }
 .MainContent .Membership table tr.NoBorder td {
   border-bottom: none;
+}
+.MainContent .Membership a {
+  color: #808080;
+  font-size: 11px;
+  text-decoration: none;
+}
+.MainContent .Membership a:hover {
+  color: #000000;
 }
 .ServicesSelector img {
   cursor: pointer;

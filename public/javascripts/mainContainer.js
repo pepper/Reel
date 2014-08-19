@@ -162,4 +162,9 @@ MainContainerView = Backbone.View.extend({
 $(document).ready(function(){
 	window.mainContainerView = new MainContainerView({ el: $(".MainContainer")});
 	$(window).trigger("resize");
+	setTimeout(function(){
+		$(".Concern").automail().autolink();
+		$(".ContactUs").automail().autolink();
+		$(".Services").automail().autolink();
+	}, 1000);
 });

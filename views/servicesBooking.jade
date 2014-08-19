@@ -3,7 +3,28 @@ extends services
 block mainContent
 	div(class="Services")
 		div(class="Content Booking")
+			- if(Administrator)
+				span(class="glyphicon glyphicon-pencil", style="font-size:32px", data-toggle="modal", data-target="#EditServicesBookingPanel")
+				br
 			img(src="/images/Services/Booking_Title.png")
 			br
 			br
-			p 本公司客服人员可代为会员预订商场内各餐厅用餐座位(B2F Réel Kitchen美食广场除外),如需任何查询,请联系客服热线021-22309788 或4001559788,我们将竭诚为您服务。
+			p #{Content}
+block panel
+	- if(Administrator)
+		div(class="modal fade", id="EditServicesBookingPanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/fix_text", method="post")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Edit Services Booking
+						div(class="modal-body")
+							div(class="row")
+								div(class="col-md-12")
+									textarea(class="form-control input-sm", name="Content", rows="10") #{Content}
+						div(class="modal-footer")
+							input(type="hidden", name="Language", value="#{Language}")
+							input(type="hidden", name="Topic", value="ServicesBooking")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Save

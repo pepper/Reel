@@ -6,6 +6,9 @@ var logger = require("nlogger").logger(module);
 
 var basicDirPath = path.join(__dirname, "..", "public", "images", "News");
 var basicBrandDirPath = path.join(__dirname, "..", "public", "brands");
+var basicReelPlacePath = path.join(__dirname, "..", "public", "images", "Visit", "FloorGuideReelPlace");
+var basicVisitAboutPath = path.join(__dirname, "..", "public", "images", "About", "IMG_About.jpg");
+var basicVisitFloorPath = path.join(__dirname, "..", "public", "images", "Visit");
 var monthEnglishName = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 var deleteFolderRecursive = function(path) {
@@ -330,6 +333,12 @@ exports.editFixText = function(req, res){
 				case "VisitReelPlace":
 					res.redirect("/Visit");
 					break;
+				case "ServicesBooking":
+					res.redirect("/Services/Booking");
+					break;
+				case "ServicesPetition":
+					res.redirect("/Services/Petition");
+					break;
 				default:
 					res.redirect("/" + req.body.Topic.replace(/[0-9]/g, ""));
 					break;
@@ -492,6 +501,69 @@ exports.removeBrand = function(req, res){
 			fs.unlink(path.join(basicBrandDirPath, key + ".jpg"), function(){
 				res.send(200);
 			});
+		});
+	});
+}
+
+exports.changeReelPlaceImage = function(req, res){
+	var targetPath = "";
+	switch(req.body.Topic){
+		case "VisitReelPlace1":
+			targetPath = path.join(basicReelPlacePath, "IMGS01.jpg");
+			break;
+		case "VisitReelPlace2":
+			targetPath = path.join(basicReelPlacePath, "IMGS02.jpg");
+			break;
+		case "VisitReelPlace3":
+			targetPath = path.join(basicReelPlacePath, "IMGS03.jpg");
+			break;
+		case "VisitReelPlace4":
+			targetPath = path.join(basicReelPlacePath, "IMGS04.jpg");
+			break;
+		case "VisitReelPlace5":
+			targetPath = path.join(basicReelPlacePath, "IMGS05.jpg");
+			break;
+		case "VisitReelPlace6":
+			targetPath = path.join(basicReelPlacePath, "IMGS06.jpg");
+			break;
+	}
+	fs.readFile(req.files.Image.path, function(err, data){
+		if(err){
+			return logger.error(err);
+		}
+		fs.writeFile(targetPath, data, function(err){
+			if(err){
+				return logger.error(err);
+			}
+			res.redirect("/Visit");
+		});
+	});
+}
+
+exports.changeVisitAboutImage = function(req, res){
+	fs.readFile(req.files.Image.path, function(err, data){
+		if(err){
+			return logger.error(err);
+		}
+		fs.writeFile(basicVisitAboutPath, data, function(err){
+			if(err){
+				return logger.error(err);
+			}
+			res.redirect("/Visit/About");
+		});
+	});
+}
+
+exports.changeVisitFloorImage = function(req, res){
+	fs.readFile(req.files.Image.path, function(err, data){
+		if(err){
+			return logger.error(err);
+		}
+		fs.writeFile(path.join(basicVisitFloorPath, "FloorPlan" + req.body.Floor + ".jpg"), data, function(err){
+			if(err){
+				return logger.error(err);
+			}
+			res.redirect("/Visit");
 		});
 	});
 }

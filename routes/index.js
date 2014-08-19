@@ -387,13 +387,36 @@ exports.servicesMemberShipBook = function(req, res){
 exports.servicesPetition = function(req, res){
 	res.result.CurrentURL = "/Services";
 	res.result.ServicesTopic = "Petition";
-	res.render("servicesPetition", res.result);
+	mongo.database.collection("fix_text", function(err, collection){
+		collection.find({"Language": res.result.Language, "Topic": "ServicesPetition"}).toArray(function(err, servicesPetition){
+			if(err){
+				logger.error(err);
+				return res.sned(500);
+			}
+			if(servicesPetition && servicesPetition.length > 0){
+				res.result.ContentArray = servicesPetition[0].Content.split("\n");
+				res.result.OriginContent = servicesPetition[0].Content;
+			}
+			res.render("servicesPetition", res.result);
+		});
+	});
 }
 
 exports.servicesBooking = function(req, res){
 	res.result.CurrentURL = "/Services";
 	res.result.ServicesTopic = "Booking";
-	res.render("servicesBooking", res.result);
+	mongo.database.collection("fix_text", function(err, collection){
+		collection.find({"Language": res.result.Language, "Topic": "ServicesBooking"}).toArray(function(err, servicesBooking){
+			if(err){
+				logger.error(err);
+				return res.sned(500);
+			}
+			if(servicesBooking && servicesBooking.length > 0){
+				res.result.Content = servicesBooking[0].Content;
+			}
+			res.render("servicesBooking", res.result);
+		});
+	});
 }
 
 exports.servicesMembership = function(req, res){
@@ -411,7 +434,19 @@ exports.servicesMembershipBenefits = function(req, res){
 exports.servicesRegulations = function(req, res){
 	res.result.CurrentURL = "/Services";
 	res.result.ServicesTopic = "Regulations";
-	res.render("servicesRegulations", res.result);
+	mongo.database.collection("fix_text", function(err, collection){
+		collection.find({"Language": res.result.Language, "Topic": "ServicesRegulations"}).toArray(function(err, concern){
+			if(err){
+				logger.error(err);
+				return res.sned(500);
+			}
+			if(concern && concern.length > 0){
+				res.result.ContentArray = concern[0].Content.split("\n");
+				res.result.OriginContent = concern[0].Content;
+			}
+			res.render("servicesRegulations", res.result);
+		});
+	});
 }
 
 exports.servicesInStoreService = function(req, res){
@@ -530,7 +565,7 @@ exports.search = function(req, res){
 						return res.sned(500);
 					}
 					brands.forEach(function(brand){
-						if((brand.Description_Ch && brand.Description_Ch.indexOf(req.body.Search) >= 0) || (brand.Description_En && brand.Description_En.indexOf(req.body.Search) >= 0) || (brand.Description && brand.Description.indexOf(req.body.Search) >= 0)){
+						if((brand.Title && brand.Title.indexOf(req.body.Search) >= 0) || (brand.Description_Ch && brand.Description_Ch.indexOf(req.body.Search) >= 0) || (brand.Description_En && brand.Description_En.indexOf(req.body.Search) >= 0) || (brand.Description && brand.Description.indexOf(req.body.Search) >= 0)){
 							res.result.SearchResult.push({
 								Title: brand.Title,
 								URL: "/Brands#" + brand.Key,

@@ -79,23 +79,135 @@ block mainContent
 				area(shape="rect", coords="181,272,219,307", href="#FloorGuide_Page_MapS05")
 				area(shape="rect", coords="357,153,398,194", href="#FloorGuide_Page_MapS06")
 		div(class="FloorGuide FloorGuide1F")
-			img(class="FloorGuideBackground", src="/images/Visit/FloorPlan1F.jpg")
+			img(class="FloorGuideBackground", src="/images/Visit/FloorPlan1F.jpg", data-toggle="modal", data-target="#EditVisitFloor1FImagePanel")
 		div(class="FloorGuide FloorGuide2F")
-			img(class="FloorGuideBackground", src="/images/Visit/FloorPlan2F.jpg")
+			img(class="FloorGuideBackground", src="/images/Visit/FloorPlan2F.jpg", data-toggle="modal", data-target="#EditVisitFloor2FImagePanel")
 		div(class="FloorGuide FloorGuide3F")
-			img(class="FloorGuideBackground", src="/images/Visit/FloorPlan3F.jpg")
+			img(class="FloorGuideBackground", src="/images/Visit/FloorPlan3F.jpg", data-toggle="modal", data-target="#EditVisitFloor3FImagePanel")
 		div(class="FloorGuide FloorGuide4F")
-			img(class="FloorGuideBackground", src="/images/Visit/FloorPlan4F.jpg")
+			img(class="FloorGuideBackground", src="/images/Visit/FloorPlan4F.jpg", data-toggle="modal", data-target="#EditVisitFloor4FImagePanel")
 		div(class="FloorGuide FloorGuide5F")
-			img(class="FloorGuideBackground", src="/images/Visit/FloorPlan5F.jpg")
+			img(class="FloorGuideBackground", src="/images/Visit/FloorPlan5F.jpg", data-toggle="modal", data-target="#EditVisitFloor5FImagePanel")
 		div(class="FloorGuide FloorGuideB1")
-			img(class="FloorGuideBackground", src="/images/Visit/FloorPlanB1.jpg")
+			img(class="FloorGuideBackground", src="/images/Visit/FloorPlanB1.jpg", data-toggle="modal", data-target="#EditVisitFloorB1ImagePanel")
 		div(class="FloorGuide FloorGuideB2")
-			img(class="FloorGuideBackground", src="/images/Visit/FloorPlanB2.jpg")
+			img(class="FloorGuideBackground", src="/images/Visit/FloorPlanB2.jpg", data-toggle="modal", data-target="#EditVisitFloorB2ImagePanel")
 	script(src="/javascripts/visitFloor.js")
 
 block panel
 	- if(Administrator)
+		div(class="modal fade", id="EditVisitFloor1FImagePanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/visit_floor_image", method="post", enctype="multipart/form-data")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Change Visit Floor Image
+						div(class="modal-body")
+							div(class="row")
+								div(class="col-md-10")
+									input(type="file", name="Image" id="Image")
+						div(class="modal-footer")
+							input(type="hidden", name="Floor", value="1F")
+							input(type="hidden", name="Language", value="#{Language}")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Change
+		div(class="modal fade", id="EditVisitFloor2FImagePanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/visit_floor_image", method="post", enctype="multipart/form-data")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Change Visit Floor Image
+						div(class="modal-body")
+							div(class="row")
+								div(class="col-md-10")
+									input(type="file", name="Image" id="Image")
+						div(class="modal-footer")
+							input(type="hidden", name="Floor", value="2F")
+							input(type="hidden", name="Language", value="#{Language}")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Change
+		div(class="modal fade", id="EditVisitFloor3FImagePanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/visit_floor_image", method="post", enctype="multipart/form-data")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Change Visit Floor Image
+						div(class="modal-body")
+							div(class="row")
+								div(class="col-md-10")
+									input(type="file", name="Image" id="Image")
+						div(class="modal-footer")
+							input(type="hidden", name="Floor", value="3F")
+							input(type="hidden", name="Language", value="#{Language}")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Change
+		div(class="modal fade", id="EditVisitFloor4FImagePanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/visit_floor_image", method="post", enctype="multipart/form-data")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Change Visit Floor Image
+						div(class="modal-body")
+							div(class="row")
+								div(class="col-md-10")
+									input(type="file", name="Image" id="Image")
+						div(class="modal-footer")
+							input(type="hidden", name="Floor", value="4F")
+							input(type="hidden", name="Language", value="#{Language}")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Change
+		div(class="modal fade", id="EditVisitFloor5FImagePanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/visit_floor_image", method="post", enctype="multipart/form-data")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Change Visit Floor Image
+						div(class="modal-body")
+							div(class="row")
+								div(class="col-md-10")
+									input(type="file", name="Image" id="Image")
+						div(class="modal-footer")
+							input(type="hidden", name="Floor", value="5F")
+							input(type="hidden", name="Language", value="#{Language}")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Change
+		div(class="modal fade", id="EditVisitFloorB1ImagePanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/visit_floor_image", method="post", enctype="multipart/form-data")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Change Visit Floor Image
+						div(class="modal-body")
+							div(class="row")
+								div(class="col-md-10")
+									input(type="file", name="Image" id="Image")
+						div(class="modal-footer")
+							input(type="hidden", name="Floor", value="B1")
+							input(type="hidden", name="Language", value="#{Language}")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Change
+		div(class="modal fade", id="EditVisitFloorB2ImagePanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/visit_floor_image", method="post", enctype="multipart/form-data")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Change Visit Floor Image
+						div(class="modal-body")
+							div(class="row")
+								div(class="col-md-10")
+									input(type="file", name="Image" id="Image")
+						div(class="modal-footer")
+							input(type="hidden", name="Floor", value="B2")
+							input(type="hidden", name="Language", value="#{Language}")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Change
 		div(class="modal fade", id="EditReelPlacePanel")
 			div(class="modal-dialog")
 				div(class="modal-content")
@@ -108,13 +220,16 @@ block panel
 								div(class="span12") #{ReelPlace.Key}
 							div(class="row")
 								form(action="/fix_text", method="post", class="form EditReelPlaceForm")
-									//- input(type="text", name="Title", class="Title", value="#{ReelPlace.Title}")
-									//- input(type="text", name="Description", class="Description", value="#{ReelPlace.Description}")
-									//- input(class="input", type="text", name="Content" value="#{ReelPlace.Content}")
 									textarea(class="form-control input-sm", name="Content", rows="3") #{ReelPlace.Content}
 									input(type="hidden", name="Language", value="#{Language}")
 									input(type="hidden", name="Topic", value="#{ReelPlace.Key}")
 									button(type="submit", class="btn btn-primary") Save
+								br
+								form(action="/reel_place_image", method="post", enctype="multipart/form-data")
+									input(type="file", name="Image" id="Image")
+									input(type="hidden", name="Topic", value="#{ReelPlace.Key}")
+									button(type="submit", class="btn btn-primary") Change Image
+								br
 								br
 					div(class="modal-footer")
 						button(type="button", class="btn btn-default", data-dismiss="modal") Close

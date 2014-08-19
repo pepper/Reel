@@ -2,6 +2,8 @@ extends visit
 
 block mainContent
 	div(class="About")
+		- if(Administrator)
+			span(class="glyphicon glyphicon-pencil", style="font-size:12px", data-toggle="modal", data-target="#EditVisitAboutImagePanel")
 		img(class="MainImage", src="/images/About/IMG_About.jpg")
 		br
 		img(src="/images/About/IMG_Sign.jpg")
@@ -49,6 +51,21 @@ block mainContent
 					br
 block panel
 	- if(Administrator)
+		div(class="modal fade", id="EditVisitAboutImagePanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/visit_about_image", method="post", enctype="multipart/form-data")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Change Visit About Image
+						div(class="modal-body")
+							div(class="row")
+								div(class="col-md-10")
+									input(type="file", name="Image" id="Image")
+						div(class="modal-footer")
+							input(type="hidden", name="Language", value="#{Language}")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Change
 		div(class="modal fade", id="EditVisitAbout1Panel")
 			div(class="modal-dialog")
 				div(class="modal-content")

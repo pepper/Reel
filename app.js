@@ -120,6 +120,10 @@ app.delete("/brand/:brand_key", needAdministrator, backend.removeBrand);
 app.post("/privacy", needAdministrator, backend.editPrivacy);
 app.post("/fix_text", needAdministrator, backend.editFixText);
 
+app.post("/reel_place_image", needAdministrator, backend.changeReelPlaceImage);
+app.post("/visit_about_image", needAdministrator, backend.changeVisitAboutImage);
+app.post("/visit_floor_image", needAdministrator, backend.changeVisitFloorImage);
+
 // app.get("/users", user.list);
 // Administrator User Login
 app.get("/administrator/status", function(req, res){
