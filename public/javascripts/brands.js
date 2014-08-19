@@ -503,4 +503,17 @@ $(document).ready(function(){
 			}
 		});
 	});
+	$(".RemoveFood").click(function(event){
+		bootbox.confirm("Are you sure want to remove food?", function(result){
+			if(result){
+				$.ajax({
+					url: "/food/" + $(event.target).data("food-key"),
+					type: "DELETE",
+					success: function(result) {
+						window.location = "/Brands";
+					}
+				});
+			}
+		});
+	});
 });

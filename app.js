@@ -117,6 +117,9 @@ app.delete("/floor/:floor_level/section/:section_key", needAdministrator, backen
 app.post("/brand", needAdministrator, backend.createBrand);
 app.delete("/brand/:brand_key", needAdministrator, backend.removeBrand);
 
+app.post("/food", needAdministrator, backend.createFood);
+app.delete("/food/:brand_key", needAdministrator, backend.removeFood);
+
 app.post("/privacy", needAdministrator, backend.editPrivacy);
 app.post("/fix_text", needAdministrator, backend.editFixText);
 

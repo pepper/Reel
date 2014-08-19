@@ -72,9 +72,14 @@ block mainContent
 						div(class="BrandURL")
 							a(href="http://#{Brand.Url}", target="_blank") #{Brand.Url}
 	div(class="FoodContainer")
+		- if(Administrator)
+			span(class="glyphicon glyphicon-plus" style="font-size:24px" data-toggle="modal", data-target="#CreateFoodPanel")
 		- each Food in Foods
 			div(class="FoodItem #{Food.Key}")
-				div(class="FoodHeader") #{Food.Title}
+				div(class="FoodHeader")
+					| #{Food.Title}&nbsp;&nbsp;&nbsp;
+					- if(Administrator)
+						span(class="glyphicon glyphicon-trash RemoveFood", data-food-key="#{Food.Key}")
 				div(class="FoodContent")
 					img(class="FoodImage", src="/foods/#{Food.Key}.jpg")
 					div(class="FoodDescription")
@@ -219,3 +224,54 @@ block panel
 							input(type="hidden", name="Language", value="#{Language}")
 							button(type="button", class="btn btn-default", data-dismiss="modal") Close
 							button(type="submit", class="btn btn-primary") Create Brand
+		div(class="modal fade", id="CreateFoodPanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/food", method="post", enctype="multipart/form-data")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Create Food
+						div(class="modal-body")
+							span Title:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="Title")
+							span Description Chinese:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="Description_Ch")
+							span Description English:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="Description_En")
+							span Phone:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="Phone")
+							span BusinessHours:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="BusinessHours")
+							span Url:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="Url")
+							span Brand Image
+							div(class="row")
+								div(class="col-md-10")
+									input(type="file", name="Image")
+							span Floor
+							div(class="row")
+								div(class="col-md-10")
+									select(name="Floor")
+										option(value="1F") 1F
+										option(value="2F") 2F
+										option(value="3F") 3F
+										option(value="4F") 4F
+										option(value="5F") 5F
+										option(value="B1") B1
+										option(value="B2") B2
+						div(class="modal-footer")
+							input(type="hidden", name="Language", value="#{Language}")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Create Food

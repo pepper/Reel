@@ -6,6 +6,7 @@ var logger = require("nlogger").logger(module);
 
 var basicDirPath = path.join(__dirname, "..", "public", "images", "News");
 var basicBrandDirPath = path.join(__dirname, "..", "public", "brands");
+var basicFoodDirPath = path.join(__dirname, "..", "public", "foods");
 var basicReelPlacePath = path.join(__dirname, "..", "public", "images", "Visit", "FloorGuideReelPlace");
 var basicVisitAboutPath = path.join(__dirname, "..", "public", "images", "About", "IMG_About.jpg");
 var basicVisitFloorPath = path.join(__dirname, "..", "public", "images", "Visit");
@@ -493,6 +494,51 @@ exports.removeBrand = function(req, res){
 	var key = req.params.brand_key;
 	var language = res.result.Language;
 	mongo.database.collection("brand", function(err, collection){
+		collection.remove({
+			Key: key
+		}, function(err){
+			if(err){
+				return logger.error(err);
+			}
+			fs.unlink(path.join(basicBrandDirPath, key + ".jpg"), function(){
+				res.send(200);
+			});
+		});
+	});
+}
+
+exports.createFood = function(req, res){
+	var key = req.body.Title.toLowerCase();
+	mongo.database.collection("food", function(err, collection){
+		collection.insert({
+			Key: key,
+			Title: req.body.Title,
+			Description_Ch: req.body.Description_Ch,
+			Description_En: req.body.Description_En,
+			Phone: req.body.Phone,
+			BusinessHours: req.body.BusinessHours,
+			Url: req.body.Url,
+			Floor: req.body.Floor,
+		});
+	});
+	fs.readFile(req.files.Image.path, function(err, data){
+		if(err){
+			return logger.error(err);
+		}
+		var newStickerPath = path.join(basicFoodDirPath, key + ".jpg");
+		fs.writeFile(newStickerPath, data, function(err){
+			if(err){
+				return logger.error(err);
+			}
+			res.redirect("/Brands");
+		});
+	});
+}
+
+exports.removeFood = function(req, res){
+	var key = req.params.brand_key;
+	var language = res.result.Language;
+	mongo.database.collection("food", function(err, collection){
 		collection.remove({
 			Key: key
 		}, function(err){
