@@ -471,6 +471,7 @@ exports.createBrand = function(req, res){
 			Phone: req.body.Phone,
 			BusinessHours: req.body.BusinessHours,
 			Url: req.body.Url,
+			Floor: req.body.Floor,
 			Filter: filter
 		});
 	});
