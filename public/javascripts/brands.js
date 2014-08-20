@@ -516,4 +516,17 @@ $(document).ready(function(){
 			}
 		});
 	});
+	$(".RemoveRestaurent").click(function(event){
+		bootbox.confirm("Are you sure want to remove restaurent?", function(result){
+			if(result){
+				$.ajax({
+					url: "/restaurent/" + $(event.target).data("restaurent-key"),
+					type: "DELETE",
+					success: function(result) {
+						window.location = "/Brands";
+					}
+				});
+			}
+		});
+	});
 });

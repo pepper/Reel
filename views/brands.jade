@@ -73,7 +73,7 @@ block mainContent
 							a(href="http://#{Brand.Url}", target="_blank") #{Brand.Url}
 	div(class="FoodContainer")
 		- if(Administrator)
-			span(class="glyphicon glyphicon-plus" style="font-size:24px" data-toggle="modal", data-target="#CreateFoodPanel")
+			span(class="glyphicon glyphicon-plus" style="font-size:24px" data-toggle="modal", data-target="#CreateFoodPanel") 
 		- each Food in Foods
 			div(class="FoodItem #{Food.Key}")
 				div(class="FoodHeader")
@@ -102,13 +102,21 @@ block mainContent
 						div(class="FoodURL")
 							a(href="http://#{Food.Url}", target="_blank") #{Food.Url}
 	div(class="RestaurentContainer")
+		- if(Administrator)
+			span(class="glyphicon glyphicon-plus" style="font-size:24px" data-toggle="modal", data-target="#CreateVerticalRestaurentPanel") Vertical
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			span(class="glyphicon glyphicon-plus" style="font-size:24px" data-toggle="modal", data-target="#CreateBlockRestaurentPanel") Block
+			br
 		- each Restaurent in Restaurents
 			if Restaurent.Type == "block"
 				div(class="BlockItem")
 					- each i in [0, 1]
 						div(class="HorizonItem")
 							div(class="Detail #{Restaurent.Brand[i].Style}")
-								div(class="Title") #{Restaurent.Brand[i].Title}
+								div(class="Title")
+									| #{Restaurent.Brand[i].Title}&nbsp;&nbsp;&nbsp;
+									- if(Administrator)
+										span(class="glyphicon glyphicon-trash RemoveRestaurent", data-restaurent-key="#{Restaurent.Key}")
 								div(class="Description")
 									- if(Language == "En")
 										| !{Restaurent.Brand[i].Description_En.replace(/\n/g, '<br />')}
@@ -125,7 +133,10 @@ block mainContent
 			else if Restaurent.Type == "vertical"
 				div(class="VerticalItem")
 					div(class="Detail #{Restaurent.Style}")
-						div(class="Title") #{Restaurent.Title}
+						div(class="Title")
+							| #{Restaurent.Title}&nbsp;&nbsp;&nbsp;
+							- if(Administrator)
+								span(class="glyphicon glyphicon-trash RemoveRestaurent", data-restaurent-key="#{Restaurent.Key}")
 						div(class="Description")
 							- if(Language == "En")
 								| !{Restaurent.Description_En.replace(/\n/g, '<br />')}
@@ -275,3 +286,166 @@ block panel
 							input(type="hidden", name="Language", value="#{Language}")
 							button(type="button", class="btn btn-default", data-dismiss="modal") Close
 							button(type="submit", class="btn btn-primary") Create Food
+		div(class="modal fade", id="CreateVerticalRestaurentPanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/restaurent", method="post", enctype="multipart/form-data")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Create Vertical Restaurent
+						div(class="modal-body")
+							span Title:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="Title")
+							span Description Chinese:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="Description_Ch")
+							span Description English:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="Description_En")
+							span Phone:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="Phone")
+							span BusinessHours:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="BusinessHours")
+							span Url:
+							div(class="row")
+								div(class="col-md-10")
+									input(type="text", class="form-control input-sm", name="Url")
+							span Brand Image
+							div(class="row")
+								div(class="col-md-10")
+									input(type="file", name="Image")
+							span Style
+							div(class="row")
+								div(class="col-md-10")
+									select(name="Style")
+										option(value="Red") Red
+										option(value="Black") Black
+						div(class="modal-footer")
+							input(type="hidden", name="Language", value="#{Language}")
+							input(type="hidden", name="Type", value="vertical")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Create Vertical Restaurent
+		div(class="modal fade", id="CreateBlockRestaurentPanel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/restaurent", method="post", enctype="multipart/form-data")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Create Block Restaurent
+						div(class="modal-body")
+							div(class="row")
+								div(class="col-md-6")
+									span Title:
+									div(class="row")
+										div(class="col-md-10")
+											input(type="text", class="form-control input-sm", name="Brand1_Title")
+									span Description Chinese:
+									div(class="row")
+										div(class="col-md-10")
+											input(type="text", class="form-control input-sm", name="Brand1_Description_Ch")
+									span Description English:
+									div(class="row")
+										div(class="col-md-10")
+											input(type="text", class="form-control input-sm", name="Brand1_Description_En")
+									span Phone:
+									div(class="row")
+										div(class="col-md-10")
+											input(type="text", class="form-control input-sm", name="Brand1_Phone")
+									span BusinessHours:
+									div(class="row")
+										div(class="col-md-10")
+											input(type="text", class="form-control input-sm", name="Brand1_BusinessHours")
+									span Url:
+									div(class="row")
+										div(class="col-md-10")
+											input(type="text", class="form-control input-sm", name="Brand1_Url")
+									span Brand Image
+									div(class="row")
+										div(class="col-md-10")
+											input(type="file", name="Brand1_Image")
+									span Style
+									div(class="row")
+										div(class="col-md-10")
+											select(name="Brand1_Style")
+												option(value="Red") Red
+												option(value="Black") Black
+								div(class="col-md-6")
+									span Title:
+									div(class="row")
+										div(class="col-md-10")
+											input(type="text", class="form-control input-sm", name="Brand2_Title")
+									span Description Chinese:
+									div(class="row")
+										div(class="col-md-10")
+											input(type="text", class="form-control input-sm", name="Brand2_Description_Ch")
+									span Description English:
+									div(class="row")
+										div(class="col-md-10")
+											input(type="text", class="form-control input-sm", name="Brand2_Description_En")
+									span Phone:
+									div(class="row")
+										div(class="col-md-10")
+											input(type="text", class="form-control input-sm", name="Brand2_Phone")
+									span BusinessHours:
+									div(class="row")
+										div(class="col-md-10")
+											input(type="text", class="form-control input-sm", name="Brand2_BusinessHours")
+									span Url:
+									div(class="row")
+										div(class="col-md-10")
+											input(type="text", class="form-control input-sm", name="Brand2_Url")
+									span Brand Image
+									div(class="row")
+										div(class="col-md-10")
+											input(type="file", name="Brand2_Image")
+									span Style
+									div(class="row")
+										div(class="col-md-10")
+											select(name="Brand2_Style")
+												option(value="Red") Red
+												option(value="Black") Black
+						div(class="modal-footer")
+							input(type="hidden", name="Language", value="#{Language}")
+							input(type="hidden", name="Type", value="block")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Create Block Restaurent
+		//- 	{
+		//- 	Type: "block",
+		//- 	Brand:[{
+		//- 		Key: "henkes002",
+		//- 		Title: "HENKES & Sushi Raku",
+		//- 		Description_Ch: "Henkes 咖啡红酒廊\n食物种类 : 澳洲 / 地中海",
+		//- 		Description_En: "Henkes 咖啡红酒廊\n食物种类 : 澳洲 / 地中海",
+		//- 		Phone: "3253 0889",
+		//- 		BusinessHours: "10:00AM-23:00PM",
+		//- 		Url: "henkes.com.cn",
+		//- 		Style: "Red"
+		//- 	},{
+		//- 		Key: "henkes001",
+		//- 		Title: "Sushi Raku",
+		//- 		Description_Ch: "食物种类 : 摩登日料",
+		//- 		Description_En: "食物种类 : 摩登日料",
+		//- 		Phone: "3253 0711",
+		//- 		BusinessHours: "11:30AM-22:30PM",
+		//- 		Url: "sushiraku.com.cn",
+		//- 		Style: "Red"
+		//- 	}]
+		//- },{
+		//- 	Type: "vertical",
+		//- 	Key: "lacreperie",
+		//- 	Title: "la creperie",
+		//- 	Description_Ch: "食物种类 : 法式薄饼",
+		//- 	Description_En: "食物种类 : 法式薄饼",
+		//- 	Phone: "021 5465 9055",
+		//- 	BusinessHours: "10:00AM-23:00PM",
+		//- 	Url: "lacreperie.com.cn",
+		//- 	Style: "Black"
+		//- }

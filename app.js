@@ -120,6 +120,9 @@ app.delete("/brand/:brand_key", needAdministrator, backend.removeBrand);
 app.post("/food", needAdministrator, backend.createFood);
 app.delete("/food/:brand_key", needAdministrator, backend.removeFood);
 
+app.post("/restaurent", needAdministrator, backend.createRestaurent);
+app.delete("/restaurent/:brand_key", needAdministrator, backend.removeRestaurent);
+
 app.post("/privacy", needAdministrator, backend.editPrivacy);
 app.post("/fix_text", needAdministrator, backend.editFixText);
 

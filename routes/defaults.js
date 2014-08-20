@@ -2074,6 +2074,7 @@ exports.createNews = function(req, res){
 	mongo.database.collection("restaurent", function(err, collection){
 		collection.insert([{
 			Type: "block",
+			Key: "henkes002henkes001",
 			Brand:[{
 				Key: "henkes002",
 				Title: "HENKES & Sushi Raku",
