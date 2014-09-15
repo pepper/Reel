@@ -4,7 +4,7 @@ var logger = require("nlogger").logger(module);
 
 exports.index = function(req, res){
 	mongo.database.collection("news", function(err, collection){
-		collection.find({"Language": res.result.Language}).toArray(function(err, news){
+		collection.find({"Language": res.result.Language}).sort({"Key": -1}).toArray(function(err, news){
 			if(err){
 				logger.error(err);
 				return res.sned(500);
@@ -230,8 +230,8 @@ exports.visitFloor = function(req, res){
 				// floors.forEach(function(floor){
 				// 	//logger.debug(JSON.stringify(floor.Brands));
 				// 	floor.Brands.sort(function(a, b){
-				// 		logger.debug(a.Key + " # " + b.Key + ":" + (a.Key > b.Key));
-				// 		return a.Key > b.Key;
+				// 		logger.debug(a.Title + " # " + b.Title + ":" + (a.Title > b.Title));
+				// 		return a.Title > b.Title;
 				// 	});
 				// 	//logger.debug(JSON.stringify(floor.Brands));
 				// 	//logger.debug("\n");
@@ -464,6 +464,7 @@ exports.search = function(req, res){
 	res.result.SearchResult = new Array();
 	if(req.body.Search && req.body.Search.length > 3){
 		console.log(req.body.Search);
+		var searchTextRegexp = new RegExp(req.body.Search, "i");
 		step(function(){
 			var next = this;
 			mongo.database.collection("news", function(err, collection){
@@ -473,7 +474,7 @@ exports.search = function(req, res){
 						return res.sned(500);
 					}
 					news.forEach(function(newsItem){
-						if(newsItem.Title.indexOf(req.body.Search) >= 0 || newsItem.Description.indexOf(req.body.Search) >= 0){
+						if(searchTextRegexp.test(newsItem.Title) || searchTextRegexp.test(newsItem.Description)){
 							res.result.SearchResult.push({
 								Title: newsItem.Title,
 								URL: "/News/" + newsItem.Key,
@@ -494,7 +495,7 @@ exports.search = function(req, res){
 					}
 					faqs.forEach(function(faq){
 						faq.QuestionList.forEach(function(question, index){
-							if(question.Question.indexOf(req.body.Search) >= 0 || question.Answer.indexOf(req.body.Search) >= 0){
+							if(searchTextRegexp.test(question.Question) || searchTextRegexp.test(question.Answer)){
 								res.result.SearchResult.push({
 									Title: question.Question,
 									URL: "/FAQ#" + faq.Title + "@" + index,
@@ -515,7 +516,7 @@ exports.search = function(req, res){
 						return res.sned(500);
 					}
 					fixTexts.forEach(function(fixText){
-						if(fixText.Content.indexOf(req.body.Search) >= 0){
+						if(searchTextRegexp.test(fixText.Content)){
 							var result = {
 								ShortDescription: fixText.Content.substr(0, 40) + "..."
 							};
@@ -565,7 +566,7 @@ exports.search = function(req, res){
 						return res.sned(500);
 					}
 					brands.forEach(function(brand){
-						if((brand.Title && brand.Title.indexOf(req.body.Search) >= 0) || (brand.Description_Ch && brand.Description_Ch.indexOf(req.body.Search) >= 0) || (brand.Description_En && brand.Description_En.indexOf(req.body.Search) >= 0) || (brand.Description && brand.Description.indexOf(req.body.Search) >= 0)){
+						if((brand.Title && searchTextRegexp.test(brand.Title)) || (brand.Description_Ch && searchTextRegexp.test(brand.Description_Ch)) || (brand.Description_En && searchTextRegexp.test(brand.Description_En)) || (brand.Description && searchTextRegexp.test(brand.Description))){
 							res.result.SearchResult.push({
 								Title: brand.Title,
 								URL: "/Brands#" + brand.Key,

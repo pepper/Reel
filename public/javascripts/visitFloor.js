@@ -11,8 +11,14 @@ VisitFloorDescriptionView = Backbone.View.extend({
 		"mouseout .FloorGuideB2AreaList":"stopB2Panel",
 		"mousemove .FloorGuideB1AreaList":"moveB1Panel",
 		"mouseout .FloorGuideB1AreaList":"stopB1Panel",
-		"mousemove .FloorGuide4FAreaList":"move4FPanel",
-		"mouseout .FloorGuide4FAreaList":"stop4FPanel",
+		"mousemove .FloorGuide1FAreaList":"move1FPanel",
+		"mouseout .FloorGuide1FAreaList":"stop1FPanel",
+		"mousemove .FloorGuide2FAreaList":"move2FPanel",
+		"mouseout .FloorGuide2FAreaList":"stop2FPanel",
+		"mousemove .FloorGuide3FAreaList":"move3FPanel",
+		"mouseout .FloorGuide3FAreaList":"stop3FPanel",
+		// "mousemove .FloorGuide4FAreaList":"move4FPanel",
+		// "mouseout .FloorGuide4FAreaList":"stop4FPanel",
 		"click .AreaListScrollButton .ScrollUp":"scrollUp",
 		"click .AreaListScrollButton .ScrollDown":"scrollDown",
 		"click .AddSection": "addSection",
@@ -102,6 +108,132 @@ VisitFloorDescriptionView = Backbone.View.extend({
 		var context = this;
 		context.currentB1PanelRun = "+=0px";
 	},
+	move1FPanel: function(event){
+		var context = this;
+		var currentPanel = $(".FloorGuide1FAreaList .AreaListPanel")
+		var parentHeight = $(event.target).closest(".AreaList").height();
+		var parentOffset = $(event.target).closest(".AreaList").offset();
+		var relativeYPosition = (event.pageY - parentOffset.top);
+		if(relativeYPosition < 100 && currentPanel.position().top != 0){
+			context.current1FPanelRun = "+=20px";
+		}
+		else if(relativeYPosition > 410 && currentPanel.position().top != (parentHeight - currentPanel.height() + 1)){
+			context.current1FPanelRun = "-=20px";
+		}
+		else{
+			context.current1FPanelRun = "+=0px";
+		}
+		var Scroll1FPanel = function(){
+			var currentPanelHeight = currentPanel.height();
+			currentPanel.animate({
+				top: context.current1FPanelRun
+			}, "fast", "linear", function(){
+				if($(this).position().top > 0){
+					context.current1FPanelRun = "0px";
+					Scroll1FPanel();
+				}
+				else if($(this).position().top <= (parentHeight - currentPanelHeight)){
+					context.current1FPanelRun = (parentHeight - currentPanelHeight + 1) + "px";
+					Scroll1FPanel();
+				}
+				else{
+					Scroll1FPanel();
+				}
+			});
+		}
+		if(!context.alreadyRun1FPanel){
+			context.alreadyRun1FPanel = true;
+			Scroll1FPanel();
+		}
+	},
+	stop1FPanel: function(){
+		var context = this;
+		context.current1FPanelRun = "+=0px";
+	},
+	move2FPanel: function(event){
+		var context = this;
+		var currentPanel = $(".FloorGuide2FAreaList .AreaListPanel")
+		var parentHeight = $(event.target).closest(".AreaList").height();
+		var parentOffset = $(event.target).closest(".AreaList").offset();
+		var relativeYPosition = (event.pageY - parentOffset.top);
+		if(relativeYPosition < 100 && currentPanel.position().top != 0){
+			context.current2FPanelRun = "+=20px";
+		}
+		else if(relativeYPosition > 410 && currentPanel.position().top != (parentHeight - currentPanel.height() + 1)){
+			context.current2FPanelRun = "-=20px";
+		}
+		else{
+			context.current2FPanelRun = "+=0px";
+		}
+		var Scroll2FPanel = function(){
+			var currentPanelHeight = currentPanel.height();
+			currentPanel.animate({
+				top: context.current2FPanelRun
+			}, "fast", "linear", function(){
+				if($(this).position().top > 0){
+					context.current2FPanelRun = "0px";
+					Scroll2FPanel();
+				}
+				else if($(this).position().top <= (parentHeight - currentPanelHeight)){
+					context.current2FPanelRun = (parentHeight - currentPanelHeight + 1) + "px";
+					Scroll2FPanel();
+				}
+				else{
+					Scroll2FPanel();
+				}
+			});
+		}
+		if(!context.alreadyRun2FPanel){
+			context.alreadyRun2FPanel = true;
+			Scroll2FPanel();
+		}
+	},
+	stop2FPanel: function(){
+		var context = this;
+		context.current2FPanelRun = "+=0px";
+	},
+	move3FPanel: function(event){
+		var context = this;
+		var currentPanel = $(".FloorGuide3FAreaList .AreaListPanel")
+		var parentHeight = $(event.target).closest(".AreaList").height();
+		var parentOffset = $(event.target).closest(".AreaList").offset();
+		var relativeYPosition = (event.pageY - parentOffset.top);
+		if(relativeYPosition < 100 && currentPanel.position().top != 0){
+			context.current3FPanelRun = "+=20px";
+		}
+		else if(relativeYPosition > 410 && currentPanel.position().top != (parentHeight - currentPanel.height() + 1)){
+			context.current3FPanelRun = "-=20px";
+		}
+		else{
+			context.current3FPanelRun = "+=0px";
+		}
+		var Scroll3FPanel = function(){
+			var currentPanelHeight = currentPanel.height();
+			currentPanel.animate({
+				top: context.current3FPanelRun
+			}, "fast", "linear", function(){
+				if($(this).position().top > 0){
+					context.current3FPanelRun = "0px";
+					Scroll3FPanel();
+				}
+				else if($(this).position().top <= (parentHeight - currentPanelHeight)){
+					context.current3FPanelRun = (parentHeight - currentPanelHeight + 1) + "px";
+					Scroll3FPanel();
+				}
+				else{
+					Scroll3FPanel();
+				}
+			});
+		}
+		if(!context.alreadyRun3FPanel){
+			context.alreadyRun3FPanel = true;
+			Scroll3FPanel();
+		}
+	},
+	stop3FPanel: function(){
+		var context = this;
+		context.current3FPanelRun = "+=0px";
+	},
 	move4FPanel: function(event){
 		var context = this;
 		var currentPanel = $(".FloorGuide4FAreaList .AreaListPanel")
@@ -151,13 +283,19 @@ VisitFloorDescriptionView = Backbone.View.extend({
 	},
 	scrollUp: function(){
 		var context = this;
-		context.current4FPanelRun = ($(".FloorGuide4FAreaList .AreaListPanel").position().top + 100) + "px";
+		context.current1FPanelRun = ($(".FloorGuide1FAreaList .AreaListPanel").position().top + 100) + "px";
+		context.current2FPanelRun = ($(".FloorGuide2FAreaList .AreaListPanel").position().top + 100) + "px";
+		context.current3FPanelRun = ($(".FloorGuide3FAreaList .AreaListPanel").position().top + 100) + "px";
+		// context.current4FPanelRun = ($(".FloorGuide4FAreaList .AreaListPanel").position().top + 100) + "px";
 		context.currentB1PanelRun = ($(".FloorGuideB1AreaList .AreaListPanel").position().top + 100) + "px";
 		context.currentB2PanelRun = ($(".FloorGuideB2AreaList .AreaListPanel").position().top + 100) + "px";
 	},
 	scrollDown: function(){
 		var context = this;
-		context.current4FPanelRun = ($(".FloorGuide4FAreaList .AreaListPanel").position().top - 100) + "px";
+		context.current1FPanelRun = ($(".FloorGuide1FAreaList .AreaListPanel").position().top - 100) + "px";
+		context.current2FPanelRun = ($(".FloorGuide2FAreaList .AreaListPanel").position().top - 100) + "px";
+		context.current3FPanelRun = ($(".FloorGuide3FAreaList .AreaListPanel").position().top - 100) + "px";
+		// context.current4FPanelRun = ($(".FloorGuide4FAreaList .AreaListPanel").position().top - 100) + "px";
 		context.currentB1PanelRun = ($(".FloorGuideB1AreaList .AreaListPanel").position().top - 100) + "px";
 		context.currentB2PanelRun = ($(".FloorGuideB2AreaList .AreaListPanel").position().top - 100) + "px";
 	},
