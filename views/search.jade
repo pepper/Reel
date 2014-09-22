@@ -8,4 +8,4 @@ block mainContent
 				div(class="SecondLevel")
 					a(href="#{ResultItem.URL}") &gt;&nbsp#{ResultItem.ShortDescription}
 		- else
-			div(class="TopLevel") 您输入的搜寻字串找不到任何结果
+			img(class="NotFound", src="/images/Search/NotFound_#{Language}.jpg")

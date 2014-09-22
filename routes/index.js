@@ -381,7 +381,19 @@ exports.services = function(req, res){
 exports.servicesMemberShipBook = function(req, res){
 	res.result.CurrentURL = "/Services";
 	res.result.ServicesTopic = "MemberShipBook";
-	res.render("servicesMemberShipBook", res.result);
+	mongo.database.collection("fix_text", function(err, collection){
+		collection.find({"Language": res.result.Language, "Topic": "ServicesMemberShipBook"}).toArray(function(err, concern){
+			if(err){
+				logger.error(err);
+				return res.sned(500);
+			}
+			if(concern && concern.length > 0){
+				res.result.ContentArray = concern[0].Content.split("\n");
+				res.result.OriginContent = concern[0].Content;
+			}
+			res.render("servicesMemberShipBook", res.result);
+		});
+	});
 }
 
 exports.servicesPetition = function(req, res){

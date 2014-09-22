@@ -46,6 +46,8 @@ $(document).ready(function(){
 		if($(this).parent(".SubMenu").length == 0){
 			$(".BrandCategorySelector .SubMenu").slideUp();
 		}
+		$(".BrandItem .BrandContent").slideUp();
+		window.mainContainerView.setToZeroPosition();
 	});
 
 	$(".FoodItem .FoodContent").hide();

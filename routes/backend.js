@@ -3,6 +3,15 @@ var fs = require("fs");
 var step = require("step");
 var mongo = require("../utilities/database");
 var logger = require("nlogger").logger(module);
+var nodemailer = require("nodemailer");
+
+var smtpTransport = nodemailer.createTransport({
+	service: "Gmail",
+	auth: {
+		user: "pepper.yen@gmail.com",
+		pass: "ru.4ru6au4a83"
+	}
+});
 
 var basicDirPath = path.join(__dirname, "..", "public", "images", "News");
 var basicBrandDirPath = path.join(__dirname, "..", "public", "brands");
@@ -718,6 +727,29 @@ exports.changeVisitFloorImage = function(req, res){
 				return logger.error(err);
 			}
 			res.redirect("/Visit");
+		});
+	});
+}
+
+exports.sendContactEmail = function(req, res){
+	var text = "Company:" + req.body.company + "\nName:" + req.body.name + "\nEmail:" + req.body.email + "\nPhone:" + req.body.phone + "\nDescription:" + req.body.description;
+	var html = "Company:" + req.body.company + "<br />Name:" + req.body.name + "<br />Email:" + req.body.email + "<br />Phone:" + req.body.phone + "<br />Description:" + req.body.description;
+	var mailOptions = {
+		from: "Reel Service<reelshanghai@gmail.com>",
+		to: "reelshanghai@gmail.com",
+		subject: "WebContactUs from " + req.body.company + " " + req.body.name,
+		text: text,
+		html: html
+	};
+	smtpTransport.sendMail(mailOptions, function(error, response){
+		if(error){
+			logger.error(error);
+			return res.json(500, {
+				error: error
+			});
+		}
+		res.json(200, {
+			message: "Send OK"
 		});
 	});
 }

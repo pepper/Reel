@@ -123,6 +123,8 @@ app.delete("/food/:brand_key", needAdministrator, backend.removeFood);
 app.post("/restaurent", needAdministrator, backend.createRestaurent);
 app.delete("/restaurent/:brand_key", needAdministrator, backend.removeRestaurent);
 
+app.post("/send_contact_email", backend.sendContactEmail);
+
 app.post("/privacy", needAdministrator, backend.editPrivacy);
 app.post("/fix_text", needAdministrator, backend.editFixText);
 

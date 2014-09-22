@@ -11,6 +11,7 @@
     "less-middleware": "0.1.15",
     "step": "*",
     "mongodb": "*",
-    "nlogger": "*"
+    "nlogger": "*",
+    "nodemailer": "*"
   }
 }

@@ -490,8 +490,9 @@ div {
 }
 .MainContent .ContactUs .Cooperation .SubmitButton {
   float: right;
-  width: 60px;
+  width: 100px;
   height: 30px;
+  margin-right: -40px;
   cursor: pointer;
 }
 .MainContent .ContactUs .Cooperation .SubmitButton img {
@@ -1475,6 +1476,16 @@ div {
   margin-bottom: 8px;
   text-transform: uppercase;
 }
+.BrandContainerTopMask {
+  position: absolute;
+  top: 0px;
+  left: 45%;
+  z-index: 100;
+  width: 755px;
+  height: 48px;
+  margin-left: -377px;
+  background: #FFFFFF;
+}
 .BrandContainer {
   /*top:					40px;*/
   left: 45%;
@@ -1994,4 +2005,8 @@ div {
 .MainContent .Search .SecondLevel a {
   line-height: 24px;
   font-size: 12px;
+}
+.MainContent .Search .NotFound {
+  margin-top: 230px;
+  margin-left: 35%;
 }

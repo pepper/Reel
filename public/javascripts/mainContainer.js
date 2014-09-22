@@ -156,6 +156,10 @@ MainContainerView = Backbone.View.extend({
 			contentMaxOffset = 0;
 		}
 		mainContent.css({"top":(contentMaxOffset * (currentOffset / maxOffset) * (-1)) + "px"});
+	},
+	setToZeroPosition: function(){
+		this.$el.find(".ScrollBar").css({"top":"0px"});
+		this.changePosition();
 	}
 });
 
@@ -166,5 +170,6 @@ $(document).ready(function(){
 		$(".Concern").automail().autolink();
 		$(".ContactUs").automail().autolink();
 		$(".Services").automail().autolink();
+		$(".Recruiting").automail().autolink();
 	}, 1000);
 });
