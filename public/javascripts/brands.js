@@ -151,12 +151,15 @@ $(document).ready(function(){
 	});
 	$(".BrandMapMode").click(function(){
 		changeModeAndBrand("BrandMapMode");
+		window.mainContainerView.setToZeroPosition();
 	});
 	$(".RestaurentMode").click(function(){
 		changeModeAndBrand("RestaurentMode");
+		window.mainContainerView.setToZeroPosition();
 	});
 	$(".FoodMode").click(function(){
 		changeModeAndBrand("FoodMode");
+		window.mainContainerView.setToZeroPosition();
 	});
 
 	var brandSelectorPrefixPosition = new Array();
@@ -531,4 +534,7 @@ $(document).ready(function(){
 			}
 		});
 	});
+	if(window.location.hash && window.location.hash != ""){
+		changeModeAndBrand("BrandListMode", window.location.hash.replace("#", ""));
+	}
 });
