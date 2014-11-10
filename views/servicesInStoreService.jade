@@ -3,82 +3,148 @@ extends services
 block mainContent
 	div(class="Services")
 		div(class="Content InStoreService")
-			img(src="/images/Services/InStoreService_01.png")
+			img(src="/images/Services/InStoreService_01_#{Language}.png")
 			br
 			table
 				tr
 					td(class="TopHead" style="width:105px;")
-					td(class="TopHead" style="width:225px;") B1F Information CenterCard
-					td(class="TopHead" style="width:225px;") 3F VIP Room
-					td(class="TopHead") Intimate Services
+					td(class="TopHead" style="width:225px;")
+						- if(Language == "En")
+							span B1F Information CenterCard
+						- else
+							span B1F 客户服务台
+					td(class="TopHead" style="width:225px;")
+						- if(Language == "En")
+							span B1F 3F VIP Room
+						- else
+							span 3F 贵宾室
+					td(class="TopHead")
+						- if(Language == "En")
+							span Intimate Services
+						- else
+							span 贴心配套服务
 				tr
 					td(class="Title") Member's Privileges
 					td
-						| Shopping & Event Guide
-						br
-						| Invoicing Parking Validation Lost & Foun
-						br
-						| Umbrella Rental
-						br
-						| Stroller Rental
-						br
-						| Wheelchair Rental
-						br
-						| Paging Service
-						br
-						| Portable First-aid Kit
-						br
-						| Sewing Kit Borrowing
-						br
-						| Mobile Phone Charger
-						br
-						| Borrowin
-						br
-						| Customer Complaints
+						- each Content in Topic.ServicesInStoreService_01.ContentArray
+							| #{Content}
+							br
+						- if(Administrator)
+							span(class="glyphicon glyphicon-pencil", style="font-size:12px", data-toggle="modal", data-target="#EditServicesInStoreService_01Panel")
 					td
-						| Membership Application
-						br
-						| Membership Card
-						br
-						| Lost/Reissuing Service
-						br
-						| Member’s Address Change
-						br
-						| Shopping & Event Guide
-						br
-						| Parking Validation
-						br
-						| Gift Wrapping
-						br
-						| Wireless Internet Access
-						br
-						| Paging Service
-						br
-						| Member’s Overcoat
-						br
-						| Depositing Mobile Phone Charger
-						br
-						| Borrowing
-						br
-						| Fax Service
-						br
-						| Photocopying Service
-						br
-						| Customer Complaints
+						- each Content in Topic.ServicesInStoreService_02.ContentArray
+							| #{Content}
+							br
+						- if(Administrator)
+							span(class="glyphicon glyphicon-pencil", style="font-size:12px", data-toggle="modal", data-target="#EditServicesInStoreService_02Panel")
 					td
-						| B2F Locker & Depositing
-						br
-						| Service: B2F
-						br
-						| Baby Caring Room: 3F
-						br
-						| Shoe Repairing Room: B1F ATM: B2F Goods Delivery Service: We provide our customers the service to carry the goods customer bought in the Department Store to a nearby parking lot or taxi station; however, this service may be waited for a while based on customer’s demands. Please contact the information counter at B1F for more information, and we will be happy to serve you.
+						- each Content in Topic.ServicesInStoreService_03.ContentArray
+							| #{Content}
+							br
+						- if(Administrator)
+							span(class="glyphicon glyphicon-pencil", style="font-size:12px", data-toggle="modal", data-target="#EditServicesInStoreService_03Panel")
 			br
-			img(src="/images/Services/InStoreService_02.png")
+			img(src="/images/Services/InStoreService_02_#{Language}.png")
 			br
 			br
-			p Dear customer, you’re welcomed to express your enquiries or suggestions through our Customer Service Email eservice@reelshanghai.com, and we will be wholeheartedly at your service. (Warm tips: please leave your personal contact information such as name, telephone number, e-mail, etc. in your e-mail so that a timely contact will be facilitated.) Customer Service Line You can also call the customer service line +86 21 22309788 or 4001559788 for explanation and services, or inquire about the following FAQ for more information. Service hours of customer service line: 10:00 to 22:00
-			img(src="/images/Services/InStoreService_03.png")
+			p 
+				- each Content in Topic.ServicesInStoreService_04.ContentArray
+					| #{Content}
+					br
+				- if(Administrator)
+					span(class="glyphicon glyphicon-pencil", style="font-size:12px", data-toggle="modal", data-target="#EditServicesInStoreService_04Panel")
+			img(src="/images/Services/InStoreService_03_#{Language}.png")
 			br
 			br
-			p You can also call the customer service line +86 21 22309788 or 4001559788 for explanation and services, or inquire about the following FAQ for more information. Service hours of customer service line: 10:00 to 22:00
+			p
+				- each Content in Topic.ServicesInStoreService_05.ContentArray
+					| #{Content}
+					br
+				- if(Administrator)
+					span(class="glyphicon glyphicon-pencil", style="font-size:12px", data-toggle="modal", data-target="#EditServicesInStoreService_05Panel")
+block panel
+	- if(Administrator)
+		div(class="modal fade", id="EditServicesInStoreService_01Panel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/fix_text", method="post")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Edit Services
+						div(class="modal-body")
+							div(class="row")
+								div(class="col-md-12")
+									textarea(class="form-control input-sm", name="Content", rows="10") #{Topic.ServicesInStoreService_01.OriginContent}
+						div(class="modal-footer")
+							input(type="hidden", name="Language", value="#{Language}")
+							input(type="hidden", name="Topic", value="ServicesInStoreService_01")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Save
+
+		div(class="modal fade", id="EditServicesInStoreService_02Panel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/fix_text", method="post")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Edit Services
+						div(class="modal-body")
+							div(class="row")
+								div(class="col-md-12")
+									textarea(class="form-control input-sm", name="Content", rows="10") #{Topic.ServicesInStoreService_02.OriginContent}
+						div(class="modal-footer")
+							input(type="hidden", name="Language", value="#{Language}")
+							input(type="hidden", name="Topic", value="ServicesInStoreService_02")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Save
+
+		div(class="modal fade", id="EditServicesInStoreService_03Panel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/fix_text", method="post")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Edit Services
+						div(class="modal-body")
+							div(class="row")
+								div(class="col-md-12")
+									textarea(class="form-control input-sm", name="Content", rows="10") #{Topic.ServicesInStoreService_03.OriginContent}
+						div(class="modal-footer")
+							input(type="hidden", name="Language", value="#{Language}")
+							input(type="hidden", name="Topic", value="ServicesInStoreService_03")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Save
+
+		div(class="modal fade", id="EditServicesInStoreService_04Panel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/fix_text", method="post")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Edit Services
+						div(class="modal-body")
+							div(class="row")
+								div(class="col-md-12")
+									textarea(class="form-control input-sm", name="Content", rows="10") #{Topic.ServicesInStoreService_04.OriginContent}
+						div(class="modal-footer")
+							input(type="hidden", name="Language", value="#{Language}")
+							input(type="hidden", name="Topic", value="ServicesInStoreService_04")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Save
+
+		div(class="modal fade", id="EditServicesInStoreService_05Panel")
+			div(class="modal-dialog")
+				div(class="modal-content")
+					form(action="/fix_text", method="post")
+						div(class="modal-header")
+							button(type="button", class="close", data-dismiss="modal", aria-hidden="true") &times;
+							h4(class="modal-title") Edit Services
+						div(class="modal-body")
+							div(class="row")
+								div(class="col-md-12")
+									textarea(class="form-control input-sm", name="Content", rows="10") #{Topic.ServicesInStoreService_05.OriginContent}
+						div(class="modal-footer")
+							input(type="hidden", name="Language", value="#{Language}")
+							input(type="hidden", name="Topic", value="ServicesInStoreService_05")
+							button(type="button", class="btn btn-default", data-dismiss="modal") Close
+							button(type="submit", class="btn btn-primary") Save

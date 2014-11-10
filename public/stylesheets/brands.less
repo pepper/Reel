@@ -166,7 +166,7 @@
 	top:					0px;
 	left:					45%;
 	z-index:				100;
-	width:					755px;
+	width:					775px;
 	height:					48px;
 	margin-left:			-377px;
 	background:				#FFFFFF;
@@ -180,6 +180,7 @@
 	margin-bottom:			40px;
 	border-top:				solid 1px #808080;
 	border-bottom:			solid 1px #808080;
+
 	.BrandItem{
 		position:			relative;
 		border-bottom:		dotted 1px #808080;
@@ -191,108 +192,116 @@
 			font:			normal 14px verdana;
 			line-height:	24px;
 		}
-		.BrandHeader.Active{
-			background:		#000000;
-			color:			#FFFFFF;
-			border-bottom:	solid 1px #000000;
-		}
 		.BrandContent{
-			height:			250px;
-			.BrandDescription{
-				position:		absolute !important;
-				top:			10px;
-				left:			510px;
-				width:			245px;
-				height:			174px;
-				color:			#808080;
-				font-size:		12px;
-				line-height:	19px;
-				overflow:		hidden;
+			height:			0px;
+			overflow:		hidden;
+			-webkit-transition: height 0.5s;
+			transition: height 0.5s;
+		}
+		&.Active{
+			.BrandHeader{
+				background:		#000000;
+				color:			#FFFFFF;
+				border-bottom:	solid 1px #000000;
 			}
-			.BrandProperty1{
-				position:		absolute !important;
-				bottom:			24px;
-				left:			500px;
-				height:			24px;
-				width:			255px;
-				border-bottom:	dotted 1px #808080;
-				font-size:		12px;
-				color:			#808080;
-				line-height:	24px;
-				.BrandBusinessHours{
-					height:			100%;
-					padding-left:	10px;
-					div{
-						position:		absolute !important;
-						top:			0px;
-						left:			25px;
+			.BrandContent{
+				height:			250px;
+				.BrandDescription{
+					position:		absolute !important;
+					top:			10px;
+					left:			510px;
+					width:			245px;
+					height:			174px;
+					color:			#808080;
+					font-size:		12px;
+					line-height:	19px;
+					overflow:		hidden;
+				}
+				.BrandProperty1{
+					position:		absolute !important;
+					bottom:			24px;
+					left:			500px;
+					height:			24px;
+					width:			255px;
+					border-bottom:	dotted 1px #808080;
+					font-size:		12px;
+					color:			#808080;
+					line-height:	24px;
+					.BrandBusinessHours{
 						height:			100%;
-						line-height:	24px;
+						padding-left:	10px;
+						div{
+							position:		absolute !important;
+							top:			0px;
+							left:			25px;
+							height:			100%;
+							line-height:	24px;
+						}
+					}
+					.BrandFloorGuide{
+						position:	absolute !important;
+						top:		0px;
+						right:		6px;
+						height:		100%;
+						width:		200px;
+						text-align:	right;
+						a{
+							position:		absolute !important;
+							top:			0px;
+							right:			15px;
+							height:			100%;
+							line-height:	24px;
+							font-size:		10px;
+							color:			#808080;
+							text-decoration:none;
+						}
+						a:hover{
+							text-decoration:underline;
+						}
 					}
 				}
-				.BrandFloorGuide{
-					position:	absolute !important;
-					top:		0px;
-					right:		6px;
-					height:		100%;
-					width:		200px;
-					text-align:	right;
-					a{
-						position:		absolute !important;
-						top:			0px;
-						right:			15px;
+				.BrandProperty2{
+					position:		absolute !important;
+					bottom:			0px;
+					left:			500px;
+					height:			24px;
+					width:			255px;
+					font-size:		12px;
+					color:			#808080;
+					line-height:	24px;
+					.BrandContact{
 						height:			100%;
-						line-height:	24px;
-						font-size:		10px;
-						color:			#808080;
-						text-decoration:none;
+						padding-left:	10px;
+						div{
+							position:		absolute !important;
+							top:			0px;
+							left:			25px;
+							height:			100%;
+							line-height:	24px;
+						}
 					}
-					a:hover{
-						text-decoration:underline;
-					}
-				}
-			}
-			.BrandProperty2{
-				position:		absolute !important;
-				bottom:			0px;
-				left:			500px;
-				height:			24px;
-				width:			255px;
-				font-size:		12px;
-				color:			#808080;
-				line-height:	24px;
-				.BrandContact{
-					height:			100%;
-					padding-left:	10px;
-					div{
-						position:		absolute !important;
-						top:			0px;
-						left:			25px;
-						height:			100%;
-						line-height:	24px;
-					}
-				}
-				.BrandURL{
-					position:	absolute !important;
-					top:		0px;
-					right:		6px;
-					height:		100%;
-					width:		200px;
-					text-align:	right;
-					a{
-						font-size:		10px;
-						color:			#808080;
-						text-decoration:none;
-					}
-					a:hover{
-						text-decoration:underline;
-					}
-					div{
-						position:		absolute !important;
-						top:			0px;
-						right:			15px;
-						height:			100%;
-						line-height:	24px;
+					.BrandURL{
+						position:	absolute !important;
+						top:		0px;
+						right:		6px;
+						height:		100%;
+						width:		200px;
+						text-align:	right;
+						a{
+							font-size:		10px;
+							color:			#808080;
+							text-decoration:none;
+						}
+						a:hover{
+							text-decoration:underline;
+						}
+						div{
+							position:		absolute !important;
+							top:			0px;
+							right:			15px;
+							height:			100%;
+							line-height:	24px;
+						}
 					}
 				}
 			}
@@ -320,102 +329,110 @@
 			font:			normal 14px verdana;
 			line-height:	24px;
 		}
-		.FoodHeader.Active{
-			background:		#000000;
-			color:			#FFFFFF;
-			border-bottom:	solid 1px #000000;
-		}
 		.FoodContent{
-			height:			250px;
-			.FoodDescription{
-				position:		absolute !important;
-				top:			10px;
-				left:			510px;
-				width:			245px;
-				height:			174px;
-				color:			#808080;
-				font-size:		12px;
-				line-height:	19px;
-				overflow:		hidden;
+			height:			0px;
+			overflow:		hidden;
+			-webkit-transition: height 0.5s;
+			transition: height 0.5s;
+		}
+		&.Active{
+			.FoodHeader{
+				background:		#000000;
+				color:			#FFFFFF;
+				border-bottom:	solid 1px #000000;
 			}
-			.FoodProperty1{
-				position:		absolute !important;
-				bottom:			24px;
-				left:			500px;
-				height:			24px;
-				width:			255px;
-				border-bottom:	dotted 1px #808080;
-				font-size:		12px;
-				color:			#808080;
-				line-height:	24px;
-				.FoodBusinessHours{
-					height:			100%;
-					padding-left:	10px;
-					div{
-						position:		absolute !important;
-						top:			0px;
-						left:			25px;
+			.FoodContent{
+				height:			250px;
+				.FoodDescription{
+					position:		absolute !important;
+					top:			10px;
+					left:			510px;
+					width:			245px;
+					height:			174px;
+					color:			#808080;
+					font-size:		12px;
+					line-height:	19px;
+					overflow:		hidden;
+				}
+				.FoodProperty1{
+					position:		absolute !important;
+					bottom:			24px;
+					left:			500px;
+					height:			24px;
+					width:			255px;
+					border-bottom:	dotted 1px #808080;
+					font-size:		12px;
+					color:			#808080;
+					line-height:	24px;
+					.FoodBusinessHours{
 						height:			100%;
-						line-height:	24px;
+						padding-left:	10px;
+						div{
+							position:		absolute !important;
+							top:			0px;
+							left:			25px;
+							height:			100%;
+							line-height:	24px;
+						}
+					}
+					.FoodFloorGuide{
+						position:	absolute !important;
+						top:		0px;
+						right:		6px;
+						height:		100%;
+						width:		200px;
+						text-align:	right;
+						div{
+							position:		absolute !important;
+							top:			0px;
+							right:			15px;
+							height:			100%;
+							line-height:	24px;
+						}
 					}
 				}
-				.FoodFloorGuide{
-					position:	absolute !important;
-					top:		0px;
-					right:		6px;
-					height:		100%;
-					width:		200px;
-					text-align:	right;
-					div{
-						position:		absolute !important;
-						top:			0px;
-						right:			15px;
+				.FoodProperty2{
+					position:		absolute !important;
+					bottom:			0px;
+					left:			500px;
+					height:			24px;
+					width:			255px;
+					font-size:		12px;
+					color:			#808080;
+					line-height:	24px;
+					.FoodContact{
 						height:			100%;
-						line-height:	24px;
+						padding-left:	10px;
+						div{
+							position:		absolute !important;
+							top:			0px;
+							left:			25px;
+							height:			100%;
+							line-height:	24px;
+						}
 					}
-				}
-			}
-			.FoodProperty2{
-				position:		absolute !important;
-				bottom:			0px;
-				left:			500px;
-				height:			24px;
-				width:			255px;
-				font-size:		12px;
-				color:			#808080;
-				line-height:	24px;
-				.FoodContact{
-					height:			100%;
-					padding-left:	10px;
-					div{
-						position:		absolute !important;
-						top:			0px;
-						left:			25px;
-						height:			100%;
-						line-height:	24px;
-					}
-				}
-				.FoodURL{
-					position:	absolute !important;
-					top:		0px;
-					right:		6px;
-					height:		100%;
-					width:		200px;
-					text-align:	right;
-					a{
-						font-size:		10px;
-						color:			#808080;
-						text-decoration:none;
-					}
-					a:hover{
-						text-decoration:underline;
-					}
-					div{
-						position:		absolute !important;
-						top:			0px;
-						right:			15px;
-						height:			100%;
-						line-height:	24px;
+					.FoodURL{
+						position:	absolute !important;
+						top:		0px;
+						right:		6px;
+						height:		100%;
+						width:		200px;
+						text-align:	right;
+						a{
+							font-size:		10px;
+							color:			#808080;
+							text-decoration:none;
+						}
+						a:hover{
+							text-decoration:underline;
+						}
+						div{
+							position:		absolute !important;
+							top:			0px;
+							right:			15px;
+							height:			100%;
+							line-height:	24px;
+						}
 					}
 				}
 			}

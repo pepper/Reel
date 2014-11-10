@@ -374,26 +374,10 @@ exports.recruiting = function(req, res){
 	});
 }
 
+
+
 exports.services = function(req, res){
 	res.redirect("/Services/Petition");
-}
-
-exports.servicesMemberShipBook = function(req, res){
-	res.result.CurrentURL = "/Services";
-	res.result.ServicesTopic = "MemberShipBook";
-	mongo.database.collection("fix_text", function(err, collection){
-		collection.find({"Language": res.result.Language, "Topic": "ServicesMemberShipBook"}).toArray(function(err, concern){
-			if(err){
-				logger.error(err);
-				return res.sned(500);
-			}
-			if(concern && concern.length > 0){
-				res.result.ContentArray = concern[0].Content.split("\n");
-				res.result.OriginContent = concern[0].Content;
-			}
-			res.render("servicesMemberShipBook", res.result);
-		});
-	});
 }
 
 exports.servicesPetition = function(req, res){
@@ -410,6 +394,164 @@ exports.servicesPetition = function(req, res){
 				res.result.OriginContent = servicesPetition[0].Content;
 			}
 			res.render("servicesPetition", res.result);
+		});
+	});
+}
+
+exports.servicesMembershipBenefits = function(req, res){
+	res.result.CurrentURL = "/Services";
+	res.result.ServicesTopic = "MembershipBenefits";
+	res.result.Topic = {};
+	mongo.database.collection("fix_text", function(err, collection){
+		collection.find({
+			$and:[{
+				"Language": res.result.Language,
+			}, {
+				$or:[{
+					"Topic": "ServicesMembershipBenefits_01"
+				},{
+					"Topic": "ServicesMembershipBenefits_02"
+				},{
+					"Topic": "ServicesMembershipBenefits_03"
+				},{
+					"Topic": "ServicesMembershipBenefits_04"
+				},{
+					"Topic": "ServicesMembershipBenefits_05"
+				},{
+					"Topic": "ServicesMembershipBenefits_06"
+				},{
+					"Topic": "ServicesMembershipBenefits_07"
+				},{
+					"Topic": "ServicesMembershipBenefits_08"
+				}]
+			}]
+		}).toArray(function(err, servicesMembershipBenefits){
+			if(err){
+				logger.error(err);
+				return res.sned(500);
+			}
+			if(servicesMembershipBenefits && servicesMembershipBenefits.length > 0){
+				servicesMembershipBenefits.forEach(function(servicesMembershipBenefit){
+					res.result.Topic[servicesMembershipBenefit.Topic] = {};
+					res.result.Topic[servicesMembershipBenefit.Topic].ContentArray = servicesMembershipBenefit.Content.split("\n");
+					res.result.Topic[servicesMembershipBenefit.Topic].OriginContent = servicesMembershipBenefit.Content;
+				});
+			}
+			res.render("servicesMembershipBenefits", res.result);
+		});
+	});
+}
+
+exports.servicesRegulations = function(req, res){
+	res.result.CurrentURL = "/Services";
+	res.result.ServicesTopic = "Regulations";
+	mongo.database.collection("fix_text", function(err, collection){
+		collection.find({"Language": res.result.Language, "Topic": "ServicesRegulations"}).toArray(function(err, concern){
+			if(err){
+				logger.error(err);
+				return res.sned(500);
+			}
+			if(concern && concern.length > 0){
+				res.result.ContentArray = concern[0].Content.split("\n");
+				res.result.OriginContent = concern[0].Content;
+			}
+			res.render("servicesRegulations", res.result);
+		});
+	});
+}
+
+exports.servicesPorterService = function(req, res){
+	res.result.CurrentURL = "/Services";
+	res.result.ServicesTopic = "PorterService";
+	mongo.database.collection("fix_text", function(err, collection){
+		collection.find({"Language": res.result.Language, "Topic": "ServicesPorterService"}).toArray(function(err, concern){
+			if(err){
+				logger.error(err);
+				return res.sned(500);
+			}
+			if(concern && concern.length > 0){
+				res.result.ContentArray = concern[0].Content.split("\n");
+				res.result.OriginContent = concern[0].Content;
+			}
+			res.render("servicesPorterService", res.result);
+		});
+	});
+}
+
+exports.servicesReservationService = function(req, res){
+	res.result.CurrentURL = "/Services";
+	res.result.ServicesTopic = "ReservationService";
+	mongo.database.collection("fix_text", function(err, collection){
+		collection.find({"Language": res.result.Language, "Topic": "ServicesReservationService"}).toArray(function(err, concern){
+			if(err){
+				logger.error(err);
+				return res.sned(500);
+			}
+			if(concern && concern.length > 0){
+				res.result.ContentArray = concern[0].Content.split("\n");
+				res.result.OriginContent = concern[0].Content;
+			}
+			res.render("servicesReservationService", res.result);
+		});
+	});
+}
+
+exports.servicesInStoreService = function(req, res){
+	res.result.CurrentURL = "/Services";
+	res.result.ServicesTopic = "InStoreService";
+	res.result.Topic = {};
+	mongo.database.collection("fix_text", function(err, collection){
+		collection.find({
+			$and:[{
+				"Language": res.result.Language,
+			}, {
+				$or:[{
+					"Topic": "ServicesInStoreService_01"
+				},{
+					"Topic": "ServicesInStoreService_02"
+				},{
+					"Topic": "ServicesInStoreService_03"
+				},{
+					"Topic": "ServicesInStoreService_04"
+				},{
+					"Topic": "ServicesInStoreService_05"
+				}]
+			}]
+		}).toArray(function(err, servicesInStoreServices){
+			if(err){
+				logger.error(err);
+				return res.sned(500);
+			}
+			if(servicesInStoreServices && servicesInStoreServices.length > 0){
+				servicesInStoreServices.forEach(function(servicesInStoreService){
+					res.result.Topic[servicesInStoreService.Topic] = {};
+					res.result.Topic[servicesInStoreService.Topic].ContentArray = servicesInStoreService.Content.split("\n");
+					res.result.Topic[servicesInStoreService.Topic].OriginContent = servicesInStoreService.Content;
+				});
+			}
+			res.render("servicesInStoreService", res.result);
+		});
+	});
+}
+
+
+
+
+/*
+exports.servicesMemberShipBook = function(req, res){
+	res.result.CurrentURL = "/Services";
+	res.result.ServicesTopic = "MemberShipBook";
+	mongo.database.collection("fix_text", function(err, collection){
+		collection.find({"Language": res.result.Language, "Topic": "ServicesMemberShipBook"}).toArray(function(err, concern){
+			if(err){
+				logger.error(err);
+				return res.sned(500);
+			}
+			if(concern && concern.length > 0){
+				res.result.ContentArray = concern[0].Content.split("\n");
+				res.result.OriginContent = concern[0].Content;
+			}
+			res.render("servicesMemberShipBook", res.result);
 		});
 	});
 }
@@ -436,36 +578,11 @@ exports.servicesMembership = function(req, res){
 	res.result.ServicesTopic = "Membership";
 	res.render("servicesMembership", res.result);
 }
+*/
 
-exports.servicesMembershipBenefits = function(req, res){
-	res.result.CurrentURL = "/Services";
-	res.result.ServicesTopic = "MembershipBenefits";
-	res.render("servicesMembershipBenefits", res.result);
-}
 
-exports.servicesRegulations = function(req, res){
-	res.result.CurrentURL = "/Services";
-	res.result.ServicesTopic = "Regulations";
-	mongo.database.collection("fix_text", function(err, collection){
-		collection.find({"Language": res.result.Language, "Topic": "ServicesRegulations"}).toArray(function(err, concern){
-			if(err){
-				logger.error(err);
-				return res.sned(500);
-			}
-			if(concern && concern.length > 0){
-				res.result.ContentArray = concern[0].Content.split("\n");
-				res.result.OriginContent = concern[0].Content;
-			}
-			res.render("servicesRegulations", res.result);
-		});
-	});
-}
 
-exports.servicesInStoreService = function(req, res){
-	res.result.CurrentURL = "/Services";
-	res.result.ServicesTopic = "InStoreService";
-	res.render("servicesInStoreService", res.result);
-}
+
 
 exports.siteMap = function(req, res){
 	res.result.CurrentURL = "/SiteMap";

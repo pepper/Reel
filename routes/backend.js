@@ -344,11 +344,23 @@ exports.editFixText = function(req, res){
 				case "VisitReelPlace":
 					res.redirect("/Visit");
 					break;
-				case "ServicesBooking":
-					res.redirect("/Services/Booking");
-					break;
 				case "ServicesPetition":
 					res.redirect("/Services/Petition");
+					break;
+				case "ServicesMembershipBenefits_":
+					res.redirect("/Services/MembershipBenefits");
+					break;
+				case "ServicesRegulations":
+					res.redirect("/Services/Regulations");
+					break;
+				case "ServicesPorterService":
+					res.redirect("/Services/PorterService");
+					break;
+				case "ServicesReservationService":
+					res.redirect("/Services/ReservationService");
+					break;
+				case "ServicesInStoreService_":
+					res.redirect("/Services/InStoreService");
 					break;
 				default:
 					res.redirect("/" + req.body.Topic.replace(/[0-9]/g, ""));

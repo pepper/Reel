@@ -86,14 +86,19 @@ app.get("/Visit/Floor/:Floor", index.visitFloor);
 app.get("/Visit/Location", index.visitLocation);
 app.get("/Visit/About", index.visitAbout);
 app.get("/Recruiting", index.recruiting);
+
 app.get("/Services", index.services);
-app.get("/Services/MemberShipBook", index.servicesMemberShipBook);
 app.get("/Services/Petition", index.servicesPetition);
-app.get("/Services/Booking", index.servicesBooking);
-app.get("/Services/Membership", index.servicesMembership);
 app.get("/Services/MembershipBenefits", index.servicesMembershipBenefits);
 app.get("/Services/Regulations", index.servicesRegulations);
+app.get("/Services/PorterService", index.servicesPorterService);
+app.get("/Services/ReservationService", index.servicesReservationService);
 app.get("/Services/InStoreService", index.servicesInStoreService);
+
+//app.get("/Services/MemberShipBook", index.servicesMemberShipBook);
+//app.get("/Services/Booking", index.servicesBooking);
+// app.get("/Services/Membership", index.servicesMembership);
+
 app.get("/SiteMap", index.siteMap);
 app.post("/Search", index.search);
 

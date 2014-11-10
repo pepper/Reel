@@ -6,9 +6,8 @@ block mainContent
 			- if(Administrator)
 				span(class="glyphicon glyphicon-pencil", style="font-size:32px", data-toggle="modal", data-target="#EditServicesRegulationsPanel")
 				br
-			img(src="/images/Services/Regulations_01.png")
-			br
-			br
+			img(src="/images/Services/Regulations_01_#{Language}.png")
+			img(class="ServiceHeadImage", src="/images/Services/ServiceHeadImage.jpg")
 			- each Content in ContentArray
 				- if (Content.indexOf("#Paragraph#") >= 0) 
 					p #{Content.replace("#Paragraph# ", "")}

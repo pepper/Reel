@@ -32,9 +32,13 @@ FAQView = Backbone.View.extend({
 	},
 	toggleAnswer: function(event){
 		if($(event.target).next(".Answer").is(':hidden')){
+			var question = $(event.target);
 			this.$el.find(".Answer").slideUp();
 			$(event.target).next(".Answer").slideToggle(function(){
-				$(window).trigger("resize");
+				setTimeout(function(){
+					console.log(question);
+					$(".MainContent").animate({"top": (-1 * question.position().top) + "px"});
+				}, 700);
 			});
 		}
 		else{

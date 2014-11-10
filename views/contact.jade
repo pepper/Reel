@@ -3,7 +3,7 @@ extends layout
 block mainContent
 	div(class="ContactUs")
 		img(src="/images/ContactUs/Contact_Mail_#{Language}.png")
-		&nbsp;&nbsp;
+		| &nbsp;&nbsp;
 		- if(Administrator)
 			span(class="glyphicon glyphicon-pencil", style="font-size:12px", data-toggle="modal", data-target="#EditContent1Panel")
 		br
@@ -14,7 +14,7 @@ block mainContent
 				span #{Content}
 				br
 		img(src="/images/ContactUs/Contact_Line_#{Language}.png")
-		&nbsp;&nbsp;
+		| &nbsp;&nbsp;
 		- if(Administrator)
 			span(class="glyphicon glyphicon-pencil", style="font-size:12px", data-toggle="modal", data-target="#EditContent2Panel")
 		br
@@ -25,7 +25,7 @@ block mainContent
 				span #{Content}
 				br
 		img(src="/images/ContactUs/Contact_Cooperation_#{Language}.png")
-		&nbsp;&nbsp;
+		| &nbsp;&nbsp;
 		- if(Administrator)
 			span(class="glyphicon glyphicon-pencil", style="font-size:12px", data-toggle="modal", data-target="#EditContent3Panel")
 		br
@@ -54,6 +54,13 @@ block mainContent
 				img(class="SendFail", src="/images/ContactUs/Fail.png")
 				img(class="SendSuccess", src="/images/ContactUs/Success.png")
 	script(src="/javascripts/contact.js")
+block messageBox
+	div(class="ContactUsCompleted ContactUsMessage")
+		img(src="/images/ContactUs/ContactCompleted_#{Language}.jpg")
+		img(class="ContactCloseButton", src="/images/ContactUs/ContactCloseButton.png")
+	div(class="ContactUsError ContactUsMessage")
+		img(src="/images/ContactUs/ContactError_#{Language}.jpg")
+		img(class="ContactCloseButton", src="/images/ContactUs/ContactCloseButton.png")
 block panel
 	- if(Administrator)
 		div(class="modal fade", id="EditContent1Panel")

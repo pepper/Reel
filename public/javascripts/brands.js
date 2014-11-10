@@ -19,16 +19,21 @@ $(document).ready(function(){
 		$(".BrandCategorySelector .SubMenu." + $(this).closest(".HaveSubMenu").attr("sub_menu")).slideDown();
 	});
 
-	$(".BrandItem .BrandContent").hide();
 	$(".BrandItem .BrandHeader").click(function(){
-		$(".BrandItem .BrandHeader").removeClass("Active");
-		$(".BrandItem .BrandContent").slideUp();
-		$(this).next(".BrandContent").clearQueue().slideDown();
 		var brandItem = $(this).closest(".BrandItem");
-		setTimeout(function(){
-			$(".MainContent").animate({"top": (-1 * brandItem.position().top) + "px"});
-		}, 1000);
-		$(this).addClass("Active");
+		if(brandItem.hasClass("Active")){
+			$(".BrandItem").removeClass("Active");
+			setTimeout(function(){
+				$(".MainContent").animate({"top": "0px"});
+			}, 700);
+		}
+		else{
+			$(".BrandItem").removeClass("Active");
+			brandItem.addClass("Active");
+			setTimeout(function(){
+				$(".MainContent").animate({"top": (-1 * brandItem.position().top) + "px"});
+			}, 700);
+		}
 	});
 
 	$(".BrandFilter").click(function(){
@@ -46,16 +51,26 @@ $(document).ready(function(){
 		if($(this).parent(".SubMenu").length == 0){
 			$(".BrandCategorySelector .SubMenu").slideUp();
 		}
-		$(".BrandItem .BrandContent").slideUp();
 		window.mainContainerView.setToZeroPosition();
+		$(".BrandItem").removeClass("Active");
+		$(".FoodItem").removeClass("Active");
 	});
 
-	$(".FoodItem .FoodContent").hide();
 	$(".FoodItem .FoodHeader").click(function(){
-		$(".FoodItem .FoodHeader").removeClass("Active");
-		$(".FoodItem .FoodContent").slideUp();
-		$(this).next(".FoodContent").clearQueue().slideDown();
-		$(this).addClass("Active");
+		var foodItem = $(this).closest(".FoodItem");
+		if(foodItem.hasClass("Active")){
+			$(".FoodItem").removeClass("Active");
+			setTimeout(function(){
+				$(".MainContent").animate({"top": "0px"});
+			}, 700);
+		}
+		else{
+			$(".FoodItem").removeClass("Active");
+			foodItem.addClass("Active");
+			setTimeout(function(){
+				$(".MainContent").animate({"top": (-1 * foodItem.position().top) + "px"});
+			}, 700);
+		}
 	});
 
 	var changeModeAndBrand = function(mode, brand){

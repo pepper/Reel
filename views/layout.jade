@@ -16,6 +16,7 @@ html
 			script(src="/javascripts/libraries/raphael.min.js")
 			script(src="/javascripts/libraries/bootbox.min.js")
 			script(src="/javascripts/libraries/autolink.js")
+			script(src="/javascripts/libraries/jquery.placeholder.js")
 		block moreScript
 	body
 		div(class="MainContainer #{BackgroundStyle}")
@@ -54,6 +55,8 @@ html
 					- if(ShowBottomLine)
 						div(class="BottomMask")
 							div(class="Underline")
+				div(class="MessageBoxContainer")
+					block messageBox
 		script(src="/javascripts/mainContainer.js")
 		block footer
 			div(class="Footer")

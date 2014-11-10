@@ -101,6 +101,16 @@ div {
   bottom: 0px;
   height: 0px;
 }
+.MainContainer .MessageBoxContainer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
 .HoverLink {
   cursor: pointer;
 }
@@ -499,6 +509,43 @@ div {
   padding-top: 0px;
   padding-bottom: 0px;
 }
+.ContactUsMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 100px;
+  margin-left: -125px;
+  margin-top: -50px;
+  color: #FFFFFF;
+  background: #FFFF00;
+}
+.ContactUsMessage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.ContactUsMessage .ContactCloseButton {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  margin-right: -31px;
+  margin-top: -31px;
+  width: 63px;
+  cursor: pointer;
+}
+.ContactUsCompleted {
+  width: 490px;
+  height: 135px;
+  margin-left: -245px;
+  margin-top: -67px;
+}
+.ContactUsError {
+  width: 490px;
+  height: 313px;
+  margin-left: -245px;
+  margin-top: -156px;
+}
 .MainContent .FloorGuideReelPlace {
   left: 50%;
   margin-left: -339px;
@@ -890,6 +937,16 @@ div {
 .FAQSelector img {
   cursor: pointer;
 }
+.FAQContainerTopMask {
+  position: absolute;
+  top: 0px;
+  left: 45%;
+  z-index: 100;
+  width: 775px;
+  height: 48px;
+  margin-left: -377px;
+  background: #FFFFFF;
+}
 .MainContent .MemberShipBook {
   top: 45px;
   left: 50%;
@@ -1166,6 +1223,10 @@ div {
   width: 100px;
   position: relative;
   padding-bottom: 5px;
+}
+.MainContent .ServiceHeadImage {
+  margin-top: 25px !important;
+  margin-bottom: 15px !important;
 }
 .MainContent .News {
   top: 45px;
@@ -1481,7 +1542,7 @@ div {
   top: 0px;
   left: 45%;
   z-index: 100;
-  width: 755px;
+  width: 775px;
   height: 48px;
   margin-left: -377px;
   background: #FFFFFF;
@@ -1508,15 +1569,21 @@ div {
   font: normal 14px verdana;
   line-height: 24px;
 }
-.BrandContainer .BrandItem .BrandHeader.Active {
+.BrandContainer .BrandItem .BrandContent {
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+}
+.BrandContainer .BrandItem.Active .BrandHeader {
   background: #000000;
   color: #FFFFFF;
   border-bottom: solid 1px #000000;
 }
-.BrandContainer .BrandItem .BrandContent {
+.BrandContainer .BrandItem.Active .BrandContent {
   height: 250px;
 }
-.BrandContainer .BrandItem .BrandContent .BrandDescription {
+.BrandContainer .BrandItem.Active .BrandContent .BrandDescription {
   position: absolute !important;
   top: 10px;
   left: 510px;
@@ -1527,7 +1594,7 @@ div {
   line-height: 19px;
   overflow: hidden;
 }
-.BrandContainer .BrandItem .BrandContent .BrandProperty1 {
+.BrandContainer .BrandItem.Active .BrandContent .BrandProperty1 {
   position: absolute !important;
   bottom: 24px;
   left: 500px;
@@ -1538,18 +1605,18 @@ div {
   color: #808080;
   line-height: 24px;
 }
-.BrandContainer .BrandItem .BrandContent .BrandProperty1 .BrandBusinessHours {
+.BrandContainer .BrandItem.Active .BrandContent .BrandProperty1 .BrandBusinessHours {
   height: 100%;
   padding-left: 10px;
 }
-.BrandContainer .BrandItem .BrandContent .BrandProperty1 .BrandBusinessHours div {
+.BrandContainer .BrandItem.Active .BrandContent .BrandProperty1 .BrandBusinessHours div {
   position: absolute !important;
   top: 0px;
   left: 25px;
   height: 100%;
   line-height: 24px;
 }
-.BrandContainer .BrandItem .BrandContent .BrandProperty1 .BrandFloorGuide {
+.BrandContainer .BrandItem.Active .BrandContent .BrandProperty1 .BrandFloorGuide {
   position: absolute !important;
   top: 0px;
   right: 6px;
@@ -1557,7 +1624,7 @@ div {
   width: 200px;
   text-align: right;
 }
-.BrandContainer .BrandItem .BrandContent .BrandProperty1 .BrandFloorGuide a {
+.BrandContainer .BrandItem.Active .BrandContent .BrandProperty1 .BrandFloorGuide a {
   position: absolute !important;
   top: 0px;
   right: 15px;
@@ -1567,10 +1634,10 @@ div {
   color: #808080;
   text-decoration: none;
 }
-.BrandContainer .BrandItem .BrandContent .BrandProperty1 .BrandFloorGuide a:hover {
+.BrandContainer .BrandItem.Active .BrandContent .BrandProperty1 .BrandFloorGuide a:hover {
   text-decoration: underline;
 }
-.BrandContainer .BrandItem .BrandContent .BrandProperty2 {
+.BrandContainer .BrandItem.Active .BrandContent .BrandProperty2 {
   position: absolute !important;
   bottom: 0px;
   left: 500px;
@@ -1580,18 +1647,18 @@ div {
   color: #808080;
   line-height: 24px;
 }
-.BrandContainer .BrandItem .BrandContent .BrandProperty2 .BrandContact {
+.BrandContainer .BrandItem.Active .BrandContent .BrandProperty2 .BrandContact {
   height: 100%;
   padding-left: 10px;
 }
-.BrandContainer .BrandItem .BrandContent .BrandProperty2 .BrandContact div {
+.BrandContainer .BrandItem.Active .BrandContent .BrandProperty2 .BrandContact div {
   position: absolute !important;
   top: 0px;
   left: 25px;
   height: 100%;
   line-height: 24px;
 }
-.BrandContainer .BrandItem .BrandContent .BrandProperty2 .BrandURL {
+.BrandContainer .BrandItem.Active .BrandContent .BrandProperty2 .BrandURL {
   position: absolute !important;
   top: 0px;
   right: 6px;
@@ -1599,15 +1666,15 @@ div {
   width: 200px;
   text-align: right;
 }
-.BrandContainer .BrandItem .BrandContent .BrandProperty2 .BrandURL a {
+.BrandContainer .BrandItem.Active .BrandContent .BrandProperty2 .BrandURL a {
   font-size: 10px;
   color: #808080;
   text-decoration: none;
 }
-.BrandContainer .BrandItem .BrandContent .BrandProperty2 .BrandURL a:hover {
+.BrandContainer .BrandItem.Active .BrandContent .BrandProperty2 .BrandURL a:hover {
   text-decoration: underline;
 }
-.BrandContainer .BrandItem .BrandContent .BrandProperty2 .BrandURL div {
+.BrandContainer .BrandItem.Active .BrandContent .BrandProperty2 .BrandURL div {
   position: absolute !important;
   top: 0px;
   right: 15px;
@@ -1636,15 +1703,21 @@ div {
   font: normal 14px verdana;
   line-height: 24px;
 }
-.FoodContainer .FoodItem .FoodHeader.Active {
+.FoodContainer .FoodItem .FoodContent {
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+}
+.FoodContainer .FoodItem.Active .FoodHeader {
   background: #000000;
   color: #FFFFFF;
   border-bottom: solid 1px #000000;
 }
-.FoodContainer .FoodItem .FoodContent {
+.FoodContainer .FoodItem.Active .FoodContent {
   height: 250px;
 }
-.FoodContainer .FoodItem .FoodContent .FoodDescription {
+.FoodContainer .FoodItem.Active .FoodContent .FoodDescription {
   position: absolute !important;
   top: 10px;
   left: 510px;
@@ -1655,7 +1728,7 @@ div {
   line-height: 19px;
   overflow: hidden;
 }
-.FoodContainer .FoodItem .FoodContent .FoodProperty1 {
+.FoodContainer .FoodItem.Active .FoodContent .FoodProperty1 {
   position: absolute !important;
   bottom: 24px;
   left: 500px;
@@ -1666,18 +1739,18 @@ div {
   color: #808080;
   line-height: 24px;
 }
-.FoodContainer .FoodItem .FoodContent .FoodProperty1 .FoodBusinessHours {
+.FoodContainer .FoodItem.Active .FoodContent .FoodProperty1 .FoodBusinessHours {
   height: 100%;
   padding-left: 10px;
 }
-.FoodContainer .FoodItem .FoodContent .FoodProperty1 .FoodBusinessHours div {
+.FoodContainer .FoodItem.Active .FoodContent .FoodProperty1 .FoodBusinessHours div {
   position: absolute !important;
   top: 0px;
   left: 25px;
   height: 100%;
   line-height: 24px;
 }
-.FoodContainer .FoodItem .FoodContent .FoodProperty1 .FoodFloorGuide {
+.FoodContainer .FoodItem.Active .FoodContent .FoodProperty1 .FoodFloorGuide {
   position: absolute !important;
   top: 0px;
   right: 6px;
@@ -1685,14 +1758,14 @@ div {
   width: 200px;
   text-align: right;
 }
-.FoodContainer .FoodItem .FoodContent .FoodProperty1 .FoodFloorGuide div {
+.FoodContainer .FoodItem.Active .FoodContent .FoodProperty1 .FoodFloorGuide div {
   position: absolute !important;
   top: 0px;
   right: 15px;
   height: 100%;
   line-height: 24px;
 }
-.FoodContainer .FoodItem .FoodContent .FoodProperty2 {
+.FoodContainer .FoodItem.Active .FoodContent .FoodProperty2 {
   position: absolute !important;
   bottom: 0px;
   left: 500px;
@@ -1702,18 +1775,18 @@ div {
   color: #808080;
   line-height: 24px;
 }
-.FoodContainer .FoodItem .FoodContent .FoodProperty2 .FoodContact {
+.FoodContainer .FoodItem.Active .FoodContent .FoodProperty2 .FoodContact {
   height: 100%;
   padding-left: 10px;
 }
-.FoodContainer .FoodItem .FoodContent .FoodProperty2 .FoodContact div {
+.FoodContainer .FoodItem.Active .FoodContent .FoodProperty2 .FoodContact div {
   position: absolute !important;
   top: 0px;
   left: 25px;
   height: 100%;
   line-height: 24px;
 }
-.FoodContainer .FoodItem .FoodContent .FoodProperty2 .FoodURL {
+.FoodContainer .FoodItem.Active .FoodContent .FoodProperty2 .FoodURL {
   position: absolute !important;
   top: 0px;
   right: 6px;
@@ -1721,15 +1794,15 @@ div {
   width: 200px;
   text-align: right;
 }
-.FoodContainer .FoodItem .FoodContent .FoodProperty2 .FoodURL a {
+.FoodContainer .FoodItem.Active .FoodContent .FoodProperty2 .FoodURL a {
   font-size: 10px;
   color: #808080;
   text-decoration: none;
 }
-.FoodContainer .FoodItem .FoodContent .FoodProperty2 .FoodURL a:hover {
+.FoodContainer .FoodItem.Active .FoodContent .FoodProperty2 .FoodURL a:hover {
   text-decoration: underline;
 }
-.FoodContainer .FoodItem .FoodContent .FoodProperty2 .FoodURL div {
+.FoodContainer .FoodItem.Active .FoodContent .FoodProperty2 .FoodURL div {
   position: absolute !important;
   top: 0px;
   right: 15px;
