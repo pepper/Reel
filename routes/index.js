@@ -1,4 +1,5 @@
 var step = require("step");
+var _ = require("underscore");
 var mongo = require("../utilities/database");
 var logger = require("nlogger").logger(module);
 
@@ -227,15 +228,13 @@ exports.visitFloor = function(req, res){
 					logger.error(err);
 					return res.sned(500);
 				}
-				// floors.forEach(function(floor){
-				// 	//logger.debug(JSON.stringify(floor.Brands));
-				// 	floor.Brands.sort(function(a, b){
-				// 		logger.debug(a.Title + " # " + b.Title + ":" + (a.Title > b.Title));
-				// 		return a.Title > b.Title;
-				// 	});
-				// 	//logger.debug(JSON.stringify(floor.Brands));
-				// 	//logger.debug("\n");
-				// });
+				floors.forEach(function(floor){
+					logger.debug(JSON.stringify(floor.Brands));
+					floor.Brands = _.sortBy(floor.Brands, function(brand){
+						return brand.Title;
+					});
+					logger.debug(JSON.stringify(floor.Brands));
+				});
 				res.result.AreaListArray = floors;
 				next();
 			});
@@ -591,8 +590,7 @@ exports.siteMap = function(req, res){
 
 exports.search = function(req, res){
 	res.result.SearchResult = new Array();
-	if(req.body.Search && req.body.Search.length > 3){
-		console.log(req.body.Search);
+	if(req.body.Search){
 		var searchTextRegexp = new RegExp(req.body.Search, "i");
 		step(function(){
 			var next = this;
@@ -649,6 +647,7 @@ exports.search = function(req, res){
 							var result = {
 								ShortDescription: fixText.Content.substr(0, 40) + "..."
 							};
+							logger.debug(fixText.Topic);
 							switch(fixText.Topic){
 								case "Privacy":
 									result.Title = "私隐权利（Privacy）";
@@ -678,6 +677,41 @@ exports.search = function(req, res){
 								case "VisitLocation":
 									result.Title = "地理位置（Location）";
 									result.URL = "/Visit/Location";
+									break;
+								case "ServicesPetition":
+									result.Title = "申办会员卡（Membership）";
+									result.URL = "/Services/Petition";
+									break;
+								case "ServicesMembershipBenefits_01":
+								case "ServicesMembershipBenefits_02":
+								case "ServicesMembershipBenefits_03":
+								case "ServicesMembershipBenefits_04":
+								case "ServicesMembershipBenefits_05":
+								case "ServicesMembershipBenefits_06":
+								case "ServicesMembershipBenefits_07":
+								case "ServicesMembershipBenefits_08":
+									result.Title = "会员优惠（Membership Benefits）";
+									result.URL = "/Services/MembershipBenefits";
+									break;
+								case "ServicesRegulations":
+									result.Title = "购物记录卡及会员卡管理细则（Terms of Use）";
+									result.URL = "/Services/Regulations";
+									break;
+								case "ServicesPorterService":
+									result.Title = "攜貨服務（Porter Service）";
+									result.URL = "/Services/PorterService";
+									break;
+								case "ServicesReservationService":
+									result.Title = "预订服务（Reservation Service）";
+									result.URL = "/Services/ReservationService";
+									break;
+								case "ServicesInStoreService_01":
+								case "ServicesInStoreService_02":
+								case "ServicesInStoreService_03":
+								case "ServicesInStoreService_04":
+								case "ServicesInStoreService_05":
+									result.Title = "店内服务（In-Store Service）";
+									result.URL = "/Services/InStoreService";
 									break;
 							}
 							res.result.SearchResult.push(result);

@@ -43,7 +43,7 @@ FAQView = Backbone.View.extend({
 		}
 		else{
 			$(event.target).next(".Answer").slideToggle(function(){
-				$(window).trigger("resize");
+				$(".MainContent").animate({"top": "0px"});
 			});
 		}
 	},

@@ -9,9 +9,10 @@
     "express": "3.4.8",
     "jade": "1.1.5",
     "less-middleware": "0.1.15",
-    "step": "*",
     "mongodb": "*",
     "nlogger": "*",
-    "nodemailer": "*"
+    "nodemailer": "*",
+    "step": "*",
+    "underscore": "^1.7.0"
   }
 }
