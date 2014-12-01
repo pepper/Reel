@@ -26,7 +26,7 @@ exports.index = function(req, res){
 
 exports.news = function(req, res){
 	mongo.database.collection("news", function(err, collection){
-		collection.find({"Language": res.result.Language}).toArray(function(err, news){
+		collection.find({"Language": res.result.Language}).sort({"Key": -1}).toArray(function(err, news){
 			if(err){
 				logger.error(err);
 				return res.sned(500);
