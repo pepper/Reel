@@ -733,7 +733,7 @@ exports.search = function(req, res){
 							res.result.SearchResult.push({
 								Title: brand.Title,
 								URL: "/Brands#" + brand.Key,
-								ShortDescription: brand.Description_Ch.substr(0, 40) + "...",
+								ShortDescription: (brand.Description_Ch)?(brand.Description_Ch.substr(0, 40) + "..."):"",
 							});
 						}
 					});
