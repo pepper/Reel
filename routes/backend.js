@@ -489,6 +489,7 @@ exports.createBrand = function(req, res){
 		filter.push("Living");
 	}
 	mongo.database.collection("brand", function(err, collection){
+		console.log(Object.getOwnPropertyNames(collection));
 		collection.insert({
 			Key: key,
 			Title: req.body.Title,
