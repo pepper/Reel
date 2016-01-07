@@ -462,10 +462,7 @@ exports.removeSection = function(req, res){
 }
 
 exports.createBrand = function(req, res){
-	var key = req.body.Title.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "");
-	// if(key == ""){
-	// 	key = uuid
-	// }
+	var key = mongo.generateKey(req.body.Title);
 	var filter = new Array();
 	if(req.body.Women){
 		filter.push("Women");
@@ -488,30 +485,29 @@ exports.createBrand = function(req, res){
 	if(req.body.Living){
 		filter.push("Living");
 	}
-	mongo.database.collection("brand", function(err, collection){
-		console.log(Object.getOwnPropertyNames(collection));
-		collection.insert({
-			Key: key,
-			Title: req.body.Title,
-			Description_Ch: req.body.Description_Ch,
-			Description_En: req.body.Description_En,
-			Phone: req.body.Phone,
-			BusinessHours: req.body.BusinessHours,
-			Url: req.body.Url,
-			Floor: req.body.Floor,
-			Filter: filter
-		});
-	});
 	fs.readFile(req.files.Image.path, function(err, data){
 		if(err){
 			return logger.error(err);
 		}
-		var newStickerPath = path.join(basicBrandDirPath, key + ".jpg");
-		fs.writeFile(newStickerPath, data, function(err){
-			if(err){
-				return logger.error(err);
-			}
-			res.redirect("/Brands");
+		var imageData = data || new Buffer();	
+		mongo.database.collection("brand", function(err, collection){
+			collection.insert({
+				Key: key,
+				Title: req.body.Title,
+				Description_Ch: req.body.Description_Ch,
+				Description_En: req.body.Description_En,
+				Phone: req.body.Phone,
+				BusinessHours: req.body.BusinessHours,
+				Url: req.body.Url,
+				Floor: req.body.Floor,
+				Filter: filter,
+				Image: imageData.toString("base64"),
+			}, function(err){
+				if(err){
+					logger.debug(err);
+				}
+				res.redirect("/Brands");
+			});
 		});
 	});
 }
@@ -526,37 +522,35 @@ exports.removeBrand = function(req, res){
 			if(err){
 				return logger.error(err);
 			}
-			fs.unlink(path.join(basicBrandDirPath, key + ".jpg"), function(){
-				res.send(200);
-			});
+			res.send(200);
 		});
 	});
 }
 
 exports.createFood = function(req, res){
-	var key = req.body.Title.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "");
-	mongo.database.collection("food", function(err, collection){
-		collection.insert({
-			Key: key,
-			Title: req.body.Title,
-			Description_Ch: req.body.Description_Ch,
-			Description_En: req.body.Description_En,
-			Phone: req.body.Phone,
-			BusinessHours: req.body.BusinessHours,
-			Url: req.body.Url,
-			Floor: req.body.Floor,
-		});
-	});
+	var key = mongo.generateKey(req.body.Title);
 	fs.readFile(req.files.Image.path, function(err, data){
 		if(err){
 			return logger.error(err);
 		}
-		var newStickerPath = path.join(basicFoodDirPath, key + ".jpg");
-		fs.writeFile(newStickerPath, data, function(err){
-			if(err){
-				return logger.error(err);
-			}
-			res.redirect("/Brands");
+		var imageData = data || new Buffer();
+		mongo.database.collection("food", function(err, collection){
+			collection.insert({
+				Key: key,
+				Title: req.body.Title,
+				Description_Ch: req.body.Description_Ch,
+				Description_En: req.body.Description_En,
+				Phone: req.body.Phone,
+				BusinessHours: req.body.BusinessHours,
+				Url: req.body.Url,
+				Floor: req.body.Floor,
+				Image: imageData.toString("base64"),
+			}, function(err){
+				if(err){
+					logger.debug(err);
+				}
+				res.redirect("/Brands");
+			});
 		});
 	});
 }
@@ -571,9 +565,7 @@ exports.removeFood = function(req, res){
 			if(err){
 				return logger.error(err);
 			}
-			fs.unlink(path.join(basicBrandDirPath, key + ".jpg"), function(){
-				res.send(200);
-			});
+			res.send(200);
 		});
 	});
 }
@@ -581,79 +573,75 @@ exports.removeFood = function(req, res){
 exports.createRestaurent = function(req, res){
 	switch(req.body.Type){
 		case "vertical":
-			var key = req.body.Title.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "");
-			mongo.database.collection("restaurent", function(err, collection){
-				collection.insert({
-					Type: req.body.Type,
-					Key: key,
-					Title: req.body.Title,
-					Description_Ch: req.body.Description_Ch,
-					Description_En: req.body.Description_En,
-					Phone: req.body.Phone,
-					BusinessHours: req.body.BusinessHours,
-					Url: req.body.Url,
-					Style: req.body.Style,
-				});
-			});
+			var key = mongo.generateKey(req.body.Title);
 			fs.readFile(req.files.Image.path, function(err, data){
 				if(err){
 					return logger.error(err);
 				}
-				var newStickerPath = path.join(basicRestaurentDirPath, key + ".jpg");
-				fs.writeFile(newStickerPath, data, function(err){
-					if(err){
-						return logger.error(err);
-					}
-					res.redirect("/Brands");
+				var imageData = data || new Buffer();
+				mongo.database.collection("restaurent", function(err, collection){
+					collection.insert({
+						Type: req.body.Type,
+						Key: key,
+						Title: req.body.Title,
+						Description_Ch: req.body.Description_Ch,
+						Description_En: req.body.Description_En,
+						Phone: req.body.Phone,
+						BusinessHours: req.body.BusinessHours,
+						Url: req.body.Url,
+						Style: req.body.Style,
+						Image: imageData.toString("base64"),
+					}, function(err){
+						if(err){
+							logger.debug(err);
+						}
+						res.redirect("/Brands");
+					});
 				});
 			});
 			break;
 		case "block":
-			var brand1Key = req.body.Brand1_Title.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "");
-			var brand2Key = req.body.Brand2_Title.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "");
-			
-			mongo.database.collection("restaurent", function(err, collection){
-				collection.insert({
-					Type: req.body.Type,
-					Key: brand1Key + brand2Key,
-					Brand:[{
-						Key: brand1Key,
-						Title: req.body.Brand1_Title,
-						Description_Ch: req.body.Brand1_Description_Ch,
-						Description_En: req.body.Brand1_Description_En,
-						Phone: req.body.Brand1_Phone,
-						BusinessHours: req.body.Brand1_BusinessHours,
-						Url: req.body.Brand1_Url,
-						Style: req.body.Brand1_Style,
-					},{
-						Key: brand2Key,
-						Title: req.body.Brand2_Title,
-						Description_Ch: req.body.Brand2_Description_Ch,
-						Description_En: req.body.Brand2_Description_En,
-						Phone: req.body.Brand2_Phone,
-						BusinessHours: req.body.Brand2_BusinessHours,
-						Url: req.body.Brand2_Url,
-						Style: req.body.Brand2_Style,
-					}]
-				});
-			});
-			fs.readFile(req.files.Brand1_Image.path, function(err, data){
+			var brand1Key = mongo.generateKey(req.body.Brand1_Title);
+			var brand2Key = mongo.generateKey(req.body.Brand2_Title);
+			fs.readFile(req.files.Brand1_Image.path, function(err, data1){
 				if(err){
 					return logger.error(err);
 				}
-				var newStickerPath = path.join(basicRestaurentDirPath, brand1Key + ".jpg");
-				fs.writeFile(newStickerPath, data, function(err){
+				var imageData1 = data1 || new Buffer();
+				fs.readFile(req.files.Brand2_Image.path, function(err, data2){
 					if(err){
 						return logger.error(err);
 					}
-					fs.readFile(req.files.Brand2_Image.path, function(err, data){
-						if(err){
-							return logger.error(err);
-						}
-						var newStickerPath = path.join(basicRestaurentDirPath, brand2Key + ".jpg");
-						fs.writeFile(newStickerPath, data, function(err){
+					var imageData2 = data2 || new Buffer();
+					mongo.database.collection("restaurent", function(err, collection){
+						collection.insert({
+							Type: req.body.Type,
+							Key: brand1Key + brand2Key,
+							Brand:[{
+								Key: brand1Key,
+								Title: req.body.Brand1_Title,
+								Description_Ch: req.body.Brand1_Description_Ch,
+								Description_En: req.body.Brand1_Description_En,
+								Phone: req.body.Brand1_Phone,
+								BusinessHours: req.body.Brand1_BusinessHours,
+								Url: req.body.Brand1_Url,
+								Style: req.body.Brand1_Style,
+								Image: imageData1.toString("base64"),
+							},{
+								Key: brand2Key,
+								Title: req.body.Brand2_Title,
+								Description_Ch: req.body.Brand2_Description_Ch,
+								Description_En: req.body.Brand2_Description_En,
+								Phone: req.body.Brand2_Phone,
+								BusinessHours: req.body.Brand2_BusinessHours,
+								Url: req.body.Brand2_Url,
+								Style: req.body.Brand2_Style,
+								Image: imageData2.toString("base64"),
+							}]
+							
+						}, function(err){
 							if(err){
-								return logger.error(err);
+								logger.debug(err);
 							}
 							res.redirect("/Brands");
 						});
@@ -674,9 +662,7 @@ exports.removeRestaurent = function(req, res){
 			if(err){
 				return logger.error(err);
 			}
-			fs.unlink(path.join(basicRestaurentDirPath, key + ".jpg"), function(){
-				res.send(200);
-			});
+			res.send(200);
 		});
 	});
 }

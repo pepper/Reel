@@ -53,7 +53,7 @@ block mainContent
 					- if(Administrator)
 						span(class="glyphicon glyphicon-trash RemoveBrand", data-brand-key="#{Brand.Key}")
 				div(class="BrandContent")
-					img(class="BrandImage", src="/brands/#{Brand.Key}.jpg")
+					img(class="BrandImage", src="/Brands/#{Brand.Key}/Image")
 					div(class="BrandDescription")
 						- if(Language == "En")
 							| #{Brand.Description_En}
@@ -83,7 +83,7 @@ block mainContent
 					- if(Administrator)
 						span(class="glyphicon glyphicon-trash RemoveFood", data-food-key="#{Food.Key}")
 				div(class="FoodContent")
-					img(class="FoodImage", src="/foods/#{Food.Key}.jpg")
+					img(class="FoodImage", src="/Foods/#{Food.Key}/Image")
 					div(class="FoodDescription")
 						- if(Language == "En")
 							| #{Food.Description_En}
@@ -131,7 +131,7 @@ block mainContent
 									div(class="Phone") #{Restaurent.Brand[i].Phone}
 									div(class="Url") #{Restaurent.Brand[i].Url}
 							div(class="Image")
-								img(src="/restaurents/#{Restaurent.Brand[i].Key}.jpg")
+								img(src="/Restaurents/#{Restaurent.Brand[i].Key}/Image")
 			else if Restaurent.Type == "vertical"
 				div(class="VerticalItem")
 					div(class="Detail #{Restaurent.Style}")
@@ -151,7 +151,7 @@ block mainContent
 							div(class="Phone") #{Restaurent.Phone}
 							div(class="Url") #{Restaurent.Url}
 					div(class="Image")
-						img(src="/restaurents/#{Restaurent.Key}.jpg")
+						img(src="/Restaurents/#{Restaurent.Key}/Image")
 	script(src="/javascripts/brands.js")
 
 block panel

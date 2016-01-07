@@ -158,9 +158,6 @@ exports.brand = function(req, res){
 		var next = this;
 		mongo.database.collection("brand", function(err, collection){
 			collection.find({}).toArray(function(err, brands){
-				// brands.sort(function(a, b){
-				// 	return a.Key > b.Key;
-				// });
 				res.result.Brands = brands;
 				res.result.BrandCategoryArray = new Array();
 				brands.forEach(function(brand){
@@ -211,6 +208,112 @@ exports.brand = function(req, res){
 				res.result.Foods = foods;
 				res.render("brands", res.result);
 			});
+		});
+	});
+}
+
+exports.brandImage = function(req, res){
+	mongo.database.collection("brand", function(err, collection){
+		collection.find({
+			"Key": req.params.Key
+		}).toArray(function(err, brands){
+			if(err){
+				logger.error(err);
+				return res.send(err);
+			}
+			if(brands && brands.length > 0 && brands[0].Image && brands[0].Image != ""){
+				var imageBuffer = new Buffer(brands[0].Image, "base64");
+				res.writeHead(200, {
+					"Content-Type": "image/jpeg",
+					"Content-Length": imageBuffer.length
+				});
+				res.end(imageBuffer);
+			}
+			else{
+				return res.send("Image not found.");
+			}
+		});
+	});
+}
+
+exports.foodImage = function(req, res){
+	mongo.database.collection("food", function(err, collection){
+		collection.find({
+			"Key": req.params.Key
+		}).toArray(function(err, brands){
+			if(err){
+				logger.error(err);
+				return res.send(err);
+			}
+			if(brands && brands.length > 0 && brands[0].Image && brands[0].Image != ""){
+				var imageBuffer = new Buffer(brands[0].Image, "base64");
+				res.writeHead(200, {
+					"Content-Type": "image/jpeg",
+					"Content-Length": imageBuffer.length
+				});
+				res.end(imageBuffer);
+			}
+			else{
+				return res.send("Image not found.");
+			}
+		});
+	});
+}
+
+exports.restaurentImage = function(req, res){
+	mongo.database.collection("restaurent", function(err, collection){
+		collection.find({
+			$or:[{
+				"Key": req.params.Key
+			}, {
+				"Brand.Key": req.params.Key
+			}]
+		}).toArray(function(err, brands){
+			if(err){
+				logger.error(err);
+				return res.send(err);
+			}
+			var found = false;
+			if(brands && brands.length > 0){
+				switch(brands[0].Type){
+					case "vertical":
+						if(brands[0].Image && brands[0].Image != ""){
+							var imageBuffer = new Buffer(brands[0].Image, "base64");
+							res.writeHead(200, {
+								"Content-Type": "image/jpeg",
+								"Content-Length": imageBuffer.length
+							});
+							res.end(imageBuffer);
+							found = true;
+						}
+						break;
+					case "block":
+						if(brands[0].Brand && brands[0].Brand.length > 1){
+							if(brands[0].Brand[0].Key == req.params.Key && brands[0].Brand[0].Image && brands[0].Brand[0].Image != ""){
+								var imageBuffer = new Buffer(brands[0].Brand[0].Image, "base64");
+								res.writeHead(200, {
+									"Content-Type": "image/jpeg",
+									"Content-Length": imageBuffer.length
+								});
+								res.end(imageBuffer);
+								found = true;
+							}
+							else if(brands[0].Brand[1].Key == req.params.Key && brands[0].Brand[1].Image && brands[0].Brand[1].Image != ""){
+								var imageBuffer = new Buffer(brands[0].Brand[1].Image, "base64");
+								res.writeHead(200, {
+									"Content-Type": "image/jpeg",
+									"Content-Length": imageBuffer.length
+								});
+								res.end(imageBuffer);
+								found = true;
+							}
+						}
+						break;
+				}
+			}
+			if(!found){
+				res.send("Image not found.");
+			}
 		});
 	});
 }
@@ -373,8 +476,6 @@ exports.recruiting = function(req, res){
 	});
 }
 
-
-
 exports.services = function(req, res){
 	res.redirect("/Services/Petition");
 }
@@ -532,56 +633,6 @@ exports.servicesInStoreService = function(req, res){
 		});
 	});
 }
-
-
-
-
-/*
-exports.servicesMemberShipBook = function(req, res){
-	res.result.CurrentURL = "/Services";
-	res.result.ServicesTopic = "MemberShipBook";
-	mongo.database.collection("fix_text", function(err, collection){
-		collection.find({"Language": res.result.Language, "Topic": "ServicesMemberShipBook"}).toArray(function(err, concern){
-			if(err){
-				logger.error(err);
-				return res.sned(500);
-			}
-			if(concern && concern.length > 0){
-				res.result.ContentArray = concern[0].Content.split("\n");
-				res.result.OriginContent = concern[0].Content;
-			}
-			res.render("servicesMemberShipBook", res.result);
-		});
-	});
-}
-
-exports.servicesBooking = function(req, res){
-	res.result.CurrentURL = "/Services";
-	res.result.ServicesTopic = "Booking";
-	mongo.database.collection("fix_text", function(err, collection){
-		collection.find({"Language": res.result.Language, "Topic": "ServicesBooking"}).toArray(function(err, servicesBooking){
-			if(err){
-				logger.error(err);
-				return res.sned(500);
-			}
-			if(servicesBooking && servicesBooking.length > 0){
-				res.result.Content = servicesBooking[0].Content;
-			}
-			res.render("servicesBooking", res.result);
-		});
-	});
-}
-
-exports.servicesMembership = function(req, res){
-	res.result.CurrentURL = "/Services";
-	res.result.ServicesTopic = "Membership";
-	res.render("servicesMembership", res.result);
-}
-*/
-
-
-
-
 
 exports.siteMap = function(req, res){
 	res.result.CurrentURL = "/SiteMap";
