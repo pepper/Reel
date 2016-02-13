@@ -332,11 +332,9 @@ exports.visitFloor = function(req, res){
 					return res.sned(500);
 				}
 				floors.forEach(function(floor){
-					logger.debug(JSON.stringify(floor.Brands));
 					floor.Brands = _.sortBy(floor.Brands, function(brand){
 						return brand.Title;
 					});
-					logger.debug(JSON.stringify(floor.Brands));
 				});
 				res.result.AreaListArray = floors;
 				next();
@@ -698,7 +696,6 @@ exports.search = function(req, res){
 							var result = {
 								ShortDescription: fixText.Content.substr(0, 40) + "..."
 							};
-							logger.debug(fixText.Topic);
 							switch(fixText.Topic){
 								case "Privacy":
 									result.Title = "私隐权利（Privacy）";

@@ -222,7 +222,6 @@ exports.addNewsImage = function(req, res){
 				return logger.error(err);
 			}
 			if(news && news.length > 0){
-				logger.debug(news[0]);
 				var newsPath = path.join(basicDirPath, news[0].Key + "_" + req.body.Language);
 				var imageFileName = ((news[0].ImageQuantity < 9)?("0"+(news[0].ImageQuantity + 1)):("" + (news[0].ImageQuantity + 1))) + ".jpg";
 				collection.update({
@@ -287,10 +286,8 @@ exports.removeNewsImage = function(req, res){
 				return logger.error(err);
 			}
 			fs.unlink(newsImagePath, function(){
-				logger.debug(newsImagePath);
 				var renameImage = function(index){
 					var oldPath = path.join(basicNewsPath, ((index < 9)?("0" + (index + 1)):((index + 1) + "") ) + ".jpg");
-					logger.debug(oldPath);
 					fs.exists(oldPath, function(exist){
 						if(exist){
 							var newPath = path.join(basicNewsPath, ((index < 10)?("0" + index):(index + "") ) + ".jpg");
@@ -399,9 +396,6 @@ exports.removeFaq = function(req, res){
 		}).toArray(function(err, faq){
 			if(faq && faq.length > 0){
 				faq[0].QuestionList.splice(req.params.question_index, 1);
-				logger.debug(req.params.title);
-				logger.debug(req.params.question_index);
-				logger.debug(faq[0].QuestionList);
 				collection.update({
 					Title: req.params.title,
 					Language: res.result.Language
@@ -463,6 +457,9 @@ exports.removeSection = function(req, res){
 
 exports.createBrand = function(req, res){
 	var key = mongo.generateKey(req.body.Title);
+	if(!key || key == ""){
+		return res.redirect("/Brands");
+	}
 	var filter = new Array();
 	if(req.body.Women){
 		filter.push("Women");
@@ -504,7 +501,7 @@ exports.createBrand = function(req, res){
 				Image: imageData.toString("base64"),
 			}, function(err){
 				if(err){
-					logger.debug(err);
+					logger.error(err);
 				}
 				res.redirect("/Brands");
 			});
@@ -529,6 +526,9 @@ exports.removeBrand = function(req, res){
 
 exports.createFood = function(req, res){
 	var key = mongo.generateKey(req.body.Title);
+	if(!key || key == ""){
+		return res.redirect("/Brands");
+	}
 	fs.readFile(req.files.Image.path, function(err, data){
 		if(err){
 			return logger.error(err);
@@ -547,7 +547,7 @@ exports.createFood = function(req, res){
 				Image: imageData.toString("base64"),
 			}, function(err){
 				if(err){
-					logger.debug(err);
+					logger.error(err);
 				}
 				res.redirect("/Brands");
 			});
@@ -574,6 +574,9 @@ exports.createRestaurent = function(req, res){
 	switch(req.body.Type){
 		case "vertical":
 			var key = mongo.generateKey(req.body.Title);
+			if(!key || key == ""){
+				return res.redirect("/Brands");
+			}
 			fs.readFile(req.files.Image.path, function(err, data){
 				if(err){
 					return logger.error(err);
@@ -593,7 +596,7 @@ exports.createRestaurent = function(req, res){
 						Image: imageData.toString("base64"),
 					}, function(err){
 						if(err){
-							logger.debug(err);
+							logger.error(err);
 						}
 						res.redirect("/Brands");
 					});
@@ -603,6 +606,9 @@ exports.createRestaurent = function(req, res){
 		case "block":
 			var brand1Key = mongo.generateKey(req.body.Brand1_Title);
 			var brand2Key = mongo.generateKey(req.body.Brand2_Title);
+			if(!brand1Key || brand1Key == "" || !brand2Key || brand2Key == ""){
+				return res.redirect("/Brands");
+			}
 			fs.readFile(req.files.Brand1_Image.path, function(err, data1){
 				if(err){
 					return logger.error(err);
@@ -641,7 +647,7 @@ exports.createRestaurent = function(req, res){
 							
 						}, function(err){
 							if(err){
-								logger.debug(err);
+								logger.error(err);
 							}
 							res.redirect("/Brands");
 						});
